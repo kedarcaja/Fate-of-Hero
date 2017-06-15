@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2BCD8FB8-4422-692B-023E-63CDED374D07}</ProjectGuid>
+    <ProjectGuid>{696663AA-A123-A93C-F8CB-C9629E01153E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,15 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Console.cs" />
      <Compile Include="Assets\Fading.cs" />
      <Compile Include="Assets\Move_character.cs" />
      <Compile Include="Assets\Save.cs" />
      <Compile Include="Assets\Zoom_camera.cs" />
+     <Compile Include="Assets\dialog.cs" />
      <Compile Include="Assets\nextScene_onTrigger.cs" />
      <Compile Include="Assets\timescale.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/carl/Documents/FoH_Engine_Unity/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/carl/Documents/GitHub/Fate-of-Hero/Fate Of Hero/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -80,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{30F99060-FBA4-36C6-64B0-196A416C2D7D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{36A66492-79BC-6AC5-74A0-7467C5672B51}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

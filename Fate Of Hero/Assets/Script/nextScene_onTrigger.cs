@@ -13,7 +13,7 @@ public class nextScene_onTrigger : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other) {
 
-		if (other.gameObject.tag == "nextScene" && Input.GetKeyDown(KeyCode.E)) {
+		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E)) {
 			print ("collided");
 			StartCoroutine (load());
 		}

@@ -8,12 +8,12 @@ public class MenuControler : MonoBehaviour {
     public void Loadlevel()
     {
         SceneManager.LoadScene("UvodniLokace");
-        Debug.Log("As you wish! :)");
+        Debug.Log("přesun do UvodniLokace");
     }
 
     public void QuitGame()
     {
-        Debug.Log("As you wish! :)");
+        Debug.Log("Konec");
         Application.Quit();
     }
 }

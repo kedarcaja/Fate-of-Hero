@@ -2,24 +2,26 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
-	public Transform mainMenu, optionsMenu;
+	
+    public float autoLoadNextLevel;
+   void Start() {
+        if (autoLoadNextLevel == 0) {Debug.Log("Level auto load Disable");}
+        else{Invoke("LoadNextLevel", autoLoadNextLevel);}
+    }
 
-	public void Loadlevel()
-    {
-        SceneManager.LoadScene("UvodniLokace");	
-	}
-	public void QuitGame(){
-		Application.Quit();
-	}
-	public void OptionsMenu(bool clicked){
-		if (clicked == true){
-			optionsMenu.gameObject.SetActive(clicked);
-			mainMenu.gameObject.SetActive(false);
-		} else {
-			optionsMenu.gameObject.SetActive(clicked);
-			mainMenu.gameObject.SetActive(true);
-		}
-	}
+   public void LoadLevel(string name)
+   {
+       Debug.Log("New Level load: " + name);
+       Application.LoadLevel(name);
+   }
 
+   public void LoadNextLevel()
+   {
+       Application.LoadLevel(Application.loadedLevel + 1);
+   }
 
+      
+
+  
+	
 }

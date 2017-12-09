@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class MenuControler : MonoBehaviour {
 
-    public Slider BrightnessSlider,VolumeSlider;
+
+    #region Variables
+    [Header("Nastavení")]
+    public Slider BrightnessSlider;
+    public Slider VolumeSlider;
     public Text BrightnessLable, VolumeLable;
     float brightnessValue, VolumeValue;
-    public Dropdown ResxDropdown,QualityDropdown;
- 
+    public Dropdown ResxDropdown, QualityDropdown;
     Resolution[] resolutions;
 
+    #endregion
+
+
+    #region Unity Metod
     void Start()
     {
         if (!BrightnessSlider) { Debug.LogError("Objekt BrightnessSlider nebyl nalezen"); }
@@ -35,8 +42,7 @@ public class MenuControler : MonoBehaviour {
             QualityDropdown.options.Add(new Dropdown.OptionData(QualitySettings.names[i]));
         }
         QualityDropdown.onValueChanged.AddListener(delegate { SetQualityLevel(); });   
-    }
-     
+    }     
     void Update()
     {
         brightnessValue = BrightnessSlider.value;
@@ -47,16 +53,12 @@ public class MenuControler : MonoBehaviour {
     public void bAdj(float brightnessValue)
     {
         brightnessValue = BrightnessSlider.value;
-        //rgbValue = GUI.HorizontalSlider (new Rect (Screen.width / 2 - 50, 90, 100, 30), rgbValue, 0f, 1.0f);
-        //RenderSettings.ambientLight = brightnessValue;
         RenderSettings.ambientLight = new Color(brightnessValue, brightnessValue, brightnessValue, 1);
     }
-
     public void VolumeControl(float volumeControl)
     {
         AudioListener.volume = volumeControl;
     }
-
     public void SetQualityLevel()
     {
         QualitySettings.SetQualityLevel(QualityDropdown.value);
@@ -76,13 +78,24 @@ public class MenuControler : MonoBehaviour {
         VolumeSlider.value = 100f;
         BrightnessSlider.value = 50f;
     }
+ 
     public void FullScreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
     }
     public void QuitGame()
     {
-        Debug.Log("Konec");
-        Application.Quit();
+
+        #if UNITY_EDITOR
+
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+         Application.Quit();
+        #endif
     }
+        #endregion
 }
+
+
+    
+

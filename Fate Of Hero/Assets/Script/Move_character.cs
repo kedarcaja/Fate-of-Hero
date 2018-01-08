@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// PlayerScript requires the GameObject to have a Rigidbody2D component
-
-[RequireComponent (typeof (Rigidbody2D))]
-
 public class Move_character : MonoBehaviour {
 
 
-	public float playerSpeed = 4f;
+    #region Variables
+    public float speed = 5f;
+    #endregion
 
-	void Start () {
+    #region Unity Metod
 
-	}
+    void Start()
+    {
 
-	void FixedUpdate () {
-		Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-		GetComponent<Rigidbody2D>().velocity=targetVelocity * playerSpeed;
-	}
+    }
+
+    void Update()
+    {
+
+        transform.Translate(Input.GetAxis("Horizontal") * speed * UnityEngine.Time.deltaTime, Input.GetAxis("Vertical") * speed * UnityEngine.Time.deltaTime, 0f);
+    }
+    #endregion
 }

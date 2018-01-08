@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{292CF0C3-9F95-5CF9-2EB0-90E16BC78B13}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -222,6 +222,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraControler.cs" />
+    <Compile Include="Assets\DialogControlScript.cs" />
+    <Compile Include="Assets\Hlaška.cs" />
+    <Compile Include="Assets\Move.cs" />
+    <Compile Include="Assets\MS01.cs" />
+    <Compile Include="Assets\Music.cs" />
+    <Compile Include="Assets\MusicManager.cs" />
     <Compile Include="Assets\Script\ButtonTool.cs" />
     <Compile Include="Assets\Script\Console.cs" />
     <Compile Include="Assets\Script\dialog.cs" />
@@ -235,9 +242,11 @@
     <Compile Include="Assets\Script\PanelAnim.cs" />
     <Compile Include="Assets\Script\PlayAnim.cs" />
     <Compile Include="Assets\Script\Save.cs" />
+    <Compile Include="Assets\Script\Splash.cs" />
     <Compile Include="Assets\Script\TiltWindow.cs" />
     <Compile Include="Assets\Script\timescale.cs" />
     <Compile Include="Assets\Script\Zoom_camera.cs" />
+    <Compile Include="Assets\VolbaControler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

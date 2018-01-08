@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
+
 
 public class MenuControler : MonoBehaviour {
 
@@ -47,7 +47,7 @@ public class MenuControler : MonoBehaviour {
     {
         brightnessValue = BrightnessSlider.value;
         BrightnessLable.text = Mathf.FloorToInt(brightnessValue).ToString();
-        VolumeValue = VolumeSlider.value;
+        VolumeValue = VolumeSlider.value*100;
         VolumeLable.text = Mathf.FloorToInt(VolumeValue).ToString();
     }
     public void bAdj(float brightnessValue)
@@ -71,7 +71,7 @@ public class MenuControler : MonoBehaviour {
     {
         GlobalSetting.SetMasterVolume(VolumeSlider.value);
         GlobalSetting.SetMasterBrightness(BrightnessSlider.value);
-        
+
     }
     public void SetDefault()
     {

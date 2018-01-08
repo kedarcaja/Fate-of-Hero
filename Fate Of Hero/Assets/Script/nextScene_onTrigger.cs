@@ -15,7 +15,7 @@ public class nextScene_onTrigger : MonoBehaviour {
 
 		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E)) {
 			print ("collided");
-			StartCoroutine (load());
+			StartCoroutine (Load());
 		}
 
 	}
@@ -37,13 +37,17 @@ public class nextScene_onTrigger : MonoBehaviour {
 	{		
 		BeginFade(-1);	
 	}
-	IEnumerator load()
+	IEnumerator Load()
 	{
 		BeginFade (1);
 		yield return new WaitForSeconds(fadeSpeed);
-		if(Application.levelCount > Application.loadedLevel)
-		{
-		Application.LoadLevel (Application.loadedLevel + 1);
-		}
+#pragma warning disable CS0618 // Typ nebo člen je zastaralý.
+        if (Application.levelCount > Application.loadedLevel)
+#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+        {
+#pragma warning disable CS0618 // Typ nebo člen je zastaralý.
+            Application.LoadLevel (Application.loadedLevel + 1);
+#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+        }
 	}
 }

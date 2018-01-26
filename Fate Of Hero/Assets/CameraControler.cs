@@ -7,13 +7,17 @@ public class CameraControler : MonoBehaviour {
     #region Variables
     public GameObject Player;
     public Vector3 offset;
-   #endregion
-     
-   #region Unity Metod
-   
-	void Start () {
+    #endregion
+
+    #region Unity Metod
+    private void Awake()
+    {
+       
         offset = transform.position - Player.transform.position;
-	}
+        transform.position = Player.transform.position + offset;
+    }
+
+ 
 	
 	void Update () {
         transform.position = Player.transform.position + offset;

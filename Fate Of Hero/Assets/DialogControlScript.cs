@@ -25,11 +25,11 @@ public class DialogControlScript : MonoBehaviour
     public AudioClip Voice;
     bool IsPlay;
     bool Trigger;
-    //AudioSource source;
 
     private void Start()
     {
-         if (VybranýDialog == DialogList.None) { Debug.LogError("<color=Red><b>ERROR: </b> Zapoměl jsi vybrat o jaký dialog se jedná </color>"); }
+      
+        if (VybranýDialog == DialogList.None) { Debug.LogError("<color=Red><b>ERROR: </b> Zapoměl jsi vybrat o jaký dialog se jedná </color>"); }
     }
 
     void Update()
@@ -40,7 +40,6 @@ public class DialogControlScript : MonoBehaviour
 
             }
         else { timer += UnityEngine.Time.deltaTime; }
-
         if (Trigger)
         {
             if (Input.GetKeyDown(KeyCode.E) && IsPlay==false)
@@ -49,6 +48,7 @@ public class DialogControlScript : MonoBehaviour
                 dialogControler.SetActive(true);
                 Part = 1; Dialog();
                 AudioSource.PlayClipAtPoint(Voice, transform.position, 1f);
+                PlayerScript.Instance.isMove = false;
             }
         }
     }
@@ -231,153 +231,190 @@ public class DialogControlScript : MonoBehaviour
             {
                 timer = 0;
                 dialogControler.SetActive(false);
+                PlayerScript.Instance.isMove = true;
                 Destroy(DialogObject);
             }
         }
         if (VybranýDialog == DialogList.D_MS01_03)
         {
-           
             if (Part == 1)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> Kvě… SSS… jo Samatho, donesl jsem ti ten tvůj lístek.";
-                waitTime = 8f;
+                waitTime = 7f;
                 Step = 2;
             }
-            if (Part == 1)
+            if (Part == 2)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Jé, děkuji, tady máš za něj klíč k mříži od stoky!";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Jé, děkuji, tady máš za něj klíč k mříži od stoky!";
+                waitTime = 5f;
+                Step = 3;
             }
-            if (Part == 1)
+            if (Part == 3)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Až mi přiroste zpátky, tak budu zase ta nejkrásnější květina široko daleko. ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Až mi přiroste zpátky, tak budu zase ta nejkrásnější květina široko daleko. ";
+                waitTime = 6f;
+                Step = 4 ;
             }
-            if (Part == 1)
+            if (Part == 4)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Ty? Ha ha ha vždyť i žížaly jsou krásnější, než ty.";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=grey><b>Myška: </b></color> Ty? Ha ha ha vždyť i žížaly jsou krásnější, než ty.";
+                waitTime = 6f;
+                Step = 5;
             }
-            if (Part == 1)
+            if (Part == 5)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> A proč je tady tahle ?";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> A proč je tady tahle ?";
+                waitTime = 2f;
+                Step = 6;
             }
-            if (Part == 1)
+            if (Part == 6)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> E...";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 1f;
+                Step = 7;
             }
-            if (Part == 1)
+            if (Part == 7)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Jsem tu, abych ti řekla, že si jdu nahoru sehnat nový klobouk, který ty nikdy mít nebudeš, dřív tady uhniješ!";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=grey><b>Myška: </b></color> Jsem tu, abych ti řekla, že si jdu nahoru sehnat nový klobouk, který ty nikdy mít nebudeš, dřív tady uhniješ!";
+                waitTime = 12.2f;
+                Step = 8;
             }
-            if (Part == 1)
+            if (Part == 8)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> Ale… holky…nechte toho. Myška se ti přišla omluvit, Samantho.";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 7.8f;
+                Step = 9;
             }
-            if (Part == 1)
+            if (Part == 9)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> Dělej se omluv, sám se odsud už dokážu dostat. Klíč mám.";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 4f;
+                Step = 10;
             }
-            if (Part == 1)
+            if (Part == 10)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> Takže pokud se neomluvíš, zůstáváš tady i s žížalama.";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 3f;
+                Step = 11;
             }
-            if (Part == 1)
+            if (Part == 11)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Tak já se ti teda omlouvám Samantho";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=grey><b>Myška: </b></color> Ne! Ne! Ach jo. Tak já se ti teda omlouvám Samantho.";
+                waitTime = 7f;
+                Step = 12;
             }
-            if (Part == 1)
+            if (Part == 12)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> První omluva za posledních sto let!";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> První omluva za posledních sto let!";
+                waitTime = 5f;
+                Step = 13;
             }
-            if (Part == 1)
+            if (Part == 13)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> děkuji hrdino…! Hrdino? Haló hrdino…!";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Děkuji hrdino…! Hrdino? Haló hrdino…!";
+                waitTime = 6f;
+                Step = 14;
             }
-            if (Part == 1)
+            if (Part == 14)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> To mluvíš na mě? ";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 1.5f;
+                Step = 15;
             }
-            if (Part == 1)
+            if (Part == 15)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Ano hrdino, chtěla jsem ti za odměnu dát ještě jednu radu.";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Ano hrdino, chtěla jsem ti za odměnu dát ještě jednu radu.";
+                waitTime = 4f;
+                Step = 16;
             }
-            if (Part == 1)
+            if (Part == 16)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color> Sem s ní. ";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 2f;
+                Step = 17;
             }
-            if (Part == 1)
+            if (Part == 17)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Ať bude dračice sebevíc sexy, nelíbej ji.  ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Ať bude dračice sebevíc sexy, nelíbej ji.  ";
+                waitTime = 4f;
+                Step = 18;
             }
-            if (Part == 1)
+            if (Part == 18)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> rada nad zlato...! ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=grey><b>Myška: </b></color> rada nad zlato...! ";
+                waitTime = 4f;
+                Step = 19;
             }
-            if (Part == 1)
+            if (Part == 19)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Měj se Samantho!  ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=brown><b>Leonard: </b></color> Ale no tak.  ";
+                waitTime = 3f;
+                Step = 20;
 
             }
-            if (Part == 1)
+            if (Part == 20)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Měj se hrdino! ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=brown><b>Leonard: </b></color> Měj se Samantho!  ";
+                waitTime = 2f;
+                Step = 21;
+
             }
-            if (Part == 1)
+            if (Part == 21)
             {
+                timer = 0;
+                DialogText.text = "<color=yellow><b>Samantha: </b></color> Měj se hrdino! ";
+                waitTime = 2f;
+                Step = 22;
+            }
+            if (Part == 22)
+            {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color>A teď konečně vstříc slunci! Už mi od toho vlhka málem začaly plesnivět nohy. ";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 7.5f;
+                Step = 23;
             }
-            if (Part == 1)
+            if (Part == 23)
             {
-                DialogText.text = "<color=brown><b>Leonard: </b></color> Myslíš to zelený, co máš mezi prsty?  ";
-                waitTime = 8f;
-                Step = 2;
+                timer = 0;
+                DialogText.text = "<color=grey><b>Myška: </b></color> Myslíš to zelený, co máš mezi prsty?  ";
+                waitTime = 3f;
+                Step = 24;
             }
-            if (Part == 1)
+            if (Part == 24)
             {
+                timer = 0;
                 DialogText.text = "<color=brown><b>Leonard: </b></color>Ne, to je tam už dlouho, ale málem se to rozrostlo dál. ";
-                waitTime = 8f;
-                Step = 2;
+                waitTime = 4f;
+                Step = 25;
+            }
+            if (Part == 25)
+            {
+                timer = 0;
+                dialogControler.SetActive(false);
+                PlayerScript.Instance.isMove = true;
+                Destroy(DialogObject);
             }
         }
-    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -388,6 +425,7 @@ public class DialogControlScript : MonoBehaviour
         }
       
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

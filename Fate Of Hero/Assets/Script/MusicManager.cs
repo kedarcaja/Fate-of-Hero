@@ -2,15 +2,18 @@
 using System.Collections;
 
 public class MusicManager : MonoBehaviour {
-
-    public AudioClip levelMusic;
+    #region Varibles
+    [SerializeField]
+    private AudioClip levelMusic;
+    
     public static bool MusicEnd;
     private AudioSource audioSource;
-    
+    #endregion
 
-    void Awake() {
+    #region Funkcion
+    void Awake()
+    {
 		DontDestroyOnLoad (gameObject);
-		
 	}
     private void Update()
     {
@@ -18,17 +21,14 @@ public class MusicManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-       
-      
     }
-    void Start () {
-
+    void Start ()
+    {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = levelMusic;
         audioSource.loop = true;
         audioSource.volume = 0.5f;
         audioSource.Play();
     }
-	
-	
+    #endregion
 }

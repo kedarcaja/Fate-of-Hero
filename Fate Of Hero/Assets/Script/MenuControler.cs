@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class MenuControler : MonoBehaviour {
-
-
     #region Variables
     [Header("Nastavení")]
-    public Slider BrightnessSlider;
-    public Slider VolumeSlider;
-    public Text BrightnessLable, VolumeLable;
+    [SerializeField]
+    private Slider BrightnessSlider;
+    [SerializeField]
+    private Slider VolumeSlider;
+    [SerializeField]
+    private Text BrightnessLable, VolumeLable;
     float brightnessValue, VolumeValue;
-    public Dropdown ResxDropdown, QualityDropdown;
+    [SerializeField]
+    private Dropdown ResxDropdown, QualityDropdown;
     Resolution[] resolutions;
-
     #endregion
-
 
     #region Unity Metod
     void Start()
@@ -71,23 +70,19 @@ public class MenuControler : MonoBehaviour {
     {
         GlobalSetting.SetMasterVolume(VolumeSlider.value);
         GlobalSetting.SetMasterBrightness(BrightnessSlider.value);
-
     }
     public void SetDefault()
     {
         VolumeSlider.value = 100f;
         BrightnessSlider.value = 50f;
     }
- 
     public void FullScreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
     }
     public void QuitGame()
     {
-
         #if UNITY_EDITOR
-
         UnityEditor.EditorApplication.isPlaying = false;
         #else
          Application.Quit();

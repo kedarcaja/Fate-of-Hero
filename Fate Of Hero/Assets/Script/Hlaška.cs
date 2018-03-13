@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Hlaška : MonoBehaviour {
 
     //public dropdown
-    public enum PartList { None,Pryč,Zebou,kámen,Nejdu,lebka,Kupa,Zamčeno,Nora, }
+    public enum PartList { None,Pryč,Zebou,kámen,Nejdu,lebka,Kupa,Zamčeno,Nora }
     [Header("Výběr Hlášky")]
     [Tooltip("Z menu mužeme vybrat o jaký dialog se jedná")]
     public PartList VybranýPart = PartList.None;

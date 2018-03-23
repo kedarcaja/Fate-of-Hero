@@ -7,7 +7,7 @@ public class MenuControler : MonoBehaviour {
     #region Variables
     [Header("Nastavení")]
     [SerializeField]
-    private Slider BrightnessSlider;
+   private Slider BrightnessSlider;
     [SerializeField]
     private Slider VolumeSlider;
     [SerializeField]
@@ -16,6 +16,10 @@ public class MenuControler : MonoBehaviour {
     [SerializeField]
     private Dropdown ResxDropdown, QualityDropdown;
     Resolution[] resolutions;
+
+   
+
+
     #endregion
 
     #region Unity Metod
@@ -49,7 +53,7 @@ public class MenuControler : MonoBehaviour {
         VolumeValue = VolumeSlider.value*100;
         VolumeLable.text = Mathf.FloorToInt(VolumeValue).ToString();
     }
-    public void bAdj(float brightnessValue)
+    public void BAdj(float brightnessValue)
     {
         brightnessValue = BrightnessSlider.value;
         RenderSettings.ambientLight = new Color(brightnessValue, brightnessValue, brightnessValue, 1);
@@ -68,8 +72,7 @@ public class MenuControler : MonoBehaviour {
     }
     public void SaveAndExit()
     {
-        GlobalSetting.SetMasterVolume(VolumeSlider.value);
-        GlobalSetting.SetMasterBrightness(BrightnessSlider.value);
+       
     }
     public void SetDefault()
     {

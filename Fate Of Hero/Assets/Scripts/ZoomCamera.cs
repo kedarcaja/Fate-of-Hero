@@ -2,12 +2,16 @@
 using System.Collections;
 
 public class ZoomCamera : MonoBehaviour {
-
-	public float zoomSpeed = 1;
-	public float targetOrtho;
-	public float smoothSpeed = 2.0f;
-	public float minOrtho = 1.0f;
-	public float maxOrtho = 20.0f;
+    [SerializeField]
+	private float zoomSpeed = 1;
+    [SerializeField]
+    private float targetOrtho;
+    [SerializeField]
+    private float smoothSpeed = 2.0f;
+    [SerializeField]
+    private float minOrtho = 1.0f;
+    [SerializeField]
+    private float maxOrtho = 20.0f;
 
 	void Start() {
 		targetOrtho = Camera.main.orthographicSize;

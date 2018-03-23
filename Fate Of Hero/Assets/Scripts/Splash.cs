@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Splash : MonoBehaviour {
+public class SplashControler: MonoBehaviour {
 
     #region Variables
-    public Image image;
+    [SerializeField]
+    private Image image;
     Color c;
-    public CanvasGroup canvasGroup;
-    public Text Klavesa;
+    [SerializeField]
+    private CanvasGroup canvasGroup;
+    [SerializeField]
+    private Text Klavesa;
+    [SerializeField]
     private bool KeyActive;
+    [SerializeField]
     private bool fadingIn, fadingOut;
-    public float fadeTime;
+    [SerializeField]
+    private float fadeTime;
+    [SerializeField]
     public AudioClip sound;
+    [SerializeField]
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
     #endregion
 
@@ -25,8 +33,7 @@ public class Splash : MonoBehaviour {
         gameObject.AddComponent<AudioSource>();
         source.clip = sound;
         source.playOnAwake = false;
-    }
-	
+    }	
 	void Update () {
         if (canvasGroup.alpha == 1)
         {
@@ -40,14 +47,11 @@ public class Splash : MonoBehaviour {
            Invoke("LoadNextLevel", 1);
         }
 	}
-
     public void LoadNextLevel()
     {
-
-#pragma warning disable CS0618 // Typ nebo člen je zastaralý.
+#pragma warning disable CS0618 
         Application.LoadLevel(Application.loadedLevel + 1);
-#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
-
+#pragma warning restore CS0618 
     }
     void PlaySound()
     {

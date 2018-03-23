@@ -6,34 +6,43 @@ using UnityEngine.UI;
 public class MonologScript : MonoBehaviour {
 
     //public dropdown
-    public enum PartList { None,Pryč,Zebou,kámen,Nejdu,lebka,Kupa,Zamčeno,Nora }
-    [Header("Výběr Hlášky")]
-    [Tooltip("Z menu mužeme vybrat o jaký dialog se jedná")]
-    public PartList VybranýPart = PartList.None;
-    [Header("Objekty")]
-    public GameObject dialogControler;
-    public GameObject DialogObject;
-    [Header("Volba")]
-    public Text DialogText;
-    private int Part, Step;
+    public enum PartList { None,P01,P02,P03,P04,P05,P06,P07,P08 }
+    [Header("Dialog selection")]
+    [Tooltip("From the menu, we can select what the dialog is about")]
+    [SerializeField]
+    private PartList selectedPart = PartList.None;
+    [Header("Object")]
+    [SerializeField]
+    private GameObject partControler;
+    [SerializeField]
+    private GameObject partObject;
+    [Header("Choice")]
+    [SerializeField]
+    private Text partText;
+    private int part, step;
     private float timer, waitTime;
-    public AudioClip Voice;
+    [Header("Sound track")]
+    [SerializeField]
+    private AudioClip voice;
     bool IsPlay;
     public bool Trigger;
    
 
     private void Start()
     {
-
+         if (selectedPart == PartList.None) { Debug.LogError("<color=Red><b>ERROR: </b> Zapoměl jsi vybrat o jaký dialog se jedná </color>"); }
        
-         if (VybranýPart == PartList.None) { Debug.LogError("<color=Red><b>ERROR: </b> Zapoměl jsi vybrat o jaký dialog se jedná </color>"); }
+        if (!partControler) { Debug.LogError("<color=Red><b>ERROR: </b> The partControler object was not found </color>"); }
+        if (!partText) { Debug.LogError("<color=Red><b>ERROR: </b> Text partText was not found </color>"); }
+        if (!partObject) { Debug.LogError("<color=Red><b>ERROR: </b> The partObject object was not found </color>"); }
+        if (!voice) { Debug.LogError("<color=Red><b>ERROR: </b> The voice object was not found </color>"); }
     }
 
     void Update()
     {
         if (timer >= waitTime)
         {
-            Part = Step; Monolog();
+            part = step; Monolog();
 
         }
         else { timer += UnityEngine.Time.deltaTime; }
@@ -43,149 +52,149 @@ public class MonologScript : MonoBehaviour {
             if (IsPlay == false)
             {
                 IsPlay = true;
-                dialogControler.SetActive(true);
-                Part = 1; Monolog();
-                AudioSource.PlayClipAtPoint(Voice, transform.position, 0.8f);
+                partControler.SetActive(true);
+                part = 1; Monolog();
+                AudioSource.PlayClipAtPoint(voice, transform.position, 0.8f);
             }
         }
     }
 
     public void Monolog()
     {
-        if (VybranýPart == PartList.Pryč)
+        if (selectedPart == PartList.P01)
         {
 
-            if (Part == 1)
+            if (part == 1)
             {
                 timer = 0;
-                DialogText.text = "Jak se odsud dostanu pryč?";
+                partText.text = "Jak se odsud dostanu pryč?";
                 waitTime = 2f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
 
         }
-        if (VybranýPart == PartList.Zebou)
+        if (selectedPart == PartList.P02)
         {
 
-            if (Part == 1)
+            if (part == 1)
             {
-                DialogText.text = "Už chci pryč, zebou mě nohy.";
+                partText.text = "Už chci pryč, zebou mě nohy.";
                 waitTime = 2f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
-        if (VybranýPart == PartList.kámen)
+        if (selectedPart == PartList.P03)
         {
-            if (Part == 1)
+            if (part == 1)
             {
                 timer = 0;
-                DialogText.text = "Na tom kameni se něco hýbe.";
+                partText.text = "Na tom kameni se něco hýbe.";
                 waitTime = 2f;
-                Step = 2;
+                step = 2;
             }
-           else if (Part == 2)
+           else if (part == 2)
             {
                 timer = 0;
-                DialogText.text = "Jé to je ale hezký drobeček.";
+                partText.text = "Jé to je ale hezký drobeček.";
                 waitTime = 3f;
-                Step = 3;
+                step = 3;
             }
-            else if (Part == 3)
+            else if (part == 3)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
-        if (VybranýPart == PartList.Nejdu)
+        if (selectedPart == PartList.P04)
         {
 
-            if (Part == 1)
+            if (part == 1)
             {
                 timer = 0;
-                DialogText.text = "K ní teď nejdu, kdybych přišel s prázdnou mohlo by jí to rozrušit. ";
+                partText.text = "K ní teď nejdu, kdybych přišel s prázdnou mohlo by jí to rozrušit. ";
                 waitTime = 4.47f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
 
         }
-        if (VybranýPart == PartList.lebka)
+        if (selectedPart == PartList.P05)
         {
-            if (Part == 1)
+            if (part == 1)
             {
                 timer = 0;
-                DialogText.text = "Fuj, ta lebka mě děsí.";
+                partText.text = "Fuj, ta lebka mě děsí.";
                 waitTime = 2f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
-        if (VybranýPart == PartList.Zamčeno)
+        if (selectedPart == PartList.P06)
         {
-            if (Part == 1)
+            if (part == 1)
             {
                 timer = 0;
-                DialogText.text = "Sakra zamčeno.";
+                partText.text = "Sakra zamčeno.";
                 waitTime = 1.72f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
-        if (VybranýPart == PartList.Nora)
+        if (selectedPart == PartList.P07)
         {
-            if (Part == 1)
+            if (part == 1)
             {
-                DialogText.text = "Upřímně nevím, zda se mi tam chce.";
+                partText.text = "Upřímně nevím, zda se mi tam chce.";
                 waitTime =4f;
-                Step = 2;
+                step = 2;
             }        
-            else if (Part == 2)
+            else if (part == 2)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
-        if (VybranýPart == PartList.Kupa)
+        if (selectedPart == PartList.P08)
         {
-            if (Part == 1)
+            if (part == 1)
             {
-                DialogText.text = "Aha, kupa sena. Třeba tu bude někde jehla. Prohledám ji. ";
+                partText.text = "Aha, kupa sena. Třeba tu bude někde jehla. Prohledám ji. ";
                 waitTime = 7f;
-                Step = 2;
+                step = 2;
             }
-            else if (Part == 2)
+            else if (part == 2)
             {
                 timer = 0;
-                DialogText.text = "no tak zase nic.";
+                partText.text = "no tak zase nic.";
                 waitTime = 2f;
-                Step = 4;
+                step = 4;
             }
-            if (Part == 4)
+            if (part == 4)
             {
-                dialogControler.SetActive(false);
-                Destroy(DialogObject);
+                partControler.SetActive(false);
+                Destroy(partObject);
             }
         }
     }

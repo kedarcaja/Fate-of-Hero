@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadText : MonoBehaviour {
-  
-    public TextAsset TextFile;
-    public Text CreditText;
-    public int Ymax;
-    public PlayAnim Anim;
-  
+public class CreditsScript : MonoBehaviour {
+
+    [Header("Text File")]
+    [SerializeField]
+    private TextAsset TextFile;
+    [SerializeField]
+    private Text CreditText;
+    [SerializeField]
+    private int Ymax;
+   
+    [SerializeField]
     RectTransform myRectTransform;
-    public bool IsPlay;
-    public float speed;
+    [SerializeField]
+    private bool IsPlay;
+    [SerializeField]
+    private float speed;
 	
 	void Start () {
-       myRectTransform = GetComponent<RectTransform>();
-      
+       myRectTransform = GetComponent<RectTransform>();     
     }
     void Update()
     {
@@ -26,16 +31,11 @@ public class LoadText : MonoBehaviour {
         }
         if (Ymax == myRectTransform.localPosition.y)
         {
-           
-            Anim.Press();
             myRectTransform.localPosition = new Vector3(0, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-          
-            Anim.Press();
             myRectTransform.localPosition = new Vector3(0, 0, 0);
-
         }
 
     }

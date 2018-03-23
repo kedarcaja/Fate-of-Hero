@@ -5,41 +5,43 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ButtonTool : MonoBehaviour {
     #region Variables
-    [Header("Tlačítka")]
-    public Text Buttontext;
-    public Color StartColor;
-    public Color Enter;
-    public bool SaveExist;
+    [Header("Button")]
+    [SerializeField]
+    private Text buttonText;
+    [SerializeField]
+    private Color startColor;
+    [SerializeField]
+    private Color Enter;
+    private bool saveExist;
    
-
     [Space]
 
     [Header("Zvuk")]
-    public AudioClip sound;
-    private Button button { get { return GetComponent<Button>(); } }
-    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+    [SerializeField]
+    private AudioClip sound;
+    private Button Button { get { return GetComponent<Button>(); } }
+    private AudioSource Source { get { return GetComponent<AudioSource>(); } }
     #endregion
     #region Unity Metod
     void Start () {
 		gameObject.AddComponent<AudioSource>();
-		source.clip = sound;
-		source.playOnAwake = false;
-		button.onClick.AddListener(() => PlaySound());
-	}
+		Source.clip = sound;
+		Source.playOnAwake = false;
+		Button.onClick.AddListener(() => PlaySound());
+        if (!buttonText) { Debug.LogError("<color=Red><b>ERROR: </b> Text buttonText was not found </color>"); }
+    }
 	
 	void PlaySound () {
-		source.PlayOneShot(sound);
+		Source.PlayOneShot(sound);
 	}
 
     public void MouseEnter()
     {
-        if (!SaveExist) { Buttontext.color = Enter; }
-
+        if (!saveExist) { buttonText.color = Enter; Enter.a = 1; }
     }
     public void MouseLeave()
     {
-        if (!SaveExist) { Buttontext.color = StartColor; }
-
+        if (!saveExist) { buttonText.color = startColor;  startColor.a = 1; }
     }
     #endregion
 }

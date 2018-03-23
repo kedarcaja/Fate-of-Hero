@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour {
 
-    public float time;
-    public float waitTime;
-    public GameObject exit;
+    [SerializeField]
+    private float time;
+    [SerializeField]
+    private float waitTime;
+    [SerializeField]
+    private GameObject exit;
     private GameObject Player;
      [Header("Dveře = true, průchod = false")]
     public bool door;
@@ -16,6 +19,9 @@ public class Door : MonoBehaviour {
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
+        if (time == 0) { Debug.LogError("<color=Red><b>ERROR: </b> time value is not defined </color>"); }
+        if (waitTime == 0) { Debug.LogError("<color=Red><b>ERROR: </b> waitTime value is not defined </color>"); }
+        if (!exit) { Debug.LogError("<color=Red><b>ERROR: </b> The exit object was not found </color>"); }
     }
     private void Update()
     {
@@ -23,10 +29,8 @@ public class Door : MonoBehaviour {
         {
             if (time >= waitTime)
             {
-
                 Load();
                 timer = false;
-
             }
             else { time += UnityEngine.Time.deltaTime; }
         }
@@ -34,14 +38,12 @@ public class Door : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-
         if (door == true)
         {
             if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
             {
                 print("collided");
                 //StartCoroutine(load());
-
             }
         }
         else
@@ -49,18 +51,14 @@ public class Door : MonoBehaviour {
             if (other.gameObject.tag == "Player")
             {
                 print("collided");
-                timer = true;
-                
+                timer = true;  
             }
         }
 
     }
-
     public void Load()
     {
         time = 0;
         Player.transform.position = exit.transform.position;
     }
-
-   
 }

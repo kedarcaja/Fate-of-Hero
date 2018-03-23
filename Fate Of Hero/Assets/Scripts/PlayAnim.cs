@@ -3,18 +3,17 @@ using UnityEngine.UI;
 
 public class PlayAnim : MonoBehaviour {
 
-    
-	public GameObject transInObject;
-	public Animation transOutAnim;
-	public Animation transInAnim;
-
-    
+    [SerializeField]
+	private GameObject transInObject;
+    [SerializeField]
+    private Animation transOutAnim;
+    [SerializeField]
+    private Animation transInAnim;
 
     public void Press()
     {
         transInObject.SetActive(true);
         transInAnim.Play();
         transOutAnim.Play();
-       
     }
 }

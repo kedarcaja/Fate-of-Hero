@@ -8,7 +8,6 @@ public class WallFaded : MonoBehaviour {
     [SerializeField]
     private GameObject wall1, wall2;
 
-
     private Color def;
     private Color fade;
     #endregion
@@ -20,15 +19,6 @@ public class WallFaded : MonoBehaviour {
         fade = def;
         fade.a = 0.4f;
     }
-	
-	
-	void Update () {
-		
-	}
-
-    
-
- 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class nextSceneOnTrigger : MonoBehaviour {
+public class NextSceneOnTrigger : MonoBehaviour {
 
 	public bool teleportTriggered;
 	public Texture2D fadeOutTexture;	

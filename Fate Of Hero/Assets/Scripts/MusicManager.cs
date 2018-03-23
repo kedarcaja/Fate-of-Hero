@@ -5,7 +5,8 @@ public class MusicManager : MonoBehaviour {
     #region Varibles
     [SerializeField]
     private AudioClip levelMusic;
-    
+
+  
     public static bool MusicEnd;
     private AudioSource audioSource;
     #endregion

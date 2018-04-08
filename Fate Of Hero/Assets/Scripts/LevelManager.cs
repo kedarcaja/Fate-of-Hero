@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour {
 
 #pragma warning disable CS0618 // Typ nebo člen je zastaralý.
         Application.LoadLevel( Application.loadedLevel + 1);
-#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+
 
     }
 

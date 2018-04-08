@@ -19,8 +19,8 @@ public class Door : MonoBehaviour {
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
-        if (time == 0) { Debug.LogError("<color=Red><b>ERROR: </b> time value is not defined </color>"); }
-        if (waitTime == 0) { Debug.LogError("<color=Red><b>ERROR: </b> waitTime value is not defined </color>"); }
+        
+       
         if (!exit) { Debug.LogError("<color=Red><b>ERROR: </b> The exit object was not found </color>"); }
     }
     private void Update()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControler : MonoBehaviour {
 
     #region Variables
-   
+    
     private GameObject player;
     [SerializeField]
     private Vector3 offset;
@@ -14,13 +14,14 @@ public class CameraControler : MonoBehaviour {
     #region Unity Metod
     private void Awake()
     {
+        player = GameObject.FindWithTag("Player");
         offset = transform.position - player.transform.position;
         transform.position = player.transform.position + offset;
     }
     private void Start()
     {
       
-        player = GameObject.FindWithTag("Player");
+        
     }
 
 

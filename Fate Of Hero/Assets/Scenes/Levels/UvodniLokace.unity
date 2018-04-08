@@ -455,9 +455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogControler: {fileID: 1031190218}
-  DialogObject: {fileID: 193785874}
-  DialogText: {fileID: 1200669232}
-  Voice: {fileID: 8300000, guid: d6c0d3237a8aa7343b5f4995cc4bcb16, type: 3}
+  dialogObject: {fileID: 0}
+  dialogText: {fileID: 0}
+  voice: {fileID: 0}
 --- !u!4 &193785876
 Transform:
   m_ObjectHideFlags: 0
@@ -480,11 +480,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -38.150566
+      value: -35.21
       objectReference: {fileID: 0}
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 27.701933
+      value: 23.32
       objectReference: {fileID: 0}
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.z
@@ -924,11 +924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb87e29a12da47449724415a3794a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "Vybran\xFDDialog": 2
+  selectedDialog: 1
   dialogControler: {fileID: 1031190218}
-  DialogObject: {fileID: 340484945}
-  DialogText: {fileID: 1200669232}
-  Voice: {fileID: 8300000, guid: 699c74c9b6d0a4442b4edd5066e0ec29, type: 3}
+  dialogObject: {fileID: 1031190218}
+  partText: {fileID: 1200669232}
+  voice: {fileID: 8300000, guid: e8ca79c3550a0ec40a874a4409287164, type: 3}
 --- !u!1 &342170065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,13 +1082,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367737567}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.08, y: -4.27, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.23389138, w: -0.97226274}
+  m_LocalPosition: {x: 4.961, y: -4.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915868451}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.053001}
 --- !u!212 &367737569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1162,11 +1162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5098bb2451e4794daac72bb2970ab76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "Vybran\xFDPart": 3
-  dialogControler: {fileID: 1031190218}
-  DialogObject: {fileID: 375177462}
-  DialogText: {fileID: 1200669232}
-  Voice: {fileID: 8300000, guid: 2e73e7dea0e1d5841a6a277d6604e0ff, type: 3}
+  selectedPart: 3
+  partControler: {fileID: 1031190218}
+  partObject: {fileID: 375177462}
+  partText: {fileID: 1200669232}
+  voice: {fileID: 8300000, guid: 9a4db2cebc1ad244ab84771b49a1e62f, type: 3}
   Trigger: 0
 --- !u!58 &375177464
 CircleCollider2D:
@@ -1287,11 +1287,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.205021
+      value: 2.28
       objectReference: {fileID: 0}
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.1185865
+      value: 10.71
       objectReference: {fileID: 0}
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1354,7 +1354,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1131908523616778, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114077646944737446, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
@@ -1555,11 +1555,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -34.900566
+      value: -34.58
       objectReference: {fileID: 0}
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 23.021933
+      value: 21.2
       objectReference: {fileID: 0}
     - target: {fileID: 4404110127658834, guid: 7c3a516bbea412c42af0582edbbb48ec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4225,11 +4225,6 @@ Transform:
   m_Father: {fileID: 58383936}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1673891505 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1411298886586282, guid: 214b1db0e08cb2b42913292b67858d78,
-    type: 2}
-  m_PrefabInternal: {fileID: 1783907570}
 --- !u!1 &1681583899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4798,8 +4793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da305b853d095b0468e27e8a2bf0d079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1673891505}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 10, y: 10, z: 5}
 --- !u!50 &1995205232
 Rigidbody2D:
   serializedVersion: 4
@@ -5283,11 +5277,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.6050215
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.9385862
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 4888428116087894, guid: a70f17352f41edb47b8792411af4ee54, type: 2}
       propertyPath: m_LocalPosition.z

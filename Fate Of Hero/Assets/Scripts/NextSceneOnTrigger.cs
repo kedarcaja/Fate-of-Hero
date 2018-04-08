@@ -41,13 +41,14 @@ public class NextSceneOnTrigger : MonoBehaviour {
 	{
 		BeginFade (1);
 		yield return new WaitForSeconds(fadeSpeed);
+
 #pragma warning disable CS0618 // Typ nebo člen je zastaralý.
         if (Application.levelCount > Application.loadedLevel)
-#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+
+
         {
 #pragma warning disable CS0618 // Typ nebo člen je zastaralý.
-            Application.LoadLevel (Application.loadedLevel + 1);
-#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+            Application.LoadLevel(Application.loadedLevel + 1);
         }
 	}
 }

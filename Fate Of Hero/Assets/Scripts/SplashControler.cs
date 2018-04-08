@@ -12,32 +12,38 @@ public class SplashControler: MonoBehaviour {
     [SerializeField]
     private CanvasGroup canvasGroup;
     [SerializeField]
-    private Text Klavesa;
-    [SerializeField]
+    private Text KeyText;
+    
     private bool KeyActive;
-    [SerializeField]
+    
     private bool fadingIn, fadingOut;
     [SerializeField]
     private float fadeTime;
     [SerializeField]
     public AudioClip sound;
     [SerializeField]
-    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+    private AudioSource Source { get { return GetComponent<AudioSource>(); } }
     #endregion
 
     #region Unity Metod
 
     void Start () {
+        
+        if (!image) { Debug.LogError("<color=Red><b>ERROR: </b> The image object was not found </color>"); }
+        if (!canvasGroup) { Debug.LogError("<color=Red><b>ERROR: </b> The canvasGroup object was not found </color>"); }
+        if (!KeyText) { Debug.LogError("<color=Red><b>ERROR: </b> The KeyText object was not found </color>"); }
+
+
         StartCoroutine("FadeIn");
-        Klavesa.gameObject.SetActive(false);
+        KeyText.gameObject.SetActive(false);
         gameObject.AddComponent<AudioSource>();
-        source.clip = sound;
-        source.playOnAwake = false;
+        Source.clip = sound;
+        Source.playOnAwake = false;
     }	
 	void Update () {
         if (canvasGroup.alpha == 1)
         {
-            Klavesa.gameObject.SetActive(true);
+            KeyText.gameObject.SetActive(true);
             KeyActive = true;
         }
 
@@ -55,7 +61,7 @@ public class SplashControler: MonoBehaviour {
     }
     void PlaySound()
     {
-        source.PlayOneShot(sound);
+        Source.PlayOneShot(sound);
     }
     private IEnumerator FadeOut()
     {

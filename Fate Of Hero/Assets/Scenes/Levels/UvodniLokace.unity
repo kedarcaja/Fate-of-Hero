@@ -1877,6 +1877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 822717229}
   - component: {fileID: 822717228}
+  - component: {fileID: 822717230}
   m_Layer: 0
   m_Name: SikmaStenaSloupy
   m_TagString: Untagged
@@ -1941,6 +1942,61 @@ Transform:
   m_Father: {fileID: 328436547}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &822717230
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822717227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.5866666, y: 7.2266665}
+    newSize: {x: 3.44, y: 5.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.2666667, y: -2.2666667}
+      - {x: 2.28, y: -1.0533334}
+      - {x: 2.2933333, y: -0.84000003}
+      - {x: 2.2933333, y: 1.2666667}
+      - {x: 1.4133334, y: 1.2133334}
+      - {x: 1.3066667, y: 1.4}
+      - {x: 1.2533333, y: 2.04}
+      - {x: 0.3866667, y: 2.0266666}
+      - {x: 0.29333335, y: 2.2133334}
+      - {x: 0.24000001, y: 2.8533335}
+      - {x: -0.62666667, y: 2.8400002}
+      - {x: -0.73333335, y: 3.0266666}
+      - {x: -0.7733334, y: 3.6133335}
+      - {x: -2.2666667, y: 3.6133335}
+      - {x: -2.2933333, y: 3.2133334}
+      - {x: -2.2933333, y: 1.4}
+      - {x: -2.2666667, y: -0.28}
+      - {x: -2.2933333, y: -0.52000004}
+      - {x: -2.2933333, y: -1.1866667}
+      - {x: -1.3066667, y: -1.4666667}
+      - {x: -1.32, y: -1.5066667}
+      - {x: -1.28, y: -1.9866667}
+      - {x: -0.30666667, y: -2.3200002}
+      - {x: -0.26666668, y: -2.8}
+      - {x: 0.76, y: -3.0933335}
+      - {x: 0.7066667, y: -3.1333334}
+      - {x: 0.73333335, y: -3.6133335}
+      - {x: 2.28, y: -3.6133335}
+      - {x: 2.28, y: -3.6000001}
+      - {x: 2.2933333, y: -3.4533334}
+      - {x: 2.2933333, y: -2.6666667}
 --- !u!1 &843704319 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1131908523616778, guid: 7c3a516bbea412c42af0582edbbb48ec,

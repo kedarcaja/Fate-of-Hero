@@ -19,10 +19,14 @@ public class CreditsScript : MonoBehaviour {
     private bool IsPlay;
     [SerializeField]
     private float speed;
-	
-	void Start () {
+
+    public PlayAnim play;
+
+	void Start ()
+    {
        myRectTransform = GetComponent<RectTransform>();     
     }
+
     void Update()
     {
         if (IsPlay)
@@ -31,19 +35,26 @@ public class CreditsScript : MonoBehaviour {
         }
         if (Ymax == myRectTransform.localPosition.y)
         {
-            myRectTransform.localPosition = new Vector3(0, 0, 0);
+            play.Press();
+            StartCoroutine("ResetPosition");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            myRectTransform.localPosition = new Vector3(0, 0, 0);
+            play.Press();
+            StartCoroutine("ResetPosition");
         }
-
     }
 
     private void OnGUI()
     {
         CreditText.text = TextFile.text;
     }
+    IEnumerator ResetPosition()
+    {
+       
+        yield return new WaitForSeconds(0);
+        myRectTransform.localPosition = new Vector3(0, 0, 0);
+        
+    }
 
-    
 }

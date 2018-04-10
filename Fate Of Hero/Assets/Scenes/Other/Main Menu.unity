@@ -3310,7 +3310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 18, y: 232}
   m_SizeDelta: {x: 1920, y: 4898}
   m_Pivot: {x: -0.000000013038516, y: 1}
 --- !u!114 &1038247321
@@ -3327,9 +3327,10 @@ MonoBehaviour:
   TextFile: {fileID: 4900000, guid: be5de2de4400b454faae1a6ecfefb69d, type: 3}
   CreditText: {fileID: 1038247322}
   Ymax: 0
-  myRectTransform: {fileID: 0}
+  myRectTransform: {fileID: 1038247320}
   IsPlay: 1
   speed: 3
+  play: {fileID: 1038247324}
 --- !u!114 &1038247322
 MonoBehaviour:
   m_ObjectHideFlags: 0

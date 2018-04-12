@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour {
 
    public void LoadLevel(string name)
    {
+           
        Debug.Log("New Level load: " + name);
 #pragma warning disable CS0618
         Application.LoadLevel(name);

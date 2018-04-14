@@ -10,33 +10,53 @@ public class MenuLoad : MonoBehaviour {
     [SerializeField]
     private GameObject ActiveScene;
     private Button ThisGameObjectButton;
+
+
+  
     private void Awake()
     {
-        OtherMenuScenes = GameObject.FindGameObjectsWithTag("MenuScreen");
+
+      
         ActiveScene.tag = "Untagged";
+        OtherMenuScenes = GameObject.FindGameObjectsWithTag("MenuScreen");
+      
+
         ThisGameObjectButton = GetComponent<Button>();
     }
     private void Update()
     {
         ThisGameObjectButton.onClick.AddListener(() => ChangeScene());
+     
     }
 
 
 
     public void ChangeScene()
     {
-        
+       
 
-        for(int i = 0; i < OtherMenuScenes.Length; i++)
+        for (int i = 0; i < OtherMenuScenes.Length; i++)
         {
 
             OtherMenuScenes[i].SetActive(false);
             
         }
-    ActiveScene.SetActive(true);
+        ActiveScene.SetActive(true);
 
+       
     }
 
+    public void Back()
+    {
+
+      
+        transform.parent.transform.parent.gameObject.SetActive(false);
+      
+
+
+
+    }
+  
 
 
 

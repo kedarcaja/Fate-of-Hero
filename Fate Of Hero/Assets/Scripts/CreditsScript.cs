@@ -3,58 +3,75 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreditsScript : MonoBehaviour {
-
+public class CreditsScript : MonoBehaviour
+{
+    #region Variables
     [Header("Text File")]
     [SerializeField]
     private TextAsset TextFile;
     [SerializeField]
     private Text CreditText;
-    [SerializeField]
-    private int Ymax;
    
+    private readonly int Ymax = 4700;
+    
+  
     [SerializeField]
     RectTransform myRectTransform;
+    private float StartPosition;
     [SerializeField]
-    private bool IsPlay;
+    private GameObject scene;
     [SerializeField]
     private float speed;
-
-    public PlayAnim play;
-
-	void Start ()
+    private MenuLoad menuLoader;
+  
+    #endregion
+    void Start()
     {
-       myRectTransform = GetComponent<RectTransform>();     
+      
+
+        myRectTransform = GetComponent<RectTransform>();
+    
+        StartPosition = transform.position.y;
+        menuLoader = transform.parent.GetComponentInParent<MenuLoad>();
+        
     }
 
     void Update()
     {
-        if (IsPlay)
-        {
-            myRectTransform.localPosition += new Vector3(0, (speed*10) * Time.deltaTime, 0);
-        }
-        if (Ymax == myRectTransform.localPosition.y)
-        {
-            play.Press();
-            StartCoroutine("ResetPosition");
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            play.Press();
-            StartCoroutine("ResetPosition");
-        }
-    }
-
-    private void OnGUI()
-    {
-        CreditText.text = TextFile.text;
-    }
-    IEnumerator ResetPosition()
-    {
+       if(IsPlay())
+            myRectTransform.localPosition += new Vector3(0, (speed * 10) * Time.deltaTime, 0);
        
-        yield return new WaitForSeconds(0);
-        myRectTransform.localPosition = new Vector3(0, 0, 0);
-        
+        if (Input.GetKey(KeyCode.Escape))
+        {
+
+          
+            menuLoader.ChangeScene(scene);
+           
+          
+            ResetTextPosition();
+        }
+       
+       
+    } 
+        private void OnGUI()
+        {
+            CreditText.text = TextFile.text;
+        }
+       
+
+    private Vector3 ResetTextPosition()
+    {
+
+
+
+        return myRectTransform.localPosition = new Vector3(0,StartPosition,0);
     }
 
-}
+    private bool IsPlay()
+    {
+
+
+        return transform.parent.parent.gameObject.activeSelf;
+    }
+    }
+ 

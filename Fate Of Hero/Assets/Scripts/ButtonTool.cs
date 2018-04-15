@@ -36,4 +36,13 @@ public class ButtonTool : MonoBehaviour {
         if (!saveExist) { buttonText.color = startColor;  startColor.a = 1; }
     }
     #endregion
+
+
+   public void Back()
+    {
+
+
+
+        transform.parent.parent.gameObject.SetActive(false);
+    }
 }

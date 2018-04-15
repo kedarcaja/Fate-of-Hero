@@ -6,33 +6,33 @@ using UnityEngine.UI;
 public class MenuLoad : MonoBehaviour {
 
 
-    private GameObject[] OtherMenuScenes;
-    [SerializeField]
-    private GameObject ActiveScene;
-    private Button ThisGameObjectButton;
-    private PanelDeactive[] Panels;
+    private  GameObject[] OtherMenuScenes;
+  
+
+  
+    private  Button ThisGameObjectButton;
+    private  PanelDeactive[] Panels;
   
   
     private void Awake()
     {
 
         Panels = FindObjectsOfType<PanelDeactive>();
-        ActiveScene.tag = "Untagged";
+    
         OtherMenuScenes = GameObject.FindGameObjectsWithTag("MenuScreen");
        
         ThisGameObjectButton = GetComponent<Button>();
     }
-    private void Update()
+   
+
+
+
+    public  void ChangeScene(GameObject activeScene)
     {
-        ThisGameObjectButton.onClick.AddListener(() => ChangeScene());
-     
-    }
 
-
-
-    public void ChangeScene()
-    {
        
+        activeScene.tag = "Untagged";
+
 
         for (int i = 0; i < OtherMenuScenes.Length; i++)
         {
@@ -40,7 +40,7 @@ public class MenuLoad : MonoBehaviour {
             OtherMenuScenes[i].SetActive(false);
 
           
-#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+#pragma warning restore CS0618
 
         }
         for(int i = 0; i < Panels.Length; i++)
@@ -49,21 +49,13 @@ public class MenuLoad : MonoBehaviour {
 
             Panels[i].ResetPanel();
         }
-        ActiveScene.SetActive(true);
-       
-       
+      
+        activeScene.SetActive(true);
+        activeScene.tag = "MenuScreen";
+
     }
 
-    public void Back()
-    {
-
-      
-        transform.parent.transform.parent.gameObject.SetActive(false);
-      
-
-
-
-    }
+ 
   
 
 }

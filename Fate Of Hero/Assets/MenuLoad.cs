@@ -10,17 +10,19 @@ public class MenuLoad : MonoBehaviour {
     [SerializeField]
     private GameObject ActiveScene;
     private Button ThisGameObjectButton;
-
-
+    private PanelDeactive[] Panels;
+    private AudioSource audi;
+    [SerializeField]
+    private AudioClip Sound;
   
     private void Awake()
     {
 
-      
+        Panels = FindObjectsOfType<PanelDeactive>();
         ActiveScene.tag = "Untagged";
         OtherMenuScenes = GameObject.FindGameObjectsWithTag("MenuScreen");
-      
-
+        audi = gameObject.AddComponent<AudioSource>();
+        audi.clip = Sound;
         ThisGameObjectButton = GetComponent<Button>();
     }
     private void Update()
@@ -39,10 +41,19 @@ public class MenuLoad : MonoBehaviour {
         {
 
             OtherMenuScenes[i].SetActive(false);
-            
+
+          
+#pragma warning restore CS0618 // Typ nebo člen je zastaralý.
+
+        }
+        for(int i = 0; i < Panels.Length; i++)
+        {
+
+
+            Panels[i].ResetPanel();
         }
         ActiveScene.SetActive(true);
-
+       
        
     }
 

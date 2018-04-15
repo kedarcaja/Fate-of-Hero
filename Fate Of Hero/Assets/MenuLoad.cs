@@ -11,9 +11,7 @@ public class MenuLoad : MonoBehaviour {
     private GameObject ActiveScene;
     private Button ThisGameObjectButton;
     private PanelDeactive[] Panels;
-    private AudioSource audi;
-    [SerializeField]
-    private AudioClip Sound;
+  
   
     private void Awake()
     {
@@ -21,8 +19,7 @@ public class MenuLoad : MonoBehaviour {
         Panels = FindObjectsOfType<PanelDeactive>();
         ActiveScene.tag = "Untagged";
         OtherMenuScenes = GameObject.FindGameObjectsWithTag("MenuScreen");
-        audi = gameObject.AddComponent<AudioSource>();
-        audi.clip = Sound;
+       
         ThisGameObjectButton = GetComponent<Button>();
     }
     private void Update()
@@ -68,8 +65,5 @@ public class MenuLoad : MonoBehaviour {
 
     }
   
-
-
-
 
 }

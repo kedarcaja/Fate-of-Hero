@@ -18,8 +18,8 @@ public class CreditsScript : MonoBehaviour
     [SerializeField]
     RectTransform myRectTransform;
     private float StartPosition;
-    [SerializeField]
-    private GameObject scene;
+    //[SerializeField]
+    //private GameObject scene;
     [SerializeField]
     private float speed;
     private MenuLoad menuLoader;
@@ -43,11 +43,7 @@ public class CreditsScript : MonoBehaviour
        
         if (Input.GetKey(KeyCode.Escape))
         {
-
-          
-            menuLoader.ChangeScene(scene);
-           
-          
+            menuLoader.BackToMenu(menuLoader.Scene);
             ResetTextPosition();
         }
        

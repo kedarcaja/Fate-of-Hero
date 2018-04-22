@@ -12,7 +12,7 @@ public class CreditsScript : MonoBehaviour
     [SerializeField]
     private Text CreditText;
    
-    private readonly int Ymax = 4700;
+    private readonly int Ymax = 4695;
     
   
     [SerializeField]
@@ -22,30 +22,24 @@ public class CreditsScript : MonoBehaviour
     //private GameObject scene;
     [SerializeField]
     private float speed;
-    private MenuLoad menuLoader;
-  
+
+
     #endregion
     void Start()
     {
-      
+
 
         myRectTransform = GetComponent<RectTransform>();
-    
+
         StartPosition = transform.position.y;
-        menuLoader = transform.parent.GetComponentInParent<MenuLoad>();
-        
     }
 
     void Update()
     {
-       if(IsPlay())
+     
             myRectTransform.localPosition += new Vector3(0, (speed * 10) * Time.deltaTime, 0);
-       
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            menuLoader.BackToMenu(menuLoader.Scene);
-            ResetTextPosition();
-        }
+
+
        
        
     } 
@@ -55,7 +49,7 @@ public class CreditsScript : MonoBehaviour
         }
        
 
-    private Vector3 ResetTextPosition()
+   public Vector3 ResetTextPosition()
     {
 
 
@@ -63,11 +57,12 @@ public class CreditsScript : MonoBehaviour
         return myRectTransform.localPosition = new Vector3(0,StartPosition,0);
     }
 
-    private bool IsPlay()
+   
+    public bool isOnEnd()
     {
 
 
-        return transform.parent.parent.gameObject.activeSelf;
+        return myRectTransform.localPosition.y >= Ymax;
     }
-    }
+}
  

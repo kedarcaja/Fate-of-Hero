@@ -9,6 +9,8 @@ public class Pump : MonoBehaviour {
     private bool canBoost = true;
     [SerializeField]
     private RectTransform BellowRectTransform;
+    [SerializeField]
+   
     private void Awake()
     {
       
@@ -17,6 +19,7 @@ public class Pump : MonoBehaviour {
         PumpSlider.maxValue = 135;
         PumpSlider.value = PumpSlider.maxValue;
         PumpSlider.minValue = 70;
+            gameObject.SetActive(false);
 
 
 
@@ -27,8 +30,19 @@ public class Pump : MonoBehaviour {
 
 
         BellowRectTransform.sizeDelta = new Vector2(207, PumpSlider.value);
-       if(PumpSlider.value== PumpSlider.maxValue&&canBoost)
-            SpeedBoost();
+
+        if (TemperatureMeter.HasStarted)
+        {
+           
+            if (PumpSlider.value == PumpSlider.maxValue && canBoost)
+            {
+
+
+                SpeedBoost();
+
+
+            }
+        }
           
            
 
@@ -45,7 +59,7 @@ public class Pump : MonoBehaviour {
     private void SpeedBoost()
     {
         canBoost = false;
-
+        if (TemperatureMeter.speed<30)
         TemperatureMeter.speed += 5;
     }
 }

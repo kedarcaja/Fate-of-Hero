@@ -13,10 +13,12 @@ public class TemperatureMeter : MonoBehaviour {
    [SerializeField]
     private bool CanTurn = true;
     public static bool HasStarted { get; set; }
+    [SerializeField]
+    private GameObject Bellow;
     private RectTransform myRectTransform;
  private void Awake()
      {
-
+       
         speed = 2;
          myRectTransform = GetComponent<RectTransform>();
 
@@ -29,6 +31,7 @@ public class TemperatureMeter : MonoBehaviour {
 
         if (CanTurn&&HasStarted)
         {
+            Bellow.SetActive(true);
             Angels = Vector3.Lerp(Angels, v3To, Time.deltaTime * speed);
             myRectTransform.localEulerAngles = Angels;
         }

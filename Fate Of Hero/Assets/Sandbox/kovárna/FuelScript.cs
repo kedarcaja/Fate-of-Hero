@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FuelScript : MonoBehaviour {
+    #region Variables
     private Button FuelButton;
     private Transform target;
     public  bool isInInventory = false;
  
     private float speed;
     private bool choosed;
-    private GameObject Ore;
+    private GameObject Ore,Fuel;
     private ParticleSystem Fire;
+    #endregion
     private void Awake()
     {
         FuelButton = GetComponent<Button>();
@@ -20,12 +22,17 @@ public class FuelScript : MonoBehaviour {
       
         choosed = false;
         Ore = GameObject.Find("rudy");
+   Fuel = GameObject.Find("Paliva");
         Fire = FindObjectOfType<ParticleSystem>();
 
-        Ore.SetActive(false);
+     
         Fire.Stop();
 
-        speed = 250;
+        speed = 500;
+    }
+    private void Start()
+    {
+        Ore.SetActive(false);
     }
     void Update () {
         if (isInInventory&&!TemperatureMeter.HasStarted)
@@ -48,7 +55,8 @@ public class FuelScript : MonoBehaviour {
         {
             if(transform.position == target.position)
             {
-
+             if(Ore.activeSelf)
+                    Fuel.SetActive(false);
 
                 Ore.SetActive(true);
                
@@ -59,12 +67,14 @@ public class FuelScript : MonoBehaviour {
 
             if (gameObject.transform.IsChildOf(Ore.transform))
             {
+                if(transform.position == target.position)
+                Ore.SetActive(false);
 
                 HasStarted();
             }
           
         }
-        if (transform.IsChildOf(GameObject.Find("Paliva").transform))
+        if (transform.IsChildOf(Fuel.transform))
         {
 
 
@@ -88,14 +98,6 @@ public class FuelScript : MonoBehaviour {
        
         choosed = true;
 
-        for (int i = 0; i < transform.parent.childCount; i++)
-        {
-
-
-            if (transform.parent.GetChild(i) != transform)
-                transform.parent.GetChild(i).gameObject.SetActive(false);
-        }
-       
 
     }
     private void SetDestination()

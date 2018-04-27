@@ -13,13 +13,14 @@ public class TemperatureMeter : MonoBehaviour {
    [SerializeField]
     private bool CanTurn = true;
     public static bool HasStarted { get; set; }
+    public static float cvalityTemperature;
     [SerializeField]
     private GameObject Bellow;
     private RectTransform myRectTransform;
  private void Awake()
      {
        
-        speed = 2;
+        speed = 0.01f;
          myRectTransform = GetComponent<RectTransform>();
 
      }

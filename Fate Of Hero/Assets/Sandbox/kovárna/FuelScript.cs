@@ -53,6 +53,12 @@ public class FuelScript : MonoBehaviour {
 
         if (choosed)
         {
+            for(int i = 0; i < transform.parent.childCount; i++)
+            {
+
+                if (transform.parent.GetChild(i).gameObject != gameObject)
+                    transform.parent.GetChild(i).gameObject.SetActive(false);
+            }
             if(transform.position == target.position)
             {
              if(Ore.activeSelf)
@@ -95,7 +101,7 @@ public class FuelScript : MonoBehaviour {
 
    public void Choosed()
     {
-       
+     
         choosed = true;
 
 

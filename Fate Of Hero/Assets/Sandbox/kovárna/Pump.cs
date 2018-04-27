@@ -60,6 +60,6 @@ public class Pump : MonoBehaviour {
     {
         canBoost = false;
         if (TemperatureMeter.speed<30)
-        TemperatureMeter.speed += 5;
+        TemperatureMeter.speed += 0.5f;
     }
 }

@@ -16,9 +16,9 @@ public class Pump : MonoBehaviour {
       
         PumpSlider = GetComponent<Slider>();
       
-        PumpSlider.maxValue = 135;
+        PumpSlider.maxValue = 308f;
         PumpSlider.value = PumpSlider.maxValue;
-        PumpSlider.minValue = 70;
+        PumpSlider.minValue = 180;
             gameObject.SetActive(false);
 
 
@@ -29,7 +29,7 @@ public class Pump : MonoBehaviour {
     {
 
 
-        BellowRectTransform.sizeDelta = new Vector2(207, PumpSlider.value);
+        BellowRectTransform.sizeDelta = new Vector2(450, PumpSlider.value);
 
         if (TemperatureMeter.HasStarted)
         {

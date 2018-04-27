@@ -11,6 +11,7 @@ public class FuelScript : MonoBehaviour {
     private float speed;
     private bool choosed;
     private GameObject Ore;
+    private ParticleSystem Fire;
     private void Awake()
     {
         FuelButton = GetComponent<Button>();
@@ -19,9 +20,12 @@ public class FuelScript : MonoBehaviour {
       
         choosed = false;
         Ore = GameObject.Find("rudy");
-        Ore.SetActive(false);
+        Fire = FindObjectOfType<ParticleSystem>();
 
-        speed = 200;
+        Ore.SetActive(false);
+        Fire.Stop();
+
+        speed = 250;
     }
     void Update () {
         if (isInInventory&&!TemperatureMeter.HasStarted)
@@ -42,8 +46,17 @@ public class FuelScript : MonoBehaviour {
 
         if (choosed)
         {
-            Ore.SetActive(true);
+            if(transform.position == target.position)
+            {
+
+
+                Ore.SetActive(true);
+               
+                Fire.Play();
+            }
             SetDestination();
+
+
             if (gameObject.transform.IsChildOf(Ore.transform))
             {
 

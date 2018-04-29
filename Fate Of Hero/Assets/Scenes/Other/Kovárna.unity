@@ -695,7 +695,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 814811976}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.5
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2941,9 +2941,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e003cd8acaad8464bbe75b291400df64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speedRotation: 0.1
   max: 0
   min: 0
+  speed: 3
 --- !u!23 &1191908921
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -40,7 +40,7 @@ public class TemperatureMeter : MonoBehaviour {
         
         if (Temperature.z <= max)
             CanTurn = false;
-        print(speed);
+        
     }
 
 

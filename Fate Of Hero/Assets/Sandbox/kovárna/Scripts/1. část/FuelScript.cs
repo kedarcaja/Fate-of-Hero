@@ -103,7 +103,7 @@ public class FuelScript : MonoBehaviour {
     {
      
         choosed = true;
-
+        print("clicked");
 
     }
     private void SetDestination()

@@ -78,7 +78,7 @@ public class Pour : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
             SetStart = true;
 
-        print(transform.eulerAngles.x);
+   
     }
 
 

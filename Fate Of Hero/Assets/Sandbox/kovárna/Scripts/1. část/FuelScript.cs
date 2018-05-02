@@ -37,19 +37,12 @@ public class FuelScript : MonoBehaviour {
     void Update () {
         if (isInInventory&&!TemperatureMeter.HasStarted)
         {
-
-
-
-
             FuelButton.interactable = true;
 
         }
       
         if (!isInInventory)
             FuelButton.interactable = false;
-
-
-
 
         if (choosed)
         {
@@ -94,16 +87,16 @@ public class FuelScript : MonoBehaviour {
 
 
     }
-
-
-
-  
+    public void Bum()
+    {
+        Debug.Log("bum");
+    }
 
    public void Choosed()
     {
      
         choosed = true;
-
+        Debug.Log("bum");
 
     }
     private void SetDestination()
@@ -116,8 +109,6 @@ public class FuelScript : MonoBehaviour {
 
   private void HasStarted()
     {
-
-
         TemperatureMeter.HasStarted = true;
     }
   

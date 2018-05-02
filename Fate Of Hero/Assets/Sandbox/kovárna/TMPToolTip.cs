@@ -8,11 +8,27 @@ public class TMPToolTip : MonoBehaviour {
     private Text text;
     [SerializeField]
     private GameObject Panel;
-    private float max, min;
+    [HideInInspector]
+public  float CurrentValue;
+    [SerializeField]
+   private float maxValue;
+
+
+
+
+    public float Max
+    {
+        get
+        {
+            return maxValue;
+
+        }
+    }
+
     private void Awake()
     {
         text = Panel.GetComponentInChildren<Text>();
-        max = 200;
+     
     }
     private void OnMouseEnter()
     {
@@ -24,6 +40,6 @@ public class TMPToolTip : MonoBehaviour {
     }
     private void Update()
     {
-        text.text = min + "/" + max;
+        text.text =  CurrentValue+ "/" + maxValue;
     }
 }

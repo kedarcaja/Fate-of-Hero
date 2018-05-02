@@ -11,10 +11,14 @@ public class Pour : MonoBehaviour {
     [SerializeField]
     private float speedRotation,max, min,speed,currentTime,FullTime;
     private TMPToolTip toolTip;
+    private ParticleSystem[] HotMetal;
     private void Start()
     {
+        HotMetal = FindObjectsOfType<ParticleSystem>();
+        for (int i = 0; i < HotMetal.Length; i++)
+            HotMetal[i].Stop();
         Puller = FindObjectOfType<Slider>();
-        max = 272;
+        max = 271;
         min = 359;
         StartCoroutine(delay());
         toolTip = FindObjectOfType<TMPToolTip>();
@@ -38,12 +42,22 @@ public class Pour : MonoBehaviour {
 	}
     private void Update()
     {
-        if (CanPour&&transform.eulerAngles.x<=max&&toolTip.CurrentValue<toolTip.Max)
+        if (transform.eulerAngles.x<=max&&toolTip.CurrentValue<toolTip.Max)
         {
-            toolTip.CurrentValue += 1;
-            CanPour = false;
+            if (CanPour){
+                toolTip.CurrentValue += 1;
+                CanPour = false;
+            }
+           
+                HotMetal[1].Play();
+            StartCoroutine(HotMetalWait());
+        }
+        else
+        {
 
 
+            for (int i = 0; i < HotMetal.Length; i++)
+                HotMetal[i].Stop();
         }
 
         print(CanPour);
@@ -80,7 +94,13 @@ public class Pour : MonoBehaviour {
         
     }
 
+    IEnumerator HotMetalWait()
+    {
 
+
+        yield return new WaitForSeconds(0.5f);
+        HotMetal[0].Play();
+    }
      
     }
 

@@ -8,11 +8,11 @@ public class Pour : MonoBehaviour {
     private bool SetStart = false;
     private float CurrentValue,returnValue;
     [SerializeField]
-    private float speedRotation,max, min,speed;
+    private float speedRotation,max, min,speed,currentTime,FullTime;
     private void Start()
     {
         Puller = FindObjectOfType<Slider>();
-        max = 280;
+        max = 272;
         min = 359;
     }
 
@@ -20,8 +20,8 @@ public class Pour : MonoBehaviour {
         if (Puller.value >CurrentValue&& transform.eulerAngles.x > max)
         {
             transform.Rotate(new Vector3(0, speedRotation));
-           
 
+           
         }
         if (Puller.value < CurrentValue)
         {
@@ -35,7 +35,7 @@ public class Pour : MonoBehaviour {
     private void Update()
     {
 
-
+     
 
         if (SetStart)
         {
@@ -53,5 +53,5 @@ public class Pour : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
             SetStart = true;
     }
-    
+  
 }

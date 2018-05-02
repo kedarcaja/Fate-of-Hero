@@ -9,7 +9,7 @@ public class Pour : MonoBehaviour {
     private bool CanPour;
     private float CurrentValue,returnValue;
     [SerializeField]
-    private float speedRotation,max, min,speed,currentTime,FullTime;
+    private float speedRotation, max, min, speed;
     private TMPToolTip toolTip;
     private ParticleSystem[] HotMetal;
     private void Start()
@@ -18,8 +18,8 @@ public class Pour : MonoBehaviour {
         for (int i = 0; i < HotMetal.Length; i++)
             HotMetal[i].Stop();
         Puller = FindObjectOfType<Slider>();
-        max = 271;
-        min = 359;
+        max = 1f;
+        min =84f;
         StartCoroutine(delay());
         toolTip = FindObjectOfType<TMPToolTip>();
     }
@@ -60,7 +60,7 @@ public class Pour : MonoBehaviour {
                 HotMetal[i].Stop();
         }
 
-        print(CanPour);
+       
 
         if (SetStart)
         {
@@ -69,7 +69,7 @@ public class Pour : MonoBehaviour {
             transform.eulerAngles = new Vector3(returnValue, transform.eulerAngles.y, transform.eulerAngles.z);
 
         }
-        print(toolTip.CurrentValue);
+     
         if (Input.GetMouseButtonDown(0))
         {
             SetStart = false;
@@ -77,6 +77,8 @@ public class Pour : MonoBehaviour {
         }
         if (Input.GetMouseButtonUp(0))
             SetStart = true;
+
+        print(transform.eulerAngles.x);
     }
 
 

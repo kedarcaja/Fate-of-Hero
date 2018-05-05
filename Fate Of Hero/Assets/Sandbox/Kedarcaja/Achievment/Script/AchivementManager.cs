@@ -4,16 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class AchivementManager : MonoBehaviour {
-    #region Variables
+  
+    [SerializeField]
     public GameObject achivementPrefab;
+    [SerializeField]
     public Sprite[] sprites;
+    [SerializeField]
     public Scrollbar scrollbar;
+    
     private AchvementButton ActiveButton;
+    [SerializeField]
     public ScrollRect scrollRect;
+    [SerializeField]
     public Text textPoint;
+    [SerializeField]
     public GameObject visualAchievment;
+    [SerializeField]
     public GameObject achivementMenu;
+    [SerializeField]
     public Dictionary<string, Achivement> achievment = new Dictionary<string, Achivement>();
+    [SerializeField]
     public Sprite unlockedSprite;
     private static AchivementManager instance;
     private int fadeTime = 2;
@@ -32,13 +42,9 @@ public class AchivementManager : MonoBehaviour {
  
     }
 
-    #endregion
-    #region Metods
     void Start ()
     {
         PlayerPrefs.DeleteAll();
-       
-
         ActiveButton = GameObject.Find("GeneralBtn").GetComponent<AchvementButton>();
         CreateAchivement("General","Press W","Press W to unlock",5,1,0);
         CreateAchivement("General","Press S","Press S to unlock",5,1,0);
@@ -187,5 +193,5 @@ public class AchivementManager : MonoBehaviour {
         Destroy(achievment);
 
     }
-    #endregion
+ 
 }

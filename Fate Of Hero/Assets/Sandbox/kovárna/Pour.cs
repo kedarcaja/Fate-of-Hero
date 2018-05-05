@@ -20,7 +20,7 @@ public class Pour : MonoBehaviour {
         Puller = FindObjectOfType<Slider>();
         max = 1f;
         min =84f;
-        StartCoroutine(delay());
+        StartCoroutine(Delay());
         toolTip = FindObjectOfType<TMPToolTip>();
     }
 
@@ -28,8 +28,6 @@ public class Pour : MonoBehaviour {
         if (Puller.value >CurrentValue&& transform.eulerAngles.x > max)
         {
             transform.Rotate(new Vector3(0, speedRotation));
-
-           
         }
         if (Puller.value < CurrentValue)
         {
@@ -59,15 +57,11 @@ public class Pour : MonoBehaviour {
             for (int i = 0; i < HotMetal.Length; i++)
                 HotMetal[i].Stop();
         }
-
-       
-
         if (SetStart)
         {
             Puller.value = Mathf.Lerp(Puller.value, Puller.minValue, Time.deltaTime*speed);
             returnValue = Mathf.Lerp(transform.eulerAngles.x, min, Time.deltaTime*speed);
-            transform.eulerAngles = new Vector3(returnValue, transform.eulerAngles.y, transform.eulerAngles.z);
-
+            transform.eulerAngles = new Vector3(returnValue, transform.eulerAngles.y,transform.eulerAngles.z);
         }
      
         if (Input.GetMouseButtonDown(0))
@@ -77,33 +71,23 @@ public class Pour : MonoBehaviour {
         }
         if (Input.GetMouseButtonUp(0))
             SetStart = true;
-
-   
     }
 
-
- 
-
-      IEnumerator delay()
-    {
-
-
+      IEnumerator Delay()
+      {
         while (true)
         {
             yield return new WaitForSeconds(2);
             CanPour = true;
-        }
-        
-    }
+        } 
+      }
 
     IEnumerator HotMetalWait()
     {
-
-
         yield return new WaitForSeconds(0.5f);
         HotMetal[0].Play();
     }
      
-    }
+}
 
 

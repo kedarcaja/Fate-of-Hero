@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuControler : MonoBehaviour {
-    #region Variables
+public class MenuControler : MonoBehaviour
+{
     [Header("Nastavení")]
     [SerializeField]
    private Slider BrightnessSlider;
@@ -17,12 +17,6 @@ public class MenuControler : MonoBehaviour {
     private Dropdown ResxDropdown, QualityDropdown;
     Resolution[] resolutions;
 
-   
-
-
-    #endregion
-
-    #region Unity Metod
     void Start()
     {
         if (!BrightnessSlider) { Debug.LogError("Objekt BrightnessSlider nebyl nalezen"); }
@@ -70,10 +64,6 @@ public class MenuControler : MonoBehaviour {
     {
         return res.width + " x " + res.height;
     }
-    public void SaveAndExit()
-    {
-       
-    }
     public void SetDefault()
     {
         VolumeSlider.value = 100f;
@@ -91,7 +81,6 @@ public class MenuControler : MonoBehaviour {
          Application.Quit();
         #endif
     }
-        #endregion
 }
 
 

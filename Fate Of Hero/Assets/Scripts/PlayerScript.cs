@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript : MonoBehaviour {
-    #region Variables
+public class PlayerScript : MonoBehaviour
+{
+   
     private static PlayerScript instance;
     [SerializeField]
     private float speed;
@@ -28,10 +29,6 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-    #endregion
-
-    #region Unity Metod
-
     void Start()
     {
         myrigidbody = GetComponent<Rigidbody2D>();
@@ -44,7 +41,6 @@ public class PlayerScript : MonoBehaviour {
         if (isMove)
         {
             Move();
-           // transform.Translate(Input.GetAxis("Horizontal") * speed * UnityEngine.Time.deltaTime, Input.GetAxis("Vertical") * speed * UnityEngine.Time.deltaTime, 0f);
         }
        
     }
@@ -74,5 +70,4 @@ public class PlayerScript : MonoBehaviour {
         }
 
     }
-    #endregion
 }

@@ -13,22 +13,17 @@ public  float CurrentValue;
     [SerializeField]
    private float maxValue;
 
-
-
-
     public float Max
     {
         get
         {
             return maxValue;
-
         }
     }
 
     private void Awake()
     {
         text = Panel.GetComponentInChildren<Text>();
-     
     }
     private void OnMouseEnter()
     {

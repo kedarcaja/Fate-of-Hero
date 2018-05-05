@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WallFaded : MonoBehaviour {
-    #region Varibles
+public class WallFaded : MonoBehaviour
+{
     [SerializeField]
     private GameObject wall1, wall2;
-
     private Color def;
     private Color fade;
-    #endregion
 
-    #region Unity methods
 
-    void Start () {
+    void Start()
+    {
         def = wall1.GetComponent<SpriteRenderer>().color;
         fade = def;
         fade.a = 0.4f;
@@ -37,5 +35,4 @@ public class WallFaded : MonoBehaviour {
             wall2.GetComponent<SpriteRenderer>().color = def;
         }
     }
-    #endregion
 }

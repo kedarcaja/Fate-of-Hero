@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class PlayAnim : MonoBehaviour {
 
- //   [SerializeField]
-	//private GameObject transInObject;
- //   [SerializeField]
- //   private Animation transOutAnim;
- //   [SerializeField]
- //   private Animation transInAnim;
-
     [SerializeField]
     private CanvasGroup canvasGroupIn;
     [SerializeField]
@@ -27,15 +20,7 @@ public class PlayAnim : MonoBehaviour {
             StartCoroutine("FadeIn");
         }
     }
-    public void Press()
-    {
-        
-        //transInObject.SetActive(true);
-        //transInAnim.Play();
-        //transOutAnim.Play();
-       // 
-       
-    }
+   
     private IEnumerator FadeOut()
     {
         if (!fadingOut)

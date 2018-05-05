@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SplashControler: MonoBehaviour {
-
-    #region Variables
+public class SplashControler: MonoBehaviour
+{
     [SerializeField]
     private Image image;
     Color c;
@@ -23,9 +22,6 @@ public class SplashControler: MonoBehaviour {
     public AudioClip sound;
     [SerializeField]
     private AudioSource Source { get { return GetComponent<AudioSource>(); } }
-    #endregion
-
-    #region Unity Metod
 
     void Start () {
         
@@ -55,9 +51,7 @@ public class SplashControler: MonoBehaviour {
 	}
     public void LoadNextLevel()
     {
-#pragma warning disable CS0618 
         Application.LoadLevel(Application.loadedLevel + 1);
-#pragma warning restore CS0618 
     }
     void PlaySound()
     {
@@ -105,5 +99,4 @@ public class SplashControler: MonoBehaviour {
         }
 
     }
-    #endregion
 }

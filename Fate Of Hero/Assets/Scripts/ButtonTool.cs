@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 public class ButtonTool : MonoBehaviour {
-    #region Variables
+   
     [Header("Button")]
     [SerializeField]
     private Text buttonText;
@@ -13,19 +13,11 @@ public class ButtonTool : MonoBehaviour {
     [SerializeField]
     private Color Enter;
     private bool saveExist;
-   
- 
 
-    #endregion
-    #region Unity Metod
-    void Start () {
-		
-		
-		
+    void Start ()
+    {
         if (!buttonText) { Debug.LogError("<color=Red><b>ERROR: </b> Text buttonText was not found </color>"); }
     }
-	
-
 
     public void MouseEnter()
     {
@@ -35,14 +27,9 @@ public class ButtonTool : MonoBehaviour {
     {
         if (!saveExist) { buttonText.color = startColor;  startColor.a = 1; }
     }
-    #endregion
-
 
    public void Back()
     {
-
-
-
         transform.parent.parent.gameObject.SetActive(false);
     }
 }

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class TempChoice : MonoBehaviour {
+public class TempChoice : MonoBehaviour
+{
 
 [SerializeField]
     private Dropdown TemplateChoose;
@@ -11,7 +12,6 @@ public class TempChoice : MonoBehaviour {
    
     private void Start()
     {
-    
         TemplateChoose = FindObjectOfType<Dropdown>();
     }
     private void Update()
@@ -19,14 +19,9 @@ public class TempChoice : MonoBehaviour {
         if (TemplateChoose.value == 0)
         {
             gameObject.GetComponent<Image>().color = Color.black;
-
-
         }
         else
             gameObject.GetComponent<Image>().color = Color.white;
-
-
         gameObject.GetComponent<Image>().sprite = templates[TemplateChoose.value];
     }
-  
 }

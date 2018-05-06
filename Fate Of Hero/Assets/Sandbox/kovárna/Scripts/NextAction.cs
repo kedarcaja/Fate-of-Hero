@@ -8,7 +8,5 @@ public class NextAction : MonoBehaviour {
     {
         ToActive.SetActive(true);
         gameObject.SetActive(false);
-
-
     }
 }

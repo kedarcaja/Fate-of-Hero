@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZoomCamera : MonoBehaviour {
+public class ZoomCamera : MonoBehaviour
+{
     [SerializeField]
 	private float zoomSpeed = 1;
     [SerializeField]

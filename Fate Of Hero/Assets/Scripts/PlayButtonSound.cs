@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayButtonSound : MonoBehaviour {
-
+public class PlayButtonSound : MonoBehaviour
+{
     private AudioSource audi;
     public AudioClip Sound;
-
-
 
     private void Awake()
     {
@@ -18,15 +16,9 @@ public class PlayButtonSound : MonoBehaviour {
     }
 
 
-
     public  void PlaySound()
     {
-
-
-
-
         audi.PlayOneShot(Sound);
-
 
     }
 }

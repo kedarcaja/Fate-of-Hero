@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<ItemContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Weapons>
+    <Item xsi:type="Weapon">
+      <ItemName>Rare Sword</ItemName>
+      <Description>This is RARE sword</Description>
+      <ItemType>MAINHAND</ItemType>
+      <Quality>RARE</Quality>
+      <SpriteNeutral>Weapons/Sword01</SpriteNeutral>
+      <SpriteHighlighted>Weapons/Sword02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>12</Strength>
+      <Agility>8</Agility>
+      <Intellect>6</Intellect>
+      <Stamina>5</Stamina>
+      <AttackSpeed>2</AttackSpeed>
+    </Item>
+    <Item xsi:type="Weapon">
+      <ItemName>Dvouruční sekera</ItemName>
+      <Description>This is AXE</Description>
+      <ItemType>TWOHAND</ItemType>
+      <Quality>EPIC</Quality>
+      <SpriteNeutral>Weapons/TwoHand01</SpriteNeutral>
+      <SpriteHighlighted>Weapons/TwoHand01</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>80</Strength>
+      <Agility>15</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>25</Stamina>
+      <AttackSpeed>0.25</AttackSpeed>
+    </Item>
+    <Item xsi:type="Weapon">
+      <ItemName>Dvouruční sekera smrti</ItemName>
+      <Description>This is AXE</Description>
+      <ItemType>TWOHAND</ItemType>
+      <Quality>EPIC</Quality>
+      <SpriteNeutral>Weapons/TwoHand01</SpriteNeutral>
+      <SpriteHighlighted>Weapons/TwoHand01</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>100</Strength>
+      <Agility>15</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>25</Stamina>
+      <AttackSpeed>0.25</AttackSpeed>
+    </Item>
+    <Item xsi:type="Weapon">
+      <ItemName>Štít mrtvého rytíře</ItemName>
+      <Description>This is Shied</Description>
+      <ItemType>OFFHAND</ItemType>
+      <Quality>ARTEFACT</Quality>
+      <SpriteNeutral>Weapons/Shield01</SpriteNeutral>
+      <SpriteHighlighted>Weapons/Shield01</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>59</Strength>
+      <Agility>81</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>26</Stamina>
+      <AttackSpeed>1</AttackSpeed>
+    </Item>
+  </Weapons>
+  <Consumeables>
+    <Item xsi:type="Consumeable">
+      <ItemName>Mana potion</ItemName>
+      <Description>This is Mana potion</Description>
+      <ItemType>CONSUMEABLE</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Consumeable/M01</SpriteNeutral>
+      <SpriteHighlighted>Consumeable/M02</SpriteHighlighted>
+      <MaxSize>10</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Health>0</Health>
+      <Mana>15</Mana>
+    </Item>
+    <Item xsi:type="Consumeable">
+      <ItemName>Health potion</ItemName>
+      <Description>This is Health potion</Description>
+      <ItemType>CONSUMEABLE</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Consumeable/Z01</SpriteNeutral>
+      <SpriteHighlighted>Consumeable/Z02</SpriteHighlighted>
+      <MaxSize>5</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Health>0</Health>
+      <Mana>25</Mana>
+    </Item>
+    <Item xsi:type="Consumeable">
+      <ItemName>zivotabudič</ItemName>
+      <Description>This is IRON</Description>
+      <ItemType>CONSUMEABLE</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Consumeable/Z01</SpriteNeutral>
+      <SpriteHighlighted>Consumeable/Z02</SpriteHighlighted>
+      <MaxSize>15</MaxSize>
+      <BuyPrice>60</BuyPrice>
+      <SellPrice>8</SellPrice>
+      <Health>0</Health>
+      <Mana>0</Mana>
+    </Item>
+  </Consumeables>
+  <Equipment>
+    <Item xsi:type="Equipment">
+      <ItemName>Legendary Armor</ItemName>
+      <Description>This is LEGENDARY armor</Description>
+      <ItemType>CHEST</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Armor01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Armor02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>0</Strength>
+      <Agility>9</Agility>
+      <Intellect>5</Intellect>
+      <Stamina>3</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Uncoman Head</ItemName>
+      <Description>This is UNCOMAN head</Description>
+      <ItemType>HEAD</ItemType>
+      <Quality>UNCOMAN</Quality>
+      <SpriteNeutral>Equipment/Helma01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Helma02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>0</Strength>
+      <Agility>9</Agility>
+      <Intellect>5</Intellect>
+      <Stamina>3</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Ruka smrti</ItemName>
+      <Description>This is ARM</Description>
+      <ItemType>ARM</ItemType>
+      <Quality>RARE</Quality>
+      <SpriteNeutral>Equipment/Arm01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Arm02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>8</Strength>
+      <Agility>5</Agility>
+      <Intellect>12</Intellect>
+      <Stamina>7</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Nátepník</ItemName>
+      <Description> This is ARMGUARD</Description>
+      <ItemType>ARMGUARD</ItemType>
+      <Quality>RARE</Quality>
+      <SpriteNeutral>Equipment/ArmGuard01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/ArmGuard02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>85</Strength>
+      <Agility>59</Agility>
+      <Intellect>48</Intellect>
+      <Stamina>63</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Námořníkova zbroj</ItemName>
+      <Description>This is ARMOR</Description>
+      <ItemType>CHEST</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Armor03</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Armor04</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>35</Strength>
+      <Agility>25</Agility>
+      <Intellect>68</Intellect>
+      <Stamina>85</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Králíkovi botky</ItemName>
+      <Description>This is Boot</Description>
+      <ItemType>BOOTS</ItemType>
+      <Quality>UNCOMAN</Quality>
+      <SpriteNeutral>Equipment/Boot01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Boot02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>15</Strength>
+      <Agility>45</Agility>
+      <Intellect>58</Intellect>
+      <Stamina>25</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Perlové náušnice</ItemName>
+      <Description>This is EARRING</Description>
+      <ItemType>EARRING</ItemType>
+      <Quality>RARE</Quality>
+      <SpriteNeutral>Equipment/EarRing01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/EarRing02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>45</Strength>
+      <Agility>25</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>25</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Prďácký kaťata</ItemName>
+      <Description>This is LEGS</Description>
+      <ItemType>LEGS</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Legs01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Legs02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>45</Strength>
+      <Agility>25</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>25</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Parádní náušnice</ItemName>
+      <Description>This is NEKLANCE</Description>
+      <ItemType>TRINKET</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Necklace01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Necklace02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>59</Strength>
+      <Agility>81</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>26</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Pečetní prsten</ItemName>
+      <Description>This is Ring</Description>
+      <ItemType>RING</ItemType>
+      <Quality>RARE</Quality>
+      <SpriteNeutral>Equipment/Ring01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Ring02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>59</Strength>
+      <Agility>81</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>26</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>nátepník</ItemName>
+      <Description>This is SPAULDER</Description>
+      <ItemType>SPAULDER</ItemType>
+      <Quality>ARTEFACT</Quality>
+      <SpriteNeutral>Equipment/SPAULDER01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/SPAULDER02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>59</Strength>
+      <Agility>81</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>26</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Leather Belt</ItemName>
+      <Description>This is BELT</Description>
+      <ItemType>BELT</ItemType>
+      <Quality>ARTEFACT</Quality>
+      <SpriteNeutral>Equipment/Belt01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Belt02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>59</Strength>
+      <Agility>81</Agility>
+      <Intellect>7</Intellect>
+      <Stamina>26</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>Helma</ItemName>
+      <Description>This is Helma</Description>
+      <ItemType>HEAD</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Helma01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Helma02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+      <Strength>3</Strength>
+      <Agility>12</Agility>
+      <Intellect>25</Intellect>
+      <Stamina>4</Stamina>
+    </Item>
+    <Item xsi:type="Equipment">
+      <ItemName>sedmimilove botky</ItemName>
+      <Description>prostě botky</Description>
+      <ItemType>BOOTS</ItemType>
+      <Quality>LEGENDARY</Quality>
+      <SpriteNeutral>Equipment/Boot01</SpriteNeutral>
+      <SpriteHighlighted>Equipment/Boot02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>25</BuyPrice>
+      <SellPrice>10</SellPrice>
+      <Strength>1</Strength>
+      <Agility>2</Agility>
+      <Intellect>3</Intellect>
+      <Stamina>4</Stamina>
+    </Item>
+  </Equipment>
+  <Materials>
+    <Item xsi:type="Materials">
+      <ItemName>Iron Ingot</ItemName>
+      <Description>This is IRON</Description>
+      <ItemType>MATERIALS</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Material/Iron01</SpriteNeutral>
+      <SpriteHighlighted>Material/Iron02</SpriteHighlighted>
+      <MaxSize>10</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+    </Item>
+    <Item xsi:type="Materials">
+      <ItemName>Stone</ItemName>
+      <Description>This is Stone</Description>
+      <ItemType>MATERIALS</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Material/Stone01</SpriteNeutral>
+      <SpriteHighlighted>Material/Stone02</SpriteHighlighted>
+      <MaxSize>10</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+    </Item>
+    <Item xsi:type="Materials">
+      <ItemName>Wood Log</ItemName>
+      <Description>This is WOOD</Description>
+      <ItemType>MATERIALS</ItemType>
+      <Quality>COMON</Quality>
+      <SpriteNeutral>Material/Wood01</SpriteNeutral>
+      <SpriteHighlighted>Material/Wood02</SpriteHighlighted>
+      <MaxSize>10</MaxSize>
+      <BuyPrice>10</BuyPrice>
+      <SellPrice>5</SellPrice>
+    </Item>
+  </Materials>
+</ItemContainer>

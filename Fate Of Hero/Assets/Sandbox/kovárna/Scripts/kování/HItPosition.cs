@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class HItPosition : MonoBehaviour {
 
     private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP;
+    [SerializeField]
+    private GameObject PowerSlider;
 	void Start () {
         StartPosition = 370;
         EndPosition = -749;
@@ -38,6 +40,14 @@ public class HItPosition : MonoBehaviour {
         {
             transform.localPosition = new Vector3(transform.localPosition.x, YPositionDown);
 
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+
+
+            MoveSpeed = 0;
+            PowerSlider.SetActive(true);
         }
     }
 }

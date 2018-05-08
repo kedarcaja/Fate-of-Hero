@@ -13,8 +13,8 @@ public static float AllHitPower;
 	
 
 	void Update () {
-        print("Current Power: "+AllHitPower);
-        print("value of hits: " + HitValue);
+     print("Current Power: "+AllHitPower);
+     print("value of hits: " + HitValue);
 
     }
 }

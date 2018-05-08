@@ -44,7 +44,7 @@ public class HItPosition : MonoBehaviour {
 
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && Blade.HitValue > 0)
+        if (Input.GetKeyDown(KeyCode.A) && Blade.HitValue > 0&&isChoosingPosition)
         {
 
 

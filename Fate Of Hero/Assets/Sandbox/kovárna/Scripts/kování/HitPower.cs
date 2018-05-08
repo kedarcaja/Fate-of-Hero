@@ -11,6 +11,9 @@ public class HitPower : MonoBehaviour {
     [SerializeField]
     private GameObject Hammer;
     private Animator HammerAnimator;
+    [SerializeField]
+    private Text PowerText;
+  
         void Start () {
         PowerSlider = GetComponent<Slider>();
         PowerSlider.interactable = false;
@@ -18,6 +21,8 @@ public class HitPower : MonoBehaviour {
         PositionHit = FindObjectOfType<HItPosition>();
         Hammer.SetActive(false);
         HammerAnimator = Hammer.GetComponent<Animator>();
+      
+        PowerText.text = "";
 	}
 
     // Update is called once per frame
@@ -44,11 +49,36 @@ public class HitPower : MonoBehaviour {
         {
             Hammer.SetActive(true);
             Hammer.transform.localPosition = PositionHit.gameObject.transform.localPosition;
-            HammerAnimator.SetTrigger("Hit");
+
             PowerValue = PowerSlider.value;
+            if (PowerValue >= 0.4f && PowerValue < 0.6f)
+            {
+
+                PowerValue *= 1.5f;
+                PowerText.text = "Great";
+                PowerText.color = Color.green;
+            }
+            else if(PowerValue > 0.6f)
+            {
+                PowerValue /= 10;
+                PowerText.text = "To much";
+                PowerText.color = Color.red;
+
+            }
+            else if (PowerValue <0.4)
+            {
+                PowerValue /= 2;
+                PowerText.text = "To low";
+                PowerText.color = Color.cyan;
+
+            }
+            HammerAnimator.SetTrigger("Hit");
+           
             Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
             isChoosingPower = false;
+
+       
 
         }
     }

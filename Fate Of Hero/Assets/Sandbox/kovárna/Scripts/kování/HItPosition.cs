@@ -6,22 +6,24 @@ using UnityEngine.UI;
 public class HItPosition : MonoBehaviour {
 
     private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP;
-    [SerializeField]
-    private GameObject PowerSlider;
+   
+    private HitPower PowerHit;
+   public bool isChoosingPosition;
 	void Start () {
+        PowerHit = FindObjectOfType<HitPower>();
         StartPosition = 370;
         EndPosition = -749;
         YPositionDown = -72;
         YPositionUP = 34;
         MoveSpeed = 10;
         transform.localPosition = new Vector3(StartPosition,YPositionDown);
-
+        isChoosingPosition = true;
 	}
 	
 
 	void Update () {
 
-
+        if(isChoosingPosition&& Blade.HitValue > 0)
         transform.localPosition = new Vector3(transform.localPosition.x + MoveSpeed, transform.localPosition.y);
 		if(transform.localPosition.x < EndPosition || transform.localPosition.x > StartPosition)
         {
@@ -42,12 +44,12 @@ public class HItPosition : MonoBehaviour {
 
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.A) && Blade.HitValue > 0)
         {
 
 
-            MoveSpeed = 0;
-            PowerSlider.SetActive(true);
+            isChoosingPosition = false;
+            PowerHit.isChoosingPower = true;
         }
     }
 }

@@ -4,12 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterPanel : Inventory
-{
-
-    #region Variables
+{ 
     public Slot[] equipmentSlots;
     private static CharacterPanel instance;
-
     public static CharacterPanel Instance
     {
         get
@@ -20,7 +17,6 @@ public class CharacterPanel : Inventory
             }
             return CharacterPanel.instance;
         }
-
         set
         {
             instance = value;
@@ -34,22 +30,10 @@ public class CharacterPanel : Inventory
     {
         get { return equipmentSlots[10]; }
     }
-    #endregion
-
-    #region Unity Metod
-
- //   void Start () {
-		
-	//}
-	
-	//void Update () {
-		
-	//}
     public override void CreateBackgroundLayout()
     {
         
     }
-
     public override void CreateLayout()
     {
         
@@ -58,7 +42,6 @@ public class CharacterPanel : Inventory
     {
         equipmentSlots = transform.GetComponentsInChildren<Slot>();
     }
-
     public void EquipItem(Slot slot, ItemScript item)
     {
         if (item.Item.ItemType == ItemType.MAINHAND || item.Item.ItemType == ItemType.TWOHAND && OffHandSlot.IsEmpty)
@@ -70,7 +53,6 @@ public class CharacterPanel : Inventory
             Slot.SwapItems(slot, Array.Find(equipmentSlots, x => x.canContain == item.Item.ItemType));
         }        
     }
-
     public override void ShowToolTip(GameObject slot)
     {
         Slot tmpSlot = slot.GetComponent<Slot>();
@@ -150,9 +132,5 @@ public class CharacterPanel : Inventory
             Destroy(loadedItem);
             CalcStats();
         }
-        
-
     }
-
-        #endregion
     }

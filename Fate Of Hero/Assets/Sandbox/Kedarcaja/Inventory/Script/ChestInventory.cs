@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChestInventory : Inventory {
-
-    #region Variables
+public class ChestInventory : Inventory
+{
     private List<Stack<ItemScript>> chestItems;
     private int chestSlot;
-   
     int draw;
-    #endregion
 
-    #region Unity Metod
     public override void CreateBackgroundLayout()
     {
         allBackgroundSlot = new List<GameObject>();
@@ -46,7 +42,6 @@ public class ChestInventory : Inventory {
         }
         hoverYOffset = slotSize * 0.01f;
     }
-
     public void UpdateBackgroundLayout(int rows, int slots)
     {
         inventoryWidth = (slots / rows) * (slotSize + slotPaddingLeft) + slotPaddingLeft;
@@ -115,7 +110,6 @@ public class ChestInventory : Inventory {
             }
         }
     }
-
     public override void Open()
     {
         base.Open();
@@ -124,10 +118,8 @@ public class ChestInventory : Inventory {
             MoveItemsFromChest();
         }
     }
-
     public void MoveItemsToChest()
     {
-       
         chestItems.Clear();
 
         for (int i = 0; i < chestSlot; i++)
@@ -169,23 +161,16 @@ public class ChestInventory : Inventory {
             allBackgroundSlot[i].SetActive(true);
         }
     }
-
     protected override IEnumerator FadeOut()
     {
         yield return StartCoroutine(base.FadeOut());
         MoveItemsToChest();
     }
-
     public override void SaveInventory()
     {
        
     }
     public override void LoadInventory()
-    {
-        //foreach (GameObject slot in allSlots)
-        //{
-        //    slot.GetComponent<Slot>().ClearSlot();
-        //}
-    }
-    #endregion
+    {   
+    }   
 }

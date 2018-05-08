@@ -3,16 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryLink : MonoBehaviour {
-
-    #region Variables
+public class InventoryLink : MonoBehaviour
+{
     public ChestInventory LinkedInventory;
     public int slots, rows;
     private List<Stack<ItemScript>> allSlots;
     private bool active = false;
-    #endregion
 
-    #region Unity Metod
     private void Start()
     {
         allSlots = new List<Stack<ItemScript>>(slots);
@@ -38,7 +35,6 @@ public class InventoryLink : MonoBehaviour {
             active = false;
         }
     }
-
     public void SaveInventory()
     {
         string content = string.Empty;
@@ -111,5 +107,4 @@ public class InventoryLink : MonoBehaviour {
             LinkedInventory.UpdateLayout(allSlots, rows, slots);
         }
     }
-    #endregion
 }

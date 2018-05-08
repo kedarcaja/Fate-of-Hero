@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour {
 
-    #region Variables
     private static InventoryManager instance;
     public static InventoryManager Instance
     {
@@ -22,7 +21,6 @@ public class InventoryManager : MonoBehaviour {
             return instance;
         }
 
-       
     }
     public GameObject slotPrefab;
     public GameObject BackgroundSlotPrefab;
@@ -126,7 +124,6 @@ public class InventoryManager : MonoBehaviour {
             movingSlot = value;
         }
     }
-
     public ItemContainer ItemContainer
     {
         get
@@ -139,12 +136,10 @@ public class InventoryManager : MonoBehaviour {
             itemContainer = value;
         }
     }
-
     private Slot movingSlot;
     private ItemContainer itemContainer = new ItemContainer();
-    #endregion
+   
 
-    #region Unity Metod
 
     void Awake () {
         Type[] itemTypes = { typeof(Equipment), typeof(Weapon), typeof(Consumeable), typeof(Materials) };
@@ -196,5 +191,5 @@ public class InventoryManager : MonoBehaviour {
             chest.GetComponent<InventoryLink>().LoadInventory();
         }
     }
-    #endregion
+  
 }

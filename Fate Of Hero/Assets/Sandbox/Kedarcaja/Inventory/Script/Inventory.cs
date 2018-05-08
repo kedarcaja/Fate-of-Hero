@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-
-    #region Variables
     protected RectTransform inventoryRect;
     protected float inventoryWidth, inventoryHight;
     public int slots;
@@ -51,7 +49,6 @@ public class Inventory : MonoBehaviour
             isOpen = value;
         }
     }
-
     public bool FadingOut
     {
         get
@@ -60,12 +57,9 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
     public static bool mouseInside = false;
     public bool instantClose = true;
-    #endregion
-
-    #region Unity Metod
+    
 
     protected virtual void Start()
     {
@@ -131,10 +125,6 @@ public class Inventory : MonoBehaviour
             position.Set(position.x, position.y - hoverYOffset);
             InventoryManager.Instance.HoverObject.transform.position = InventoryManager.Instance.canvas.transform.TransformPoint(position);
         }
-
-
-
-
     }
     public void OnDrag()
     {
@@ -637,5 +627,4 @@ public class Inventory : MonoBehaviour
         }
 
     }
-    #endregion
 }

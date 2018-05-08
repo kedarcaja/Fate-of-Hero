@@ -86,14 +86,12 @@ public class CraftingBench : Inventory
            
 
     }
-
     public void CreateBluePrints()
     {
         craftingItems.Add("EMPTY-Iron Ingot-EMPTY-EMPTY-Iron Ingot-EMPTY-EMPTY-Wood Log-EMPTY-", InventoryManager.Instance.ItemContainer.Weapons.Find(x => x.ItemName == "Rare Sword"));
 
         craftingItems.Add("EMPTY-EMPTY-EMPTY-Stone-Stone-Stone-Stone-EMPTY-Stone-", InventoryManager.Instance.ItemContainer.Equipment.Find(x => x.ItemName == "Uncoman Head"));
     }
-
     public void CraftItem()
     {
         string output = string.Empty;
@@ -140,19 +138,15 @@ public class CraftingBench : Inventory
         Debug.Log(output);
         UpdatePreview();
     }
-
     public override void MoveItem(GameObject clicked)
     {
         base.MoveItem(clicked);
         UpdatePreview();
     }
-
     public void UpdatePreview()
     {
         string output = string.Empty;
-
         previewSlot.GetComponent<Slot>().ClearSlot();
-
         foreach (GameObject slot in allSlots)
         {
             Slot tmp = slot.GetComponent<Slot>();
@@ -194,7 +188,6 @@ public class CraftingBench : Inventory
         base.LoadInventory();
         UpdatePreview();
     }
-
     public override void Open()
     {
         base.Open();

@@ -7,9 +7,6 @@ public enum ItemType { CONSUMEABLE, MAINHAND, TWOHAND, OFFHAND, HEAD, SPAULDER, 
 public enum Quality { COMON,UNCOMAN,RARE,EPIC,LEGENDARY,ARTEFACT }
 public class ItemScript : MonoBehaviour {
 
-    #region Variables
- 
-
     public Sprite spriteNeutral;
 
     public Sprite spriteHighlighted;
@@ -31,9 +28,6 @@ public class ItemScript : MonoBehaviour {
         }
     }
 
-    #endregion
-
-    #region Unity Metod
 
     public void Use(Slot slot) {
         item.Use(slot, this);
@@ -44,6 +38,5 @@ public class ItemScript : MonoBehaviour {
         return item.GetTooltip(inv);
     }
 
-    #endregion
 }
 

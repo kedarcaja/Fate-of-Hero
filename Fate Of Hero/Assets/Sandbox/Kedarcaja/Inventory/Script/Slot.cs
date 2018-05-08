@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
-    #region Variables
     private Stack<ItemScript> items;
     public Stack<ItemScript> Items
     {
@@ -50,9 +49,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public ItemType canContain;
     private bool clickAble = true;
-    #endregion
 
-    #region Unity Metod
     void Awake() {
         items = new Stack<ItemScript>();
     }
@@ -74,8 +71,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
             canvasGroup = transform.parent.GetComponent<CanvasGroup>();
 
             EventTrigger trigger = GetComponentInParent<EventTrigger>();
-            EventTrigger.Entry entry = new EventTrigger.Entry();
-            entry.eventID = EventTriggerType.PointerEnter;
+            EventTrigger.Entry entry = new EventTrigger.Entry
+            {
+                eventID = EventTriggerType.PointerEnter
+            };
             entry.callback.AddListener((eventData) => { transform.parent.GetComponent<Inventory>().ShowToolTip(gameObject); });
             trigger.triggers.Add(entry);
 
@@ -257,5 +256,4 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         }
         return false;
     }
-    #endregion
 }

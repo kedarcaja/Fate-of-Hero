@@ -2,20 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CraftingBenchScript : MonoBehaviour {
+public class CraftingBenchScript : MonoBehaviour
+{
 
-    #region Variables
     public Inventory craftingBench;
-   #endregion
-     
-   #region Unity Metod
-   
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
-  #endregion  
+
 }

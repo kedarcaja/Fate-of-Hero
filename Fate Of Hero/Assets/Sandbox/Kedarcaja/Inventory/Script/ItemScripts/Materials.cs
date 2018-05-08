@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Materials : Item
 {
-    
-
     public Materials(string itemName, string description, ItemType itemType, Quality quality, string spriteNeutral, string spriteHighlighted, int maxSize, int buyPrice, int sellPrice) : base(itemName, description, itemType, quality, spriteNeutral, spriteHighlighted, maxSize,buyPrice,sellPrice)
     {
     }

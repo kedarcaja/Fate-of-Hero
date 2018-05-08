@@ -16,8 +16,6 @@ public class VendorInvetory : ChestInventory {
             }
             return instance;
         }
-
-       
     }
 
     protected override void Start()

@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class IPlayer : MonoBehaviour {
 
-    #region Variables
     private static IPlayer instance;
-    
     public float speed = 5f;
     public Inventory inventory;
     public Inventory CharPanel;
+    public Inventory CharPanelII;
     private Inventory Chest;
     public Text statsText;
 
@@ -57,23 +56,12 @@ public class IPlayer : MonoBehaviour {
             instance = value;
         }
     }
-
-   
-
-
-
-    #endregion
-
-    #region Unity Metod
-
     void Start () {
         Gold = 0;
         SetStats(0, 0, 0, 0);
-	}
-	
+	}	
 	void Update ()
     {
-       
         transform.Translate(Input.GetAxis("Horizontal")*speed * UnityEngine.Time.deltaTime, 0f, Input.GetAxis("Vertical") * speed * UnityEngine.Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.I))
@@ -97,6 +85,13 @@ public class IPlayer : MonoBehaviour {
             {
                 CharPanel.Open();
             }
+        }       
+    }
+    public void Click()
+    {
+        if (CharPanelII != null)
+        {
+            CharPanelII.Open();
         }
     }
     public void RandomItem()
@@ -163,7 +158,6 @@ public class IPlayer : MonoBehaviour {
             }
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Chest" || other.tag == "CraftingBench" || other.tag == "Vendor")
@@ -187,7 +181,6 @@ public class IPlayer : MonoBehaviour {
             
         }
     }
-
     public void SetStats(int strenght , int agility, int intellect, int stamina)
     {
         this.strenght = strenght + baseStrenght;
@@ -198,6 +191,4 @@ public class IPlayer : MonoBehaviour {
         statsText.text = string.Format(" Strenght: {0}\n Agility: {1}\n Intellect: {2}\n Stamina: {3}\n", this.strenght, this.agility, this.intellect, this.stamina);
 
     }
-   
-    #endregion
 }

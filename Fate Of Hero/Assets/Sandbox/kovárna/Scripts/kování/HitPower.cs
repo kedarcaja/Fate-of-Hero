@@ -48,15 +48,7 @@ public class HitPower : MonoBehaviour {
             PowerValue = PowerSlider.value;
             Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
-
-            if (!HammerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
-            {
-                isChoosingPower = false;
-                PositionHit.isChoosingPosition = true;
-           
-
-               
-            }
+            isChoosingPower = false;
 
         }
     }

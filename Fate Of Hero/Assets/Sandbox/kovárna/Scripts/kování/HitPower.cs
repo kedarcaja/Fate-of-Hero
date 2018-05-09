@@ -5,14 +5,15 @@ using UnityEngine.UI;
 public class HitPower : MonoBehaviour {
 
     private Slider PowerSlider;
-    private float PowerValue,PowerSpeed;
+    private float PowerSpeed;
+    private double PowerValue;
     public bool isChoosingPower = false;
     private HItPosition PositionHit;
     [SerializeField]
     private GameObject Hammer;
     private Animator HammerAnimator;
     [SerializeField]
-    private Text PowerText;
+    private Text PowerText,PowerValueText;
   
         void Start () {
         PowerSlider = GetComponent<Slider>();
@@ -28,6 +29,8 @@ public class HitPower : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+        PowerValueText.text = Blade.HitValue.ToString();
         if (isChoosingPower)
             PowerSlider.value += PowerSpeed;
             if (PowerSlider.value == PowerSlider.minValue)
@@ -50,7 +53,7 @@ public class HitPower : MonoBehaviour {
             Hammer.SetActive(true);
             Hammer.transform.localPosition = PositionHit.gameObject.transform.localPosition;
 
-            PowerValue = PowerSlider.value;
+            PowerValue =System.Math.Round(PowerSlider.value,1);
             if (PowerValue >= 0.4f && PowerValue < 0.6f)
             {
 
@@ -74,7 +77,7 @@ public class HitPower : MonoBehaviour {
             }
             HammerAnimator.SetTrigger("Hit");
            
-            Blade.AllHitPower += PowerValue;
+            Blade.AllHitPower +=(float) PowerValue;
             Blade.HitValue--;
             isChoosingPower = false;
 

@@ -77,7 +77,7 @@ public class HitPower : MonoBehaviour {
             }
             HammerAnimator.SetTrigger("Hit");
            
-            Blade.AllHitPower +=(float) PowerValue;
+            Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
             isChoosingPower = false;
 

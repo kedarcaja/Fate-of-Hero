@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blade : MonoBehaviour {
 
-public static float AllHitPower;
+public static double AllHitPower;
     public static int HitValue;
 	void Start () {
         HitValue = 10;

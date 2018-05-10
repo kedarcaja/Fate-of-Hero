@@ -9,16 +9,12 @@ public class NextAction : MonoBehaviour {
         ToActive.SetActive(true);
         gameObject.SetActive(false);
     }
-    public void ChooseAction(GameObject Active)
+    public void ShowHelp(GameObject Help)
     {
-        for(int i = 0; Active.transform.parent.childCount>i;i++)
-        {
-
-            if(Active.transform.parent.GetChild(i)!= Active)
-            Active.transform.parent.GetChild(i).gameObject.SetActive(false);
-
-        }
-        Active.SetActive(true);
-
+        Help.SetActive(true);
+    }
+    public void HideHelp(GameObject Help)
+    {
+        Help.SetActive(false);
     }
 }

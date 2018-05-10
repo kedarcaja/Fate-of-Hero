@@ -5,12 +5,16 @@ using UnityEngine.UI;
 public class HitPower : MonoBehaviour {
 
     private Slider PowerSlider;
-    private float PowerValue,PowerSpeed;
+    private float PowerSpeed;
+    private double PowerValue;
     public bool isChoosingPower = false;
     private HItPosition PositionHit;
     [SerializeField]
     private GameObject Hammer;
     private Animator HammerAnimator;
+    [SerializeField]
+    private Text PowerText,PowerValueText;
+  
         void Start () {
         PowerSlider = GetComponent<Slider>();
         PowerSlider.interactable = false;
@@ -18,11 +22,15 @@ public class HitPower : MonoBehaviour {
         PositionHit = FindObjectOfType<HItPosition>();
         Hammer.SetActive(false);
         HammerAnimator = Hammer.GetComponent<Animator>();
+      
+        PowerText.text = "";
 	}
 
     // Update is called once per frame
     void Update()
     {
+
+        PowerValueText.text = Blade.HitValue.ToString();
         if (isChoosingPower)
             PowerSlider.value += PowerSpeed;
             if (PowerSlider.value == PowerSlider.minValue)
@@ -44,19 +52,36 @@ public class HitPower : MonoBehaviour {
         {
             Hammer.SetActive(true);
             Hammer.transform.localPosition = PositionHit.gameObject.transform.localPosition;
+
+            PowerValue =System.Math.Round(PowerSlider.value,1);
+            if (PowerValue >= 0.4f && PowerValue < 0.6f)
+            {
+
+                PowerValue *= 1.5f;
+                PowerText.text = "Great";
+                PowerText.color = Color.green;
+            }
+            else if(PowerValue > 0.6f)
+            {
+                PowerValue /= 10;
+                PowerText.text = "To much";
+                PowerText.color = Color.red;
+
+            }
+            else if (PowerValue <0.4)
+            {
+                PowerValue /= 2;
+                PowerText.text = "To low";
+                PowerText.color = Color.cyan;
+
+            }
             HammerAnimator.SetTrigger("Hit");
-            PowerValue = PowerSlider.value;
+           
             Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
+            isChoosingPower = false;
 
-            if (!HammerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
-            {
-                isChoosingPower = false;
-                PositionHit.isChoosingPosition = true;
-           
-
-               
-            }
+       
 
         }
     }

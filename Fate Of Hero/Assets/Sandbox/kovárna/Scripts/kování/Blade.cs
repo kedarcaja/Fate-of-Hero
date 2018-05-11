@@ -13,8 +13,7 @@ public static double AllHitPower;
 	
 
 	void Update () {
-     print("Current Power: "+AllHitPower);
-  
+    
 
     }
 }

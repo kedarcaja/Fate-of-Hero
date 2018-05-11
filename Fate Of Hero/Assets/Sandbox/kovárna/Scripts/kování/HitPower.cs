@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class HitPower : MonoBehaviour {
-
+ public static bool removeRust;
     private Slider PowerSlider;
     private float PowerSpeed;
     private double PowerValue;
@@ -14,8 +14,9 @@ public class HitPower : MonoBehaviour {
     private Animator HammerAnimator;
     [SerializeField]
     private Text PowerText,PowerValueText;
-  
-        void Start () {
+   
+
+    void Start () {
         PowerSlider = GetComponent<Slider>();
         PowerSlider.interactable = false;
         PowerSpeed = 0.01f;
@@ -24,36 +25,37 @@ public class HitPower : MonoBehaviour {
         HammerAnimator = Hammer.GetComponent<Animator>();
       
         PowerText.text = "";
+       
 	}
 
-    // Update is called once per frame
     void Update()
     {
 
         PowerValueText.text = Blade.HitValue.ToString();
         if (isChoosingPower)
             PowerSlider.value += PowerSpeed;
-            if (PowerSlider.value == PowerSlider.minValue)
-            {
-                PowerSpeed -= 0.001f;
-                PowerSpeed *= -1;
+        if (PowerSlider.value == PowerSlider.minValue)
+        {
+            PowerSpeed -= 0.001f;
+            PowerSpeed *= -1;
 
-            }
-            if (PowerSlider.value == PowerSlider.maxValue)
-            {
-                PowerSpeed += 0.001f;
+        }
+        if (PowerSlider.value == PowerSlider.maxValue)
+        {
+            PowerSpeed += 0.001f;
 
-                PowerSpeed *= -1;
+            PowerSpeed *= -1;
 
-            }
+        }
 
-        if (Input.GetKeyDown(KeyCode.S) && Blade.HitValue > 0&&isChoosingPower)
+        if (Input.GetKeyDown(KeyCode.S) && Blade.HitValue > 0 && isChoosingPower)
 
         {
+            removeRust = true;
             Hammer.SetActive(true);
             Hammer.transform.localPosition = PositionHit.gameObject.transform.localPosition;
 
-            PowerValue =System.Math.Round(PowerSlider.value,1);
+            PowerValue = System.Math.Round(PowerSlider.value, 1);
             if (PowerValue >= 0.4f && PowerValue < 0.6f)
             {
 
@@ -61,14 +63,14 @@ public class HitPower : MonoBehaviour {
                 PowerText.text = "Great";
                 PowerText.color = Color.green;
             }
-            else if(PowerValue > 0.6f)
+            else if (PowerValue > 0.6f)
             {
                 PowerValue /= 10;
                 PowerText.text = "To much";
                 PowerText.color = Color.red;
 
             }
-            else if (PowerValue <0.4)
+            else if (PowerValue < 0.4)
             {
                 PowerValue /= 2;
                 PowerText.text = "To low";
@@ -76,13 +78,15 @@ public class HitPower : MonoBehaviour {
 
             }
             HammerAnimator.SetTrigger("Hit");
-           
+
             Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
             isChoosingPower = false;
+           
 
-       
 
         }
+      
     }
+   
 }

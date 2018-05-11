@@ -6,10 +6,17 @@ using UnityEngine.UI;
 public class HItPosition : MonoBehaviour {
 
     private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP;
-   
+    [SerializeField]
+    private GameObject Rust;
     private HitPower PowerHit;
-   public bool isChoosingPosition;
-	void Start () {
+    public bool isChoosingPosition;
+    private GameObject clons;
+
+
+
+  
+
+    void Start () {
         PowerHit = FindObjectOfType<HitPower>();
         StartPosition = 370;
         EndPosition = -749;
@@ -18,12 +25,27 @@ public class HItPosition : MonoBehaviour {
         MoveSpeed = 10;
         transform.localPosition = new Vector3(StartPosition,YPositionDown);
         isChoosingPosition = true;
-	}
-	
 
-	void Update () {
+        SetRust();
+      
 
-        if(isChoosingPosition&& Blade.HitValue > 0)
+    }
+
+
+    void Update () {
+        if (clons == null)
+        {
+            SetRust();
+            
+           
+           
+
+        }
+       
+         
+
+
+        if (isChoosingPosition&& Blade.HitValue > 0)
         transform.localPosition = new Vector3(transform.localPosition.x + MoveSpeed, transform.localPosition.y);
 		if(transform.localPosition.x < EndPosition || transform.localPosition.x > StartPosition)
         {
@@ -51,5 +73,24 @@ public class HItPosition : MonoBehaviour {
             isChoosingPosition = false;
             PowerHit.isChoosingPower = true;
         }
+
+
     }
+
+   
+    private void SetRust()
+    {
+
+
+
+
+       
+        clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),transform.position.y) ,Rust.transform.localRotation);
+        
+        clons.transform.SetParent(transform.parent);
+        clons.transform.SetSiblingIndex(1);
+
+
+    }
+
 }

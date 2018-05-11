@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HItPosition : MonoBehaviour {
 
-    private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP;
+    private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP,RustSize;
     [SerializeField]
     private GameObject Rust;
     private HitPower PowerHit;
@@ -78,12 +78,13 @@ public class HItPosition : MonoBehaviour {
 
 
 
-       
+        print(RustSize);
         clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),transform.position.y) ,Rust.transform.localRotation);
-
-        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(Random.Range(10, 50) ,Random.Range(10, 50));
+        RustSize = Random.Range(10, 50);
+        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(RustSize ,RustSize);
        Destroy(clons.GetComponent<CircleCollider2D>());
-       clons.AddComponent<CircleCollider2D>();
+       clons.AddComponent<CircleCollider2D>().radius = (RustSize / 2)-1; ;
+
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);
 

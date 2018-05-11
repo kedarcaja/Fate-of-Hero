@@ -12,11 +12,11 @@ public class Destroy : MonoBehaviour {
     {
         if (HitPower.removeRust)
         {
-
             Destroy(gameObject);
+
             HitPower.removeRust = false;
         }
-
+       
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

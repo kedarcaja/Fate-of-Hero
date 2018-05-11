@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class HItPosition : MonoBehaviour {
 
-    private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP,RustSize;
+    private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP,RustSize,RustYSpawn;
     [SerializeField]
     private GameObject Rust;
     private HitPower PowerHit;
     public bool isChoosingPosition;
     private GameObject clons;
     public static bool isTouching;
+    private int YRandomPos;
 
 
 
@@ -21,12 +22,12 @@ public class HItPosition : MonoBehaviour {
         PowerHit = FindObjectOfType<HitPower>();
         StartPosition = 370;
         EndPosition = -749;
-        YPositionDown = -72;
-        YPositionUP = 34;
+        YPositionDown = -115;
+        YPositionUP = 93;
         MoveSpeed = 10;
         transform.localPosition = new Vector3(StartPosition,YPositionDown);
         isChoosingPosition = true;
-        for(int i = 0;i<3;i++)
+        for(int i = 0;i<10;i++)
         SetRust();
       
 
@@ -34,7 +35,6 @@ public class HItPosition : MonoBehaviour {
 
 
     void Update () {
-      
 
 
      
@@ -67,7 +67,7 @@ public class HItPosition : MonoBehaviour {
             isChoosingPosition = false;
             PowerHit.isChoosingPower = true;
         }
-
+        print(transform.position.y);
 
     }
 
@@ -76,15 +76,22 @@ public class HItPosition : MonoBehaviour {
     {
 
 
+        YRandomPos = Random.Range(1, 3);
+
+        if (YRandomPos == 2)
+            RustYSpawn = transform.position.y;
+
+        if (YRandomPos == 1)
+            RustYSpawn = 313.5641f;
 
 
-        print(RustSize);
-        clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),transform.position.y) ,Rust.transform.localRotation);
-        RustSize = Random.Range(10, 50);
-        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(RustSize ,RustSize);
-       Destroy(clons.GetComponent<CircleCollider2D>());
-       clons.AddComponent<CircleCollider2D>().radius = (RustSize / 2)-1.3f; ;
 
+        clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),RustYSpawn) ,Rust.transform.localRotation);
+        RustSize = Random.Range(5, 80);
+        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(RustSize ,5);
+       Destroy(clons.GetComponent<BoxCollider2D>());
+        clons.AddComponent<BoxCollider2D>().size = new Vector2((RustSize/4),5);
+        clons.GetComponent<BoxCollider2D>().offset.Normalize();
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);
 

@@ -16,6 +16,7 @@ public class Destroy : MonoBehaviour {
 
             HitPower.removeRust = false;
         }
+      
        
     }
     private void OnTriggerExit2D(Collider2D collision)

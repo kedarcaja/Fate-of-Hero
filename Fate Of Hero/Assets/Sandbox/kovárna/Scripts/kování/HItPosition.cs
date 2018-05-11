@@ -83,7 +83,7 @@ public class HItPosition : MonoBehaviour {
         RustSize = Random.Range(10, 50);
         clons.GetComponent<RectTransform>().sizeDelta = new Vector2(RustSize ,RustSize);
        Destroy(clons.GetComponent<CircleCollider2D>());
-       clons.AddComponent<CircleCollider2D>().radius = (RustSize / 2)-1; ;
+       clons.AddComponent<CircleCollider2D>().radius = (RustSize / 2)-1.3f; ;
 
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);

@@ -51,38 +51,49 @@ public class HitPower : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.S) && Blade.HitValue > 0 && isChoosingPower)
 
         {
-            removeRust = true;
+          
             Hammer.SetActive(true);
             Hammer.transform.localPosition = PositionHit.gameObject.transform.localPosition;
-
-            PowerValue = System.Math.Round(PowerSlider.value, 1);
-            if (PowerValue >= 0.4f && PowerValue < 0.6f)
-            {
-
-                PowerValue *= 1.5f;
-                PowerText.text = "Great";
-                PowerText.color = Color.green;
-            }
-            else if (PowerValue > 0.6f)
-            {
-                PowerValue /= 10;
-                PowerText.text = "To much";
-                PowerText.color = Color.red;
-
-            }
-            else if (PowerValue < 0.4)
-            {
-                PowerValue /= 2;
-                PowerText.text = "To low";
-                PowerText.color = Color.cyan;
-
-            }
             HammerAnimator.SetTrigger("Hit");
 
             Blade.AllHitPower += PowerValue;
             Blade.HitValue--;
             isChoosingPower = false;
-           
+
+            PowerValue = System.Math.Round(PowerSlider.value, 1);
+            if (HItPosition.isTouching)
+            {
+                if (PowerValue >= 0.4f && PowerValue < 0.6f)
+                {
+
+                    PowerValue *= 1.5f;
+                    PowerText.text = "Great";
+                    PowerText.color = Color.green;
+                }
+                else if (PowerValue > 0.6f)
+                {
+                    PowerValue /= 10;
+                    PowerText.text = "To much";
+                    PowerText.color = Color.red;
+
+                }
+                else if (PowerValue < 0.4)
+                {
+                    PowerValue /= 2;
+                    PowerText.text = "To low";
+                    PowerText.color = Color.cyan;
+
+                }
+                removeRust = true;
+
+            }
+            if (!HItPosition.isTouching)
+            {
+                removeRust = false;
+                PowerText.text = "miss";
+                PowerText.color = Color.red;
+
+            }
 
 
         }

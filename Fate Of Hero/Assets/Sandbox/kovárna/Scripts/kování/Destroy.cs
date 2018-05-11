@@ -5,8 +5,7 @@ using UnityEngine;
 public class Destroy : MonoBehaviour {
     private void Update()
     {
-        // Update is called once per frame
-        print(HitPower.removeRust);
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

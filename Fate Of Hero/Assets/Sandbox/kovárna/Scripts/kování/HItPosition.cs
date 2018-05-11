@@ -11,10 +11,11 @@ public class HItPosition : MonoBehaviour {
     private HitPower PowerHit;
     public bool isChoosingPosition;
     private GameObject clons;
+    public static bool isTouching;
 
 
 
-  
+
 
     void Start () {
         PowerHit = FindObjectOfType<HitPower>();
@@ -25,7 +26,7 @@ public class HItPosition : MonoBehaviour {
         MoveSpeed = 10;
         transform.localPosition = new Vector3(StartPosition,YPositionDown);
         isChoosingPosition = true;
-
+        for(int i = 0;i<3;i++)
         SetRust();
       
 
@@ -33,17 +34,10 @@ public class HItPosition : MonoBehaviour {
 
 
     void Update () {
-        if (clons == null)
-        {
-            SetRust();
-            
-           
-           
+      
 
-        }
-       
-         
 
+     
 
         if (isChoosingPosition&& Blade.HitValue > 0)
         transform.localPosition = new Vector3(transform.localPosition.x + MoveSpeed, transform.localPosition.y);
@@ -86,11 +80,22 @@ public class HItPosition : MonoBehaviour {
 
        
         clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),transform.position.y) ,Rust.transform.localRotation);
-        
+
+        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(Random.Range(10, 50) ,Random.Range(10, 50));
+       Destroy(clons.GetComponent<CircleCollider2D>());
+       clons.AddComponent<CircleCollider2D>();
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);
 
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isTouching = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isTouching = false;
 
+    }
 }

@@ -6,26 +6,28 @@ using UnityEngine.UI;
 public class HItPosition : MonoBehaviour {
 
     private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP,RustSize,RustYSpawn;
-    [SerializeField]
+ 
     private GameObject Rust;
     private HitPower PowerHit;
     public bool isChoosingPosition;
     private GameObject clons;
     public static bool isTouching;
     private int YRandomPos;
-
-
+    [SerializeField]
+    private RectTransform down, up, max, min;
+    [SerializeField]
+    private GameObject[] rustSizes;
 
 
 
     void Start () {
         PowerHit = FindObjectOfType<HitPower>();
-        StartPosition = 370;
-        EndPosition = -749;
-        YPositionDown = -115;
-        YPositionUP = 93;
-        MoveSpeed = 10;
-        transform.localPosition = new Vector3(StartPosition,YPositionDown);
+        StartPosition = min.position.x;
+        EndPosition = max.position.x;
+        YPositionDown = down.position.y;
+        YPositionUP = up.position.y;
+        MoveSpeed = 8;
+        transform.position = new Vector3(StartPosition,YPositionDown);
         isChoosingPosition = true;
         for(int i = 0;i<10;i++)
         SetRust();
@@ -40,23 +42,23 @@ public class HItPosition : MonoBehaviour {
      
 
         if (isChoosingPosition&& Blade.HitValue > 0)
-        transform.localPosition = new Vector3(transform.localPosition.x + MoveSpeed, transform.localPosition.y);
-		if(transform.localPosition.x < EndPosition || transform.localPosition.x > StartPosition)
+        transform.position = new Vector3(transform.position.x + MoveSpeed, transform.position.y);
+		if(transform.position.x < EndPosition || transform.position.x > StartPosition)
         {
 
 
             MoveSpeed *= -1;
         }
 
-        if (transform.localPosition.x <= EndPosition)
+        if (transform.position.x <= EndPosition)
         {
 
 
-            transform.localPosition = new Vector3(transform.localPosition.x, YPositionUP);
+            transform.position = new Vector3(transform.position.x, YPositionUP);
         }
-        else if(transform.localPosition.x>=StartPosition)
+        else if(transform.position.x>=StartPosition)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, YPositionDown);
+            transform.position = new Vector3(transform.position.x, YPositionDown);
 
         }
 
@@ -79,19 +81,33 @@ public class HItPosition : MonoBehaviour {
         YRandomPos = Random.Range(1, 3);
 
         if (YRandomPos == 2)
-            RustYSpawn = transform.position.y;
+            RustYSpawn = YPositionDown;
 
         if (YRandomPos == 1)
-            RustYSpawn = 313.5641f;
+            RustYSpawn = YPositionUP;
+        switch (Random.Range(1, 4))
+        {
 
 
+            case 1:
+                Rust = rustSizes[0];
+                break;
+            case 2:
+                Rust = rustSizes[1];
 
-        clons =  Instantiate(Rust,new Vector3(Random.Range(100,600),RustYSpawn) ,Rust.transform.localRotation);
-        RustSize = Random.Range(5, 80);
-        clons.GetComponent<RectTransform>().sizeDelta = new Vector2(RustSize ,5);
-       Destroy(clons.GetComponent<BoxCollider2D>());
-        clons.AddComponent<BoxCollider2D>().size = new Vector2((RustSize/4),5);
-        clons.GetComponent<BoxCollider2D>().offset.Normalize();
+                break;
+            case 3:
+                Rust = rustSizes[2];
+
+                break;
+        }
+
+
+        clons =  Instantiate(Rust,new Vector3(Random.Range(EndPosition,StartPosition),RustYSpawn) ,Rust.transform.localRotation);
+     
+      
+       
+      
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);
 

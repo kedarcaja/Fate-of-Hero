@@ -74,20 +74,21 @@ public class HitPower : MonoBehaviour {
                 {
                     PowerValue /= 10;
                     PowerText.text = "To much";
-                    PowerText.color = Color.red;
+                    PowerText.color = Color.magenta;
 
                 }
                 else if (PowerValue < 0.4)
                 {
+                  
                     PowerValue /= 2;
                     PowerText.text = "To low";
                     PowerText.color = Color.cyan;
 
                 }
-                removeRust = true;
 
+                removeRust = true;
             }
-            if (!HItPosition.isTouching)
+           if(!HItPosition.isTouching)
             {
                 removeRust = false;
                 PowerText.text = "miss";
@@ -100,4 +101,5 @@ public class HitPower : MonoBehaviour {
       
     }
    
+
 }

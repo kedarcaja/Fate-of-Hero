@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+public class HItPosition : MonoBehaviour
+{
 
-public class HItPosition : MonoBehaviour {
+    private float MoveSpeed, StartPosition, EndPosition, YPositionDown, YPositionUP, RustSize, RustYSpawn;
 
-    private float MoveSpeed,StartPosition,EndPosition,YPositionDown,YPositionUP,RustSize,RustYSpawn;
- 
     private GameObject Rust;
     private HitPower PowerHit;
     public bool isChoosingPosition;
@@ -17,33 +17,34 @@ public class HItPosition : MonoBehaviour {
     private RectTransform down, up, max, min;
     [SerializeField]
     private GameObject[] rustSizes;
+  
+    
 
 
 
-    void Start () {
+    void Start()
+    {
         PowerHit = FindObjectOfType<HitPower>();
         StartPosition = min.position.x;
         EndPosition = max.position.x;
         YPositionDown = down.position.y;
         YPositionUP = up.position.y;
-        MoveSpeed = 8;
-        transform.position = new Vector3(StartPosition,YPositionDown);
+        MoveSpeed = 5;
+        transform.position = new Vector3(StartPosition, YPositionDown);
         isChoosingPosition = true;
-        for(int i = 0;i<10;i++)
-        SetRust();
-      
-
+        for (int i = 0; i < 4; i++)
+            SetRust();
     }
 
 
-    void Update () {
+    void Update()
+    {
 
 
-     
 
-        if (isChoosingPosition&& Blade.HitValue > 0)
-        transform.position = new Vector3(transform.position.x + MoveSpeed, transform.position.y);
-		if(transform.position.x < EndPosition || transform.position.x > StartPosition)
+        if (isChoosingPosition && Blade.HitValue > 0&& clons != null)
+            transform.position = new Vector3(transform.position.x + MoveSpeed, transform.position.y);
+        if (transform.position.x < EndPosition || transform.position.x > StartPosition)
         {
 
 
@@ -56,24 +57,23 @@ public class HItPosition : MonoBehaviour {
 
             transform.position = new Vector3(transform.position.x, YPositionUP);
         }
-        else if(transform.position.x>=StartPosition)
+        else if (transform.position.x >= StartPosition)
         {
             transform.position = new Vector3(transform.position.x, YPositionDown);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && Blade.HitValue > 0&&isChoosingPosition)
+        if (Input.GetKeyDown(KeyCode.A) && Blade.HitValue > 0 && isChoosingPosition)
         {
 
 
             isChoosingPosition = false;
             PowerHit.isChoosingPower = true;
         }
-        print(transform.position.y);
 
     }
 
-   
+
     private void SetRust()
     {
 
@@ -103,23 +103,15 @@ public class HItPosition : MonoBehaviour {
         }
 
 
-        clons =  Instantiate(Rust,new Vector3(Random.Range(EndPosition,StartPosition),RustYSpawn) ,Rust.transform.localRotation);
-     
-      
-       
-      
+        clons = Instantiate(Rust, new Vector3(Random.Range(EndPosition, StartPosition), RustYSpawn), Rust.transform.localRotation);
+
+
+
+
         clons.transform.SetParent(transform.parent);
         clons.transform.SetSiblingIndex(1);
 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        isTouching = true;
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        isTouching = false;
-
-    }
+ 
 }

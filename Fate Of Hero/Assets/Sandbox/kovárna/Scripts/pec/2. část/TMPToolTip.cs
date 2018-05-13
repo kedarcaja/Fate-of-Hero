@@ -12,6 +12,11 @@ public class TMPToolTip : MonoBehaviour {
 public  float CurrentValue;
     [SerializeField]
    private float maxValue;
+    private NextAction ChangeScreen;
+    private void Start()
+    {
+        ChangeScreen = FindObjectOfType<NextAction>();
+    }
 
     public float Max
     {
@@ -36,5 +41,8 @@ public  float CurrentValue;
     private void Update()
     {
         text.text =  CurrentValue+ "/" + maxValue;
+        if (CurrentValue >= maxValue)
+            ChangeScreen.GOTOMenu(transform.parent.parent.parent.gameObject);
+
     }
 }

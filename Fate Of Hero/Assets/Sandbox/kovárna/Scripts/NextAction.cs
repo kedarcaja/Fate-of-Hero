@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextAction : MonoBehaviour {
-
+    [SerializeField]
+    private  GameObject menu;
 	public void SetNextAction(GameObject ToActive)
     {
         ToActive.SetActive(true);
@@ -16,5 +18,16 @@ public class NextAction : MonoBehaviour {
     public void HideHelp(GameObject Help)
     {
         Help.SetActive(false);
+    }
+    public  void GOTOMenu(GameObject anotherScene)
+    {
+        menu.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+
+        Destroy(anotherScene);
+
+
     }
 }

@@ -13,12 +13,24 @@ public class Destroy : MonoBehaviour {
 
             HitPower.removeRust = false;
         }
-        
+        HItPosition.isTouching = true;
+      
     }
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (HitPower.removeRust)
+        {
+            Destroy(gameObject);
+
+            HitPower.removeRust = false;
+        }
+        HItPosition.isTouching = true;
+
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         HitPower.removeRust = false;
+        HItPosition.isTouching = false;
 
-    } 
+    }
 }

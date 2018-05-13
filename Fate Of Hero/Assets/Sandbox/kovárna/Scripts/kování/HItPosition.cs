@@ -42,7 +42,7 @@ public class HItPosition : MonoBehaviour
 
 
 
-        if (isChoosingPosition && Blade.HitValue > 0&& clons != null)
+        if (isChoosingPosition && Blade.HitValue > 0)
             transform.position = new Vector3(transform.position.x + MoveSpeed, transform.position.y);
         if (transform.position.x < EndPosition || transform.position.x > StartPosition)
         {

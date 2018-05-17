@@ -10,8 +10,8 @@ public class HammerDeactive : StateMachineBehaviour
     {
 
 
-        animator.gameObject.SetActive(false);
-        FindObjectOfType<HItPosition>().isChoosingPosition = true;
+
+        
         base.OnStateExit(animator, stateInfo, layerIndex);
     }
 }

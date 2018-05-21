@@ -377,13 +377,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56305117}
-  m_LocalRotation: {x: 0.20129278, y: -0.6739363, z: 0.19877094, w: 0.68248165}
-  m_LocalPosition: {x: 1.794744, y: 2.1522408, z: -3.0553489}
+  m_LocalRotation: {x: -0.32628474, y: 0.6827874, z: -0.42725226, w: -0.49476787}
+  m_LocalPosition: {x: 1.35, y: 2.22, z: -2.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 343191902}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.233002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.001, y: -110.11301, z: -3.091}
 --- !u!81 &56305119
 AudioListener:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.169125
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1376,6 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a3646628a3fc64181128db73677cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &265259370
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2356,7 +2357,7 @@ Transform:
   m_GameObject: {fileID: 434606457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.026155373, z: 0}
-  m_LocalScale: {x: 22.37644, y: 0.25149667, z: 22.225775}
+  m_LocalScale: {x: 10, y: 0.25149667, z: 10}
   m_Children: []
   m_Father: {fileID: 265259368}
   m_RootOrder: 0
@@ -24223,13 +24224,13 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: c6afdbd9d0ea36747a295ec1355616b1, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337445511}
-  m_LocalRotation: {x: 0.93633795, y: 0.3511001, z: -0, w: 0}
-  m_LocalPosition: {x: 1.4783, y: 1.9059, z: -2.8302}
+  m_LocalRotation: {x: 0.7068465, y: -0.7068465, z: -0.019185748, w: -0.019185776}
+  m_LocalPosition: {x: 1.174, y: 1.874, z: -2.824}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 343191902}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -41.10901}
+  m_LocalEulerAnglesHint: {x: 183.11, y: 0, z: 89.99999}
 --- !u!23 &1337445513
 MeshRenderer:
   m_ObjectHideFlags: 0

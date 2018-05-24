@@ -13,9 +13,9 @@ public class Sword : MonoBehaviour {
     private void Start()
     {
         sword = GameObject.Find("Sword");
-        MaxPositionX = -9.433747f;
+        MaxPositionX = -3.15698f;
 
-        MinPositionX = -9.73f;
+        MinPositionX = -3.543f;
     }
     void Update ()
     {
@@ -47,11 +47,14 @@ public class Sword : MonoBehaviour {
             turns++;
         }
 
-       
-      
+
+        if (turns == 0)
+            Wheel.swordIsInContact = false;
+        else
+            Wheel.swordIsInContact = true;
 
     }
-
+ 
 
 
 }

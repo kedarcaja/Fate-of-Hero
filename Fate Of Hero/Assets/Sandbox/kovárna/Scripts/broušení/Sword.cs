@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 public class Sword : MonoBehaviour {
 
-
+  
     [SerializeField]
     private float moveSpeed,rotateSpeed;
     private GameObject sword;
@@ -49,10 +49,16 @@ public class Sword : MonoBehaviour {
 
 
         if (turns == 0)
+        {
             Wheel.swordIsInContact = false;
+         
+        }
         else
+        {
             Wheel.swordIsInContact = true;
 
+
+        }
     }
  
 

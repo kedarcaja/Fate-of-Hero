@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class Wheel : MonoBehaviour {
 [SerializeField]
-    private float speed,maxSpeed;
+    private  float speed,maxSpeed;
     private ParticleSystem PS;
-   
+   public  float Speed
+    {
+
+
+        get { return speed; }
+      private  set
+        {
+
+            value = speed;
+        }
+    }
    
     public static bool swordIsInContact;
 

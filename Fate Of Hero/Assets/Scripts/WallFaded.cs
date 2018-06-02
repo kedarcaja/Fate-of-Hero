@@ -6,33 +6,35 @@ using UnityEngine.UI;
 public class WallFaded : MonoBehaviour
 {
     [SerializeField]
-    private GameObject wall1, wall2;
+    private GameObject[] wall;
     private Color def;
     private Color fade;
 
 
     void Start()
     {
-        def = wall1.GetComponent<SpriteRenderer>().color;
+        def = wall[0].GetComponent<SpriteRenderer>().color;
         fade = def;
         fade.a = 0.4f;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Leonard")
         {
-            wall1.GetComponent<SpriteRenderer>().color = fade;
-            wall2.GetComponent<SpriteRenderer>().color = fade;
+            for (int i = 0; i < wall.Length; i++)
+            {
+                wall[i].GetComponent<SpriteRenderer>().color = fade;
+            }
         }
-
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Leonard")
         {
-            wall1.GetComponent<SpriteRenderer>().color = def;
-            wall2.GetComponent<SpriteRenderer>().color = def;
+            for (int i = 0; i < wall.Length; i++)
+            {
+                wall[i].GetComponent<SpriteRenderer>().color = def;
+            }
         }
     }
 }

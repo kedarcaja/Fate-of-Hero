@@ -6,59 +6,48 @@ using UnityEngine;
 public class Door : MonoBehaviour {
 
     [SerializeField]
-    private float time;
-    [SerializeField]
-    private float waitTime;
-    [SerializeField]
     private GameObject exit;
-    private GameObject Player;
+    public GameObject Player;
      [Header("Dveře = true, průchod = false")]
     public bool door;
-    private bool timer;
+    bool indik;
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
-        
-       
         if (!exit) { Debug.LogError("<color=Red><b>ERROR: </b> The exit object was not found </color>"); }
     }
     private void Update()
     {
-        if (timer)
+
+        if (Input.GetKeyDown(KeyCode.E) && indik == true)
         {
-            if (time >= waitTime)
-            {
-                Load();
-                timer = false;
-            }
-            else { time += UnityEngine.Time.deltaTime; }
+
+            print("true");
+            Player.transform.position = exit.transform.position;
         }
-        
     }
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (door == true)
+       
+         if (door == true)
         {
-            if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+            if (other.gameObject.tag == "Leonard")
             {
-                print("collided");
-                //StartCoroutine(load());
+                indik = true;  
+            }
+            else
+            {
+                indik = false;
             }
         }
         else
         {
-            if (other.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Leonard")
             {
-                print("collided");
-                timer = true;  
+                Player.transform.position = exit.transform.position;
+
             }
         }
-
     }
-    public void Load()
-    {
-        time = 0;
-        Player.transform.position = exit.transform.position;
-    }
+   
 }

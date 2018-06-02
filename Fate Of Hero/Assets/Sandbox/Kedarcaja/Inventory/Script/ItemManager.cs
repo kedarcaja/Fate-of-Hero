@@ -39,6 +39,10 @@ public class ItemManager : MonoBehaviour {
 
     public int mana;
 
+    public int minDamage;
+
+    public int maxDamage;
+
     public int buyPrice;
 
     public int sellPrice;
@@ -66,7 +70,7 @@ public class ItemManager : MonoBehaviour {
                 itemContainer.Equipment.Add(new Equipment(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina));
                 break;
             case Category.WEAPON:
-                itemContainer.Weapons.Add(new Weapon(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina, attackSpeed));
+                itemContainer.Weapons.Add(new Weapon(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina, attackSpeed,minDamage,maxDamage));
                 break;
             case Category.CONSUMEABLE:
                 itemContainer.Consumeables.Add(new Consumeable(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice , health, mana));

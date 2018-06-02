@@ -21,11 +21,15 @@ public class IPlayer : MonoBehaviour {
     public int baseAgility;
     public int baseIntellect;
     public int baseStamina;
+    public int baseMinDamage;
+    public int baseMaxDamage;
 
     private int strenght;
     private int agility;
     private int intellect;
     private int stamina;
+    private int maxDamage;
+    private int minDamage;
     private int gold;
     public int Gold
     {
@@ -58,7 +62,7 @@ public class IPlayer : MonoBehaviour {
     }
     void Start () {
         Gold = 0;
-        SetStats(0, 0, 0, 0);
+        SetStats(0, 0, 0, 0,0,0);
 	}	
 	void Update ()
     {
@@ -181,14 +185,16 @@ public class IPlayer : MonoBehaviour {
             
         }
     }
-    public void SetStats(int strenght , int agility, int intellect, int stamina)
+    public void SetStats(int strenght , int agility, int intellect, int stamina, int minDamage, int maxDamage)
     {
         this.strenght = strenght + baseStrenght;
         this.agility = agility + baseAgility;
         this.intellect = intellect + baseIntellect;
         this.stamina = stamina + baseStamina;
+        this.minDamage = minDamage + baseMinDamage;
+        this.maxDamage = maxDamage + baseMaxDamage;
 
-        statsText.text = string.Format(" Strenght: {0}\n Agility: {1}\n Intellect: {2}\n Stamina: {3}\n", this.strenght, this.agility, this.intellect, this.stamina);
+        statsText.text = string.Format(" Damage: {4}-{5}\n Strenght: {0}\n Agility: {1}\n Intellect: {2}\n Stamina: {3}\n", this.strenght, this.agility, this.intellect, this.stamina,this.minDamage,this.maxDamage);
 
     }
 }

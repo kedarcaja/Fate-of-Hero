@@ -140,22 +140,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c3c7de9bab7c4429160666209384b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: sedmimilove botky
-  description: "prost\u011B botky"
-  itemType: 7
-  quality: 4
-  category: 0
-  spriteNeutral: Equipment/Boot01
-  spriteHighlghted: Equipment/Boot02
+  itemName: "Kudla z jednoro\u017Ece"
+  description: "bo\u017E\xED me\u010D"
+  itemType: 1
+  quality: 5
+  category: 1
+  spriteNeutral: Weapons/Sword01
+  spriteHighlghted: Weapons/Sword02
   maxSize: 1
-  strength: 1
-  agility: 2
+  strength: 90
+  agility: 5
   intellect: 3
   stamina: 4
-  attackSpeed: 0
+  attackSpeed: 0.25
   health: 0
   mana: 0
-  buyPrice: 25
+  minDamage: 2
+  maxDamage: 20
+  buyPrice: 50
   sellPrice: 10
 --- !u!4 &322343908
 Transform:

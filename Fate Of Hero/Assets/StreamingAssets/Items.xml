@@ -16,6 +16,8 @@
       <Intellect>6</Intellect>
       <Stamina>5</Stamina>
       <AttackSpeed>2</AttackSpeed>
+      <MinDamage>8</MinDamage>
+      <MaxDamage>10</MaxDamage>
     </Item>
     <Item xsi:type="Weapon">
       <ItemName>Dvouruèní sekera</ItemName>
@@ -32,6 +34,8 @@
       <Intellect>7</Intellect>
       <Stamina>25</Stamina>
       <AttackSpeed>0.25</AttackSpeed>
+      <MinDamage>2</MinDamage>
+      <MaxDamage>8</MaxDamage>
     </Item>
     <Item xsi:type="Weapon">
       <ItemName>Dvouruèní sekera smrti</ItemName>
@@ -48,6 +52,8 @@
       <Intellect>7</Intellect>
       <Stamina>25</Stamina>
       <AttackSpeed>0.25</AttackSpeed>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>55</MaxDamage>
     </Item>
     <Item xsi:type="Weapon">
       <ItemName>Štít mrtvého rytíøe</ItemName>
@@ -64,6 +70,26 @@
       <Intellect>7</Intellect>
       <Stamina>26</Stamina>
       <AttackSpeed>1</AttackSpeed>
+      <MinDamage>0</MinDamage>
+      <MaxDamage>0</MaxDamage>
+    </Item>
+    <Item xsi:type="Weapon">
+      <ItemName>Kudla z jednorožce</ItemName>
+      <Description>boží meè</Description>
+      <ItemType>MAINHAND</ItemType>
+      <Quality>ARTEFACT</Quality>
+      <SpriteNeutral>Weapons/Sword01</SpriteNeutral>
+      <SpriteHighlighted>Weapons/Sword02</SpriteHighlighted>
+      <MaxSize>1</MaxSize>
+      <BuyPrice>9</BuyPrice>
+      <SellPrice>100</SellPrice>
+      <Strength>3</Strength>
+      <Agility>4</Agility>
+      <Intellect>50</Intellect>
+      <Stamina>10</Stamina>
+      <AttackSpeed>0.25</AttackSpeed>
+      <MinDamage>2</MinDamage>
+      <MaxDamage>20</MaxDamage>
     </Item>
   </Weapons>
   <Consumeables>

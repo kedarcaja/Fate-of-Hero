@@ -73,19 +73,25 @@ public class CharacterPanel : Inventory
         int intellect = 0;
         int agility = 0;
         int stamina = 0;
+        int minDamage = 0;
+        int maxDamage = 0;
 
         foreach (Slot slot in equipmentSlots)
         {
             if (!slot.IsEmpty)
             {
                 Equipment e = (Equipment)slot.CurrentItem.Item;
+                Weapon w = (Weapon)slot.CurrentItem.Item;
                 strenght += e.Strength;
                 agility += e.Agility;
                 intellect += e.Intellect;
                 stamina += e.Stamina;
+                minDamage += w.MinDamage;
+                maxDamage += w.MaxDamage;
+                
             }
         }
-        IPlayer.Instance.SetStats(strenght, agility, intellect, stamina);
+        IPlayer.Instance.SetStats(strenght, agility, intellect, stamina, minDamage,maxDamage);
     }
     public override void SaveInventory()
     {

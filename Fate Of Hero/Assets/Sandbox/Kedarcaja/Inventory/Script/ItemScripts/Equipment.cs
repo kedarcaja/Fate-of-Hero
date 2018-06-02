@@ -10,6 +10,7 @@ public class Equipment : Item
     public int Stamina { get; set; }
    
 
+
     public Equipment()
     {
     }

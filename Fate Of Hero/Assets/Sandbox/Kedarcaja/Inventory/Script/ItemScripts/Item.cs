@@ -79,7 +79,7 @@ public abstract class Item
                 break;
 
         }
-        return string.Format("<color=" + color + "><size=24>{0}</size></color><size=22><i><color=lime>" + newLine + "{1}</color></i>\n{2}\n</size>", ItemName, Description,ItemType.ToString().ToLower());
+        return string.Format("<b><color=" + color + "><size=30>{0}</size></color></b><size=22><i><color=lime>" + newLine + "{1}</color></i>\n{2}\n</size>", ItemName, Description,ItemType.ToString().ToLower());
 
     }
 }

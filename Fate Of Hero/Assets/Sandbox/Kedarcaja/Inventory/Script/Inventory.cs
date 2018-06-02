@@ -59,6 +59,7 @@ public class Inventory : MonoBehaviour
     }
     public static bool mouseInside = false;
     public bool instantClose = true;
+   
     
 
     protected virtual void Start()
@@ -172,7 +173,7 @@ public class Inventory : MonoBehaviour
             InventoryManager.Instance.tooltipObject.SetActive(true);
             float xPos = slot.transform.position.x + 100 + slotPaddingLeft;
             float yPos = slot.transform.position.y - slot.GetComponent<RectTransform>().sizeDelta.y - slotPaddingTop;
-
+           
             InventoryManager.Instance.tooltipObject.transform.position = new Vector3(xPos, yPos);
         }
 

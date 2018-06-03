@@ -48,9 +48,10 @@ public class DialogControlScript : MonoBehaviour
 
             }
         else { timer += UnityEngine.Time.deltaTime; }
+
         if (trigger)
         {
-            if (Input.GetKeyDown(KeyCode.E) && isPlay==false)
+            if (Input.GetKeyDown(KeyCode.E) && isPlay == false)
             {
                 isPlay = true;
                 dialogControler.SetActive(true);
@@ -425,18 +426,17 @@ public class DialogControlScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Leonard")
         {
             trigger = true;
         }
-      
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Leonard")
         {
             trigger = false;
         }

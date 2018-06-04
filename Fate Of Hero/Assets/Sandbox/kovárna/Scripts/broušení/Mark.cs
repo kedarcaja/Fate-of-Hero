@@ -1,28 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mark : MonoBehaviour {
     
-    private int markHealth;
-    private bool isGrindable;
+    private float markHealth,startHealth;
+    [SerializeField]
+    private Text markText;
 	void Start () {
-        markHealth = 50;
-	}
-	
-	
-	void Update () {
-		
+        startHealth = 100;
+        markHealth = startHealth;
+
+     
+    }
+
+
+    void Update () {
+        markText.text =gameObject.name+" "+ Percentile() + "%";
 	}
     private void OnTriggerEnter(Collider other)
     {
+      
 
-
-        print(gameObject.name + " health: " + markHealth);
-        if(markHealth>0)
+     
+      if(markHealth>0&&Wheel.isRotating)
         markHealth--;
 
     }
 
+    private float Percentile()
+    {
 
+
+        return (markHealth/startHealth) * 100;
+    }
 }

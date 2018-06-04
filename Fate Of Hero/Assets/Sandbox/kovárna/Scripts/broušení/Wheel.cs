@@ -6,6 +6,7 @@ public class Wheel : MonoBehaviour {
 [SerializeField]
     private  float speed,maxSpeed;
     private ParticleSystem PS;
+    public static bool isRotating;
    public  float Speed
     {
 
@@ -37,14 +38,17 @@ public class Wheel : MonoBehaviour {
         transform.Rotate(new Vector3(0, -speed, 0));
         if (Input.GetKeyDown(KeyCode.Space)&& speed > maxSpeed)
             speed -= 1f;
-        if (speed < 0&& swordIsInContact)
+        if (speed < 0 && swordIsInContact)
         {
-
+            isRotating = true;
             PS.Play();
         }
-            
+
         else
+        {
             PS.Stop();
+            isRotating = false;
+        }
 
        
     }

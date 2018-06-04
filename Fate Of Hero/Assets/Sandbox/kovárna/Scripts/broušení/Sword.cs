@@ -10,6 +10,8 @@ public class Sword : MonoBehaviour {
     private GameObject sword;
     private int turns = 0;
     private float MaxPositionX,MinPositionX;
+
+    private int zones;
     private void Start()
     {
         sword = GameObject.Find("Sword");

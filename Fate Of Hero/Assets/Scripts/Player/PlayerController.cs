@@ -6,11 +6,14 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField]
-    private float MovementSpeed = 200f;
+    private float MovementSpeed = 2f;
+
+    
 
     private Rigidbody rigid;
     Animator anim;
 
+    
     // Use this for initialization
     void Start()
     {
@@ -24,21 +27,21 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = new Vector3();
         if (Input.GetKey(KeyCode.W))
         {
-            velocity += Vector3.forward * MovementSpeed * Time.deltaTime;
+            velocity += Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            velocity += -Vector3.forward * MovementSpeed * Time.deltaTime;
+            velocity += -Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            velocity += Vector3.left * MovementSpeed * Time.deltaTime;
+            velocity += Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            velocity += -Vector3.left * MovementSpeed * Time.deltaTime;
+            velocity += -Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
         }
         if (velocity == Vector3.zero)
         {
@@ -53,5 +56,10 @@ public class PlayerController : MonoBehaviour
 
         velocity.y = rigid.velocity.y;
         rigid.velocity = velocity;
+
+        if (Input.GetKey(KeyCode.F12))
+        {
+            Screenshot.TakeScreenshot_static(1920, 1080);
+        }
     }
 }

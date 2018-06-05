@@ -9,18 +9,19 @@ public class Mark : MonoBehaviour {
     [SerializeField]
     private Text markText;
     [SerializeField]
-   
+    private Image mark;
 	void Start () {
         startHealth = 150;
         markHealth = startHealth;
 
-        markText.color = Color.red;
+        markText.color = Color.white;
+        mark.color = Color.red;
     }
 
 
     void Update () {
         markText.text =Percentile() + "%";
-        setMarkValueColor();
+       // setMarkValueColor();
 	}
     private void OnTriggerEnter(Collider other)
     {
@@ -31,6 +32,7 @@ public class Mark : MonoBehaviour {
         {
 
             markHealth--;
+            mark.color = Color.Lerp(mark.color, Color.green, Time.deltaTime);
 
 
         }
@@ -38,7 +40,7 @@ public class Mark : MonoBehaviour {
         {
 
             markHealth-=0.5f;
-
+            mark.color = Color.Lerp(mark.color, Color.green, Time.deltaTime);
 
         }
 

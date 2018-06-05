@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Wheel : MonoBehaviour {
 [SerializeField]
-    private  float speed,maxSpeed;
+    private  static float speed,maxSpeed;
     private ParticleSystem PS;
     public static bool isRotating;
-   public  float Speed
+   public  static float Speed
     {
 
 

@@ -10,6 +10,10 @@ public class Sword : MonoBehaviour {
     private GameObject sword;
     private int turns = 0;
     private float MaxPositionX,MinPositionX;
+    private Animator anim;
+    private GameObject hand;
+    private AnimationCurve curve;
+   
 
     private int zones;
     private void Start()
@@ -61,8 +65,15 @@ public class Sword : MonoBehaviour {
 
 
         }
+
+
+
     }
- 
+    private void SetCurve()
+    {
+         
+        
+    }
 
 
 }

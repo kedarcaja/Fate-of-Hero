@@ -31,7 +31,7 @@ public class Door : MonoBehaviour {
        
          if (door == true)
         {
-            if (other.gameObject.tag == "Leonard")
+            if (other.gameObject.tag == "Player")
             {
                 indik = true;  
             }
@@ -42,7 +42,7 @@ public class Door : MonoBehaviour {
         }
         else
         {
-            if (other.gameObject.tag == "Leonard")
+            if (other.gameObject.tag == "Player")
             {
                 Player.transform.position = exit.transform.position;
 

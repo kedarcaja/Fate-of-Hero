@@ -19,7 +19,7 @@ public class WallFaded : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             for (int i = 0; i < wall.Length; i++)
             {
@@ -29,7 +29,7 @@ public class WallFaded : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             for (int i = 0; i < wall.Length; i++)
             {

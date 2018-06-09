@@ -202,7 +202,7 @@ public class MonologScript : MonoBehaviour {
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             Trigger = true;
         }
@@ -210,7 +210,7 @@ public class MonologScript : MonoBehaviour {
    
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             Trigger = false;
         }

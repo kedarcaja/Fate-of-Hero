@@ -428,7 +428,7 @@ public class DialogControlScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             trigger = true;
         }
@@ -436,7 +436,7 @@ public class DialogControlScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Leonard")
+        if (other.gameObject.tag == "Player")
         {
             trigger = false;
         }

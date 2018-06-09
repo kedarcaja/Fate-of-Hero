@@ -91,13 +91,7 @@ public class IPlayer : MonoBehaviour {
             }
         }       
     }
-    public void Click()
-    {
-        if (CharPanelII != null)
-        {
-            CharPanelII.Open();
-        }
-    }
+    
     public void RandomItem()
     {
         int randomType = UnityEngine.Random.Range(0, 4);
@@ -129,6 +123,13 @@ public class IPlayer : MonoBehaviour {
         }
         inventory.AddItem(newItem);
         Destroy(tmp);
+    }
+    public void RandomItems()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            RandomItem();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

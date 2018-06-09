@@ -26,20 +26,24 @@ public class Weapon : Equipment
 
     public override string GetTooltip(Inventory inv)
     {
-       
+        string stats = string.Empty;
+        if (MinDamage > 0)
+        {
+            stats += "\nPoškození: "+ MinDamage.ToString()+"-"+ MaxDamage.ToString();
+        }
         string equipmentTip = base.GetTooltip(inv);
 
         if (inv is VendorInvetory)
         {
-            return string.Format("{0} \n <size=22> AttackSpeed: {1}\n Damage: {2}-{3}\n<color=yellow>Price: {4}</color></size>", equipmentTip, AttackSpeed,MinDamage,MaxDamage,BuyPrice);
+            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, BuyPrice);
         }
         else if (VendorInvetory.Instance.IsOpen)
         {
-            return string.Format("{0} \n <b><size=22>Damage: {2}-{3}</size></b> \n<size=22> AttackSpeed: {1}\n \n <color=yellow>Price: {4}</color></size>", equipmentTip, AttackSpeed, MinDamage, MaxDamage, SellPrice);
+            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, SellPrice);
         }
         else
         {
-            return string.Format("{0} \n <b><color=red> <size=30>Damage: {2}-{3}</size></color></b> \n <size=22> AttackSpeed: {1}</size>", equipmentTip, AttackSpeed, MinDamage, MaxDamage);
+            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b>\n<size=22> AttackSpeed: {1}</size>", equipmentTip, AttackSpeed, stats);
         }
         
     }

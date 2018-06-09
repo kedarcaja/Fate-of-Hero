@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Consumeable : Item
 {
-    public int Health { get; set; }
+   
+   public int Health { get; set; }
+   
     public int Mana { get; set; }
   
 

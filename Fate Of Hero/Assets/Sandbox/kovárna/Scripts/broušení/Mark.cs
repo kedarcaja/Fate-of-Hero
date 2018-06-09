@@ -79,6 +79,9 @@ public class Mark : MonoBehaviour {
             myIndex++;
             print(myIndex);
         }
+
+
+
         LerpColor(colors[myIndex]);
     }
 }

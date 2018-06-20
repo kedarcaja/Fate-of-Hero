@@ -17,6 +17,7 @@ public class Mark : MonoBehaviour {
 
         markText.color = Color.white;
         mark.color = Color.red;
+        print(gameObject.name+" "+myIndex);
     }
 
 
@@ -28,6 +29,7 @@ public class Mark : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
 
+      
 
 
         if (MarkIsNotDestroyedAndWheelIsRotating())
@@ -73,11 +75,11 @@ public class Mark : MonoBehaviour {
     private void onValueChange()
     {
         
-        Color[] colors = { Color.red, Color.blue, Color.yellow,Color.magenta, Color.green };
-        if (Percentile() % 25 == 0&& myIndex<colors.Length-1)
+        Color[] colors = {Color.red, Color.blue, Color.yellow,Color.magenta, Color.green };
+        if (Percentile() % 28 == 0&& myIndex<colors.Length-1)
         {
             myIndex++;
-            print(myIndex);
+           
         }
 
 

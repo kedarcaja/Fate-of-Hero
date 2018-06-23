@@ -28,6 +28,8 @@ public class DialogControlScript : MonoBehaviour
     [Header("Sound track")]
     [SerializeField]
     private AudioClip voice;
+    [SerializeField]
+    private float volume;
     bool isPlay;
     bool trigger;
 
@@ -56,7 +58,7 @@ public class DialogControlScript : MonoBehaviour
                 isPlay = true;
                 dialogControler.SetActive(true);
                 part = 1; Dialog();
-                AudioSource.PlayClipAtPoint(voice, transform.position, 1f);
+                AudioSource.PlayClipAtPoint(voice, transform.position,25f);
                 PlayerScript.Instance.isMove = false;
             }
         }

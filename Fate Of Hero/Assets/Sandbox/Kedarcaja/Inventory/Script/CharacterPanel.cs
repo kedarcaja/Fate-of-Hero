@@ -86,8 +86,8 @@ public class CharacterPanel : Inventory
                 agility += e.Agility;
                 intellect += e.Intellect;
                 stamina += e.Stamina;
-                //minDamage += w.MinDamage;
-               // maxDamage += w.MaxDamage;
+                minDamage += e.MinDamage;
+                maxDamage += e.MaxDamage;
                 
             }
         }

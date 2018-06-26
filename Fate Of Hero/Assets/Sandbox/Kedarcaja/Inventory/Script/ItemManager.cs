@@ -67,10 +67,10 @@ public class ItemManager : MonoBehaviour {
         switch (category)
         {
             case Category.EQUIPMENT:
-                itemContainer.Equipment.Add(new Equipment(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina));
+                itemContainer.Equipment.Add(new Equipment(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina, minDamage, maxDamage));
                 break;
             case Category.WEAPON:
-                itemContainer.Weapons.Add(new Weapon(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina, attackSpeed,minDamage,maxDamage));
+                itemContainer.Weapons.Add(new Weapon(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice, strength, agility, intellect, stamina, attackSpeed, minDamage, maxDamage));
                 break;
             case Category.CONSUMEABLE:
                 itemContainer.Consumeables.Add(new Consumeable(itemName, description, itemType, quality, spriteNeutral, spriteHighlghted, maxSize, buyPrice, sellPrice , health, mana));

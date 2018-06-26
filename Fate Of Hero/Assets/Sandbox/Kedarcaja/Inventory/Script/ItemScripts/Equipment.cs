@@ -8,24 +8,32 @@ public class Equipment : Item
     public int Agility { get; set; }
     public int Intellect { get; set; }
     public int Stamina { get; set; }
-   
+
+    public int MinDamage { get; set; }
+    public int MaxDamage { get; set; }
+
 
 
     public Equipment()
     {
     }
 
-    public Equipment(string itemName, string description, ItemType itemType, Quality quality, string spriteNeutral, string spriteHighlighted, int maxSize, int buyPrice, int sellPrice, int strength, int agility, int intellect,int stamina) : base(itemName, description, itemType, quality, spriteNeutral, spriteHighlighted, maxSize, buyPrice, sellPrice)
+    public Equipment(string itemName, string description, ItemType itemType, Quality quality, string spriteNeutral, string spriteHighlighted, int maxSize, int buyPrice, int sellPrice, int strength, int agility, int intellect,int stamina, int minDamage, int maxDamage) : base(itemName, description, itemType, quality, spriteNeutral, spriteHighlighted, maxSize, buyPrice, sellPrice)
     {
         this.Strength = strength;
         this.Agility = agility;
         this.Intellect = intellect;
         this.Stamina = stamina;
-        
+        this.MinDamage = minDamage;
+        this.MaxDamage = maxDamage;
+
     }
+
+
+
     public override void Use(Slot slot, ItemScript item)
     {
-        Debug.Log("Equip " + ItemName);
+      //  Debug.Log("Equip " + ItemName);
         CharacterPanel.Instance.EquipItem(slot, item);
     }
 
@@ -48,6 +56,10 @@ public class Equipment : Item
         if (Stamina > 0)
         {
             stats += "\n+" + Stamina.ToString() + " Stamina";
+        }
+        if (MinDamage > 0)
+        {
+            stats += "\nPoškození: " + MinDamage.ToString() + "-" + MaxDamage.ToString();
         }
         string itemTip = base.GetTooltip(inv);
         if (inv is VendorInvetory && !(this is Weapon))

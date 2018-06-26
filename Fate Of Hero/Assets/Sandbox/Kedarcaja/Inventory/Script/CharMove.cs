@@ -12,9 +12,11 @@ public class CharMove : MonoBehaviour
         for (int i = 0; i < canvasGroup.Length; i++)
         {
             canvasGroup[i].alpha = 0;
+            canvasGroup[i].blocksRaycasts = false;
         }
         canvasGroup[index].alpha = 1;
-       
+        canvasGroup[index].blocksRaycasts = true;
+
     }
 
     

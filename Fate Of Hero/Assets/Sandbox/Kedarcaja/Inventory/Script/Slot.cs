@@ -76,11 +76,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler
                 eventID = EventTriggerType.PointerEnter
             };
             entry.callback.AddListener((eventData) => { transform.parent.GetComponent<Inventory>().ShowToolTip(gameObject); });
-            trigger.triggers.Add(entry);
-
+            //trigger.triggers.Add(entry);
         }
-
-        
     }
     public void AddItem(ItemScript item)
     {

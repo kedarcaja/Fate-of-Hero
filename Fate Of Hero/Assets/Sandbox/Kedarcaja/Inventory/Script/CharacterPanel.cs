@@ -81,13 +81,13 @@ public class CharacterPanel : Inventory
             if (!slot.IsEmpty)
             {
                 Equipment e = (Equipment)slot.CurrentItem.Item;
-                Weapon w = (Weapon)slot.CurrentItem.Item;
+                //Weapon w = (Weapon)slot.CurrentItem.Item;
                 strenght += e.Strength;
                 agility += e.Agility;
                 intellect += e.Intellect;
                 stamina += e.Stamina;
-                minDamage += w.MinDamage;
-                maxDamage += w.MaxDamage;
+                //minDamage += w.MinDamage;
+               // maxDamage += w.MaxDamage;
                 
             }
         }

@@ -10,7 +10,7 @@ public class CreditsScript : MonoBehaviour
     private TextAsset TextFile;
     [SerializeField]
     private Text CreditText;
-    private readonly int Ymax = 4695;
+    private readonly int Ymax = 8740;
     [SerializeField]
     RectTransform myRectTransform;
     private float StartPosition;

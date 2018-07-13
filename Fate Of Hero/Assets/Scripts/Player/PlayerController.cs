@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float MovementSpeed = 2f;
 
+    [SerializeField]
+    private bool IsMove;
     
 
     private Rigidbody rigid;
@@ -24,42 +26,41 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 velocity = new Vector3();
-        if (Input.GetKey(KeyCode.W))
+        if (IsMove)
         {
-            velocity += Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            velocity += -Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
-        }
+            Vector3 velocity = new Vector3();
+            if (Input.GetKey(KeyCode.W))
+            {
+                velocity += Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                velocity += -Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                velocity += Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            velocity += Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                velocity += -Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
+            }
+            if (velocity == Vector3.zero)
+            {
+                anim.SetBool("Moving", false);
+            }
+            else
+            {
+
+                transform.rotation = Quaternion.LookRotation(velocity);
+                anim.SetBool("Moving", true);
+            }
+            velocity.y = rigid.velocity.y;
+            rigid.velocity = velocity;
 
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            velocity += -Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
-        }
-        if (velocity == Vector3.zero)
-        {
-            anim.SetBool("Moving", false);
-        }
-        else
-        {
+        
 
-            transform.rotation = Quaternion.LookRotation(velocity);
-            anim.SetBool("Moving", true);
-        }
-
-        velocity.y = rigid.velocity.y;
-        rigid.velocity = velocity;
-
-        if (Input.GetKey(KeyCode.F12))
-        {
-            Screenshot.TakeScreenshot_static(1920, 1080);
-        }
     }
 }

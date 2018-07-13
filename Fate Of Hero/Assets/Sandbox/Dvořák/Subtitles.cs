@@ -50,9 +50,7 @@ public class Subtitles : MonoBehaviour
 
     private void Update()
     {
-        #region Decisions Methods
-       
-        #endregion
+      
         #region Dialog Methods
         for (int i = 0; i < Dialogs.Length; i++)
         {
@@ -80,6 +78,12 @@ public class Subtitles : MonoBehaviour
         {
             audi.clip = null;
             txt.text = "Empty";
+            FindObjectOfType<PlayerController>().IsMove = true;
+
+        }
+        if (audi.isPlaying)
+        {
+            FindObjectOfType<PlayerController>().IsMove = false;
         }
     }
     #endregion
@@ -96,8 +100,8 @@ public class Subtitles : MonoBehaviour
         public struct Dialog
         {
 
-          
-           
+    private bool timerStarted;
+    public bool wasPlayed;
             public string dialogName;
             public AudioClip clip;
             public bool trigger;
@@ -111,9 +115,11 @@ public class Subtitles : MonoBehaviour
 
     public void StartDialog()
     {
-        if (trigger&&!Subtitles.audi.isPlaying)
+        if (trigger&&!Subtitles.audi.isPlaying&&!timerStarted)
         {
             sentenceIndex = 0;
+            timerStarted = true;
+
 
             currentSentence = sentences[sentenceIndex];
 
@@ -125,28 +131,29 @@ public class Subtitles : MonoBehaviour
 
         }
 
+    
 
-      
 
 
-       
     }
     public IEnumerator StartTimer()
     {
-        while (Subtitles.audi.isPlaying && Subtitles.audi.clip == clip)
+        while (Subtitles.audi.isPlaying&&Subtitles.audi.clip == clip)
         {
-            yield return new WaitForSeconds(1);
-            currentSentence.timer--;
-            Debug.Log(currentSentence.timer);
-            if (currentSentence.timer <= 0 && sentenceIndex < sentences.Length - 1)
-            {
+            yield return new WaitForSecondsRealtime(1);
+          
+                currentSentence.timer--;
+
+
+
+            if (currentSentence.timer ==0&&sentenceIndex<sentences.Length) {
                 sentenceIndex++;
                 currentSentence = sentences[sentenceIndex];
                 Subtitles.Txt.text = "<b>" + currentSentence.speaker + ": " + "</b>" + currentSentence.sentence;
-
-
             }
+            
         }
+       
     }
 
   

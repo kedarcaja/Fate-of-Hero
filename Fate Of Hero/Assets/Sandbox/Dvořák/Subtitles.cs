@@ -100,8 +100,8 @@ public class Subtitles : MonoBehaviour
         public struct Dialog
         {
 
-    private bool timerStarted;
-    public bool wasPlayed;
+
+   
             public string dialogName;
             public AudioClip clip;
             public bool trigger;
@@ -115,10 +115,9 @@ public class Subtitles : MonoBehaviour
 
     public void StartDialog()
     {
-        if (trigger&&!Subtitles.audi.isPlaying&&!timerStarted)
+        if (trigger&&!Subtitles.audi.isPlaying)
         {
             sentenceIndex = 0;
-            timerStarted = true;
 
 
             currentSentence = sentences[sentenceIndex];
@@ -187,9 +186,7 @@ public struct DialogSentences
         
             public string monologName;
             public bool trigger;
-    [SerializeField]
-    private string speaker;
-
+ 
             [Space]
             [Space]
 
@@ -204,7 +201,7 @@ public struct DialogSentences
             {
                 if (trigger && !Subtitles.audi.isPlaying)
                 {
-                    Subtitles.Txt.text ="<b>"+speaker+":"+"</b>"+" "+ sentences;
+                    Subtitles.Txt.text =sentences;
                     Subtitles.audi.clip = clip;
                     Subtitles.audi.Play();
                     trigger = false;

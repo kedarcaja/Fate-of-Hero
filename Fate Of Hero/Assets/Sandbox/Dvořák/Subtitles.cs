@@ -77,7 +77,7 @@ public class Subtitles : MonoBehaviour
         if (!audi.isPlaying)
         {
             audi.clip = null;
-            txt.text = "Empty";
+            txt.text = "";
             FindObjectOfType<PlayerController>().IsMove = true;
 
         }
@@ -99,9 +99,6 @@ public class Subtitles : MonoBehaviour
 [Serializable]
         public struct Dialog
         {
-
-
-   
             public string dialogName;
             public AudioClip clip;
             public bool trigger;
@@ -171,7 +168,7 @@ public struct DialogSentences
 
     public string speaker;
 
-    [Range(1, 100)]
+    [Range(1f, 20f)]
 
     public float timer;
 

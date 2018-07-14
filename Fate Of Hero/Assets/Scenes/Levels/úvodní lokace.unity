@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,53 +173,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &97554746
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 847749411}
-    m_Modifications:
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -15.347311
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -12.676598
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -18.033775
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: dc4a700377913c64b81d164f322b7fbf, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &97554747 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4806291675837308, guid: dc4a700377913c64b81d164f322b7fbf,
-    type: 2}
-  m_PrefabInternal: {fileID: 97554746}
 --- !u!4 &146065291 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d,
@@ -257,7 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 847749411}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &221777939
 SpriteRenderer:
@@ -373,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &244375309
 Transform:
   m_ObjectHideFlags: 0
@@ -399,59 +352,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogs:
-  - dialogName: 
+  - dialogName: MS01p02
     clip: {fileID: 8300000, guid: 6dee946d12c36dc418af640ae842deb4, type: 3}
     trigger: 0
     sentences:
     - sentence: 'To jako fakt? '
       speaker: Leonard
-      timer: 3
+      timer: 2
     - sentence: "Kytky p\u0159ece nepl\xE1\u010Dou, kytky ti\u0161e rostou."
       speaker: Leonard
       timer: 5
     - sentence: "No tak j\xF3, tak j\xF3, ale budu si p\u0159ipadat jako bl\xE1zen...eee...kv\u011Btino?"
       speaker: Leonard
-      timer: 6
-    - sentence: "co chce\u0161? Jo, j\xE1 v\xEDm! Chce\u0161 mi vz\xEDt dal\u0161\xED
-        okv\u011Btn\xED l\xEDstek...no tak v\xED\u0161 co? Tak j\xE1 ti ho teda d\xE1m
-        dobrovoln\u011B, nemus\xED\u0161 mi ho \u0161kubat jako posledn\u011B...to
-        v\xE1\u017En\u011B bolelo!"
+      timer: 7
+    - sentence: "Co chce\u0161?"
       speaker: "Kv\u011Btina"
-      timer: 8
-    - sentence: "Po\u010Dkej po\u010Dkej! Nechci tvoje l\xEDstky, hled\xE1m cestu
-        ven. Ty  jsi opravdu mluv\xEDc\xED kytka? To jako fakt? Nepra\u0161til jsem
-        se p\u0159i p\xE1du moc do hlavy?"
-      speaker: Leonard
-      timer: 5
-    - sentence: "No a co? Um\xEDm mluvit, nau\u010Dila jsem se to, kdy\u017E jsem
-        byla mal\xE1...jako ka\u017Ed\xFD...to poch\xE1z\xED\u0161 z divn\xE9ho kraje,
-        kdy\u017E se to u v\xE1s d\u011Bti neu\u010D\xED."
-      speaker: "Kv\u011Btina"
-      timer: 6
-    - sentence: "No j\xE1 vlastn\u011B asi v\u016Fbec nejsem odtud...a kde to podle
-        tebe teda jsme?"
-      speaker: Leonard
-      timer: 6
-    - sentence: "Nach\xE1z\xED\u0161 se v zemi Antorsk\xE9 "
+      timer: 2
+    - sentence: "Jo, j\xE1 v\xEDm! Chce\u0161 mi vz\xEDt dal\u0161\xED okv\u011Btn\xED
+        l\xEDstek."
       speaker: "Kv\u011Btina"
       timer: 5
-    - sentence: "To v\xED\u0161 \u017Ee j\xF3\u2026"
+    - sentence: "No tak v\xED\u0161 co ?"
+      speaker: "Kv\u011Btina"
+      timer: 2
+    - sentence: "Tak j\xE1 ti ho teda d\xE1m dobrovoln\u011B."
+      speaker: "Kv\u011Btina"
+      timer: 2
+    - sentence: "Nemus\xED\u0161 mi ho \u0161kubat jako posledn\u011B."
+      speaker: "Kv\u011Btina"
+      timer: 3
+    - sentence: "To v\xE1\u017En\u011B bolelo !"
+      speaker: "Kv\u011Btina"
+      timer: 2
+    - sentence: "Po\u010Dkej po\u010Dkej!"
+      speaker: Leonard
+      timer: 2
+    - sentence: "Nechci tvoje l\xEDstky, hled\xE1m cestu ven."
       speaker: Leonard
       timer: 3
-    - sentence: "...ale abych pravdu \u0159ekla, na tomhle m\xEDst\u011B nen\xED nic
-        kouzeln\xE9ho. M\xE1m tu jen sam\xE9 tr\xE1pen\xED."
-      speaker: "Kv\u011Btina"
-      timer: 5
-    - sentence: "V\xED\u0161 co kytko? Zkus\xEDm ti naj\xEDt ten tv\u016Fj vy\u0161kubnut\xFD
-        l\xEDstek, a\u0165 je ti l\xEDp. Ani m\u011B by se tu necht\u011Blo ti\u0161e
-        a poklidn\u011B r\u016Fst jako ka\u017Ed\xE1 jin\xE1 norm\xE1ln\xED kv\u011Btina!
-        T\u0159eba m\u011B mezit\xEDm to \u0161\xE1len\xED p\u0159ejde."
+    - sentence: "Ty  jsi opravdu mluv\xEDc\xED kytka ?"
       speaker: Leonard
-      timer: 10
-    - sentence: "A ne\u0159\xEDkej mi kytko, ur\xE1\u017E\xED m\u011B to! Jmenuju
-        se Samantha. "
+      timer: 4
+    - sentence: To jako fakt?
+      speaker: Leonard
+      timer: 2
+    - sentence: "Nepra\u0161til jsem se p\u0159i tom p\xE1du moc do hlavy?"
+      speaker: Leonard
+      timer: 3
+    - sentence: No a co?
+      speaker: "Kv\u011Btina"
+      timer: 2
+    - sentence: "Um\xEDm mluvit, nau\u010Dila jsem se to, kdy\u017E jsem byla mal\xE1"
+      speaker: "Kv\u011Btina"
+      timer: 3
+    - sentence: "Jako ka\u017Ed\xFD."
+      speaker: "Kv\u011Btina"
+      timer: 2
+    - sentence: "To poch\xE1z\xED\u0161 z divn\xE9ho kraje, kdy\u017E se to u v\xE1s
+        d\u011Bti neu\u010D\xED."
       speaker: "Kv\u011Btina"
       timer: 4
+    - sentence: "No j\xE1 vlastn\u011B asi v\u016Fbec nejsem odsud."
+      speaker: Leonard
+      timer: 2
+    - sentence: A kde to podle tebe teda jsme?
+      speaker: Leonard
+      timer: 3
+    - sentence: "Nach\xE1z\xED\u0161 se na Antorsk\xE9m ostrov\u011B."
+      speaker: "Kv\u011Btina"
+      timer: 3
+    - sentence: "To v\xED\u0161 \u017Ee j\xF3."
+      speaker: Leonard
+      timer: 3
+    - sentence: "Ale Abych pravdu \u0159ekla, na tomhle m\xEDst\u011B nen\xED nic
+        kouzeln\xE9ho."
+      speaker: "Kv\u011Btina"
+      timer: 4
+    - sentence: "M\xE1m tu jen sam\xE9 tr\xE1pen\xED."
+      speaker: "Kv\u011Btina"
+      timer: 3
+    - sentence: "V\xED\u0161 co kytko?"
+      speaker: Leonard
+      timer: 2
+    - sentence: "Zkus\xEDm ti naj\xEDt ten tv\u016Fj vy\u0161kubnut\xFD l\xEDstek,
+        a\u0165 je ti l\xEDp."
+      speaker: Leonard
+      timer: 4
+    - sentence: "Ani m\u011B by se tu necht\u011Blo ti\u0161e a poklidn\u011B r\u016Fst
+        jako ka\u017Ed\xE1 jin\xE1 norm\xE1ln\xED kv\u011Btina!"
+      speaker: Leonard
+      timer: 9
+    - sentence: "T\u0159eba m\u011B mezit\xEDm to \u0161\xE1len\xED p\u0159ejde."
+      speaker: Leonard
+      timer: 3
+    - sentence: "A ne\u0159\xEDkej mi kytko, ur\xE1\u017E\xED m\u011B to!"
+      speaker: "Kv\u011Btina"
+      timer: 4
+    - sentence: ' Jmenuji se Samantha.'
+      speaker: "Kv\u011Btina"
+      timer: 2
   Monologs: []
 --- !u!114 &244375311
 MonoBehaviour:
@@ -474,8 +473,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6200067, y: 1, z: 1.681411}
-  m_Center: {x: 0.026957212, y: 0, z: -0.022123683}
+  m_Size: {x: 0.6802798, y: 1, z: 1.681411}
+  m_Center: {x: 0.58720386, y: 0, z: -0.022123683}
 --- !u!1 &253143593
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4779316367969298, guid: 386e88a4a7c106a45b65bab6a7f4af26, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 386e88a4a7c106a45b65bab6a7f4af26, type: 2}
@@ -654,7 +653,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 847749411}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &306738336
 SpriteRenderer:
@@ -738,7 +737,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4713225807282012, guid: a7092b29232bd0c4c8ba74c2ec78c9f2, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7092b29232bd0c4c8ba74c2ec78c9f2, type: 2}
@@ -756,6 +755,23 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c1ece6a75c5792b44994826b829185a5, type: 2}
   m_PrefabInternal: {fileID: 1849158275}
+--- !u!114 &389437090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389437088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs: []
+  Monologs:
+  - monologName: MS01p01
+    trigger: 0
+    sentences: ahoj
+    clip: {fileID: 8300000, guid: 4f193a863160c4742b59b40b907114e8, type: 3}
 --- !u!1 &393736839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,11 +1176,11 @@ RectTransform:
   m_Father: {fileID: 1990035172}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37, y: -363}
-  m_SizeDelta: {x: 1150.9, y: 218.9}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -616, y: 0}
+  m_SizeDelta: {x: 1150.9, y: 205.9}
+  m_Pivot: {x: -0.0000000047584905, y: 0}
 --- !u!82 &512826619
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1281,12 +1297,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 59
-    m_Alignment: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 30
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1388,7 +1404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &626626632
 Transform:
   m_ObjectHideFlags: 0
@@ -1504,7 +1520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4728015538033506, guid: d0df75ea2e665694480fdfe59f8a1cad, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0df75ea2e665694480fdfe59f8a1cad, type: 2}
@@ -1846,7 +1862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4688650638720274, guid: b033e571032cd9646b938069a6bade3f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b033e571032cd9646b938069a6bade3f, type: 2}
@@ -1885,7 +1901,6 @@ Transform:
   - {fileID: 1673188688}
   - {fileID: 241899933}
   - {fileID: 655319571}
-  - {fileID: 97554747}
   - {fileID: 1905037095}
   - {fileID: 1470093918}
   - {fileID: 1837756061}
@@ -1959,7 +1974,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 847749411}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &929003677
 SpriteRenderer:
@@ -2565,12 +2580,165 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1183889256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.17, y: 51.74, z: 7.55}
+  m_LocalPosition: {x: 7.17, y: 51.03, z: 7.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1209149122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1209149123}
+  - component: {fileID: 1209149126}
+  - component: {fileID: 1209149125}
+  - component: {fileID: 1209149124}
+  m_Layer: 4
+  m_Name: Dialog trigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1209149123
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209149122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1209149124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209149122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS01p03
+    clip: {fileID: 8300000, guid: 268e2f7a7ee30f6479deb9ea48658022, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: "Kv\u011B\u2026 SSS\u2026 jo Samatho, donesl jsem ti ten tv\u016Fj
+        l\xEDstek."
+      speaker: Leonard
+      timer: 7
+    - sentence: "J\xE9, d\u011Bkuji, tady m\xE1\u0161 za n\u011Bj kl\xED\u010D k m\u0159\xED\u017Ei
+        od stoky!"
+      speaker: Samantha
+      timer: 5
+    - sentence: "A\u017E mi p\u0159iroste zp\xE1tky, tak budu zase ta nejkr\xE1sn\u011Bj\u0161\xED
+        kv\u011Btina \u0161iroko daleko."
+      speaker: Samantha
+      timer: 6
+    - sentence: "Ty? Ha ha ha v\u017Edy\u0165 i \u017E\xED\u017Ealy jsou kr\xE1sn\u011Bj\u0161\xED,
+        ne\u017E ty."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "A pro\u010D je tady tahle ?"
+      speaker: Samantha
+      timer: 2
+    - sentence: E...
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jsem tu, abych ti \u0159ekla, \u017Ee si jdu nahoru sehnat nov\xFD
+        klobouk, kter\xFD ty nikdy m\xEDt nebude\u0161, d\u0159\xEDv tady uhnije\u0161!"
+      speaker: "My\u0161ka"
+      timer: 12
+    - sentence: "Ale\u2026E... holky\u2026nechte toho. My\u0161ka se ti p\u0159i\u0161la
+        omluvit, Samantho."
+      speaker: Leonard
+      timer: 7
+    - sentence: "D\u011Blej omluv se, s\xE1m se odsud u\u017E dok\xE1\u017Eu dostat.
+        Kl\xED\u010D m\xE1m."
+      speaker: Leonard
+      timer: 5
+    - sentence: "Tak\u017Ee pokud se neomluv\xED\u0161, z\u016Fst\xE1v\xE1\u0161 tady
+        i s \u017E\xED\u017Ealama."
+      speaker: Leonard
+      timer: 3
+    - sentence: "Ne! Ne! Ach jo. Tak j\xE1 se ti teda omlouv\xE1m Samantho."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Prvn\xED omluva za posledn\xEDch sto let!"
+      speaker: Samantha
+      timer: 4
+    - sentence: "D\u011Bkuji hrdino\u2026! Hrdino? Hal\xF3 hrdino\u2026!"
+      speaker: Samantha
+      timer: 6
+    - sentence: "To mluv\xED\u0161 na m\u011B?"
+      speaker: Leonard
+      timer: 2
+    - sentence: "Ano hrdino, cht\u011Bla jsem ti za odm\u011Bnu d\xE1t je\u0161t\u011B
+        jednu radu."
+      speaker: Samantha
+      timer: 4
+    - sentence: "Sem s n\xED."
+      speaker: Leonard
+      timer: 2
+    - sentence: " A\u0165 bude dra\u010Dice sebev\xEDc sexy, nel\xEDbej ji."
+      speaker: Samatha
+      timer: 4
+    - sentence: "F\xFAha...Rada nad zlato...!"
+      speaker: "My\u0161ka"
+      timer: 4
+    - sentence: Ale no tak.
+      speaker: Leonard
+      timer: 3
+    - sentence: "M\u011Bj se Samantho!"
+      speaker: Leonard
+      timer: 2
+    - sentence: "M\u011Bj se hrdino!"
+      speaker: Samatha
+      timer: 4
+    - sentence: "A te\u010F kone\u010Dn\u011B vst\u0159\xEDc slunci! U\u017E mi od
+        toho vlhka m\xE1lem za\u010Daly plesniv\u011Bt nohy."
+      speaker: Leonard
+      timer: 6
+    - sentence: "Mysl\xED\u0161 to zelen\xFD, co m\xE1\u0161 mezi prsty?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Ne, to je tam u\u017E dlouho, ale m\xE1lem se to rozrostlo d\xE1l."
+      speaker: Leonard
+      timer: 4
+  Monologs: []
+--- !u!114 &1209149125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209149122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1209149126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209149122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.6898233}
+  m_Center: {x: 0.58720386, y: 0, z: 0.4736712}
 --- !u!1 &1269093990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,7 +2981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 847749411}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1369481783
 SpriteRenderer:
@@ -3130,7 +3298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4779316367969298, guid: 386e88a4a7c106a45b65bab6a7f4af26, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1808108358397090, guid: 386e88a4a7c106a45b65bab6a7f4af26, type: 2}
       propertyPath: m_Name
@@ -3156,6 +3324,177 @@ Transform:
   m_PrefabParentObject: {fileID: 4779316367969298, guid: 386e88a4a7c106a45b65bab6a7f4af26,
     type: 2}
   m_PrefabInternal: {fileID: 1470093917}
+--- !u!1 &1576205683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1576205684}
+  - component: {fileID: 1576205687}
+  - component: {fileID: 1576205686}
+  - component: {fileID: 1576205685}
+  m_Layer: 4
+  m_Name: Dialog trigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576205684
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576205683}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576205685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576205683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs: []
+--- !u!114 &1576205686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576205683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1576205687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576205683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.6898233}
+  m_Center: {x: 0.58720386, y: 0, z: 0.4736712}
 --- !u!1 &1600551522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,7 +3681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4309408227452654, guid: 15dc968af875a9a418a8394b0a51f1c3, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15dc968af875a9a418a8394b0a51f1c3, type: 2}
@@ -3598,7 +3937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4309408227452654, guid: 15dc968af875a9a418a8394b0a51f1c3, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1269687658927280, guid: 15dc968af875a9a418a8394b0a51f1c3, type: 2}
       propertyPath: m_Name
@@ -3777,7 +4116,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

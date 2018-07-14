@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monolog: 0
 --- !u!65 &244375312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1139,7 +1140,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474122645}
   m_LocalRotation: {x: 0.29273883, y: 0, z: 0, w: 0.9561925}
-  m_LocalPosition: {x: 13.559999, y: 62.12, z: 2.9799986}
+  m_LocalPosition: {x: 13.559999, y: 62.12, z: -9.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2088,6 +2089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monolog: 0
 --- !u!114 &948904828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2507,6 +2509,183 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1657352, y: 4.186222, z: 0.6677408}
   m_Center: {x: 17.622543, y: 1.6976528, z: -0.16612959}
+--- !u!1 &1135748354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1135748355}
+  - component: {fileID: 1135748358}
+  - component: {fileID: 1135748357}
+  - component: {fileID: 1135748356}
+  m_Layer: 0
+  m_Name: Monolog trigger - Seno
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1135748355
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135748354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.0400009, z: -0.89100003}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135748356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135748354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs:
+  - monologName: Seno
+    trigger: 0
+    sentences: "Aha, kupa sena...t\u0159eba tu bude n\u011Bkde jehla...prohled\xE1m
+      ji..... no tak zase nic."
+    clip: {fileID: 8300000, guid: da03464a37175554a8e944afa69e4e57, type: 3}
+--- !u!114 &1135748357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135748354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+--- !u!65 &1135748358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135748354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
 --- !u!1 &1139868822 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1165341981209020, guid: 4b66f598ee9ca644f897020cecebc65d,
@@ -2586,6 +2765,182 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1200083457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1200083458}
+  - component: {fileID: 1200083461}
+  - component: {fileID: 1200083460}
+  - component: {fileID: 1200083459}
+  m_Layer: 0
+  m_Name: "Monolog trigger - Zam\u010Deno"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1200083458
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200083457}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.0400009, z: -0.89100003}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200083459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200083457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs:
+  - monologName: "Zam\u010Deno"
+    trigger: 0
+    sentences: "Sakra zam\u010Deno."
+    clip: {fileID: 8300000, guid: 1586aea759efa1649b3f9bdf59b6a5b1, type: 3}
+--- !u!114 &1200083460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200083457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+--- !u!65 &1200083461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200083457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
 --- !u!1 &1209149122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +3082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monolog: 0
 --- !u!65 &1209149126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3341,7 +3697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576205684
 Transform:
   m_ObjectHideFlags: 0
@@ -3483,6 +3839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monolog: 0
 --- !u!65 &1576205687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3493,8 +3850,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6802799, y: 1, z: 0.6898233}
-  m_Center: {x: 0.58720386, y: 0, z: 0.4736712}
+  m_Size: {x: 0.6802799, y: 0.853672, z: 0.6898233}
+  m_Center: {x: 0.58720386, y: -0.073163986, z: 0.4736712}
 --- !u!1 &1600551522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,7 +4065,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c1ece6a75c5792b44994826b829185a5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 12
+      value: -0.4299984
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c1ece6a75c5792b44994826b829185a5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4067,6 +4424,183 @@ MonoBehaviour:
   - {fileID: 1354243183}
   - {fileID: 1423482673}
   - {fileID: 1858097555}
+--- !u!1 &1974192405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1974192406}
+  - component: {fileID: 1974192409}
+  - component: {fileID: 1974192408}
+  - component: {fileID: 1974192407}
+  m_Layer: 0
+  m_Name: Monolog trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1974192406
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974192405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.04, z: -0.891}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974192407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974192405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs:
+  - monologName: "K n\xED te\u010F nejdu"
+    trigger: 0
+    sentences: "K n\xED te\u010F nejdu, kdybych p\u0159i\u0161el s pr\xE1zdnou mohlo
+      by j\xED to rozru\u0161it. "
+    clip: {fileID: 8300000, guid: 9a86ac57b8aabfe43b40b53f80c8e878, type: 3}
+--- !u!114 &1974192408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974192405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+--- !u!65 &1974192409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974192405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
 --- !u!1 &1990035168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,6 +4769,182 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &2036020444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2036020445}
+  - component: {fileID: 2036020448}
+  - component: {fileID: 2036020447}
+  - component: {fileID: 2036020446}
+  m_Layer: 0
+  m_Name: Monolog trigger -Lebka
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2036020445
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036020444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.0400009, z: -0.89100003}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036020446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036020444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs:
+  - monologName: Lebka
+    trigger: 0
+    sentences: "Fuj, ta lebka m\u011B d\u011Bs\xED."
+    clip: {fileID: 8300000, guid: 395989d534c90f64d993844b7c9cfb9a, type: 3}
+--- !u!114 &2036020447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036020444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+--- !u!65 &2036020448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036020444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
 --- !u!1 &2045041738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,6 +5019,182 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &2067639210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2067639211}
+  - component: {fileID: 2067639214}
+  - component: {fileID: 2067639213}
+  - component: {fileID: 2067639212}
+  m_Layer: 0
+  m_Name: Monolog trigger - chce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2067639211
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067639210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.0400009, z: -0.89100003}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 453726921}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067639212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067639210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - dialogName: MS02p01
+    clip: {fileID: 8300000, guid: a1df61c52f510f648b5cb6db8d4200a8, type: 3}
+    trigger: 0
+    sentences:
+    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
+        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
+      speaker: Leonard
+      timer: 9
+    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
+        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
+        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
+      speaker: "My\u0161ka"
+      timer: 11
+    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 2
+    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
+        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
+        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
+      speaker: Leonard
+      timer: 9
+    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
+        norm\xE1ln\xED!"
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
+        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
+        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
+        p\u0159iprav\xED. \r\n"
+      speaker: Leonard
+      timer: 11
+    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
+        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
+      speaker: "My\u0161ka"
+      timer: 9
+    - sentence: "Ne to ne\u2026!"
+      speaker: Leonard
+      timer: 1
+    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
+        bys byl rad\u0161i kdyby ml\u010Dely."
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
+      speaker: Leonard
+      timer: 2
+    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
+        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
+      speaker: "My\u0161ka"
+      timer: 6
+    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
+        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
+      speaker: Leonard
+      timer: 6
+    - sentence: "Hm...Mysl\xED\u0161?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
+        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
+      speaker: "My\u0161ka"
+      timer: 7
+    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
+        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
+      speaker: Leonard
+      timer: 8
+    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
+      speaker: Leonard
+      timer: 2
+    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
+        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
+      speaker: "My\u0161ka"
+      timer: 5
+    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
+        moc, nemysl\xED\u0161? "
+      speaker: Leonard
+      timer: 4
+    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
+        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
+        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
+        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
+        tady dole.\r\n"
+      speaker: "My\u0161ka"
+      timer: 17
+    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
+      speaker: Leonard
+      timer: 3
+    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
+      speaker: Leonard
+      timer: 3
+    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
+      speaker: "My\u0161ka"
+      timer: 3
+    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
+        m\xE1men\xED. \r\n"
+      speaker: Leonard
+      timer: 5
+    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
+      speaker: "My\u0161ka"
+      timer: 3
+  Monologs:
+  - monologName: Chce
+    trigger: 0
+    sentences: "Up\u0159\xEDmn\u011B nev\xEDm zda se mi tam chce."
+    clip: {fileID: 8300000, guid: 345dbb6a5220b05458613ed772b5c0d7, type: 3}
+--- !u!114 &2067639213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067639210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+--- !u!65 &2067639214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067639210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
 --- !u!1 &2091070234
 GameObject:
   m_ObjectHideFlags: 0

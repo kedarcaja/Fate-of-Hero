@@ -25,9 +25,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 velocity = new Vector3();
         if (IsMove)
         {
-            Vector3 velocity = new Vector3();
+
             if (Input.GetKey(KeyCode.W))
             {
                 velocity += Vector3.forward * (MovementSpeed * 100) * Time.deltaTime;
@@ -45,21 +46,24 @@ public class PlayerController : MonoBehaviour
             {
                 velocity += -Vector3.left * (MovementSpeed * 100) * Time.deltaTime;
             }
-            if (velocity == Vector3.zero)
-            {
-                anim.SetBool("Moving", false);
-            }
-            else
-            {
-
-                transform.rotation = Quaternion.LookRotation(velocity);
-                anim.SetBool("Moving", true);
-            }
-            velocity.y = rigid.velocity.y;
-            rigid.velocity = velocity;
-
         }
-        
+        else
+        {
+            anim.SetBool("Moving", false);
+        }
+
+        if (velocity == Vector3.zero)
+        {
+            anim.SetBool("Moving", false);
+        }
+        else
+        {
+
+            transform.rotation = Quaternion.LookRotation(velocity);
+            anim.SetBool("Moving", true);
+        }
+        velocity.y = rigid.velocity.y;
+        rigid.velocity = velocity;
 
     }
 }

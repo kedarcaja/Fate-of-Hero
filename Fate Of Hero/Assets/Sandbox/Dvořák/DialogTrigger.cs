@@ -26,4 +26,12 @@ public class DialogTrigger : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player" )
+        {
+            Destroy(this);
+        }
+    }
 }

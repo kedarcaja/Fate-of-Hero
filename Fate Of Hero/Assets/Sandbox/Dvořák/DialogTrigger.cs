@@ -7,7 +7,14 @@ public class DialogTrigger : MonoBehaviour
 {
     [SerializeField]
     private bool monolog;
-
+    private void Update()
+    {
+               
+        if (GetComponent<Subtitles>().Dialogs[0].wasPlayed && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if (!monolog)

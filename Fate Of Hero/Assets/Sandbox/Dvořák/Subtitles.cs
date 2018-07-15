@@ -45,8 +45,7 @@ public class Subtitles : MonoBehaviour
         txt = FindObjectOfType<Text>();
         audioSource = FindObjectOfType<Text>().GetComponent<AudioSource>();
     }
-
-
+   
 
     private void Update()
     {
@@ -61,8 +60,9 @@ public class Subtitles : MonoBehaviour
                 StartCoroutine(Dialogs[i].StartTimer());
 
             }
-            #endregion
         }
+
+        #endregion
         #region Monolog Methods
         for (int i = 0; i < Monologs.Length; i++)
         {
@@ -85,9 +85,10 @@ public class Subtitles : MonoBehaviour
         {
            // FindObjectOfType<PlayerController>().IsMove = false;
         }
+
+        #endregion
     }
-    #endregion
-  
+
 }
 
 
@@ -98,7 +99,8 @@ public class Subtitles : MonoBehaviour
 
 [Serializable]
         public struct Dialog
-        {
+  {
+    public bool wasPlayed;
             public string dialogName;
             public AudioClip clip;
             public bool trigger;
@@ -112,10 +114,10 @@ public class Subtitles : MonoBehaviour
 
     public void StartDialog()
     {
-        if (trigger&&!Subtitles.Audi.isPlaying)
+        if (trigger&&!Subtitles.Audi.clip==clip)
         {
             sentenceIndex = 0;
-
+            wasPlayed = true;
 
             currentSentence = sentences[sentenceIndex];
 
@@ -126,11 +128,11 @@ public class Subtitles : MonoBehaviour
             currentSentence = sentences[sentenceIndex];
 
         }
-
+        
     }
     public IEnumerator StartTimer()
     {
-        while (Subtitles.Audi.isPlaying&&Subtitles.Audi.clip == clip)
+        while (Subtitles.Audi.clip == clip)
         {
             yield return new WaitForSecondsRealtime(1);
           
@@ -138,7 +140,7 @@ public class Subtitles : MonoBehaviour
 
 
 
-            if (currentSentence.timer ==0&&sentenceIndex<sentences.Length) {
+            if (currentSentence.timer ==0&&sentenceIndex<sentences.Length-1) {
                 sentenceIndex++;
                 currentSentence = sentences[sentenceIndex];
                 Subtitles.Txt.text = "<b>" + currentSentence.speaker + ": " + "</b>" + currentSentence.sentence;
@@ -146,7 +148,9 @@ public class Subtitles : MonoBehaviour
             
         }
        
+    
     }
+    
 
 }
 [Serializable]

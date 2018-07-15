@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Change : MonoBehaviour {
+    [SerializeField]
+	private GameObject  second;
 
-	private GameObject first, second;
-
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
        
         if (other.tag == "Player")
         {
-            first.SetActive(false);
+          
             second.SetActive(true);
         }
     }

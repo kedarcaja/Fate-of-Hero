@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1055,23 +1055,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c1ece6a75c5792b44994826b829185a5, type: 2}
   m_PrefabInternal: {fileID: 1849158275}
---- !u!114 &389437090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 389437088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs: []
-  Monologs:
-  - monologName: MS01p01
-    trigger: 0
-    sentences: ahoj
-    clip: {fileID: 8300000, guid: 4f193a863160c4742b59b40b907114e8, type: 3}
 --- !u!1 &393736839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,7 +3443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1209149123
 Transform:
   m_ObjectHideFlags: 0
@@ -4268,6 +4251,7 @@ GameObject:
   - component: {fileID: 1576205687}
   - component: {fileID: 1576205686}
   - component: {fileID: 1576205685}
+  - component: {fileID: 1576205688}
   m_Layer: 4
   m_Name: Dialog trigger (2)
   m_TagString: Untagged
@@ -4430,6 +4414,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9860679, y: 4.7958145, z: 0.6898233}
   m_Center: {x: 0.5382507, y: 1.8979073, z: 0.4736712}
+--- !u!114 &1576205688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576205683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa279a7e211837348bf2e77dd5479d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 1209149122}
 --- !u!1 &1600551522
 GameObject:
   m_ObjectHideFlags: 0

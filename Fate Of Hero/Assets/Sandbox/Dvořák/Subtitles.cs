@@ -12,7 +12,7 @@ public class Subtitles : MonoBehaviour
     private static AudioSource audioSource;
 
     [HideInInspector]
-    public static AudioSource audi
+    public static AudioSource Audi
     {
         get
         {
@@ -74,16 +74,16 @@ public class Subtitles : MonoBehaviour
 
         }
 
-        if (!audi.isPlaying)
+        if (!Audi.isPlaying)
         {
-            audi.clip = null;
+            Audi.clip = null;
             txt.text = "";
-            FindObjectOfType<PlayerController>().IsMove = true;
+            //FindObjectOfType<PlayerController>().IsMove = true;
 
         }
-        if (audi.isPlaying)
+        if (Audi.isPlaying)
         {
-            FindObjectOfType<PlayerController>().IsMove = false;
+           // FindObjectOfType<PlayerController>().IsMove = false;
         }
     }
     #endregion
@@ -112,7 +112,7 @@ public class Subtitles : MonoBehaviour
 
     public void StartDialog()
     {
-        if (trigger&&!Subtitles.audi.isPlaying)
+        if (trigger&&!Subtitles.Audi.isPlaying)
         {
             sentenceIndex = 0;
 
@@ -120,21 +120,17 @@ public class Subtitles : MonoBehaviour
             currentSentence = sentences[sentenceIndex];
 
          
-            Subtitles.audi.clip = clip;
-            Subtitles.audi.Play();
+            Subtitles.Audi.clip = clip;
+            Subtitles.Audi.Play();
             Subtitles.Txt.text = "<b>" + currentSentence.speaker + ": " + "</b>" + currentSentence.sentence;
             currentSentence = sentences[sentenceIndex];
 
         }
 
-    
-
-
-
     }
     public IEnumerator StartTimer()
     {
-        while (Subtitles.audi.isPlaying&&Subtitles.audi.clip == clip)
+        while (Subtitles.Audi.isPlaying&&Subtitles.Audi.clip == clip)
         {
             yield return new WaitForSecondsRealtime(1);
           
@@ -151,12 +147,6 @@ public class Subtitles : MonoBehaviour
         }
        
     }
-
-  
-
-
-
-
 
 }
 [Serializable]
@@ -196,11 +186,11 @@ public struct DialogSentences
             #endregion
             public void StartMonolog()
             {
-                if (trigger && !Subtitles.audi.isPlaying)
+                if (trigger && !Subtitles.Audi.isPlaying)
                 {
                     Subtitles.Txt.text =sentences;
-                    Subtitles.audi.clip = clip;
-                    Subtitles.audi.Play();
+                    Subtitles.Audi.clip = clip;
+                    Subtitles.Audi.Play();
                     trigger = false;
 
 

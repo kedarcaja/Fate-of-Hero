@@ -15,14 +15,13 @@ public class PlayerController : MonoBehaviour
     Animator anim;
 
     
-    // Use this for initialization
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         Vector3 velocity = new Vector3();

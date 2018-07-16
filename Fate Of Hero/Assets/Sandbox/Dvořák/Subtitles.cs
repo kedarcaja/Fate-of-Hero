@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using UnityEditor.IMGUI;
+//using UnityEditor.IMGUI;
 
 public class Subtitles : MonoBehaviour
 {
@@ -17,7 +17,6 @@ public class Subtitles : MonoBehaviour
         get
         {
             return audioSource;
-
         }
 
     }

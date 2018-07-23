@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-//using UnityEditor.IMGUI;
 
 public class Subtitles : MonoBehaviour
 {
@@ -66,21 +65,21 @@ public class Subtitles : MonoBehaviour
         for (int i = 0; i < Monologs.Length; i++)
         {
             Monologs[i].StartMonolog();
-            if (Monologs[i].trigger)
-            {
-                Monologs[i].trigger = false;
-            }
 
+			if (Monologs[i].wasPlayed && !audioSource.isPlaying)
+			{
+				Destroy(gameObject);
+			}
         }
 
-        if (!Audi.isPlaying)
+        if (!audioSource.isPlaying)
         {
-            Audi.clip = null;
+            audioSource.clip = null;
             txt.text = "";
             //FindObjectOfType<PlayerController>().IsMove = true;
 
         }
-        if (Audi.isPlaying)
+        if (audioSource.isPlaying)
         {
            // FindObjectOfType<PlayerController>().IsMove = false;
         }
@@ -100,9 +99,9 @@ public class Subtitles : MonoBehaviour
         public struct Dialog
   {
     public bool wasPlayed;
-            public string dialogName;
-            public AudioClip clip;
-            public bool trigger;
+    public string dialogName;
+    public AudioClip clip;
+    public bool trigger;
     [Space]
     [Space]
     [SerializeField]
@@ -175,7 +174,8 @@ public struct DialogSentences
             #region Monolog Variables
         
             public string monologName;
-            public bool trigger;
+            public bool trigger,wasPlayed;
+	
  
             [Space]
             [Space]
@@ -189,16 +189,19 @@ public struct DialogSentences
             #endregion
             public void StartMonolog()
             {
-                if (trigger && !Subtitles.Audi.isPlaying)
+                if (trigger && !Subtitles.Audi.isPlaying&&!wasPlayed)
                 {
                     Subtitles.Txt.text =sentences;
                     Subtitles.Audi.clip = clip;
                     Subtitles.Audi.Play();
-                    trigger = false;
+
+			trigger = false;
+			wasPlayed = true;
 
 
                 }
-
+	
+				
             }
 
         }

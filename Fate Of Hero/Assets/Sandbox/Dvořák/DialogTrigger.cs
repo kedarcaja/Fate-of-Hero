@@ -24,21 +24,19 @@ public class DialogTrigger : MonoBehaviour
                 GetComponent<Subtitles>().Dialogs[0].trigger = true;
             }
         }
-        else if (monolog)
-        {
-            if (other.tag == "Player" && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying)
-            {
-                
-                GetComponent<Subtitles>().Monologs[0].trigger = true;
-            }
-        }
+      
     }
+	private void OnTriggerEnter(Collider other)
+	{
+		   if (monolog)
+		{
+			if (other.tag == "Player" && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying)
+			{
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player" )
-        {
-            Destroy(this);
-        }
-    }
+				GetComponent<Subtitles>().Monologs[0].trigger = true;
+			}
+		}
+	}
+
+
 }

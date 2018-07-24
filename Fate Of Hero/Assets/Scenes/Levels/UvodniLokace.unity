@@ -4944,6 +4944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866314676}
   - component: {fileID: 1866314675}
+  - component: {fileID: 1866314677}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5000,6 +5001,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1866314677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866314674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c77c4747da8bee478f3350c8a133cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: Horizontal
+  verticallInput: Vertical
+  jumpInput: 32
+  strafeInput: 9
+  sprintInput: 304
+  rotateCameraXInput: Mouse X
+  rotateCameraYInput: Mouse Y
 --- !u!1001 &1905037094
 Prefab:
   m_ObjectHideFlags: 0

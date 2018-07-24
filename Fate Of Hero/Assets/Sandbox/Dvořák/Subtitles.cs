@@ -154,10 +154,10 @@ public class Subtitles : MonoBehaviour
 [Serializable]
 public struct DialogSentences
 {
-
-    [Multiline]
+#if UNITY_EDITOR
+    [TextAreaAttribute (5, 3000)]
     public string sentence;
-
+#endif
     public string speaker;
 
     [Range(1f, 20f)]

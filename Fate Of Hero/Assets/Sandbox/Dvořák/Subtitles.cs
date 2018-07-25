@@ -142,22 +142,19 @@ public class Subtitles : MonoBehaviour
                 sentenceIndex++;
                 currentSentence = sentences[sentenceIndex];
                 Subtitles.Txt.text = "<b>" + currentSentence.speaker + ": " + "</b>" + currentSentence.sentence;
-            }
-            
-        }
-       
-    
-    }
-    
-
+            }           
+        }         
+    }    
 }
+
 [Serializable]
 public struct DialogSentences
 {
-#if UNITY_EDITOR
+
     [TextAreaAttribute (5, 3000)]
     public string sentence;
-#endif
+
+
     public string speaker;
 
     [Range(1f, 20f)]

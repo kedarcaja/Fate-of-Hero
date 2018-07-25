@@ -7,6 +7,8 @@ public class DialogTrigger : MonoBehaviour
 {
     [SerializeField]
     private bool monolog;
+    //[SerializeField]
+    //private GameObject text;
     private void Update()
     {
                

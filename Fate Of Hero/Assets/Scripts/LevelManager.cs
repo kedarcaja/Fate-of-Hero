@@ -6,8 +6,22 @@ public class LevelManager : MonoBehaviour {
     [SerializeField]
     private float autoLoadNextLevel;
 
+    private LevelManager levelManager;
 
-   void Start() {
+    public LevelManager MyInstance
+    {
+        get
+        {
+            return levelManager;
+        }
+
+        set
+        {
+            levelManager = value;
+        }
+    }
+
+    void Start() {
         if (autoLoadNextLevel != 0) 
         {Invoke("LoadNextLevel", autoLoadNextLevel);}  
     }

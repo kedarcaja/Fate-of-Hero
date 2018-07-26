@@ -84,9 +84,22 @@ public class Subtitles : MonoBehaviour
            // FindObjectOfType<PlayerController>().IsMove = false;
         }
 
-        #endregion
+		#endregion
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			End();
+		}
     }
-
+	public void End()
+	{
+		if ((audioSource.isPlaying&&audioSource.clip==Dialogs[0].clip))
+		{
+			audioSource.Stop();
+			audioSource.clip = null;
+			txt.text = "";
+			Destroy(gameObject);
+		}
+	}
 }
 
 
@@ -96,7 +109,7 @@ public class Subtitles : MonoBehaviour
 #region Dialog
 
 [Serializable]
-        public struct Dialog
+        public class Dialog
   {
     public bool wasPlayed;
     public string dialogName;
@@ -181,8 +194,7 @@ public struct DialogSentences
             [Multiline]
             [SerializeField]
             private string sentences;
-            [SerializeField]
-            private AudioClip clip;
+            public AudioClip clip;
             #endregion
             public void StartMonolog()
             {

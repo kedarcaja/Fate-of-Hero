@@ -24,8 +24,10 @@ public class DialogTrigger : MonoBehaviour
             if (other.tag == "Player" && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying && Input.GetKeyDown(KeyCode.E))
             {
                 GetComponent<Subtitles>().Dialogs[0].trigger = true;
-            }
-        }
+				
+			}
+			
+		}
       
     }
 	private void OnTriggerEnter(Collider other)

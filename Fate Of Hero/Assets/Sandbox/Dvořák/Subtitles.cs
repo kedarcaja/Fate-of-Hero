@@ -97,18 +97,21 @@ public class Subtitles : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.Space)&&audioSource.clip==d.clip || d.wasPlayed && !audioSource.isPlaying)
 			{
+				d.ended = true;
 				End();
+				Destroy(gameObject);
 			}
 		}
 		
     }
 	public void End()
 	{
-	
-			audioSource.Stop();
+			
+
+		audioSource.Stop();
 			audioSource.clip = null;
 			txt.text = "";
-			Destroy(gameObject);
+			
 				player.IsMove = true;
 
 	}
@@ -123,7 +126,7 @@ public class Subtitles : MonoBehaviour
 [Serializable]
         public class Dialog
   {
-    public bool wasPlayed;
+    public bool wasPlayed,ended;
     public string dialogName;
     public AudioClip clip;
     public bool trigger;

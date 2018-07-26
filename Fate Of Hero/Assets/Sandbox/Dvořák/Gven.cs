@@ -9,6 +9,8 @@ public class Gven : MonoBehaviour {
 	private Transform portStart,portEnd,bridge,player,currentTarget;
 	private int currentIndex;
 	private bool startPort,agentFollow;
+	[SerializeField]
+	private Subtitles dialog;
 	
 	
 	
@@ -17,11 +19,14 @@ public class Gven : MonoBehaviour {
 
 		startPort = false;
 		agentFollow = true;
-		currentTarget = bridge;
+		
 	}
 	
 	void Update () {
-
+		if (dialog.Dialogs[0].trigger)
+		{
+			currentTarget = bridge;
+		}
 		if (agentFollow)
 		{
 			agent.SetDestination(currentTarget.position);
@@ -33,9 +38,9 @@ public class Gven : MonoBehaviour {
 	
 	}
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
-		if (other.transform == bridge)
+		if (other.transform == bridge&&dialog.Dialogs[0].ended)
 		{
 			currentTarget = portStart;
 		}

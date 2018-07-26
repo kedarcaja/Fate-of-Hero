@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3373,7 +3373,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3892,6 +3892,16 @@ Prefab:
       propertyPath: m_Center.z
       value: -0.1538868
       objectReference: {fileID: 0}
+    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
+        type: 2}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 271195338}
+    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
+        type: 2}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 271195335}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
   m_IsPrefabParent: 0

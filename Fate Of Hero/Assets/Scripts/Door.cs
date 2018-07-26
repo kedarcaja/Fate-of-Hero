@@ -45,7 +45,7 @@ public class Door : MonoBehaviour {
             if (other.gameObject.tag == "Player")
             {
                 Player.transform.position = exit.transform.position;
-
+				Gven.room = int.Parse(gameObject.name.Split(' ')[1]);
             }
         }
     }

@@ -11,7 +11,7 @@ public class Gven : MonoBehaviour {
 	private bool startPort,agentFollow;
 	[SerializeField]
 	private Subtitles dialog;
-	
+	public static int room { get; set; }
 	
 	
 	void Start () {
@@ -49,7 +49,7 @@ public class Gven : MonoBehaviour {
 			agent.enabled = false;
 			startPort = true;
 		}
-		if (other.transform == portEnd)
+		if (other.transform == portEnd&&room==2)
 		{
 			startPort = false;
 			currentTarget = player;

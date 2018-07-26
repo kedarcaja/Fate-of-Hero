@@ -54,6 +54,7 @@ public class Gven : MonoBehaviour {
 			startPort = false;
 			currentTarget = player;
 			agent.enabled = true;
+			agent.stoppingDistance = 2.5f;
 			agentFollow = true;
 		}
 	}

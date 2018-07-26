@@ -111,8 +111,8 @@ public class Subtitles : MonoBehaviour
 		audioSource.Stop();
 			audioSource.clip = null;
 			txt.text = "";
-			
-				player.IsMove = true;
+
+		player.IsMove = true;
 
 	}
 }

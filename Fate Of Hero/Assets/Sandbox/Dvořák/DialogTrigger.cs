@@ -9,19 +9,12 @@ public class DialogTrigger : MonoBehaviour
     private bool monolog;
     //[SerializeField]
     //private GameObject text;
-    private void Update()
-    {
-               
-        if (GetComponent<Subtitles>().Dialogs[0].wasPlayed && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying)
-        {
-            Destroy(gameObject);
-        }
-    }
+  
     private void OnTriggerStay(Collider other)
     {
         if (!monolog)
         {
-            if (other.tag == "Player" && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying && Input.GetKeyDown(KeyCode.E))
+            if (other.tag == "Player" && !GameObject.Find("SubtitlesText").GetComponent<AudioSource>().isPlaying && Input.GetKeyDown(KeyCode.E))
             {
                 GetComponent<Subtitles>().Dialogs[0].trigger = true;
 				
@@ -34,7 +27,7 @@ public class DialogTrigger : MonoBehaviour
 	{
 		   if (monolog)
 		{
-			if (other.tag == "Player" && !FindObjectOfType<Text>().GetComponent<AudioSource>().isPlaying)
+			if (other.tag == "Player" && !GameObject.Find("SubtitlesText").GetComponent<AudioSource>().isPlaying)
 			{
 
 				GetComponent<Subtitles>().Monologs[0].trigger = true;

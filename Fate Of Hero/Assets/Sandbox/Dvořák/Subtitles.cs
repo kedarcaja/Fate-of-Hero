@@ -40,8 +40,10 @@ public class Subtitles : MonoBehaviour
 
     private void Start()
     {
-        txt = FindObjectOfType<Text>();
-        audioSource = FindObjectOfType<Text>().GetComponent<AudioSource>();
+		txt = GameObject.Find("SubtitlesText").GetComponent<Text>();
+
+		audioSource = txt.GetComponent<AudioSource>();	
+
     }
    
 
@@ -85,20 +87,23 @@ public class Subtitles : MonoBehaviour
         }
 
 		#endregion
-		if (Input.GetKeyDown(KeyCode.Space))
+		foreach (Dialog d in Dialogs)
 		{
-			End();
+			if (Input.GetKeyDown(KeyCode.Space)&&audioSource.clip==d.clip || d.wasPlayed && !audioSource.isPlaying)
+			{
+				End();
+			}
 		}
+		
     }
 	public void End()
 	{
-		if ((audioSource.isPlaying&&audioSource.clip==Dialogs[0].clip))
-		{
+	
 			audioSource.Stop();
 			audioSource.clip = null;
 			txt.text = "";
 			Destroy(gameObject);
-		}
+		
 	}
 }
 

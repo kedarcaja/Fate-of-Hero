@@ -91,6 +91,7 @@ public class Subtitles : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Space) && audioSource.clip == m.clip || m.wasPlayed && !audioSource.isPlaying)
 			{
 				End();
+				Destroy(gameObject);
 			}
 		}
 		foreach (Dialog d in Dialogs)

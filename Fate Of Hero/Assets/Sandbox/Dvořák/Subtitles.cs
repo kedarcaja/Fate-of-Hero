@@ -7,6 +7,7 @@ using System.Linq;
 
 public class Subtitles : MonoBehaviour
 {
+	private PlayerController player;
     #region Class Variables
     private static AudioSource audioSource;
 
@@ -42,7 +43,8 @@ public class Subtitles : MonoBehaviour
     {
 		txt = GameObject.Find("SubtitlesText").GetComponent<Text>();
 
-		audioSource = txt.GetComponent<AudioSource>();	
+		audioSource = txt.GetComponent<AudioSource>();
+		player = FindObjectOfType<PlayerController>();
 
     }
    
@@ -68,10 +70,7 @@ public class Subtitles : MonoBehaviour
         {
             Monologs[i].StartMonolog();
 
-			if (Monologs[i].wasPlayed && !audioSource.isPlaying)
-			{
-				Destroy(gameObject);
-			}
+			
         }
 
         if (!audioSource.isPlaying)
@@ -87,6 +86,13 @@ public class Subtitles : MonoBehaviour
         }
 
 		#endregion
+		foreach (Monolog m in Monologs)
+		{
+			if (Input.GetKeyDown(KeyCode.Space) && audioSource.clip == m.clip || m.wasPlayed && !audioSource.isPlaying)
+			{
+				End();
+			}
+		}
 		foreach (Dialog d in Dialogs)
 		{
 			if (Input.GetKeyDown(KeyCode.Space)&&audioSource.clip==d.clip || d.wasPlayed && !audioSource.isPlaying)
@@ -103,7 +109,8 @@ public class Subtitles : MonoBehaviour
 			audioSource.clip = null;
 			txt.text = "";
 			Destroy(gameObject);
-		
+				player.IsMove = true;
+
 	}
 }
 

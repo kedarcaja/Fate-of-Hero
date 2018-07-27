@@ -29,6 +29,7 @@ public class Gven : MonoBehaviour {
 		}
 		if (agentFollow)
 		{
+			if(currentTarget!=null)
 			agent.SetDestination(currentTarget.position);
 		}
 		if (startPort)
@@ -48,13 +49,14 @@ public class Gven : MonoBehaviour {
 		{
 			agent.enabled = false;
 			startPort = true;
+			currentTarget = null;
 		}
 		if (other.transform == portEnd&&room==2)
 		{
 			startPort = false;
 			currentTarget = player;
 			agent.enabled = true;
-			agent.stoppingDistance = 2.5f;
+			
 			agentFollow = true;
 		}
 	}

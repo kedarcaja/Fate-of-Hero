@@ -8,7 +8,7 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField]
     private bool monolog;
 	private PlayerController player;
-
+	
 	private void Start()
 	{
 		player = FindObjectOfType<PlayerController>();

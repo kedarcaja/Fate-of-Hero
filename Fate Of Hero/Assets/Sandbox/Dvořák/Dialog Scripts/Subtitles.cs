@@ -101,6 +101,7 @@ public class Subtitles : MonoBehaviour
 				d.ended = true;
 				End();
 				Destroy(gameObject);
+				
 			}
 		}
 		

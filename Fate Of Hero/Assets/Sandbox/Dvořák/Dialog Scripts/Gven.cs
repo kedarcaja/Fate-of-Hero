@@ -12,6 +12,8 @@ public class Gven : MonoBehaviour {
 	[SerializeField]
 	private Subtitles dialog;
 	public static int room { get; set; }
+	[SerializeField]
+	private GameObject leav;
 	
 	
 	void Start () {
@@ -43,6 +45,8 @@ public class Gven : MonoBehaviour {
 	{
 		if (other.transform == bridge&&dialog.Dialogs[0].ended)
 		{
+			leav.SetActive(true);
+
 			currentTarget = portStart;
 		}
 		if (other.transform == portStart)

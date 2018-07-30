@@ -781,7 +781,6 @@ GameObject:
   - component: {fileID: 244375312}
   - component: {fileID: 244375311}
   - component: {fileID: 244375310}
-  - component: {fileID: 244375313}
   m_Layer: 4
   m_Name: Dialog trigger MS01p02
   m_TagString: Untagged
@@ -940,38 +939,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28538376, y: 5.3759155, z: 0.97852266}
   m_Center: {x: 0.5738877, y: 2.1892853, z: 0.3021674}
---- !u!114 &244375313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244375308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAftedDialog: 1
-  dialog: {fileID: 244375310}
-  questType: 0
-  coulomb: {fileID: 0}
-  coulombIndex: 0
-  questName: "hled\xE1n\xED l\xEDstku"
-  questObjectCollected: 0
-  shortInfo: "Najdi l\xEDstek, kter\xFD byl kv\u011Btin\u011B odcizen!"
-  text: {fileID: 0}
-  questTypeIcon: {fileID: 0}
-  questContent: "Tv\xFDm \xFAkolem je naj\xEDt l\xEDstek, kter\xFD kv\u011Btin\u011B
-    n\u011Bkdo ukradl a p\u0159in\xE9st j\xED ho zp\u011Bt"
-  completed: 0
-  accepted: 0
-  added: 0
-  enable: 0
-  isChoosed: 0
-  isTrigged: 0
-  isSettedAsCurrent: 0
-  quest: {fileID: 0}
-  btn: {fileID: 0}
 --- !u!1 &253143593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,7 +2836,6 @@ Transform:
   - {fileID: 1033588713}
   - {fileID: 1948519260}
   - {fileID: 1221041559}
-  - {fileID: 1917574189}
   m_Father: {fileID: 274850272}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3682,7 +3648,6 @@ MonoBehaviour:
   player: {fileID: 1927463436}
   currentTarget: {fileID: 0}
   dialog: {fileID: 1576205685}
-  leav: {fileID: 1917574184}
 --- !u!136 &934077375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4842,7 +4807,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1355887520262384, guid: 57c03f51cdeb130439446a4183edf67a,
     type: 2}
   m_PrefabInternal: {fileID: 336531660}
---- !u!114 &1253685871
+--- !u!114 &1253685869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4853,28 +4818,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAftedDialog: 1
-  dialog: {fileID: 244375310}
   questType: 0
-  coulomb: {fileID: 0}
-  coulombIndex: 0
-  questName: "l\xEDstek"
-  questObjectCollected: 0
-  shortInfo: "najdi odcizen\xFD l\xEDstek a vra\u0165 ho Samant\u011B"
-  text: {fileID: 0}
-  questTypeIcon: {fileID: 0}
-  questContent: "Kv\u011Btin\u011B n\u011Bkdo ukradl okv\u011Btn\xED l\xEDstek. Tv\xFDm
-    \xFAkolem je l\xEDstek naj\xEDt a vr\xE1tit j\xED ho."
+  questName: xxxxxxxxx
+  shortInfo: spln
+  questContent: lknkJBKQ.JWn|:W:aw
   completed: 0
   accepted: 0
-  added: 0
-  enable: 0
+  enable: 1
   isChoosed: 0
   isTrigged: 0
   isSettedAsCurrent: 0
-  quest: {fileID: 0}
-  btn: {fileID: 0}
---- !u!114 &1253685872
+--- !u!114 &1253685870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4886,7 +4840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests: []
-  values: {fileID: 0}
 --- !u!1 &1262368272 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1602669011066560, guid: 92c12835c97a88c43b3ea6703aab70f8,
@@ -7155,105 +7108,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4309408227452654, guid: 15dc968af875a9a418a8394b0a51f1c3,
     type: 2}
   m_PrefabInternal: {fileID: 1905037094}
---- !u!1 &1917574184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1917574189}
-  - component: {fileID: 1917574188}
-  - component: {fileID: 1917574187}
-  - component: {fileID: 1917574186}
-  - component: {fileID: 1917574185}
-  m_Layer: 0
-  m_Name: leave
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1917574185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917574184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e658e2d19a4483c459358de60f793b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 1253685872}
---- !u!136 &1917574186
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917574184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &1917574187
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917574184}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1917574188
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917574184}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1917574189
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1917574184}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.424, y: -12.16, z: 19.14}
-  m_LocalScale: {x: 0.48609373, y: 0.099999666, z: 0.6249998}
-  m_Children: []
-  m_Father: {fileID: 687184121}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926878469
 GameObject:
   m_ObjectHideFlags: 0

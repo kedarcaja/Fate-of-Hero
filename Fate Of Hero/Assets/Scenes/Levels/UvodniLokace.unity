@@ -2070,8 +2070,7 @@ Transform:
   m_LocalRotation: {x: 0.29273883, y: 0, z: 0, w: 0.9561925}
   m_LocalPosition: {x: 16.4, y: 62.12, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1759003103}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 34.044, y: 0, z: 0}
@@ -2502,7 +2501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 860, y: -79.05}
+  m_AnchoredPosition: {x: 533.3, y: 33.5}
   m_SizeDelta: {x: 94.3, y: 62.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579247512
@@ -2712,7 +2711,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000037789, y: -0.0000090599}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627879045
 MonoBehaviour:
@@ -6667,14 +6666,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5c3f99a5dd1aac748810120d7ab2721c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6858,6 +6857,7 @@ GameObject:
   - component: {fileID: 1759003102}
   - component: {fileID: 1759003101}
   - component: {fileID: 1759003100}
+  - component: {fileID: 1759003104}
   m_Layer: 0
   m_Name: MinimapCamera
   m_TagString: Untagged
@@ -6876,7 +6876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f0f6b12881aa84d9ced830ae490aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxZoom: 30
+  maxZoom: 40
   minZoom: 20
 --- !u!124 &1759003101
 Behaviour:
@@ -6905,7 +6905,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 40
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6927,13 +6927,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1759003099}
-  m_LocalRotation: {x: 0.4694715, y: 0, z: 0, w: 0.8829476}
-  m_LocalPosition: {x: -0.03, y: 37.59, z: 1.75}
+  m_LocalRotation: {x: 0.70737815, y: -0, z: -0, w: 0.7068354}
+  m_LocalPosition: {x: 16.369999, y: 92.287674, z: 23.19405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 474122651}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 56, y: 0, z: 0}
+--- !u!114 &1759003104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759003099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146dd8d2bad24404e8e9c01c151d083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 389437088}
 --- !u!1 &1777453881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7085,8 +7097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.29992676, y: -0.9000244}
-  m_SizeDelta: {x: -52.200012, y: -48.599976}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0.000015258789}
+  m_SizeDelta: {x: 24.7, y: -6.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802833681
 MonoBehaviour:
@@ -7119,8 +7131,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: aba13a28f30993b4fbb894463d38d9d1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7542,7 +7554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 531.35, y: -78}
+  m_AnchoredPosition: {x: 563.5, y: -25.8}
   m_SizeDelta: {x: 115.7, y: 64.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870580767

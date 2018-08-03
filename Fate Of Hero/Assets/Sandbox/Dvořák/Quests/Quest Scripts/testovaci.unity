@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484308833}
   - component: {fileID: 484308834}
+  - component: {fileID: 484308835}
   m_Layer: 0
   m_Name: QuestTrigger
   m_TagString: Untagged
@@ -322,6 +323,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &484308835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484308832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addda6da5b4855440aae89fa3b3c2e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &497928350 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1406243976909430, guid: 92c12835c97a88c43b3ea6703aab70f8,
@@ -340,7 +352,6 @@ GameObject:
   - component: {fileID: 506812591}
   - component: {fileID: 506812590}
   - component: {fileID: 506812589}
-  - component: {fileID: 506812595}
   m_Layer: 0
   m_Name: Quest
   m_TagString: Untagged
@@ -360,9 +371,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questType: 0
-  questName: najdi
-  shortInfo: "najdi l\xEDstek kv\u011Btiny"
-  questContent: "najdi l\xEDstek kv\u011Btiny"
+  questName: listek
+  shortInfo: seber listek
+  questContent: seber listek
   completed: 0
   accepted: 0
   enable: 1
@@ -446,29 +457,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &506812595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 506812588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questType: 2
-  questName: sdkcsjdn
-  shortInfo: lakclascma
-  questContent: smdcbskdnc
-  completed: 0
-  accepted: 0
-  enable: 0
-  isChoosed: 0
-  isTrigged: 0
-  isSettedAsCurrent: 0
 --- !u!1 &809100750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,145 +1010,3 @@ GameObject:
   m_PrefabParentObject: {fileID: 1228440481217446, guid: 92c12835c97a88c43b3ea6703aab70f8,
     type: 2}
   m_PrefabInternal: {fileID: 1320970827}
---- !u!1 &1973211435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1973211442}
-  - component: {fileID: 1973211441}
-  - component: {fileID: 1973211440}
-  - component: {fileID: 1973211439}
-  - component: {fileID: 1973211438}
-  - component: {fileID: 1973211437}
-  - component: {fileID: 1973211436}
-  m_Layer: 0
-  m_Name: Quest 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1973211436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questType: 2
-  questName: odejdi
-  shortInfo: odejdi
-  questContent: smdcbskdnc
-  completed: 0
-  accepted: 0
-  enable: 0
-  isChoosed: 0
-  isTrigged: 0
-  isSettedAsCurrent: 0
---- !u!114 &1973211437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questType: 3
-  questName: seber
-  shortInfo: "seber l\xEDstek"
-  questContent: "seber l\xEDstek kv\u011Btiny"
-  completed: 0
-  accepted: 0
-  enable: 1
-  isChoosed: 0
-  isTrigged: 0
-  isSettedAsCurrent: 0
---- !u!114 &1973211438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6ee1b3e10ef8f4481f2017ca16ae62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests: []
---- !u!65 &1973211439
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1973211440
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 173f71fe79567b2469c69ac6bf71a499, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1973211441
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1973211442
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211435}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03, y: 1, z: -0.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

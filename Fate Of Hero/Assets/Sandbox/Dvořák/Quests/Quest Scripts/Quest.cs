@@ -285,10 +285,12 @@ public class Quest : MonoBehaviour {
 			if (questIcon == null)
 			{
 				questIcon = new GameObject("Quest icon");
+				questIcon.transform.SetParent(gameObject.transform);
 				questIcon.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
 				questIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, gameObject.transform.position.z);
 				SpriteRenderer sr = questIcon.AddComponent<SpriteRenderer>();
 				sr.sprite = SetQuestIcon();
+			
 
 			}
 		}

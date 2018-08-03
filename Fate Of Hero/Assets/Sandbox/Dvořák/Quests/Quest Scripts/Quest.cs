@@ -83,13 +83,9 @@ public class Quest : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			bool active = (values.questBook.activeSelf) ? false : true;
-			values.questBook.SetActive(true);
+			values.questBook.SetActive(active);
 		}
-		if (Input.GetKeyDown(KeyCode.T))
-		{
-			bool active = (values.questBook.activeSelf) ? false : true;
-			values.questBook.SetActive(false);
-		}
+		
 
 	}
 	
@@ -151,22 +147,6 @@ public class Quest : MonoBehaviour {
 			
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	public void HideQuest()

@@ -5095,44 +5095,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1253685868 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1355887520262384, guid: 57c03f51cdeb130439446a4183edf67a,
-    type: 2}
-  m_PrefabInternal: {fileID: 336531660}
---- !u!114 &1253685869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1253685868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d22d1c9e537d45b1385fcf3dd2648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questType: 0
-  questName: xxxxxxxxx
-  shortInfo: spln
-  questContent: lknkJBKQ.JWn|:W:aw
-  completed: 0
-  accepted: 0
-  enable: 1
-  isChoosed: 0
-  isTrigged: 0
-  isSettedAsCurrent: 0
---- !u!114 &1253685870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1253685868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6ee1b3e10ef8f4481f2017ca16ae62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests: []
 --- !u!1 &1262368272 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1602669011066560, guid: 92c12835c97a88c43b3ea6703aab70f8,
@@ -5181,48 +5143,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.8795233, y: 3.1328201, z: 24.208494}
   m_Center: {x: 1.6951995, y: 1.0664101, z: -1.9768057}
---- !u!1 &1281171464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1281171465}
-  - component: {fileID: 1281171466}
-  m_Layer: 0
-  m_Name: QuestTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1281171465
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1281171464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 389437089}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1281171466
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1281171464}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.9674149
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.2556763, z: 0}
 --- !u!1 &1283172658
 GameObject:
   m_ObjectHideFlags: 0

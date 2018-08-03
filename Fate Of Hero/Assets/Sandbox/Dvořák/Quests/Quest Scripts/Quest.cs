@@ -20,8 +20,8 @@ public class Quest : MonoBehaviour {
 	[TextAreaAttribute(12,2000)]
 	private string questContent;
 	public bool completed, accepted, enable, isChoosed,isTrigged,isSettedAsCurrent;
-	
-	private GameObject quest;
+
+	private GameObject quest,questIcon;
 	private Button btn;
 	private QuestManager manager;
 	
@@ -31,26 +31,31 @@ public class Quest : MonoBehaviour {
 		coulombIndex = (int)(questType);// getting int value from enum
 		values = FindObjectOfType<QuestValues>();
 		coulomb = values.coulombs[coulombIndex];
+		SetCurrentAsEmpty();
+
 	}
-	
+
 	private void Update()
 	{
+
+		
 		values.close.onClick.AddListener(()=>HideQuest());
 		
 		if (enable)
 		{
+			showQuestIcon();
+		
 			if (this.isTrigged&&!this.accepted)
 			{
 				
 					ShowQuest();
-					SetButtons(true,true);
-				values.accept.onClick.AddListener(() => AcceptQuest());
-				values.setAsCurrent.onClick.AddListener(() => SetQuestAsCurrent());
+				
 
 
 			}
 			if (this.accepted)
 			{
+
 				btn.onClick.AddListener(() => ShowQuest());
 				btn.onClick.AddListener(() => this.isChoosed = true);
 				if (isChoosed&&!completed)
@@ -59,14 +64,13 @@ public class Quest : MonoBehaviour {
 					SetButtons(false, true);
 					values.setAsCurrent.onClick.AddListener(() => SetQuestAsCurrent());
 				}
-				if(this.completed&&this.isChoosed)
-				{
-					SetButtons(false,false);
-				}
+			
+				
 				if (this.completed)
 				{
-					SetToCompleted();
 					SetCurrentAsCompleted();
+					SetButtons(false, false);
+
 
 				}
 
@@ -74,21 +78,24 @@ public class Quest : MonoBehaviour {
 		
 		}
 	
-		#region Inputs
+	
 	
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			bool active = (values.questBook.activeSelf) ? false : true;
-			values.questBook.SetActive(active);
+			values.questBook.SetActive(true);
 		}
-		
-		#endregion
+		if (Input.GetKeyDown(KeyCode.T))
+		{
+			bool active = (values.questBook.activeSelf) ? false : true;
+			values.questBook.SetActive(false);
+		}
+
 	}
 	
 	public void AddToCoulomb()
 	{
-		if (!accepted)
-		{
+	
 			quest = new GameObject(questName);
 			text = quest.AddComponent<Text>();
 			text.text = questName;
@@ -101,7 +108,7 @@ public class Quest : MonoBehaviour {
 			btn = quest.AddComponent<Button>();
 			accepted = true;
 			HideQuest();
-		}
+		
 	}
 	
 	
@@ -115,7 +122,10 @@ public class Quest : MonoBehaviour {
 	public void AcceptQuest()
 	{
 		if(!accepted)
-		AddToCoulomb();
+		{
+			AddToCoulomb();
+		}
+
 		HideQuest();
 
 
@@ -137,23 +147,53 @@ public class Quest : MonoBehaviour {
 			values.currentQuestText.text = shortInfo;
 
 			HideQuest();
+			
+			
 		}
 	}
-	
-	/// <summary>
-	/// close quest list view
-	/// </summary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public void HideQuest()
 	{
 		values.fullQuestView.SetActive(false);
 		values.fullQuestViewIcon.sprite = null;
 		values.fullQuestViewContent.text = "";
+		isChoosed = false;
 
 	}
+
+
+
+
+
+
 	private Sprite SetQuestIcon()
 	{
 		return questTypeIcon = values.icons[coulombIndex];
 	}
+
+
+
+
+
+
+
 	public void SetButtons(bool btnAccept, bool btnSetAsCurrent)
 	{
 		values.accept.gameObject.SetActive(btnAccept);
@@ -162,60 +202,99 @@ public class Quest : MonoBehaviour {
 
 
 	}
-	
-	public void SetToCompleted()
-	{
 
-		coulomb = values.coulombs[4];
-		quest.transform.SetParent(coulomb.transform);
-	}
+	
+
+
+
+
 	public void SetCurrentAsCompleted()
 	{
-		values.currentQuestImage.sprite = null;
-		values.currentQuestImage.color = new Color(1, 1, 1, 0);
+		coulomb = values.coulombs[4];
+		quest.transform.SetParent(coulomb.transform);
 		if (completed && isSettedAsCurrent)
 		{
+			if (manager.quests[manager.quests.IndexOf(this) + 1] != null&& manager.quests[manager.quests.IndexOf(this) + 1].accepted)
+			{
+				Quest nextQuest = manager.quests[manager.quests.IndexOf(this) + 1];
+				
+					nextQuest.SetQuestAsCurrent();
 
+				
+			}
+			else
+			{
+				SetCurrentAsEmpty();
+			}
 
-			values.currentQuestText.text = "Quest completed!";
-
+		
 
 		}
-		if (completed && !isSettedAsCurrent)
-		{
-			values.currentQuestText.text = "";
-
-		}
+	
 	}
-	private void OnTriggerStay(Collider other)//stay->bug?Enter-> correct
+	private void SetCurrentAsEmpty()
 	{
+	
+			values.currentQuestImage.sprite = null;
+			values.currentQuestImage.color = new Color(1, 1, 1, 0);
+			values.currentQuestText.text = "";
+		
+	}
 
-		if (!accepted && other.gameObject.name == "QuestTrigger" && this.enable)
+
+
+
+
+	private void OnTriggerStay(Collider other)
+	{
+	
+		if (!accepted && other.gameObject.name == "QuestTrigger" && enable && Input.GetKeyDown(KeyCode.E))
 		{
+			
+			Debug.Log("press E to open quest");
 			this.isTrigged = true;
 
 			SetButtons(true, true);
 
 
 			ShowQuest();
+			values.accept.onClick.AddListener(() => AcceptQuest());
+			values.setAsCurrent.onClick.AddListener(() => SetQuestAsCurrent());
 		}
 		
 
 	}
 	private void OnTriggerExit(Collider other)
 	{
+		
 		if (other.gameObject.name == "QuestTrigger" && enable)
 		{
 			this.isTrigged = false;
 			HideQuest();
 
 		}
-		if (other.gameObject.name == "QuestTrigger" && completed)
-		{
-			SetCurrentAsCompleted();
-			isSettedAsCurrent = false;
-		}
+	
+	
 
 	}
+	private void showQuestIcon()
+	{
+		if (!accepted)
+		{
 
+			if (questIcon == null)
+			{
+				questIcon = new GameObject("Quest icon");
+				questIcon.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
+				questIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, gameObject.transform.position.z);
+				SpriteRenderer sr = questIcon.AddComponent<SpriteRenderer>();
+				sr.sprite = SetQuestIcon();
+
+			}
+		}
+		else { Destroy(questIcon); }
+		
+
+
+	}
 }

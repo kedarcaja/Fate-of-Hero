@@ -33,11 +33,11 @@ public class Weapon : Equipment
 
         if (inv is VendorInvetory)
         {
-            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, BuyPrice);
+            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, SellPrice);
         }
         else if (VendorInvetory.Instance.IsOpen)
         {
-            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, SellPrice);
+            return string.Format("{0}\n<b><color=red><size=30>{2}</size></color></b> \n<size=22> AttackSpeed: {1}\n <color=yellow>Price: {3}</color></size>", equipmentTip, AttackSpeed, stats, BuyPrice);
         }
         else
         {

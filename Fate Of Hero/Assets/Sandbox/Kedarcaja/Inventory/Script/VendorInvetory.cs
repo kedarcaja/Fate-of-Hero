@@ -20,12 +20,13 @@ public class VendorInvetory : ChestInventory {
 
     protected override void Start()
     {
-        EmptySlot = slots;
+        EmptySlot = slots; 
         base.Start();
         GiveItem("Health potion");
         GiveItem("Rare Sword");
         GiveItem("Uncoman Head");
         GiveItem("Iron Ingot");
+        GiveItem("Ruka smrti");
     }
 
     protected void GiveItem(string itemName)

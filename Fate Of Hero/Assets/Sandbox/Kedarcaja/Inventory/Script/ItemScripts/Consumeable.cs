@@ -42,11 +42,11 @@ public class Consumeable : Item
 
         if (inv is VendorInvetory)
         {
-            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, BuyPrice);
+            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, SellPrice);
         }
         else if (VendorInvetory.Instance.IsOpen)
         {
-            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, SellPrice);
+            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, BuyPrice);
         }
         else
         {

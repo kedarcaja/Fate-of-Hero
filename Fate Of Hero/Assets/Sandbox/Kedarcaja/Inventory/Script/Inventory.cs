@@ -171,7 +171,7 @@ public class Inventory : MonoBehaviour
             InventoryManager.Instance.visialTextObject.text = tmpSlot.CurrentItem.GetTooltip(this);
             InventoryManager.Instance.sizeTextObject.text = InventoryManager.Instance.visialTextObject.text;
             InventoryManager.Instance.tooltipObject.SetActive(true);
-            float xPos = slot.transform.position.x + 100 + slotPaddingLeft;
+            float xPos = slot.transform.position.x + 50 + slotPaddingLeft;
             float yPos = slot.transform.position.y - slot.GetComponent<RectTransform>().sizeDelta.y - slotPaddingTop;
            
             InventoryManager.Instance.tooltipObject.transform.position = new Vector3(xPos, yPos);

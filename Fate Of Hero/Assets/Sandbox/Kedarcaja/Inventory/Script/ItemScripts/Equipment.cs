@@ -64,11 +64,11 @@ public class Equipment : Item
         string itemTip = base.GetTooltip(inv);
         if (inv is VendorInvetory && !(this is Weapon))
         {
-            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, BuyPrice);
+            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, SellPrice);
         }
         else if (VendorInvetory.Instance.IsOpen && !(this is Weapon))
         {
-            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, SellPrice);
+            return string.Format("{0}" + "<size=22>{1}\n<color=yellow>Price: {2}</color></size>", itemTip, stats, BuyPrice);
         }
         else
         {

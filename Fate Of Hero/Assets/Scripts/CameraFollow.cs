@@ -5,9 +5,12 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
     [SerializeField]
     private GameObject gameObject;
+
+    [SerializeField]
+    private float X, Y, Z = 0;
 	
 	void Update () {
 
-        transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+18f, gameObject.transform.position.z-23f);
+        transform.position = new Vector3(gameObject.transform.position.x+X, gameObject.transform.position.y+Y, gameObject.transform.position.z+Z);
 	}
 }

@@ -7,8 +7,8 @@ using System.Linq;
 
 public class Subtitles : MonoBehaviour
 {
-	private PlayerController player;
-    #region Class Variables
+	private PlayerScript player;
+    
     private static AudioSource audioSource;
 
     [HideInInspector]
@@ -37,14 +37,14 @@ public class Subtitles : MonoBehaviour
 
 
 
-    #endregion
+    
 
     private void Start()
     {
 		txt = GameObject.Find("SubtitlesText").GetComponent<Text>();
 
 		audioSource = txt.GetComponent<AudioSource>();
-		player = FindObjectOfType<PlayerController>();
+		player = FindObjectOfType<PlayerScript>();
 
     }
    
@@ -114,7 +114,7 @@ public class Subtitles : MonoBehaviour
 			audioSource.clip = null;
 			txt.text = "";
 
-		player.IsMove = true;
+		//player.IsMove = true;
 
 	}
 }

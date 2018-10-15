@@ -1,17 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
+
+public class PlayerScript : Character
 {
-   
     private static PlayerScript instance;
-    [SerializeField]
-    private float speed;
-
-    protected Vector2 direction;
-    public bool isMove;
-    private Rigidbody2D myrigidbody;
-
+   
     public static PlayerScript Instance
     {
         get
@@ -28,46 +23,33 @@ public class PlayerScript : MonoBehaviour
             instance = value;
         }
     }
-
-    void Start()
+    protected override void Awake()
     {
-        myrigidbody = GetComponent<Rigidbody2D>();
-        isMove = true;
-    }
-
-    void Update()
-    {
-        GetInput();
-        if (isMove)
-        {
-            Move();
-        }
+        base.Awake();
        
+
     }
-    public void Move()
+    protected override void Start()
     {
-        myrigidbody.velocity = direction.normalized * speed;
+
+        base.Start();
+    }
+    protected override void Update()
+    {
+
+        base.Update();
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Health.CurrentVal -= 10;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Health.CurrentVal += 10;
+        }
     }
 
     private void GetInput()
     {
-        direction = Vector2.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            direction += Vector2.up;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            direction += Vector2.down; 
-        }
-        if (Input.GetKey(KeyCode.A))
-        {  
-            direction += Vector2.left;  
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction += Vector2.right;
-        }
-
+  
     }
 }

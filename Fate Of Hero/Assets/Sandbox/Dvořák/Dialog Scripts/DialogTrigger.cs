@@ -7,12 +7,12 @@ public class DialogTrigger : MonoBehaviour
 {
     [SerializeField]
     private bool monolog;
-	private PlayerController player;
+	private PlayerScript player;
     public bool FreezeOnKeyPress; //Proměnná která nastavuje, jestli hráč musí zůstat stát při interakci
 	
 	private void Start()
 	{
-		player = FindObjectOfType<PlayerController>();
+		player = FindObjectOfType<PlayerScript>();
 
 	}
 	private void OnTriggerStay(Collider other)
@@ -24,7 +24,7 @@ public class DialogTrigger : MonoBehaviour
                 GetComponent<Subtitles>().Dialogs[0].trigger = true;
                 if (FreezeOnKeyPress)
                 {
-                    player.IsMove = false;
+                   // player.IsMove = false;
                 }
 
 
@@ -41,7 +41,7 @@ public class DialogTrigger : MonoBehaviour
 			{
                 if (FreezeOnKeyPress)
                 {
-                    player.IsMove = false;
+                    //player.IsMove = false;
                 }
 
                 GetComponent<Subtitles>().Monologs[0].trigger = true;

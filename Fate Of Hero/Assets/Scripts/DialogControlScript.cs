@@ -59,7 +59,7 @@ public class DialogControlScript : MonoBehaviour
                 dialogControler.SetActive(true);
                 part = 1; Dialog();
                 AudioSource.PlayClipAtPoint(voice, transform.position,25f);
-                PlayerScript.Instance.isMove = false;
+                //PlayerScript.Instance.isMove = false;
             }
         }
     }
@@ -242,7 +242,7 @@ public class DialogControlScript : MonoBehaviour
             {
                 timer = 0;
                 dialogControler.SetActive(false);
-                PlayerScript.Instance.isMove = true;
+                //PlayerScript.Instance.isMove = true;
                 Destroy(dialogObject);
             }
         }
@@ -422,7 +422,7 @@ public class DialogControlScript : MonoBehaviour
             {
                 timer = 0;
                 dialogControler.SetActive(false);
-                PlayerScript.Instance.isMove = true;
+               // PlayerScript.Instance.isMove = true;
                 Destroy(dialogObject);
             }
         }

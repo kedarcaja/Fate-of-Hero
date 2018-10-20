@@ -113,75 +113,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 0098da730d8947640820d64d494a3036, type: 2}
---- !u!4 &24903357 stripped
+--- !u!4 &24903357
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a,
     type: 2}
-  m_PrefabInternal: {fileID: 336531660}
---- !u!1001 &27186900
-Prefab:
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112953911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 244375309}
+  - {fileID: 1209149123}
+  m_Father: {fileID: 336531661}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &27186901
+Transform:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1362979850}
-    m_Modifications:
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -11.574244
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -12.145752
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -4.9620743
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491274073997004, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 17.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491274073997004, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 114753792778281268, guid: 4b66f598ee9ca644f897020cecebc65d,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 389437088}
-    - target: {fileID: 114753792778281268, guid: 4b66f598ee9ca644f897020cecebc65d,
-        type: 2}
-      propertyPath: exit
-      value: 
-      objectReference: {fileID: 222379228}
-    - target: {fileID: 1165881300067416, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-      propertyPath: m_Name
-      value: Enter 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
-  m_IsPrefabAsset: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864541745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 222379229}
+  - {fileID: 216595655}
+  m_Father: {fileID: 1362979850}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &33024074
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +226,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.0925746, y: 4.087429, z: 1.5016128}
   m_Center: {x: -2.5462954, y: 1.5437145, z: -1.3736899}
+--- !u!1 &43390347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129935783}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &52044420
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52044423
 MonoBehaviour:
@@ -459,7 +436,7 @@ SpriteRenderer:
   m_Size: {x: 0.68, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &87737405
@@ -594,14 +571,9 @@ SpriteRenderer:
   m_Size: {x: 0.48, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &146065291 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1321702380}
 --- !u!1 &157957868
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,14 +646,24 @@ SpriteRenderer:
   m_Size: {x: 1.04, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &216595655 stripped
+--- !u!4 &216595655
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4521348235298938, guid: 4b66f598ee9ca644f897020cecebc65d,
     type: 2}
-  m_PrefabInternal: {fileID: 27186900}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584255518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2067639211}
+  m_Father: {fileID: 27186901}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &221777937
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,14 +736,38 @@ SpriteRenderer:
   m_Size: {x: 1.21, y: 1.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &222379228 stripped
+--- !u!1 &222379228
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1165341981209020, guid: 4b66f598ee9ca644f897020cecebc65d,
     type: 2}
-  m_PrefabInternal: {fileID: 27186900}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222379229}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &222379229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222379228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 27186901}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &241899932
 Prefab:
   m_ObjectHideFlags: 0
@@ -815,176 +821,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4423264256084342, guid: d70822649b3fb0f44b08845768612862,
     type: 2}
   m_PrefabInternal: {fileID: 241899932}
---- !u!1 &244375308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 244375309}
-  - component: {fileID: 244375312}
-  - component: {fileID: 244375311}
-  - component: {fileID: 244375310}
-  m_Layer: 4
-  m_Name: Dialog trigger MS01p02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &244375309
+--- !u!4 &241899934 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244375308}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8579254, y: -1.7399979, z: -2.2800026}
-  m_LocalScale: {x: 7.7138133, y: 1, z: 9.775388}
-  m_Children: []
-  m_Father: {fileID: 24903357}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &244375310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244375308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs:
-  - wasPlayed: 0
-    ended: 0
-    dialogName: MS01p02
-    clip: {fileID: 8300000, guid: 6dee946d12c36dc418af640ae842deb4, type: 3}
-    trigger: 0
-    sentences:
-    - sentence: 'To jako fakt? '
-      speaker: Leonard
-      timer: 2
-    - sentence: "Kytky p\u0159ece nepl\xE1\u010Dou, kytky ti\u0161e rostou."
-      speaker: Leonard
-      timer: 5
-    - sentence: "No tak j\xF3, tak j\xF3, ale budu si p\u0159ipadat jako bl\xE1zen...eee...kv\u011Btino?"
-      speaker: Leonard
-      timer: 7
-    - sentence: "Co chce\u0161?"
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "Jo, j\xE1 v\xEDm! Chce\u0161 mi vz\xEDt dal\u0161\xED okv\u011Btn\xED
-        l\xEDstek."
-      speaker: "Kv\u011Btina"
-      timer: 5
-    - sentence: "No tak v\xED\u0161 co ?"
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "Tak j\xE1 ti ho teda d\xE1m dobrovoln\u011B."
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "Nemus\xED\u0161 mi ho \u0161kubat jako posledn\u011B."
-      speaker: "Kv\u011Btina"
-      timer: 3
-    - sentence: "To v\xE1\u017En\u011B bolelo !"
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "Po\u010Dkej po\u010Dkej!"
-      speaker: Leonard
-      timer: 2
-    - sentence: "Nechci tvoje l\xEDstky, hled\xE1m cestu ven."
-      speaker: Leonard
-      timer: 3
-    - sentence: "Ty  jsi opravdu mluv\xEDc\xED kytka ?"
-      speaker: Leonard
-      timer: 4
-    - sentence: To jako fakt?
-      speaker: Leonard
-      timer: 2
-    - sentence: "Nepra\u0161til jsem se p\u0159i tom p\xE1du moc do hlavy?"
-      speaker: Leonard
-      timer: 3
-    - sentence: No a co?
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "Um\xEDm mluvit, nau\u010Dila jsem se to, kdy\u017E jsem byla mal\xE1"
-      speaker: "Kv\u011Btina"
-      timer: 3
-    - sentence: "Jako ka\u017Ed\xFD."
-      speaker: "Kv\u011Btina"
-      timer: 2
-    - sentence: "To poch\xE1z\xED\u0161 z divn\xE9ho kraje, kdy\u017E se to u v\xE1s
-        d\u011Bti neu\u010D\xED."
-      speaker: "Kv\u011Btina"
-      timer: 4
-    - sentence: "No j\xE1 vlastn\u011B asi v\u016Fbec nejsem odsud."
-      speaker: Leonard
-      timer: 2
-    - sentence: A kde to podle tebe teda jsme?
-      speaker: Leonard
-      timer: 3
-    - sentence: "Nach\xE1z\xED\u0161 se na Antorsk\xE9m ostrov\u011B."
-      speaker: "Kv\u011Btina"
-      timer: 3
-    - sentence: "To v\xED\u0161 \u017Ee j\xF3."
-      speaker: Leonard
-      timer: 3
-    - sentence: "Ale Abych pravdu \u0159ekla, na tomhle m\xEDst\u011B nen\xED nic
-        kouzeln\xE9ho."
-      speaker: "Kv\u011Btina"
-      timer: 4
-    - sentence: "M\xE1m tu jen sam\xE9 tr\xE1pen\xED."
-      speaker: "Kv\u011Btina"
-      timer: 3
-    - sentence: "V\xED\u0161 co kytko?"
-      speaker: Leonard
-      timer: 2
-    - sentence: "Zkus\xEDm ti naj\xEDt ten tv\u016Fj vy\u0161kubnut\xFD l\xEDstek,
-        a\u0165 je ti l\xEDp."
-      speaker: Leonard
-      timer: 4
-    - sentence: "Ani m\u011B by se tu necht\u011Blo ti\u0161e a poklidn\u011B r\u016Fst
-        jako ka\u017Ed\xE1 jin\xE1 norm\xE1ln\xED kv\u011Btina!"
-      speaker: Leonard
-      timer: 9
-    - sentence: "T\u0159eba m\u011B mezit\xEDm to \u0161\xE1len\xED p\u0159ejde."
-      speaker: Leonard
-      timer: 3
-    - sentence: "A ne\u0159\xEDkej mi kytko, ur\xE1\u017E\xED m\u011B to!"
-      speaker: "Kv\u011Btina"
-      timer: 4
-    - sentence: ' Jmenuji se Samantha.'
-      speaker: "Kv\u011Btina"
-      timer: 2
-  Monologs: []
---- !u!114 &244375311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244375308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 0
-  FreezeOnKeyPress: 1
---- !u!65 &244375312
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244375308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.28538376, y: 5.3759155, z: 0.97852266}
-  m_Center: {x: 0.5738877, y: 2.1892853, z: 0.3021674}
+  m_PrefabInternal: {fileID: 241899932}
+--- !u!4 &244375309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a,
+    type: 2}
+  m_PrefabInternal: {fileID: 290164451}
 --- !u!1 &253143593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +902,7 @@ SpriteRenderer:
   m_Size: {x: 2.58, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &271195334
@@ -1167,8 +1012,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687184121}
-  - {fileID: 146065291}
-  - {fileID: 571555108}
+  - {fileID: 1321702381}
+  - {fileID: 1129935783}
   - {fileID: 934077373}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1232,7 +1077,7 @@ SpriteRenderer:
   m_Size: {x: 2.37, y: 3.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &286527763
@@ -1248,6 +1093,48 @@ Transform:
   m_Father: {fileID: 687184121}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &290164451
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 24903357}
+    m_Modifications:
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.8579254
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.7399979
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.2800026
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408471211412560, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99d83c9f973a11c468ec11c60589700a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &292840389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1235,7 @@ SpriteRenderer:
   m_Size: {x: 0.76, y: 0.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &305724054
@@ -1436,66 +1323,70 @@ SpriteRenderer:
   m_Size: {x: 1.29, y: 1.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &336531660
+--- !u!1001 &330616050
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1362979850}
+    m_TransformParent: {fileID: 571555108}
     m_Modifications:
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -23.218758
+      value: -2.03973
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -11.385754
+      value: -0.33999634
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -16.543076
+      value: -5.0405807
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+    - target: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
+    - target: {fileID: 114274710274191726, guid: fc7169d4154ab194aa999444d8ff869c,
         type: 2}
-      propertyPath: image
+      propertyPath: second
       value: 
-      objectReference: {fileID: 271195338}
-    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: canvasGroup
-      value: 
-      objectReference: {fileID: 271195335}
-    - target: {fileID: 65120865338972434, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1209149122}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: fc7169d4154ab194aa999444d8ff869c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &336531661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008077679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 24903357}
+  m_Father: {fileID: 1362979850}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360874089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1446,7 @@ SpriteRenderer:
   m_Size: {x: 2.5, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &360874091
@@ -1660,7 +1551,7 @@ SpriteRenderer:
   m_Size: {x: 2.6100001, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &450058706
@@ -1863,7 +1754,7 @@ SpriteRenderer:
   m_Size: {x: 1.04, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &463699912
@@ -1928,6 +1819,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &471741078
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 216595655}
+    m_Modifications:
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.6548252
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.060001373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058901918829592, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+      propertyPath: m_Name
+      value: Monolog trigger - chce
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 82b5fdddf4b292c43b520f59001b1596, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &474122645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2256,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &554812928
@@ -2381,7 +2318,7 @@ SpriteRenderer:
   m_Size: {x: 1.74, y: 2.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &554812930
@@ -2438,11 +2375,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7317218, y: 4.087429, z: 4.4879537}
   m_Center: {x: 0.13413937, y: 1.5437145, z: -0.9529296}
---- !u!4 &571555108 stripped
+--- !u!4 &571555108
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a,
     type: 2}
-  m_PrefabInternal: {fileID: 1129935782}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021603227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1576205684}
+  m_Father: {fileID: 1129935783}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579247510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,6 +2512,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 579247510}
   m_CullTransparentMesh: 0
+--- !u!1 &584255518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216595655}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &604377467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,6 +2732,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4728015538033506, guid: d0df75ea2e665694480fdfe59f8a1cad,
     type: 2}
   m_PrefabInternal: {fileID: 658750949}
+--- !u!4 &658750951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 658750949}
+--- !u!1001 &659738778
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 453726921}
+    m_Modifications:
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.932
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.891
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366815581350920, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cae2fd480054a2d49acff43e1bda6960, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &669019536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +2837,7 @@ SpriteRenderer:
   m_Size: {x: 1.74, y: 2.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &669019538
@@ -3048,7 +3056,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &755745556
@@ -3192,7 +3200,7 @@ SpriteRenderer:
   m_Size: {x: 2.58, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &782552186
@@ -3331,7 +3339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 808615803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2033af0d34c1c49a654bcccf4d483c, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &808615806
@@ -3468,11 +3476,11 @@ Transform:
   m_Children:
   - {fileID: 991165994}
   - {fileID: 1673188688}
-  - {fileID: 241899933}
+  - {fileID: 241899934}
   - {fileID: 1594518195}
   - {fileID: 1283172659}
   - {fileID: 1369481782}
-  - {fileID: 658750950}
+  - {fileID: 658750951}
   m_Father: {fileID: 1362979850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3576,7 +3584,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &905512186
@@ -3696,7 +3704,7 @@ SpriteRenderer:
   m_Size: {x: 1.42, y: 2.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &934077372 stripped
@@ -3847,7 +3855,7 @@ SpriteRenderer:
   m_Size: {x: 0.67, y: 0.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &990199815
@@ -3909,7 +3917,7 @@ SpriteRenderer:
   m_Size: {x: 2.6100001, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &990199817
@@ -4070,7 +4078,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1033588711
@@ -4132,7 +4140,7 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1033588713
@@ -4289,7 +4297,7 @@ SpriteRenderer:
   m_Size: {x: 2.58, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1091128611
@@ -4328,6 +4336,21 @@ RectTransform:
   m_AnchoredPosition: {x: -924.9, y: 701.5}
   m_SizeDelta: {x: 100, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1112953911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24903357}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1128875870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,86 +4408,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1657352, y: 4.186222, z: 0.6677408}
   m_Center: {x: 17.622543, y: 1.6976528, z: -0.16612959}
---- !u!1001 &1129935782
-Prefab:
+--- !u!4 &1129935783
+Transform:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 274850272}
-    m_Modifications:
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -16.648758
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -11.265755
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 14.966923
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328041379336106, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853090638071238, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3.953698
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853090638071238, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.0535007
-      objectReference: {fileID: 0}
-    - target: {fileID: 65120865338972434, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 3.2415218
-      objectReference: {fileID: 0}
-    - target: {fileID: 65120865338972434, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: m_Center.x
-      value: -0.055413246
-      objectReference: {fileID: 0}
-    - target: {fileID: 65120865338972434, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 4.1279564
-      objectReference: {fileID: 0}
-    - target: {fileID: 65120865338972434, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: m_Center.z
-      value: -0.1538868
-      objectReference: {fileID: 0}
-    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 271195338}
-    - target: {fileID: 114718458334901080, guid: 57c03f51cdeb130439446a4183edf67a,
-        type: 2}
-      propertyPath: canvasGroup
-      value: 
-      objectReference: {fileID: 271195335}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 57c03f51cdeb130439446a4183edf67a, type: 2}
-  m_IsPrefabAsset: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43390347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 571555108}
+  m_Father: {fileID: 274850272}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135748354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,7 +4578,7 @@ SpriteRenderer:
   m_Size: {x: 1.74, y: 2.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1175608660
@@ -4696,7 +4653,7 @@ SpriteRenderer:
   m_Size: {x: 1.5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1183889258
@@ -4713,237 +4670,21 @@ Transform:
   m_Father: {fileID: 1362979850}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1200083457
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1200083458}
-  - component: {fileID: 1200083461}
-  - component: {fileID: 1200083460}
-  - component: {fileID: 1200083459}
-  m_Layer: 0
-  m_Name: "Monolog trigger - Zam\u010Deno"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1200083458
+--- !u!4 &1200083458 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1200083457}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.075315475, y: -0.25424576, z: 0.33307648}
-  m_LocalScale: {x: 6.4182196, y: 1, z: 9.775389}
-  m_Children: []
-  m_Father: {fileID: 1283172659}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1200083459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1200083457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs: []
-  Monologs:
-  - monologName: "Zam\u010Deno"
-    trigger: 0
-    wasPlayed: 0
-    sentences: "Sakra zam\u010Deno."
-    clip: {fileID: 8300000, guid: 3c1b8c155cd26b34391d51c9a3f5f4b2, type: 3}
---- !u!114 &1200083460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1200083457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 1
-  FreezeOnKeyPress: 0
---- !u!65 &1200083461
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1200083457}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29821667, y: 1.6556091, z: 0.47871006}
-  m_Center: {x: 0.12011142, y: 0.624424, z: 0.039885707}
---- !u!1 &1209149122
+  m_CorrespondingSourceObject: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00,
+    type: 2}
+  m_PrefabInternal: {fileID: 1957918857}
+--- !u!1 &1209149122 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1209149123}
-  - component: {fileID: 1209149126}
-  - component: {fileID: 1209149125}
-  - component: {fileID: 1209149124}
-  m_Layer: 4
-  m_Name: Dialog trigger MS01p03
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1209149123
+  m_CorrespondingSourceObject: {fileID: 1460078830769250, guid: 527bc4a5b85b1dc45a0709da20fa5cd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091685086}
+--- !u!4 &1209149123 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209149122}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.163683, y: -0.76999664, z: -5.8968925}
-  m_LocalScale: {x: 7.7138133, y: 1, z: 9.775388}
-  m_Children: []
-  m_Father: {fileID: 24903357}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209149124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209149122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs:
-  - wasPlayed: 0
-    ended: 0
-    dialogName: MS01p03
-    clip: {fileID: 8300000, guid: 699c74c9b6d0a4442b4edd5066e0ec29, type: 3}
-    trigger: 0
-    sentences:
-    - sentence: "Kv\u011B\u2026 SSS\u2026 jo Samatho, donesl jsem ti ten tv\u016Fj
-        l\xEDstek."
-      speaker: Leonard
-      timer: 7
-    - sentence: "J\xE9, d\u011Bkuji, tady m\xE1\u0161 za n\u011Bj kl\xED\u010D k m\u0159\xED\u017Ei
-        od stoky!"
-      speaker: Samantha
-      timer: 5
-    - sentence: "A\u017E mi p\u0159iroste zp\xE1tky, tak budu zase ta nejkr\xE1sn\u011Bj\u0161\xED
-        kv\u011Btina \u0161iroko daleko."
-      speaker: Samantha
-      timer: 6
-    - sentence: "Ty? Ha ha ha v\u017Edy\u0165 i \u017E\xED\u017Ealy jsou kr\xE1sn\u011Bj\u0161\xED,
-        ne\u017E ty."
-      speaker: "My\u0161ka"
-      timer: 6
-    - sentence: "A pro\u010D je tady tahle ?"
-      speaker: Samantha
-      timer: 2
-    - sentence: E...
-      speaker: Leonard
-      timer: 1
-    - sentence: "Jsem tu, abych ti \u0159ekla, \u017Ee si jdu nahoru sehnat nov\xFD
-        klobouk, kter\xFD ty nikdy m\xEDt nebude\u0161, d\u0159\xEDv tady uhnije\u0161!"
-      speaker: "My\u0161ka"
-      timer: 12
-    - sentence: "Ale\u2026E... holky\u2026nechte toho. My\u0161ka se ti p\u0159i\u0161la
-        omluvit, Samantho."
-      speaker: Leonard
-      timer: 7
-    - sentence: "D\u011Blej omluv se, s\xE1m se odsud u\u017E dok\xE1\u017Eu dostat.
-        Kl\xED\u010D m\xE1m."
-      speaker: Leonard
-      timer: 5
-    - sentence: "Tak\u017Ee pokud se neomluv\xED\u0161, z\u016Fst\xE1v\xE1\u0161 tady
-        i s \u017E\xED\u017Ealama."
-      speaker: Leonard
-      timer: 3
-    - sentence: "Ne! Ne! Ach jo. Tak j\xE1 se ti teda omlouv\xE1m Samantho."
-      speaker: "My\u0161ka"
-      timer: 7
-    - sentence: "Prvn\xED omluva za posledn\xEDch sto let!"
-      speaker: Samantha
-      timer: 4
-    - sentence: "D\u011Bkuji hrdino\u2026! Hrdino? Hal\xF3 hrdino\u2026!"
-      speaker: Samantha
-      timer: 6
-    - sentence: "To mluv\xED\u0161 na m\u011B?"
-      speaker: Leonard
-      timer: 2
-    - sentence: "Ano hrdino, cht\u011Bla jsem ti za odm\u011Bnu d\xE1t je\u0161t\u011B
-        jednu radu."
-      speaker: Samantha
-      timer: 4
-    - sentence: "Sem s n\xED."
-      speaker: Leonard
-      timer: 2
-    - sentence: " A\u0165 bude dra\u010Dice sebev\xEDc sexy, nel\xEDbej ji."
-      speaker: Samatha
-      timer: 4
-    - sentence: "F\xFAha...Rada nad zlato...!"
-      speaker: "My\u0161ka"
-      timer: 4
-    - sentence: Ale no tak.
-      speaker: Leonard
-      timer: 3
-    - sentence: "M\u011Bj se Samantho!"
-      speaker: Leonard
-      timer: 2
-    - sentence: "M\u011Bj se hrdino!"
-      speaker: Samatha
-      timer: 4
-    - sentence: "A te\u010F kone\u010Dn\u011B vst\u0159\xEDc slunci! U\u017E mi od
-        toho vlhka m\xE1lem za\u010Daly plesniv\u011Bt nohy."
-      speaker: Leonard
-      timer: 6
-    - sentence: "Mysl\xED\u0161 to zelen\xFD, co m\xE1\u0161 mezi prsty?"
-      speaker: "My\u0161ka"
-      timer: 3
-    - sentence: "Ne, to je tam u\u017E dlouho, ale m\xE1lem se to rozrostlo d\xE1l."
-      speaker: Leonard
-      timer: 4
-  Monologs: []
---- !u!114 &1209149125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209149122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 0
-  FreezeOnKeyPress: 1
---- !u!65 &1209149126
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209149122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.81061584, y: 6.6688957, z: 1.3605}
-  m_Center: {x: 0.7816137, y: 2.8344479, z: 0.13833284}
+  m_CorrespondingSourceObject: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091685086}
 --- !u!1 &1221041558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,6 +4922,10 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b66f598ee9ca644f897020cecebc65d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1321702381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1321702380}
 --- !u!1 &1324858085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,7 +4998,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.59}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1354243183
@@ -5328,7 +5073,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1362979849
@@ -5357,8 +5102,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 847749411}
-  - {fileID: 216595655}
-  - {fileID: 24903357}
+  - {fileID: 27186901}
+  - {fileID: 336531661}
   - {fileID: 1183889258}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -5435,7 +5180,7 @@ SpriteRenderer:
   m_Size: {x: 3.25, y: 2.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1370483259
@@ -5510,7 +5255,7 @@ SpriteRenderer:
   m_Size: {x: 2.58, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1373604992
@@ -5674,7 +5419,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1469218892
@@ -5818,7 +5563,7 @@ SpriteRenderer:
   m_Size: {x: 0.67, y: 0.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1556260174
@@ -5834,194 +5579,17 @@ Transform:
   m_Father: {fileID: 687184121}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1576205683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1576205684}
-  - component: {fileID: 1576205687}
-  - component: {fileID: 1576205686}
-  - component: {fileID: 1576205685}
-  - component: {fileID: 1576205688}
-  m_Layer: 4
-  m_Name: Dialog trigger MS02p01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1576205684
+--- !u!4 &1576205684 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576205683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.03973, y: -0.33999634, z: -5.0405807}
-  m_LocalScale: {x: 6.4182196, y: 1, z: 9.775389}
-  m_Children: []
-  m_Father: {fileID: 571555108}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1576205685
+  m_CorrespondingSourceObject: {fileID: 4604960149119542, guid: fc7169d4154ab194aa999444d8ff869c,
+    type: 2}
+  m_PrefabInternal: {fileID: 330616050}
+--- !u!114 &1576205685 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576205683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114329779809667344, guid: fc7169d4154ab194aa999444d8ff869c,
+    type: 2}
+  m_PrefabInternal: {fileID: 330616050}
   m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs:
-  - wasPlayed: 0
-    ended: 0
-    dialogName: MS02p01
-    clip: {fileID: 8300000, guid: 12c21e01159733e4ab2fd8c8d4efa81c, type: 3}
-    trigger: 0
-    sentences:
-    - sentence: " Hm\u2026vypad\xE1 to jako ob\u0159\xED my\u0161\xED d\xEDra, douf\xE1m,
-        \u017Ee ta my\u0161, co tu \u017Eije, nem\xE1 slintavku, kulhavku nebo vzteklinu"
-      speaker: Leonard
-      timer: 9
-    - sentence: "Tak hele! Jedin\xFD, co m\xE1m je brblavka, co\u017E se bude projevovat
-        v n\xE1sleduj\xEDc\xEDch dvou minut\xE1ch na\u0161eho rozhovoru, proto\u017Ee
-        nesn\xE1\u0161\xEDm, kdy\u017E mi n\u011Bkdo leze bez pozv\xE1n\xED do lo\u017Enice\u2026\u2026"
-      speaker: "My\u0161ka"
-      timer: 11
-    - sentence: "Pro\u010D ml\u010D\xED\u0161?"
-      speaker: "My\u0161ka"
-      timer: 2
-    - sentence: "S \u0161\xE1len\xEDmi a m\xE1men\xEDmi se bavit nehodl\xE1m. Vid\xEDm,
-        \u017Ee m\xE1\u0161 okv\u011Btn\xED l\xEDstek, kter\xFD pat\u0159\xED kv\u011Btin\u011B.
-        Dej mi ho a j\xE1 zase pokojn\u011B odejdu."
-      speaker: Leonard
-      timer: 9
-    - sentence: "Nejsem \u017E\xE1dn\xE9 tvoje \u0161\xE1len\xED! Jsem \xFApln\u011B
-        norm\xE1ln\xED!"
-      speaker: "My\u0161ka"
-      timer: 5
-    - sentence: "Ne, pra\u0161til jsem se do hlavy p\u0159i p\xE1du a te\u010F m\xE1m
-        m\xE1men\xED o mluv\xEDc\xEDch kv\u011Btin\xE1ch a ob\u0159\xEDch hubat\xFDch
-        my\u0161\xEDch. Nechci v\u011Bd\u011Bt, co mi je\u0161t\u011B ta moje hlava
-        p\u0159iprav\xED. \r\n"
-      speaker: Leonard
-      timer: 11
-    - sentence: "Tak j\xE1 ti to \u0159eknu: m\xE1me tady mluv\xEDc\xED draky, mluv\xEDc\xED
-        v\xEDly, mluv\xEDc\xED maso\u017Eravky\u2026."
-      speaker: "My\u0161ka"
-      timer: 9
-    - sentence: "Ne to ne\u2026!"
-      speaker: Leonard
-      timer: 1
-    - sentence: "Jo to jo! A mnohem hor\u0161\xED mluv\xEDc\xED bytosti, u kter\xFDch
-        bys byl rad\u0161i kdyby ml\u010Dely."
-      speaker: "My\u0161ka"
-      timer: 7
-    - sentence: "Jo, t\u0159eba kv\u011Btiny a my\u0161i\u2026"
-      speaker: Leonard
-      timer: 3
-    - sentence: "Tak d\xE1\u0161 u\u017E mi ten l\xEDstek? "
-      speaker: Leonard
-      timer: 2
-    - sentence: " Ne\u2026 hraju si s n\xEDm, je tu nuda. A\u017E m\u011B omrz\xED,
-        tak si z n\u011Bj vyrob\xEDm klobou\u010Dek."
-      speaker: "My\u0161ka"
-      timer: 6
-    - sentence: "V\u017Edy\u0165 je malinkat\xFD, nepokryl by ti celou hlavu a nav\xEDc
-        by k tob\u011B v\xEDc sed\u011Bla fialov\xE1. \r\n"
-      speaker: Leonard
-      timer: 6
-    - sentence: "Hm...Mysl\xED\u0161?"
-      speaker: "My\u0161ka"
-      timer: 3
-    - sentence: "Tak v\xED\u0161 co? D\xE1m ti ten okv\u011Btn\xED l\xEDstek a ty
-        mi m\u016F\u017Ee\u0161 sehnat n\u011Bco fialov\xE9ho na sebe. \r\n"
-      speaker: "My\u0161ka"
-      timer: 7
-    - sentence: "Ty ses zbl\xE1znila, m\xE1midlo jedno! Nev\xEDm ani kudy vede cesta
-        ven, nato\u017E kde tu maj\xED fialov\xE9 klobouky!\r\n"
-      speaker: Leonard
-      timer: 8
-    - sentence: "Neboj, budu tvoje pr\u016Fvodkyn\u011B."
-      speaker: "My\u0161ka"
-      timer: 3
-    - sentence: "No pr\xE1v\u011B toho se boj\xEDm."
-      speaker: Leonard
-      timer: 2
-    - sentence: "Kdy\u017E p\u016Fjdu s tebou, tak ti uk\xE1\u017Eu, jak bojovat s
-        rozli\u010Dn\xFDmi p\u0159\xED\u0161erami tohoto sv\u011Bta."
-      speaker: "My\u0161ka"
-      timer: 5
-    - sentence: "Po\u010Dkej, po\u010Dkej, p\u0159\xED\u0161ery? To u\u017E je tro\u0161ku
-        moc, nemysl\xED\u0161? "
-      speaker: Leonard
-      timer: 4
-    - sentence: "Bohu\u017Eel\u2026n\xE1\u0161 sv\u011Bt nen\xED jen p\u0159\xE1telsk\xFD.
-        D\u0159\xEDv to tak b\xFDvalo, ale od t\xE9 doby co si tu za\u0159\xE1dili
-        ryt\xED\u0159i Temn\xE9 arm\xE1dy, je v\u0161echno jinak. Mimochodem ti taky
-        mluv\xED, ale hlavn\u011B sv\xFDmi me\u010Di. Proto u\u017E se l\xE9ta schov\xE1v\xE1m
-        tady dole.\r\n"
-      speaker: "My\u0161ka"
-      timer: 17
-    - sentence: "To je mi l\xEDto my\u0161ko. Abychom to nezamluvili\u2026"
-      speaker: Leonard
-      timer: 3
-    - sentence: "D\xE1\u0161 mi ten l\xEDstek pros\xEDm?"
-      speaker: Leonard
-      timer: 3
-    - sentence: "Tak\u017Ee souhlas\xED\u0161, \u017Ee m\u016F\u017Eu s tebou?"
-      speaker: "My\u0161ka"
-      timer: 3
-    - sentence: "Noo jooooo,  t\u0159eba bude\u0161 nakonec u\u017Eite\u010Dn\xE9
-        m\xE1men\xED. \r\n"
-      speaker: Leonard
-      timer: 5
-    - sentence: "Jup\xED\xED\xED, tady ho m\xE1\u0161. "
-      speaker: "My\u0161ka"
-      timer: 3
-  Monologs: []
---- !u!114 &1576205686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576205683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 0
-  FreezeOnKeyPress: 0
---- !u!65 &1576205687
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576205683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5378156, y: 4.72805, z: 0.39829633}
-  m_Center: {x: 0.3141245, y: 1.8640251, z: 0.4700445}
---- !u!114 &1576205688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576205683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa279a7e211837348bf2e77dd5479d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  second: {fileID: 1209149122}
 --- !u!1 &1594518194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6115,7 +5683,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1600551524
@@ -6190,7 +5758,7 @@ SpriteRenderer:
   m_Size: {x: 2.37, y: 3.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1611604526
@@ -6278,7 +5846,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1673188687
@@ -6442,7 +6010,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1714713655
@@ -6517,7 +6085,7 @@ SpriteRenderer:
   m_Size: {x: 0.48, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1725716957
@@ -6910,7 +6478,7 @@ SpriteRenderer:
   m_Size: {x: 0.81, y: 0.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1838885566
@@ -7073,9 +6641,24 @@ SpriteRenderer:
   m_Size: {x: 9.68, y: 3.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1864541745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27186901}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1866314674
 GameObject:
   m_ObjectHideFlags: 0
@@ -7140,7 +6723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1870580765
 GameObject:
@@ -7403,7 +6986,7 @@ SpriteRenderer:
   m_Size: {x: 1.74, y: 2.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1926878471
@@ -7483,7 +7066,7 @@ SpriteRenderer:
   m_Size: {x: 0.4, y: 0.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1929604190
@@ -7601,7 +7184,7 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1942768885
@@ -7790,7 +7373,7 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1948519260
@@ -7806,81 +7389,48 @@ Transform:
   m_Father: {fileID: 687184121}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1974192405
-GameObject:
+--- !u!1001 &1957918857
+Prefab:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1974192406}
-  - component: {fileID: 1974192409}
-  - component: {fileID: 1974192408}
-  - component: {fileID: 1974192407}
-  m_Layer: 0
-  m_Name: Monolog trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1974192406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974192405}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.932, y: 1.04, z: -0.891}
-  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
-  m_Children: []
-  m_Father: {fileID: 453726921}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1974192407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974192405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs: []
-  Monologs:
-  - monologName: "K n\xED te\u010F nejdu"
-    trigger: 0
-    wasPlayed: 0
-    sentences: "K n\xED te\u010F nejdu, kdybych p\u0159i\u0161el s pr\xE1zdnou mohlo
-      by j\xED to rozru\u0161it. "
-    clip: {fileID: 8300000, guid: 9a86ac57b8aabfe43b40b53f80c8e878, type: 3}
---- !u!114 &1974192408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974192405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 1
-  FreezeOnKeyPress: 0
---- !u!65 &1974192409
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974192405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
-  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
+  m_Modification:
+    m_TransformParent: {fileID: 1283172659}
+    m_Modifications:
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.075315475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.25424576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.33307648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822524664426320, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ff0ce5dddbeb2641a9cdbbbe8e43f00, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1990035168
 GameObject:
   m_ObjectHideFlags: 0
@@ -8049,9 +7599,24 @@ SpriteRenderer:
   m_Size: {x: 2.6100001, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2008077679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336531661}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &2020190111
 Prefab:
   m_ObjectHideFlags: 0
@@ -8118,6 +7683,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35cea298329c71d48bce801aec42f258, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &2021603227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571555108}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &2036020444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,7 +7831,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2040390644
@@ -8339,7 +7919,7 @@ SpriteRenderer:
   m_Size: {x: 2.6100001, y: 9.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2058984886
@@ -8414,83 +7994,14 @@ SpriteRenderer:
   m_Size: {x: 0.53, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2067639210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2067639211}
-  - component: {fileID: 2067639214}
-  - component: {fileID: 2067639213}
-  - component: {fileID: 2067639212}
-  m_Layer: 0
-  m_Name: Monolog trigger - chce
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2067639211
+--- !u!4 &2067639211 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067639210}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6548252, y: 0.060001373, z: -10.55}
-  m_LocalScale: {x: 6.4182196, y: 1, z: 9.775389}
-  m_Children: []
-  m_Father: {fileID: 216595655}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2067639212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067639210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogs: []
-  Monologs:
-  - monologName: Chce
-    trigger: 0
-    wasPlayed: 0
-    sentences: "Up\u0159\xEDmn\u011B nev\xEDm zda se mi tam chce."
-    clip: {fileID: 8300000, guid: 9d63ae76e2d78eb44be970a06041eafb, type: 3}
---- !u!114 &2067639213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067639210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolog: 1
-  FreezeOnKeyPress: 0
---- !u!65 &2067639214
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067639210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
-  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
+  m_CorrespondingSourceObject: {fileID: 4739150404059506, guid: 82b5fdddf4b292c43b520f59001b1596,
+    type: 2}
+  m_PrefabInternal: {fileID: 471741078}
 --- !u!1 &2091070234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8550,7 +8061,7 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2091070236
@@ -8566,6 +8077,48 @@ Transform:
   m_Father: {fileID: 1128875872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2091685086
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 24903357}
+    m_Modifications:
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.163683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.76999664
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.8968925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046190165609346, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 527bc4a5b85b1dc45a0709da20fa5cd1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2100161588
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,7 +8178,7 @@ SpriteRenderer:
   m_Size: {x: 9.68, y: 3.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2100161590
@@ -8831,6 +8384,6 @@ SpriteRenderer:
   m_Size: {x: 10.17, y: 3.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

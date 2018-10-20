@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1685810599187512}
+  m_IsPrefabAsset: 1
+--- !u!1 &1685810599187512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4366815581350920}
+  - component: {fileID: 65803150320980702}
+  - component: {fileID: 114333583821387748}
+  - component: {fileID: 114892449321621220}
+  m_Layer: 0
+  m_Name: Monolog trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4366815581350920
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685810599187512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.932, y: 1.04, z: -0.891}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65803150320980702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685810599187512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6802799, y: 1, z: 0.16324744}
+  m_Center: {x: 0.58720386, y: 0, z: 0.73695934}
+--- !u!114 &114333583821387748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685810599187512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80d2a877ef0f842a091b9c9a45d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolog: 1
+  FreezeOnKeyPress: 0
+--- !u!114 &114892449321621220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685810599187512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ed3e55f023c740a6df82e5177374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogs: []
+  Monologs:
+  - monologName: "K n\xED te\u010F nejdu"
+    trigger: 0
+    wasPlayed: 0
+    sentences: "K n\xED te\u010F nejdu, kdybych p\u0159i\u0161el s pr\xE1zdnou mohlo
+      by j\xED to rozru\u0161it. "
+    clip: {fileID: 8300000, guid: 9a86ac57b8aabfe43b40b53f80c8e878, type: 3}

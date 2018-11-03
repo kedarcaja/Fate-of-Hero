@@ -50,9 +50,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4621171860792138}
   - component: {fileID: 95401923652868456}
-  - component: {fileID: 114112542000598322}
   - component: {fileID: 54547169445051964}
+  - component: {fileID: 114133907860184352}
   - component: {fileID: 195010872463035072}
+  - component: {fileID: 65246762866691070}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -69,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4422347394619648}
   - component: {fileID: 137708529797641888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DwarfHero_Model_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,8 +142,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644408783840310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 253.6, y: 0, z: 126.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -18.470003, y: -12.76, z: -9.63}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4422347394619648}
   - {fileID: 4278916805115688}
@@ -219,6 +220,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65246762866691070
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644408783840310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5143699, y: 1.6455842, z: 0.3669453}
+  m_Center: {x: -0.00000044703484, y: 0.8170939, z: 0.030351851}
 --- !u!95 &95401923652868456
 Animator:
   serializedVersion: 3
@@ -237,7 +250,7 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114112542000598322
+--- !u!114 &114133907860184352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,9 +258,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1644408783840310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31e5084d2bed6804e842e44e1f96ffbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6deb76250e085984cb583d4b3fd26ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  Health:
+    bar: {fileID: 0}
+    maxVal: 100
+    currentVal: 100
 --- !u!137 &137708529797641888
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -305,16 +323,16 @@ NavMeshAgent:
   m_GameObject: {fileID: 1644408783840310}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 5
+  m_Radius: 0.4
+  m_Speed: 6
   m_Acceleration: 30
   avoidancePriority: 50
-  m_AngularSpeed: 800
+  m_AngularSpeed: 999
   m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0

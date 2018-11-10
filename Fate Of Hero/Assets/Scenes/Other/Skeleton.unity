@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -286,7 +286,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 992443283}
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0025576123, y: -0.6659198, z: 0.0000007349705}
+  m_ConnectedAnchor: {x: 0.0025576123, y: -0.66591984, z: 0.0000007349705}
   serializedVersion: 2
   m_Spring: 10000
   m_Damper: 0.2
@@ -405,7 +405,6 @@ GameObject:
   - component: {fileID: 554672233}
   - component: {fileID: 554672232}
   - component: {fileID: 554672237}
-  - component: {fileID: 554672238}
   m_Layer: 0
   m_Name: Chest1
   m_TagString: Untagged
@@ -507,17 +506,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.017530918, z: 0.9726707}
   m_Center: {x: 0, y: -3.6607492, z: -0.0136646405}
---- !u!114 &554672238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 554672231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456054edfdcca4a4aacc9ae850e481b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &621558397
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +684,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 2134663516}
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0025576123, y: -0.6659198, z: 0.0000007349705}
+  m_ConnectedAnchor: {x: 0.0025576123, y: -0.66591984, z: 0.0000007349705}
   serializedVersion: 2
   m_Spring: 10000
   m_Damper: 0.2
@@ -1649,7 +1637,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1871639084}
-  - component: {fileID: 1871639085}
   m_Layer: 0
   m_Name: Carl
   m_TagString: Untagged
@@ -1681,17 +1668,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1871639085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1871639083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62bb6a796d6753459337bf4f8409886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2025006391
 GameObject:
   m_ObjectHideFlags: 0

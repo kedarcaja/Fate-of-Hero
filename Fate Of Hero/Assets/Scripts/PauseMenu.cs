@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    LevelManager levelManager;
+    
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

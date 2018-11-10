@@ -21,7 +21,7 @@ public class MouseManager : MonoBehaviour
         
         // Raycast into scene
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 32, clickableLayer.value))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 45, clickableLayer.value))
         {
             bool door = false;
             if (hit.collider.gameObject.tag == "Doorway")

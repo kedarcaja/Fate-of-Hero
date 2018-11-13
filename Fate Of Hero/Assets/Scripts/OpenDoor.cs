@@ -1,43 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Mode { unlocked, locked }
+
 public class OpenDoor : MonoBehaviour
 {
-    private Animator anim;
-    public BoxCollider boxCollider;
+    public enum Mode { unlocked, locked }
+    private float Range = 2;
+    Animator anim;
     bool IsOpen;
     bool Key,trigger;
     public Mode mode;
+    Transform player;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         Key = true;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)&&trigger)
+        if (player != null && Vector3.Distance(transform.position, player.position) < Range)
+        {
+            trigger = true;
+        }
+        else
+        {
+            trigger = false;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.E) && trigger)
         {
             Open();
         }
-            if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             anim.SetTrigger("Open");
-           // boxCollider.enabled = false;
-
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
             anim.SetTrigger("Close");
-          //  boxCollider.enabled = true;
-
         }
     }
-
+    
     public void Open()
     {
         switch (mode)
@@ -70,17 +80,9 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnDrawGizmos()
     {
-        if (other.tag == "Player")
-        {
-            trigger = true;
-            Debug.Log("enter");
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-            trigger = false;
-        Debug.Log("exit");
+        Gizmos.color = new Color(1f, 1f, 0f, 1f);
+        Gizmos.DrawWireSphere(new Vector3(transform.position.x + 0, transform.position.y - 1, transform.position.z + 0), Range);
     }
 }

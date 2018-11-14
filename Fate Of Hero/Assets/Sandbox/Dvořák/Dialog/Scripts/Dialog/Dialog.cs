@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(menuName = "New Dialog", fileName = "Dialog")]
-public class Dialogs : ScriptableObject, IInterpretable
+public class Dialog : ScriptableObject, IInterpretable
 {
     [SerializeField]
     private AudioClip clip;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogInterpret : MonoBehaviour {
-    public Dialogs dialog;
+    public Dialog dialog;
     public bool IsEnable;
     private void Awake()
     {

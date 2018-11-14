@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerScript : Character
 {
     private static PlayerScript instance;
-   
+    public bool CanMove;
     public static PlayerScript Instance
     {
         get
@@ -25,7 +25,9 @@ public class PlayerScript : Character
     }
     protected override void Awake()
     {
+        CanMove = true;
         base.Awake();
+
        
 
     }
@@ -36,8 +38,11 @@ public class PlayerScript : Character
     }
     protected override void Update()
     {
+        if(CanMove)
+        {
+            base.Update();
+        }
 
-        base.Update();
         if (Input.GetKeyDown(KeyCode.Y))
         {
             Health.CurrentVal -= 10;

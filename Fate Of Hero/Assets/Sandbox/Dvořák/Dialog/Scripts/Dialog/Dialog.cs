@@ -18,6 +18,7 @@ public class Dialog : ScriptableObject, IInterpretable
     public DialogHandler OnEnd;
     public DialogHandler OnSubtitlesChange;
     public bool IsPlaying { get; set; }
+    public bool WasPlayed { get; set; }
 
     // Must be called before using Dialog
     public void Init()
@@ -38,20 +39,22 @@ public class Dialog : ScriptableObject, IInterpretable
             DialogManager.Instance.AudioPlayer.Play();
             IsPlaying = true;
             DialogManager.Instance.StartCoroutine(Timer());
-
-            //PlayerScript.Instance. = false;
+            WasPlayed = true;
+            PlayerScript.Instance.CanMove = false;
+            PlayerScript.Instance.MyAnimator.SetFloat("Speed", 0);
 
         };
         OnEnd += () =>
         {
-
+            DialogManager.Instance.StopAllCoroutines();
 
             DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Text;
 
             DialogManager.Instance.AudioPlayer.clip = null;
             DialogManager.Instance.AudioPlayer.Stop();
             IsPlaying = false;
-         //   Player.Instance.CanMove = true;
+            PlayerScript.Instance.CanMove = true;
+
 
         };
         OnSubtitlesChange += () =>

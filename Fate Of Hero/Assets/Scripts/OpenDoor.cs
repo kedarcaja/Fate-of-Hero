@@ -34,7 +34,7 @@ public class OpenDoor : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.E) && trigger)
+        if (Input.GetKeyDown(KeyCode.E) && trigger&&mode==Mode.unlocked)
         {
             Open();
         }
@@ -84,5 +84,9 @@ public class OpenDoor : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 1f, 0f, 1f);
         Gizmos.DrawWireSphere(new Vector3(transform.position.x + 0, transform.position.y - 1, transform.position.z + 0), Range);
+    }
+    public void Unlock()
+    {
+        mode = Mode.unlocked;
     }
 }

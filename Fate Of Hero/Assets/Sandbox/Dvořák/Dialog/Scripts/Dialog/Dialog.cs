@@ -42,18 +42,27 @@ public class Dialog : ScriptableObject, IInterpretable
             WasPlayed = true;
             PlayerScript.Instance.CanMove = false;
             PlayerScript.Instance.MyAnimator.SetFloat("Speed", 0);
+            DialogManager.Instance.SubtitleArea.gameObject.SetActive(true);
+            PlayerScript.Instance.Agent.isStopped = true;
+            PlayerScript.Instance.Agent.destination = PlayerScript.Instance.transform.position;//player turning
+
 
         };
         OnEnd += () =>
         {
             DialogManager.Instance.StopAllCoroutines();
 
-            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Text;
+            DialogManager.Instance.SubtitleArea.text = "";
 
             DialogManager.Instance.AudioPlayer.clip = null;
             DialogManager.Instance.AudioPlayer.Stop();
             IsPlaying = false;
             PlayerScript.Instance.CanMove = true;
+            PlayerScript.Instance.Agent.isStopped = false;
+
+            DialogManager.Instance.SubtitleArea.gameObject.SetActive(false);
+
+
 
 
         };

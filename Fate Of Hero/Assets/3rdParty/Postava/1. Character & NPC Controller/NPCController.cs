@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityScript.Steps;
+using Random = UnityEngine.Random;
 
 public enum Mode { stay, FollowMe, GoToWaypoint, GoToWaypointWithPlayer, WalkBetweenWaypoints }
 [SelectionBase]
@@ -104,4 +106,13 @@ public class NPCController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, Range);
     }
+    public void SwapMode(string mode)
+    {
+        this.mode =(Mode) Enum.Parse(typeof(Mode),mode);
+    }
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
+
 }

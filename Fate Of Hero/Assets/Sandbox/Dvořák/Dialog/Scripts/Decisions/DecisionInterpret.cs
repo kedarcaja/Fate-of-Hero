@@ -6,7 +6,7 @@ public class DecisionInterpret : MonoBehaviour
     [SerializeField]
     private List<Option> decisions;
     [SerializeField]
-    private Dialog dialogBefore;
+    private Dialogs dialogBefore;
     private int currentDecisionIndex = 0;
     private void Awake()
     {

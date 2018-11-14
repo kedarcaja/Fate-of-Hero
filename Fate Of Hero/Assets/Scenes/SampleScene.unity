@@ -622,46 +622,6 @@ Prefab:
       propertyPath: Health.bar
       value: 
       objectReference: {fileID: 1992087703}
-    - target: {fileID: 195010872463035072, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 195010872463035072, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 195010872463035072, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 54547169445051964, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_Mass
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 65246762866691070, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65246762866691070, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1.6552076
-      objectReference: {fileID: 0}
-    - target: {fileID: 65246762866691070, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.81228226
-      objectReference: {fileID: 0}
-    - target: {fileID: 195010872463035072, guid: dd51aa0141228c3478f60d3fe5ba00eb,
-        type: 2}
-      propertyPath: m_Height
-      value: 1.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd51aa0141228c3478f60d3fe5ba00eb, type: 2}
   m_IsPrefabAsset: 0
@@ -1453,11 +1413,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967127af2216ed04aa1e4d0dd8f1cb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 10
+  Range: 0
   mode: 0
-  target: {fileID: 317837672}
+  target: {fileID: 0}
   waypoints: []
-  IsFollow: 1
+  IsFollow: 0
 --- !u!95 &243787302
 Animator:
   serializedVersion: 3
@@ -1608,9 +1568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reflectionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  reflectSkybox: 1
-  clearColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Bits: 0
+  reflectSkybox: 0
+  clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reflectionSampler: _ReflectionTex
   clipPlaneOffset: 0.07
 --- !u!114 &262578821
@@ -1625,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2ab2b9ac93bb544b9552e49030371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specularLight: {fileID: 1566994458}
+  specularLight: {fileID: 0}
 --- !u!114 &262578822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1da353243062479a9b31c85074a796b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: a5f2339f242f6cc41a982ec55ea3c201, type: 2}
+  sharedMaterial: {fileID: 0}
   waterQuality: 2
   edgeBlend: 1
 --- !u!4 &262578823
@@ -2187,6 +2147,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4456946002283414, guid: 729d1c7bb42ed1b4791b1c28b4ed6d7a,
     type: 2}
   m_PrefabInternal: {fileID: 327764117}
+--- !u!1 &328454397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328454399}
+  - component: {fileID: 328454398}
+  m_Layer: 0
+  m_Name: WaterReflectionPreview Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &328454398
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328454397}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_projectionMatrixMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &328454399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328454397}
+  m_LocalRotation: {x: -0.3535534, y: 0.35355335, z: 0.14644659, w: 0.8535534}
+  m_LocalPosition: {x: -33.24, y: -31.79, z: -26.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &345863520
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,7 +7272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 84852da86f9ad0146b550f3feaf5bcef, type: 2}
+  profile: {fileID: 0}
 --- !u!81 &420657531
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8127,7 +8156,6 @@ GameObject:
   - component: {fileID: 534669908}
   - component: {fileID: 534669907}
   - component: {fileID: 534669906}
-  - component: {fileID: 534669909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8231,24 +8259,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1abfd74d895ed540b5e26608fd71fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 372061340}
-  distance: 3
-  MinDistance: 3
-  MaxDistance: 12
-  offset: {x: 0, y: 0.84, z: 0}
+  target: {fileID: 1195636240}
+  distance: 5
+  MinDistance: 1
+  MaxDistance: 10
+  offset: {x: 0, y: 0, z: 0}
   smoothSpeed: 5
-  scrollSensitivity: 5
---- !u!114 &534669909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 214f19084261a0d42b3d77999cdd407c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  scrollSensitivity: 8
 --- !u!1001 &540423490
 Prefab:
   m_ObjectHideFlags: 0
@@ -17169,6 +17186,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7ee77e6072df6c94fb3b9fd25b44f480,
     type: 3}
   m_PrefabInternal: {fileID: 1769931109}
+--- !u!4 &1195636240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4930076153430238, guid: dd51aa0141228c3478f60d3fe5ba00eb,
+    type: 2}
+  m_PrefabInternal: {fileID: 98796461}
 --- !u!4 &1195963387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4184147851460122, guid: ed799b5d17bad5647affce807495abe6,
@@ -25011,8 +25033,8 @@ Camera:
   m_GameObject: {fileID: 1696287224}
   m_Enabled: 0
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -25031,7 +25053,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967279
+    m_Bits: 0
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -25049,8 +25071,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696287224}
-  m_LocalRotation: {x: 0.16408834, y: 0.7461702, z: 0.19954446, w: -0.61358535}
-  m_LocalPosition: {x: 49.82624, y: -17.621637, z: 38.8862}
+  m_LocalRotation: {x: -0.3535534, y: 0.35355335, z: 0.14644659, w: 0.8535534}
+  m_LocalPosition: {x: -33.24, y: -31.79, z: -26.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30822,7 +30844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967127af2216ed04aa1e4d0dd8f1cb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 6
+  Range: 0
   mode: 0
   target: {fileID: 0}
   waypoints: []
@@ -36339,13 +36361,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da76b22f1edecc49aebf8c268a22f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillAmount: 1
-  lerpSpeed: 2
+  fillAmount: 100
+  lerpSpeed: 100
   content: {fileID: 51630640}
   valueText: {fileID: 99381589}
-  fullColor: {r: 1, g: 0, b: 0, a: 1}
-  lowColor: {r: 0.26415092, g: 0, b: 0, a: 1}
-  lerpColor: 1
+  fullColor: {r: 0, g: 0, b: 0, a: 0}
+  lowColor: {r: 0, g: 0, b: 0, a: 0}
+  lerpColor: 0
 --- !u!224 &1992087704
 RectTransform:
   m_ObjectHideFlags: 0

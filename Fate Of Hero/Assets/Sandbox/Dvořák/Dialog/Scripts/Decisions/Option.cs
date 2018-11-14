@@ -6,7 +6,7 @@ using UnityEngine;
 public class Option : ScriptableObject
 {
     [SerializeField]
-    private Dialog dialoAfter;
+    private Dialogs dialoAfter;
     [TextAreaAttribute(20, 100)]
     [SerializeField]
     private string sentence;
@@ -14,7 +14,7 @@ public class Option : ScriptableObject
     private Sprite icon;
 
     public string Sentence { get { return sentence; } }
-    public Dialog DialoAfter { get { return dialoAfter; } }
+    public Dialogs DialoAfter { get { return dialoAfter; } }
     public Sprite Icon { get { return icon; } }
     public DialogHandler OnDecision;
 }

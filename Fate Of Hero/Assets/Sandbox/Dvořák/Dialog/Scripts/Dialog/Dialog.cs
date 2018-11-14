@@ -39,7 +39,7 @@ public class Dialog : ScriptableObject, IInterpretable
             IsPlaying = true;
             DialogManager.Instance.StartCoroutine(Timer());
 
-            Player.Instance.CanMove = false;
+            //PlayerScript.Instance. = false;
 
         };
         OnEnd += () =>
@@ -51,7 +51,7 @@ public class Dialog : ScriptableObject, IInterpretable
             DialogManager.Instance.AudioPlayer.clip = null;
             DialogManager.Instance.AudioPlayer.Stop();
             IsPlaying = false;
-            Player.Instance.CanMove = true;
+         //   Player.Instance.CanMove = true;
 
         };
         OnSubtitlesChange += () =>

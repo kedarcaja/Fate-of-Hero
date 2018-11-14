@@ -5,21 +5,21 @@ using UnityEngine;
 public class DialogInterpret : MonoBehaviour {
     public Dialog dialog;
     public bool IsEnable;
+  
     private void Awake()
     {
         dialog.Init();// filling the default delegates
+        dialog.OnEnd += () => { Destroy(gameObject); };
     }
-    private void Update()
-    {
-
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "DialogTrigger" &&IsEnable)
+        if (other.tag == "Player" &&IsEnable)
         {
             dialog.OnStart();
 
         }
     }
+
 }
 

@@ -805,8 +805,8 @@ GameObject:
   m_Name: Brick_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &120527896
 Transform:
@@ -1148,8 +1148,8 @@ GameObject:
   m_Name: Brick_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &210553227
 Transform:
@@ -1917,8 +1917,8 @@ GameObject:
   m_Name: Brick_04 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &299478972
 Transform:
@@ -7439,8 +7439,8 @@ GameObject:
   m_Name: Brick_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &447991763
 Transform:
@@ -14612,8 +14612,8 @@ GameObject:
   m_Name: Brick_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &738552365
 Transform:
@@ -15280,8 +15280,8 @@ GameObject:
   m_Name: Brick_04 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &858611669
 Transform:
@@ -15500,8 +15500,8 @@ GameObject:
   m_Name: Brick_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &891799579
 Transform:
@@ -15753,19 +15753,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed799b5d17bad5647affce807495abe6, type: 2}
@@ -16411,8 +16427,8 @@ GameObject:
   m_Name: Brick_04 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &997294253
 Transform:
@@ -16711,8 +16727,8 @@ GameObject:
   m_Name: Brick_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1058940181
 Transform:
@@ -17346,23 +17362,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1921724529460238, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed799b5d17bad5647affce807495abe6, type: 2}
@@ -17382,8 +17414,8 @@ GameObject:
   m_Name: Brick_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1230130865
 Transform:
@@ -23046,7 +23078,11 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 325eb21ace450cc458c1b55004a23c43, type: 2}
     - target: {fileID: 100000, guid: 8f3bdbc84fd3cc44ebd662288a578646, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8f3bdbc84fd3cc44ebd662288a578646, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3bdbc84fd3cc44ebd662288a578646, type: 3}
@@ -23066,8 +23102,8 @@ GameObject:
   m_Name: Brick_04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1472759820
 Transform:
@@ -23996,8 +24032,8 @@ GameObject:
   m_Name: Brick_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1587887081
 Transform:
@@ -24238,8 +24274,8 @@ GameObject:
   m_Name: Brick_04 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1619722327
 Transform:
@@ -25013,8 +25049,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696287224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.611894, y: 18.64171, z: -168.95512}
+  m_LocalRotation: {x: 0.16408834, y: 0.7461702, z: 0.19954446, w: -0.61358535}
+  m_LocalPosition: {x: 49.82624, y: -17.621637, z: 38.8862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25504,19 +25540,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940707978333972, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127626290640540, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688992716237824, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418622047922390, guid: ed799b5d17bad5647affce807495abe6, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed799b5d17bad5647affce807495abe6, type: 2}
@@ -25656,8 +25708,8 @@ GameObject:
   m_Name: Brick_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1776223982
 Transform:
@@ -37021,8 +37073,8 @@ GameObject:
   m_Name: Brick_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &2119103832
 Transform:
@@ -37157,8 +37209,8 @@ GameObject:
   m_Name: Brick_04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &2126074763
 Transform:

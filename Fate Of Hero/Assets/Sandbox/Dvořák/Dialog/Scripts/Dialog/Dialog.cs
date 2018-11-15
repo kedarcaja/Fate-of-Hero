@@ -19,6 +19,9 @@ public class Dialog : ScriptableObject, IInterpretable
     public DialogHandler OnSubtitlesChange;
     public bool IsPlaying { get; set; }
     public bool WasPlayed { get; set; }
+  
+
+
 
     // Must be called before using Dialog
     public void Init()

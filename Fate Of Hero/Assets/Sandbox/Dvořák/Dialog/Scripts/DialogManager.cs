@@ -60,4 +60,5 @@ public class DialogManager : MonoBehaviour
         UnHighlite();
         Highlite(over.GetComponent<Text>());
     }
+
 }

@@ -17,7 +17,7 @@ public class Speaker : ScriptableObject
     {
         get
         {
-            return string.Format("<color=#{1}>{0}</color>", name, ColorUtility.ToHtmlStringRGBA(color));
+            return string.Format("<color=#{1}>{0}:</color> ", name, ColorUtility.ToHtmlStringRGBA(color));
         }
 
     }

@@ -37,7 +37,7 @@ public class Dialog : ScriptableObject, IInterpretable
         OnStart += () =>
         {
             subtitlesIndex = 0;
-            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + ": " + subtitles[subtitlesIndex].Text;
+            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
             DialogManager.Instance.AudioPlayer.clip = clip;
             DialogManager.Instance.AudioPlayer.Play();
             IsPlaying = true;
@@ -73,7 +73,7 @@ public class Dialog : ScriptableObject, IInterpretable
         {
             DialogManager.Instance.StopAllCoroutines();
             subtitlesIndex++;
-            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + ": " + subtitles[subtitlesIndex].Text;
+            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
             DialogManager.Instance.StartCoroutine(Timer());
 
 

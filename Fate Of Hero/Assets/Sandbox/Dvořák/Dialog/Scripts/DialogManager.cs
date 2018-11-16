@@ -15,6 +15,9 @@ public class DialogManager : MonoBehaviour
     public List<GameObject> Decisions { get { return decisions; } }
     [SerializeField]
     private GameObject decisionBG;
+    [SerializeField]
+    private Text skipAtention;
+        public Text SkipAtention { get { return skipAtention; } }
     private void Awake()
     {
         instance = FindObjectOfType<DialogManager>();

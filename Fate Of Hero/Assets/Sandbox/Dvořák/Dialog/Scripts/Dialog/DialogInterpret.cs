@@ -9,7 +9,7 @@ public class DialogInterpret : MonoBehaviour
     public bool IsEnable;
     public UnityEvent OnDialogEnd;
     public UnityEvent OnDialogStart;
-
+   private  int kCliickCounter;
 
     private void Awake()
     {
@@ -34,21 +34,22 @@ public class DialogInterpret : MonoBehaviour
        
        
     }
-    private void Start()
-    {
-
-
-      
-
-
-    }
+  
     private void Update()
     {
      
 
         if (dialog.IsPlaying && Input.GetKeyDown(KeyCode.K))
         {
-            dialog.OnEnd();
+            kCliickCounter++;
+            DialogManager.Instance.SkipAtention.gameObject.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.K)&&kCliickCounter==2)
+            {
+                DialogManager.Instance.SkipAtention.gameObject.SetActive(false);
+
+                kCliickCounter = 0;
+                dialog.OnEnd();
+            }
         }
     }
 

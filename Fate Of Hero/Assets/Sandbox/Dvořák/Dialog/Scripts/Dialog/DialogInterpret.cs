@@ -39,11 +39,11 @@ public class DialogInterpret : MonoBehaviour
     {
      
 
-        if (dialog.IsPlaying && Input.GetKeyDown(KeyCode.K))
+        if (dialog.IsPlaying && Input.GetKeyDown(KeyCode.Space))
         {
             kCliickCounter++;
             DialogManager.Instance.SkipAtention.gameObject.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.K)&&kCliickCounter==2)
+            if(Input.GetKeyDown(KeyCode.Space)&&kCliickCounter==2)
             {
                 DialogManager.Instance.SkipAtention.gameObject.SetActive(false);
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BarScript : MonoBehaviour {
 
-    #region Variables
+   
     [SerializeField]
     private float fillAmount;
 
@@ -15,8 +15,8 @@ public class BarScript : MonoBehaviour {
     [SerializeField]
     private Image content;
 
-    [SerializeField]
-    private Text valueText;
+    //[SerializeField]
+    //private Text valueText;
 
     [SerializeField]
     private Color fullColor;
@@ -33,19 +33,17 @@ public class BarScript : MonoBehaviour {
     {
         set
         {
-            if (valueText != null)
-            {
-                string[] tmp = valueText.text.Split(':');
-                valueText.text = tmp[0] + ": " + value;
-            }
+            //if (valueText != null)
+            //{
+            //    string[] tmp = valueText.text.Split(':');
+            //    valueText.text = tmp[0] + ": " + value;
+            //}
             
             fillAmount = Map(value,0,MaxValue,0,1);
         }
     }
 
-    #endregion
-
-    #region Unity Metod
+    
 
     void Start () {
         if (lerpColor)
@@ -76,5 +74,5 @@ public class BarScript : MonoBehaviour {
     {
         return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
     }
-  #endregion  
+  
 }

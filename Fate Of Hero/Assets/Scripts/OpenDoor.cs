@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -13,6 +13,10 @@ public class OpenDoor : MonoBehaviour
     bool Key,trigger;
     public Mode mode;
     Transform player;
+    public Text sizeTextObject;
+    public Text visialTextObject;
+    public Text text;
+    public GameObject gameObject;
 
     void Start()
     {
@@ -27,10 +31,22 @@ public class OpenDoor : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) < Range)
         {
             trigger = true;
+            sizeTextObject.text = visialTextObject.text;
+            gameObject.SetActive(true);
+            visialTextObject.text = "E";
+            if (mode == Mode.locked)
+            {
+                text.text = "zamčeno";
+            }
+            else
+            {
+                text.text = "otevřit";
+            }
         }
         else
         {
             trigger = false;
+            gameObject.SetActive(false);
         }
 
 

@@ -4,7 +4,7 @@ using UnityEngine.AI;
 using UnityScript.Steps;
 using Random = UnityEngine.Random;
 
-public enum Mode { stay, FollowMe, GoToWaypoint, GoToWaypointWithPlayer, WalkBetweenWaypoints }
+public enum Mode { stay, FollowMe, GoToWaypoint, WalkBetweenWaypoints }
 [SelectionBase]
 public class NPCController : MonoBehaviour
 {
@@ -14,15 +14,14 @@ public class NPCController : MonoBehaviour
     private Mode mode;
     [SerializeField]
     private Transform target; //Set the location of the NPC
+    
     [SerializeField]
     private Transform[] waypoints; // collection of waypoints which define a patrol area
 
     float patrolTime = 15; // time in seconds to wait before seeking a new patrol destination
     int index; // the current waypoint index in the waypoints array
     float speed, agentSpeed; // current agent speed and NavMeshAgent component speed
-    Transform player; // reference to the player object transform
-    public bool IsFollow;
-
+    Transform player; // reference to the player object transform    
     Animator animator; // reference to the animator component
     NavMeshAgent agent; // reference to the NavMeshAgent
     
@@ -37,6 +36,7 @@ public class NPCController : MonoBehaviour
         index = Random.Range(0, waypoints.Length);
 
         InvokeRepeating("Tick", 0, 0.5f);
+       
 
         if (waypoints.Length > 0 )
         {
@@ -48,22 +48,20 @@ public class NPCController : MonoBehaviour
     {
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
-        if (Input.GetKeyDown(KeyCode.L)&& IsFollow)
-        {
-            mode = Mode.GoToWaypointWithPlayer;
-            agent.speed = agentSpeed;
-        }
+      
     }
     void Patrol()
     {
         index = index == waypoints.Length - 1 ? 0 : index + 1;
     }
-
+    
     void Tick()
     {
         switch (mode)
         {
             case Mode.stay:
+               
+                
                 agent.speed = 0f;
                 break;
 
@@ -80,23 +78,20 @@ public class NPCController : MonoBehaviour
                 break;
 
             case Mode.GoToWaypoint:
-                agent.destination = target.position;
-                agent.speed = agentSpeed / 2;
-                break;
-
-            case Mode.GoToWaypointWithPlayer:
-                agent.destination = target.position;
-                agent.speed = agentSpeed;
-
-                if (player != null && Vector3.Distance(transform.position, player.position) > Range)
+                if (player != null && target != null)
                 {
-                    agent.speed = 0f;
+                    agent.destination = target.position;
+                    agent.speed = agentSpeed/2;
                 }
                 break;
 
             case Mode.WalkBetweenWaypoints:
-                agent.destination = waypoints[index].position;
-                agent.speed = agentSpeed / 2;
+                if (player != null && waypoints.Length > 0)
+                {
+                    agent.destination = waypoints[index].position;
+                    agent.speed = agentSpeed / 2;
+                }
+                
                 break;
         }
 

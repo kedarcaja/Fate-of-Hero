@@ -10,10 +10,10 @@ public class CameraMoveToPoint : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            controler.target = Point[0];
-        }
+	void Update ()
+    {
+       
+            //controler.target = Point[0];
+       
 	}
 }

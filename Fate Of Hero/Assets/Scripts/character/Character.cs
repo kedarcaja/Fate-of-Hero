@@ -8,8 +8,10 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Character : MonoBehaviour {
 
-    [SerializeField]
+   
     private float speed;
+
+    private float agentSpeed;
 
     [SerializeField]
     protected Stats Health;
@@ -24,7 +26,7 @@ public class Character : MonoBehaviour {
 
     public Animator MyAnimator { get; set; }
     private NavMeshAgent agent;
-    public NavMeshAgent Agent
+    public NavMeshAgent MyAgent
     {
         get
         {
@@ -59,16 +61,30 @@ public class Character : MonoBehaviour {
         }
     }
 
+    
+
+    public float AgentSpeed
+    {
+        get
+        {
+            return agentSpeed;
+        }
+
+        set
+        {
+            agentSpeed = value;
+        }
+    }
+
     protected virtual void Awake()
     {
         Health.Initialize();
-    }
-    protected virtual void Start()
-    {
+        if (agent != null) { agentSpeed = agent.speed; }
         myrigidbody = GetComponent<Rigidbody>();
         MyAnimator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
+        MyAgent = GetComponent<NavMeshAgent>();
     }
+    
 
     protected virtual void Update()
     {
@@ -83,7 +99,7 @@ public class Character : MonoBehaviour {
     public void Move()
     {
         
-            MyAnimator.SetFloat("Speed", Agent.velocity.magnitude);
+            MyAnimator.SetFloat("Speed", MyAgent.velocity.magnitude);
         
 
     }

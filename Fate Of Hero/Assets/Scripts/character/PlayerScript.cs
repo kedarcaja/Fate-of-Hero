@@ -31,11 +31,7 @@ public class PlayerScript : Character
        
 
     }
-    protected override void Start()
-    {
-
-        base.Start();
-    }
+    
     protected override void Update()
     {
         if(CanMove)

@@ -391,14 +391,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.96862745}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4afeaf4040724f34685c1f3b4ad5e285, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c79fbb59b7cf641408eb4c0aef489100, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -550,7 +550,7 @@ MonoBehaviour:
   OnDialogEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243787301}
+      - m_Target: {fileID: 0}
         m_MethodName: SetTarget
         m_Mode: 2
         m_Arguments:
@@ -599,7 +599,7 @@ MonoBehaviour:
   OnDialogStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243787301}
+      - m_Target: {fileID: 0}
         m_MethodName: SetTarget
         m_Mode: 2
         m_Arguments:
@@ -610,7 +610,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 243787301}
+      - m_Target: {fileID: 0}
         m_MethodName: SwapMode
         m_Mode: 5
         m_Arguments:
@@ -1701,8 +1701,9 @@ GameObject:
   m_Component:
   - component: {fileID: 243787299}
   - component: {fileID: 243787302}
-  - component: {fileID: 243787301}
   - component: {fileID: 243787300}
+  - component: {fileID: 243787303}
+  - component: {fileID: 243787301}
   m_Layer: 0
   m_Name: Gwen
   m_TagString: Untagged
@@ -1756,10 +1757,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 243787298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967127af2216ed04aa1e4d0dd8f1cb22, type: 3}
+  m_Script: {fileID: 11500000, guid: de326d56b649b604aa61f8f37ac7a470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 0
+  Health:
+    bar: {fileID: 0}
+    maxVal: 0
+    currentVal: 0
+  range: 0
   mode: 0
   target: {fileID: 0}
   waypoints: []
@@ -1782,6 +1787,21 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &243787303
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243787298}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &260119227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,8 +2574,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 328454397}
-  m_LocalRotation: {x: -0.3535534, y: 0.35355335, z: 0.14644659, w: 0.8535534}
-  m_LocalPosition: {x: -33.24, y: -31.79, z: -26.1}
+  m_LocalRotation: {x: -0.3317252, y: 0.3431569, z: 0.13100454, w: 0.86893016}
+  m_LocalPosition: {x: -25.6, y: -43.86, z: -12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7400,7 +7420,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 652f8ff177f3b004b9529d13d41b7767, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7770,7 +7790,6 @@ GameObject:
   m_Component:
   - component: {fileID: 420657528}
   - component: {fileID: 420657532}
-  - component: {fileID: 420657531}
   - component: {fileID: 420657530}
   m_Layer: 0
   m_Name: CameraFreeView
@@ -7804,13 +7823,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 0}
---- !u!81 &420657531
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 420657527}
-  m_Enabled: 1
 --- !u!20 &420657532
 Camera:
   m_ObjectHideFlags: 0
@@ -16221,7 +16233,7 @@ MonoBehaviour:
           m_StringArgument: "Jdi za dal\u0161\xEDm dobrodru\u017Estv\xEDm!"
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 243787301}
+      - m_Target: {fileID: 0}
         m_MethodName: SwapMode
         m_Mode: 5
         m_Arguments:
@@ -18722,7 +18734,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -956.2, y: 534.49133}
-  m_SizeDelta: {x: 213.9, y: 31.5}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.000000009313226, y: 0.99999964}
 --- !u!225 &1334906927
 CanvasGroup:
@@ -26171,8 +26183,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696287224}
-  m_LocalRotation: {x: 0.31487355, y: 0.17016788, z: 0.05749129, w: -0.93198305}
-  m_LocalPosition: {x: 1036.946, y: -705.23975, z: -180.79146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1519.7013, y: -394.92337, z: -4132.4946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32034,8 +32046,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1834741437}
   - component: {fileID: 1834741440}
-  - component: {fileID: 1834741439}
   - component: {fileID: 1834741438}
+  - component: {fileID: 1834741441}
+  - component: {fileID: 1834741439}
   m_Layer: 0
   m_Name: Samantha
   m_TagString: Untagged
@@ -32090,10 +32103,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834741436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967127af2216ed04aa1e4d0dd8f1cb22, type: 3}
+  m_Script: {fileID: 11500000, guid: de326d56b649b604aa61f8f37ac7a470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 0
+  Health:
+    bar: {fileID: 0}
+    maxVal: 0
+    currentVal: 0
+  range: 0
   mode: 0
   target: {fileID: 0}
   waypoints: []
@@ -32116,6 +32133,21 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &1834741441
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1834741436}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1856244962
 GameObject:
   m_ObjectHideFlags: 0
@@ -37370,7 +37402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1939070853
 Transform:
   m_ObjectHideFlags: 0
@@ -37719,7 +37751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000053406, y: -0.00075626}
+  m_AnchoredPosition: {x: -0.000048876, y: -0.00074482}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: -0.00000003259629, y: 0.9999993}
 --- !u!114 &1992087705
@@ -37742,7 +37774,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 80e634bcb3644234fad3cd2f0a4a1d8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84fc9364fcb039d418aad3086fe3fd67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

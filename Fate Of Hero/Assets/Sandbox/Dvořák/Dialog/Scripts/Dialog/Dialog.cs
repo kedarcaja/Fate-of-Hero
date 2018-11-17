@@ -46,8 +46,8 @@ public class Dialog : ScriptableObject, IInterpretable
             PlayerScript.Instance.CanMove = false;
             PlayerScript.Instance.MyAnimator.SetFloat("Speed", 0);
             DialogManager.Instance.SubtitleArea.gameObject.SetActive(true);
-            PlayerScript.Instance.Agent.isStopped = true;
-            PlayerScript.Instance.Agent.destination = PlayerScript.Instance.transform.position;//player turning
+            PlayerScript.Instance.MyAgent.isStopped = true;
+            PlayerScript.Instance.MyAgent.destination = PlayerScript.Instance.transform.position;//player turning
 
 
         };
@@ -61,7 +61,7 @@ public class Dialog : ScriptableObject, IInterpretable
             DialogManager.Instance.AudioPlayer.Stop();
             IsPlaying = false;
             PlayerScript.Instance.CanMove = true;
-            PlayerScript.Instance.Agent.isStopped = false;
+            PlayerScript.Instance.MyAgent.isStopped = false;
 
             DialogManager.Instance.SubtitleArea.gameObject.SetActive(false);
 

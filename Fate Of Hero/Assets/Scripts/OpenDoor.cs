@@ -33,7 +33,7 @@ public class OpenDoor : MonoBehaviour
             trigger = true;
             sizeTextObject.text = visialTextObject.text;
             gameObject.SetActive(true);
-            visialTextObject.text = "E";
+            visialTextObject.text = "Mezerník";
             if (mode == Mode.locked)
             {
                 text.text = "zamčeno";

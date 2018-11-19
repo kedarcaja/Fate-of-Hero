@@ -27,12 +27,14 @@ public class Stats
         set
         {
             this.currentVal = Mathf.Clamp(value, 0, MaxVal);
-            bar.Value = currentVal;
+            Bar.Value = currentVal;
         }
     }
 
     public float MaxVal
     {
+        
+	
         get
         {
             return maxVal;
@@ -40,8 +42,17 @@ public class Stats
 
         set
         {
-            maxVal = value;
-            bar.MaxValue = maxVal;
+           
+                maxVal = value;
+            Bar.MaxValue = maxVal;
+        }
+    }
+
+    public BarScript Bar
+    {
+        get
+        {
+            return bar;
         }
     }
     #endregion

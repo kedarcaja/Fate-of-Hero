@@ -2,27 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class OpenDoor : MonoBehaviour
 {
     public enum Mode { unlocked, locked }
-    private float Range = 2;
+    public SceneManager sceneManager;
+    private float Range = 3;
     Animator anim;
     bool IsOpen;
-    bool Key,trigger;
+    bool trigger;
     public Mode mode;
     Transform player;
-    public Text sizeTextObject;
-    public Text visialTextObject;
-    public Text text;
-    public GameObject gameObject;
+    [SerializeField]
+    private string descriptionText;
+    public KeyCode key;
+    
+    public UnityEvent OnHelpShow;
+    public UnityEvent OnHelpHide;
+    bool Help;
 
-    void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
-        Key = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+       
+
+    }
+    private void Start()
+    {
+        
     }
 
 
@@ -31,24 +41,22 @@ public class OpenDoor : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) < Range)
         {
             trigger = true;
-            sizeTextObject.text = visialTextObject.text;
-            gameObject.SetActive(true);
-            visialTextObject.text = "Mezerník";
-            if (mode == Mode.locked)
+            Help = true;
+            if (Help)
             {
-                text.text = "zamčeno";
+                
+                sceneManager.DescriptionText.text = descriptionText;
+                sceneManager.VisialTextObject.text = key.ToString();
+                OnHelpShow.Invoke();
             }
-            else
-            {
-                text.text = "otevřit";
-            }
+
         }
         else
         {
-            trigger = false;
-            gameObject.SetActive(false);
+            Help = false;
+            OnHelpHide.Invoke();
+            trigger = false;           
         }
-
 
         if (Input.GetKeyDown(KeyCode.E) && trigger&&mode==Mode.unlocked)
         {
@@ -63,7 +71,12 @@ public class OpenDoor : MonoBehaviour
             anim.SetTrigger("Close");
         }
     }
-    
+
+     void Helps()
+    {
+        
+        
+    }
     public void Open()
     {
         switch (mode)
@@ -81,7 +94,7 @@ public class OpenDoor : MonoBehaviour
                 }
                 break;
             case Mode.locked:
-                if (!IsOpen && Key)
+                if (!IsOpen )
                 {
                     anim.SetTrigger("Open");
                     IsOpen = true;

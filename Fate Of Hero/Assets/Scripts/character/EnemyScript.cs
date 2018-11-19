@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : Character
 {
+    public event HealthChange Healthchange;
     Transform player;
     public float aggroRange = 10; // distance in scene units below which the NPC will increase speed and seek the player
     public Transform[] waypoints; // collection of waypoints which define a patrol area
@@ -28,7 +29,14 @@ public class EnemyScript : Character
     {
         base.Update();
     }
+    public void OnHealthChange(float health)
+    {
+        if (Healthchange != null)
+        {
+            Healthchange(health);
+        }
 
+    }
     void Tick()
     {
         MyAgent.destination = waypoints[index].position;

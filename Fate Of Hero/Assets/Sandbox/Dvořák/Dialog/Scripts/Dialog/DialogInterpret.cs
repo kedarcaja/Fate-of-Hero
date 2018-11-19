@@ -4,12 +4,17 @@ using UnityEngine.Events;
 public class DialogInterpret : MonoBehaviour
 {
 
-
+    public SceneManager sceneManager;
     public Dialog dialog;
     public bool IsEnable;
     public UnityEvent OnDialogEnd;
     public UnityEvent OnDialogStart;
-   private  int kCliickCounter;
+    public UnityEvent OnHelpShow;
+    public UnityEvent OnHelpHide;
+    private  int kCliickCounter;
+
+    private string descriptionText = "přeskočit dialog";
+    private KeyCode key = KeyCode.Space;
 
     private void Awake()
     {
@@ -42,10 +47,13 @@ public class DialogInterpret : MonoBehaviour
         if (dialog.IsPlaying && Input.GetKeyDown(KeyCode.Space))
         {
             kCliickCounter++;
-            DialogManager.Instance.SkipAtention.gameObject.SetActive(true);
+            sceneManager.DescriptionText.text = descriptionText;
+            sceneManager.VisialTextObject.text = key.ToString();
+            OnHelpShow.Invoke();
             if(Input.GetKeyDown(KeyCode.Space)&&kCliickCounter==2)
             {
-                DialogManager.Instance.SkipAtention.gameObject.SetActive(false);
+                descriptionText = "opravdu přeskočit dialog";
+                OnHelpHide.Invoke();
 
                 kCliickCounter = 0;
                 dialog.OnEnd();

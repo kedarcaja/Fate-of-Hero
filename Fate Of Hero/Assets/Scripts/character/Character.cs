@@ -10,7 +10,6 @@ public class Character : MonoBehaviour {
 
    
     private float speed;
-
     private float agentSpeed;
 
     [SerializeField]
@@ -78,7 +77,11 @@ public class Character : MonoBehaviour {
 
     protected virtual void Awake()
     {
-        Health.Initialize();
+        if (Health.Bar!=null)
+        {
+            Health.Initialize();
+        }
+        
         if (agent != null) { agentSpeed = agent.speed; }
         myrigidbody = GetComponent<Rigidbody>();
         MyAnimator = GetComponent<Animator>();

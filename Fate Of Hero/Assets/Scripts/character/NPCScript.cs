@@ -12,7 +12,7 @@ public delegate void characterRemove();
 [SelectionBase]
 public class NPCScript : Character {
 
-    public event HealthChange Healthchange;
+    
     [SerializeField]
     private float range; // distance in scene units below which the NPC will increase speed and seek the player
     [SerializeField]
@@ -42,14 +42,7 @@ public class NPCScript : Character {
         }
     }
 
-    public void OnHealthChange(float health)
-    {
-        if (Healthchange != null)
-        {
-            Healthchange(health);
-        }
-
-    }
+   
     protected override void Awake()
     {
         base.Awake();

@@ -545,12 +545,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: 3497e9b304d3ecc48ac229479a219e66, type: 2}
   IsEnable: 1
   OnDialogEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 243787301}
         m_MethodName: SetTarget
         m_Mode: 2
         m_Arguments:
@@ -599,7 +600,7 @@ MonoBehaviour:
   OnDialogStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 243787301}
         m_MethodName: SetTarget
         m_Mode: 2
         m_Arguments:
@@ -607,10 +608,10 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GoToWaypoint
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 243787301}
         m_MethodName: SwapMode
         m_Mode: 5
         m_Arguments:
@@ -619,6 +620,38 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GoToWaypoint
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpShow:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpHide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1217,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: 5bfdb5e766f8adf4890958d5b8e5c441, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -1270,7 +1304,61 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OnDialogStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SwapMode
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GoToWaypoint
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SwapMode
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GoToWaypoint
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpShow:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpHide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &210553226
@@ -7695,7 +7783,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 555390986}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9078,11 +9166,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1251963758}
   - {fileID: 1334906926}
   - {fileID: 1389388318}
   - {fileID: 419637190}
   - {fileID: 1090184537}
+  - {fileID: 1251963758}
   m_Father: {fileID: 1289351899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16206,6 +16294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: d069e2517539ca242b8e5e5c777def24, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -16259,7 +16348,61 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OnDialogStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SwapMode
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GoToWaypoint
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SwapMode
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GoToWaypoint
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpShow:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpHide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &916847966
@@ -17574,7 +17717,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 555390986}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17628,6 +17771,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2035899193}
     m_Modifications:
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4899366606030200, guid: 0b2eea825b8bdda4ab0231ccadfb78cc, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.745999
@@ -17684,7 +17837,77 @@ Prefab:
       propertyPath: sizeTextObject
       value: 
       objectReference: {fileID: 1499838959}
-    m_RemovedComponents: []
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 2002071076}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: descriptionText
+      value: Haficek
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: key
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2002071076}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowHelp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpShow.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2002071076}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideHelp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
+        type: 2}
+      propertyPath: OnHelpHide.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637659853556184, guid: 0b2eea825b8bdda4ab0231ccadfb78cc, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65668056908564694, guid: 0b2eea825b8bdda4ab0231ccadfb78cc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0b2eea825b8bdda4ab0231ccadfb78cc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1102849233 stripped
@@ -17972,6 +18195,7 @@ Transform:
   - {fileID: 317837672}
   - {fileID: 1939070853}
   - {fileID: 610906137}
+  - {fileID: 2002071077}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18397,7 +18621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1251963757
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18415,15 +18639,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1750115769}
   - {fileID: 1499838956}
+  - {fileID: 1750115769}
   m_Father: {fileID: 555390986}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 399, y: -182}
-  m_SizeDelta: {x: 80.3, y: 39.83}
+  m_AnchoredPosition: {x: 399, y: -187.9}
+  m_SizeDelta: {x: 449.7, y: 64.9}
   m_Pivot: {x: -0.000000078231096, y: 1.0000007}
 --- !u!1001 &1268583002
 Prefab:
@@ -18715,7 +18939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334906926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18729,7 +18953,7 @@ RectTransform:
   m_Children:
   - {fileID: 1992087704}
   m_Father: {fileID: 555390986}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23461,7 +23685,7 @@ RectTransform:
   m_Children:
   - {fileID: 2003577903}
   m_Father: {fileID: 555390986}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24230,11 +24454,11 @@ RectTransform:
   - {fileID: 362941483}
   - {fileID: 221144904}
   m_Father: {fileID: 1251963758}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.2, y: 7}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 24.999998, y: 0.00001335144}
   m_SizeDelta: {x: 94, y: 56}
   m_Pivot: {x: -0.000000013969839, y: 1.0000002}
 --- !u!114 &1499838957
@@ -26184,7 +26408,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696287224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1519.7013, y: -394.92337, z: -4132.4946}
+  m_LocalPosition: {x: 1562.2028, y: -463.98285, z: -2781.3455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26607,18 +26831,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1750115768}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1251963758}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 299, y: -17}
-  m_SizeDelta: {x: 425.2, y: 64}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 29.709991, y: -33.82556}
+  m_SizeDelta: {x: 269.04504, y: 56}
+  m_Pivot: {x: 1.111548, y: 0.39597213}
 --- !u!222 &1750115770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37439,6 +37663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 2002071076}
   dialog: {fileID: 11400000, guid: 7b568508b21f52e4c96b8e166602cc82, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -37471,6 +37696,38 @@ MonoBehaviour:
   OnDialogStart:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpShow:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: ShowHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHelpHide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2002071076}
+        m_MethodName: HideHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1957542069
@@ -37964,6 +38221,51 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2002071075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002071077}
+  - component: {fileID: 2002071076}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2002071076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002071075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cf6cdc8a2ca94479eedcb893b99c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizeTextObject: {fileID: 1499838959}
+  visialTextObject: {fileID: 221144907}
+  descriptionText: {fileID: 1750115771}
+  HelpObject: {fileID: 1251963756}
+  rect: {fileID: 0}
+--- !u!4 &2002071077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002071075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1203756808}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2002527388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7ee77e6072df6c94fb3b9fd25b44f480,

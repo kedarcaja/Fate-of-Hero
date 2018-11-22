@@ -4,14 +4,12 @@ using UnityEngine.Events;
 public class DialogInterpret : MonoBehaviour
 {
 
-    public SceneManager sceneManager;
+
     public Dialog dialog;
     public bool IsEnable;
     public UnityEvent OnDialogEnd;
     public UnityEvent OnDialogStart;
-    public UnityEvent OnHelpShow;
-    public UnityEvent OnHelpHide;
-    private  int kCliickCounter;
+    private int kCliickCounter;
 
     private string descriptionText = "přeskočit dialog";
     private KeyCode key = KeyCode.Space;
@@ -21,40 +19,39 @@ public class DialogInterpret : MonoBehaviour
         dialog.WasPlayed = false;
 
 
-        dialog.Init();// filling the default delegates
+        dialog.Init(); // filling the default delegates
         dialog.OnEnd += () =>
         {
             Destroy(gameObject);
-         
-                OnDialogEnd.Invoke();
-            
-              
-           
+
+            OnDialogEnd.Invoke();
+
+
+
         };
         dialog.OnStart += () =>
         {
-          
-                OnDialogStart.Invoke();
+
+            OnDialogStart.Invoke();
+
         };
-       
-       
+
+
     }
-  
+
     private void Update()
     {
-     
 
         if (dialog.IsPlaying && Input.GetKeyDown(KeyCode.Space))
         {
+            SceneManager.Instance.DescriptionText.text = descriptionText;
+            SceneManager.Instance.VisialTextObject.text = key.ToString();
+            SceneManager.Instance.ShowHelp();
             kCliickCounter++;
-            sceneManager.DescriptionText.text = descriptionText;
-            sceneManager.VisialTextObject.text = key.ToString();
-            OnHelpShow.Invoke();
-            if(Input.GetKeyDown(KeyCode.Space)&&kCliickCounter==2)
-            {
-                descriptionText = "opravdu přeskočit dialog";
-                OnHelpHide.Invoke();
 
+            if (kCliickCounter == 2)
+            {
+                SceneManager.Instance.HideHelp();
                 kCliickCounter = 0;
                 dialog.OnEnd();
             }
@@ -63,12 +60,12 @@ public class DialogInterpret : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && IsEnable&&!dialog.WasPlayed)
+        if (other.tag == "Player" && IsEnable && !dialog.WasPlayed)
         {
             dialog.OnStart();
 
         }
     }
-  
+
 }
 

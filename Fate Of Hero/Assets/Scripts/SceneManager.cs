@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneManager : MonoBehaviour {
+public class SceneManager : MonoBehaviour
+{
 
     [Header("Help")]
     [SerializeField]
@@ -12,8 +11,8 @@ public class SceneManager : MonoBehaviour {
     private Text visialTextObject;
     [SerializeField]
     private Text descriptionText;
+    private Vector3 keyStartPosition;
 
-    
     public GameObject HelpObject;
 
     public RectTransform rect;
@@ -25,10 +24,7 @@ public class SceneManager : MonoBehaviour {
             return visialTextObject;
         }
 
-        set
-        {
-            visialTextObject = value;
-        }
+
     }
 
     public Text DescriptionText
@@ -38,24 +34,38 @@ public class SceneManager : MonoBehaviour {
             return descriptionText;
         }
 
-        set
-        {
-            descriptionText = value;
-        }
+
     }
 
-   
+    public Text SizeTextObject
+    {
+        get
+        {
+            return sizeTextObject;
+        }
+
+
+    }
+
+    public static SceneManager Instance;
+
+    private void Awake()
+    {
+        Instance = FindObjectOfType<SceneManager>();
+        keyStartPosition = sizeTextObject.transform.position;
+    }
 
     public void ShowHelp()
     {
-       
-        descriptionText.transform.position = new Vector2(descriptionText.transform.position.x+sizeTextObject.text.Length, descriptionText.transform.position.y);
+        HelpObject.gameObject.SetActive(true);
+
+        descriptionText.transform.position = new Vector2(descriptionText.transform.position.x + sizeTextObject.text.Length, descriptionText.transform.position.y);
         sizeTextObject.text = " " + visialTextObject.text + " ";
-        HelpObject.SetActive(true); 
     }
 
     public void HideHelp()
     {
-        HelpObject.SetActive(false);
+
+        HelpObject.gameObject.SetActive(false);
     }
 }

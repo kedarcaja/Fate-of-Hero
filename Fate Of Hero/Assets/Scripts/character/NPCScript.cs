@@ -87,6 +87,7 @@ public class NPCScript : Character {
             case Mode.GoToWaypoint:
                 if (player != null && target != null)
                 {
+                    AgentSpeed = 5;
                     MyAgent.destination = target.position;
                     MyAgent.speed = AgentSpeed / 2;
                 }

@@ -545,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: 3497e9b304d3ecc48ac229479a219e66, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -620,38 +619,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GoToWaypoint
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpShow:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpHide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1250,7 +1217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: 5bfdb5e766f8adf4890958d5b8e5c441, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -1325,38 +1291,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GoToWaypoint
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpShow:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpHide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1495,13 +1429,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1499838956}
-  m_RootOrder: 1
+  m_Father: {fileID: 362941483}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000009536743}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.4124451, y: -0.88002396}
+  m_SizeDelta: {x: 91.960396, y: 42.772278}
   m_Pivot: {x: 0.49999976, y: 0.5}
 --- !u!114 &221144905
 MonoBehaviour:
@@ -7479,13 +7413,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 221144904}
   m_Father: {fileID: 1499838956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0699997, y: 0.88000107}
+  m_AnchoredPosition: {x: -1.0699806, y: 0.8800125}
   m_SizeDelta: {x: 37.08, y: 32.7}
   m_Pivot: {x: 0.5092352, y: 0.49999943}
 --- !u!114 &362941484
@@ -15802,8 +15737,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819160169}
-  m_LocalRotation: {x: 0.09801815, y: 0.88843846, z: 0.20283651, w: -0.39990872}
-  m_LocalPosition: {x: 64.36799, y: -23.245762, z: 61.976788}
+  m_LocalRotation: {x: -0.3535534, y: 0.35355335, z: 0.14644659, w: 0.8535534}
+  m_LocalPosition: {x: -33.24, y: -31.79, z: -26.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16294,7 +16229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 0}
   dialog: {fileID: 11400000, guid: d069e2517539ca242b8e5e5c777def24, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -16369,38 +16303,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GoToWaypoint
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpShow:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpHide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -17845,12 +17747,12 @@ Prefab:
     - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
         type: 2}
       propertyPath: descriptionText
-      value: Haficek
+      value: "Otev\u0159\xEDt"
       objectReference: {fileID: 0}
     - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
         type: 2}
       propertyPath: key
-      value: 8
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 114294374244027122, guid: 0b2eea825b8bdda4ab0231ccadfb78cc,
         type: 2}
@@ -18621,7 +18523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1251963757
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24452,14 +24354,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 362941483}
-  - {fileID: 221144904}
   m_Father: {fileID: 1251963758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 24.999998, y: 0.00001335144}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 91.960396, y: 55.60396}
   m_Pivot: {x: -0.000000013969839, y: 1.0000002}
 --- !u!114 &1499838957
 MonoBehaviour:
@@ -26840,8 +26741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 29.709991, y: -33.82556}
-  m_SizeDelta: {x: 269.04504, y: 56}
+  m_AnchoredPosition: {x: 115.9, y: -33.43}
+  m_SizeDelta: {x: 330.1, y: 56}
   m_Pivot: {x: 1.111548, y: 0.39597213}
 --- !u!222 &1750115770
 CanvasRenderer:
@@ -26862,7 +26763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -37663,7 +37564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 2002071076}
   dialog: {fileID: 11400000, guid: 7b568508b21f52e4c96b8e166602cc82, type: 2}
   IsEnable: 1
   OnDialogEnd:
@@ -37696,38 +37596,6 @@ MonoBehaviour:
   OnDialogStart:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpShow:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: ShowHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHelpHide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002071076}
-        m_MethodName: HideHelp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1957542069
@@ -38231,7 +38099,7 @@ GameObject:
   - component: {fileID: 2002071077}
   - component: {fileID: 2002071076}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class OpenDoor : MonoBehaviour
 {
     public enum Mode { unlocked, locked }
-    public SceneManager sceneManager;
+
     private float Range = 3;
     Animator anim;
     bool IsOpen;
@@ -18,21 +14,21 @@ public class OpenDoor : MonoBehaviour
     [SerializeField]
     private string descriptionText;
     public KeyCode key;
-    
+
     public UnityEvent OnHelpShow;
     public UnityEvent OnHelpHide;
-    bool Help;
+
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-       
+
 
     }
     private void Start()
     {
-        
+
     }
 
 
@@ -41,24 +37,25 @@ public class OpenDoor : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) < Range)
         {
             trigger = true;
-            Help = true;
-            if (Help)
+
+            if (trigger && SceneManager.Instance.DescriptionText.text != descriptionText)
             {
-                
-                sceneManager.DescriptionText.text = descriptionText;
-                sceneManager.VisialTextObject.text = key.ToString();
+
+                SceneManager.Instance.DescriptionText.text = descriptionText;
+                SceneManager.Instance.VisialTextObject.text = key.ToString();
                 OnHelpShow.Invoke();
+
             }
 
         }
-        else
+        else if (trigger && Vector3.Distance(transform.position, player.position) > Range)
         {
-            Help = false;
+
             OnHelpHide.Invoke();
-            trigger = false;           
+            trigger = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && trigger&&mode==Mode.unlocked)
+        if (Input.GetKeyDown(KeyCode.E) && trigger && mode == Mode.unlocked)
         {
             Open();
         }
@@ -72,10 +69,10 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
-     void Helps()
+    void Helps()
     {
-        
-        
+
+
     }
     public void Open()
     {
@@ -94,7 +91,7 @@ public class OpenDoor : MonoBehaviour
                 }
                 break;
             case Mode.locked:
-                if (!IsOpen )
+                if (!IsOpen)
                 {
                     anim.SetTrigger("Open");
                     IsOpen = true;

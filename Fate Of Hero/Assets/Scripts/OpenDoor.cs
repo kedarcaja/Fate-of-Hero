@@ -55,7 +55,7 @@ public class OpenDoor : MonoBehaviour
             trigger = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && trigger && mode == Mode.unlocked)
+        if (Input.GetMouseButtonDown(0) && trigger && mode == Mode.unlocked)
         {
             Open();
         }

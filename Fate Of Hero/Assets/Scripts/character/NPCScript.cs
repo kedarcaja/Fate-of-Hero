@@ -54,9 +54,14 @@ public class NPCScript : Character {
             InvokeRepeating("Patrol", Random.Range(0, patrolTime), patrolTime);
         }
     }
-    protected override void Update()
+    void Update()
     {
-        base.Update();
+        Move();
+    }
+
+    protected override void Move()
+    {
+        base.Move();
     }
     void Patrol()
     {

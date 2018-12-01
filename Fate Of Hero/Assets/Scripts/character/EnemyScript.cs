@@ -25,9 +25,14 @@ public class EnemyScript : Character
         }
     }
 
-    protected override void Update()
+     void Update()
     {
-        base.Update();
+        Move();
+    }
+
+    protected override void Move()
+    {
+        base.Move();
     }
     public void OnHealthChange(float health)
     {

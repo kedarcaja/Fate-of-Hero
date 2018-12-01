@@ -23,28 +23,18 @@ public class MouseManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 45, clickableLayer.value)&&PlayerScript.Instance.CanMove)
         {
-            bool door = false;
+           
             if (hit.collider.gameObject.tag == "Doorway")
             {
-                Cursor.SetCursor(doorway, new Vector2(16, 16), CursorMode.Auto);
-                door = true;
+                Cursor.SetCursor(doorway, new Vector2(16, 16), CursorMode.Auto);                
             }
             else
             {
                 Cursor.SetCursor(target, new Vector2(16, 16), CursorMode.Auto);
             }
             if (Input.GetMouseButton(0))
-            {
-                if (door)
-                {
-                    Transform doorway = hit.collider.gameObject.transform;
-                    OnClickEnviroment.Invoke(doorway.position + doorway.forward * 10);
-                }
-                else
-                {
-                    OnClickEnviroment.Invoke(hit.point);
-                }
-               
+            {              
+                    OnClickEnviroment.Invoke(hit.point);              
             }
 
         }

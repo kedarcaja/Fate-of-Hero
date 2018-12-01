@@ -60,8 +60,6 @@ public class Character : MonoBehaviour {
         }
     }
 
-    
-
     public float AgentSpeed
     {
         get
@@ -89,21 +87,8 @@ public class Character : MonoBehaviour {
     }
     
 
-    protected virtual void Update()
+    protected virtual void Move()
     {
-        Move();
-    }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
-    public void Move()
-    {
-        
             MyAnimator.SetFloat("Speed", MyAgent.velocity.magnitude);
-        
-
     }
 }

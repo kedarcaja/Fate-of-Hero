@@ -6,6 +6,10 @@ using UnityEngine;
 public class PlayerScript : Character
 {
     private static PlayerScript instance;
+    [SerializeField]
+    protected Stats Stamina;
+    [SerializeField]
+    private float playerSpeed;
     public bool CanMove;
     public static PlayerScript Instance
     {
@@ -26,19 +30,33 @@ public class PlayerScript : Character
     protected override void Awake()
     {
         CanMove = true;
+        AgentSpeed = playerSpeed;
+        if (Stamina.Bar != null)
+        {
+            Stamina.Initialize();
+        }
         base.Awake();
-
-       
-
     }
     
-    protected override void Update()
+     void Update()
     {
         if(CanMove)
         {
-            base.Update();
+           
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                MyAgent.speed = AgentSpeed * 2;
+                Move();
+                Stamina.CurrentVal -= 10;
+            }
+            else
+            {
+                MyAgent.speed = AgentSpeed;
+                Move();
+                
+            }
         }
-
+//pouze pro testování fukčnosti
         if (Input.GetKeyDown(KeyCode.Y))
         {
             Health.CurrentVal -= 10;
@@ -46,11 +64,16 @@ public class PlayerScript : Character
         if (Input.GetKeyDown(KeyCode.P))
         {
             Health.CurrentVal += 10;
-        }
-    }
 
-    private void GetInput()
+        }
+///
+    }
+    protected override void Move()
     {
-  
+        base.Move();
+    }
+     public void GetInput()
+    {
+        
     }
 }

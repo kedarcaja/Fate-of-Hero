@@ -20414,8 +20414,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953871589}
-  - component: {fileID: 953871591}
   - component: {fileID: 953871590}
+  - component: {fileID: 953871591}
   m_Layer: 0
   m_Name: Monilog-Tudy
   m_TagString: Untagged
@@ -20456,12 +20456,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 953871588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd8c85a18deb5b43a5ec9df69aaae25, type: 3}
+  m_Script: {fileID: 11500000, guid: fc5cbd9b7055c9145baf41d9d3d3654b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 11400000, guid: a9af03e074222ab488b4714ac15b1616, type: 2}
+  monolog: {fileID: 11400000, guid: d8757e07d71c5844eb404bd971a77bcb, type: 2}
   IsEnable: 1
-  OnDialogEnd:
+  OnMonologEnd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 731189501}
@@ -20477,20 +20477,9 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  OnDialogStart:
+  OnMonologStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &959738674
@@ -33549,8 +33538,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696287224}
-  m_LocalRotation: {x: -0.34718382, y: 0.40324643, z: 0.16873854, w: 0.8296885}
-  m_LocalPosition: {x: -25.025446, y: -22.545918, z: 4.968229}
+  m_LocalRotation: {x: 0.27769884, y: 0.7094014, z: 0.37095672, w: -0.53105944}
+  m_LocalPosition: {x: 14.833251, y: -34.054653, z: -11.225813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -76,4 +76,8 @@ public class PlayerScript : Character
     {
         
     }
+    public void SetDestination(Vector3 destination)
+    {
+        MyAgent.destination = destination;
+    }
 }

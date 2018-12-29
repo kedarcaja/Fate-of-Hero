@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
@@ -9,6 +10,12 @@ public class SceneManager : MonoBehaviour
     private Text sizeTextObject;
     [SerializeField]
     private Text visialTextObject;
+
+    internal static void LoadScene(int v)
+    {
+        throw new NotImplementedException();
+    }
+
     [SerializeField]
     private Text descriptionText;
     private Vector3 keyStartPosition;

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
-[CreateAssetMenu(menuName = "New Monolog", fileName = "Monolog")]
+[CreateAssetMenu(fileName = "Monolog", menuName = "Dialog/New Monolog")]
 public class Monolog : ScriptableObject,IInterpretable
 {
     [SerializeField]

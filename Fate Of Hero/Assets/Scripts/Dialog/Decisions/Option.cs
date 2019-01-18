@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "New Option", fileName = "Option")]
+[CreateAssetMenu(fileName = "Option",menuName = "Dialog/New Option")]
 public class Option : ScriptableObject
 {
     [SerializeField]

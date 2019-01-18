@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Dialogoure", menuName = "New Dialogoure")]
+[CreateAssetMenu(fileName = "Dialogoure", menuName = "Dialog/New Dialogoure")]
 
 public class Dialogoure : ScriptableObject
 {

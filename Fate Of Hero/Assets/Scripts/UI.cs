@@ -8,7 +8,6 @@ public class UI : MonoBehaviour
 
     public void Enter()
     {
-        Debug.Log("kuk");
         text.SetActive(true);
     }
 

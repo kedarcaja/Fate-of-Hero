@@ -3,8 +3,6 @@ using UnityEngine.Events;
 
 public class DialogInterpret : MonoBehaviour
 {
-
-
     public Dialog dialog;
     public bool IsEnable;
     public UnityEvent OnDialogEnd;
@@ -25,9 +23,6 @@ public class DialogInterpret : MonoBehaviour
             Destroy(gameObject);
 
             OnDialogEnd.Invoke();
-
-
-
         };
         dialog.OnStart += () =>
         {

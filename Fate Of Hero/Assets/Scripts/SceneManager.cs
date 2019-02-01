@@ -54,6 +54,11 @@ public class SceneManager : MonoBehaviour
 
     }
 
+    internal static object GetActiveScene()
+    {
+        throw new NotImplementedException();
+    }
+
     public static SceneManager Instance;
 
     private void Awake()

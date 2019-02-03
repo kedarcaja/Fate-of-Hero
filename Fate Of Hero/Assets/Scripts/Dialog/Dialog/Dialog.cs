@@ -37,18 +37,31 @@ public class Dialog : ScriptableObject, IInterpretable
         OnStart += () =>
         {
             subtitlesIndex = 0;
-            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
+            if (subtitles[subtitlesIndex].Speaker != null)
+            {
+                DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
+            }
+            else
+            {
+                DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Text;
+            }
+           
             DialogManager.Instance.AudioPlayer.clip = clip;
             DialogManager.Instance.AudioPlayer.Play();
             IsPlaying = true;
             DialogManager.Instance.StartCoroutine(Timer());
             WasPlayed = true;
-            PlayerScript.Instance.CanMove = false;
+            if (PlayerScript.Instance != null)
+            { PlayerScript.Instance.CanMove = false; 
             PlayerScript.Instance.MyAnimator.SetFloat("Speed", 0);
+            }
             DialogManager.Instance.SubtitleArea.gameObject.SetActive(true);
-            PlayerScript.Instance.MyAgent.isStopped = true;
-            PlayerScript.Instance.MyAgent.destination = PlayerScript.Instance.transform.position;//player turning
 
+            if (PlayerScript.Instance != null)
+            {
+                PlayerScript.Instance.MyAgent.isStopped = true;
+                PlayerScript.Instance.MyAgent.destination = PlayerScript.Instance.transform.position;//player turning
+            }
 
         };
         OnEnd += () =>
@@ -60,8 +73,12 @@ public class Dialog : ScriptableObject, IInterpretable
             DialogManager.Instance.AudioPlayer.clip = null;
             DialogManager.Instance.AudioPlayer.Stop();
             IsPlaying = false;
-            PlayerScript.Instance.CanMove = true;
-            PlayerScript.Instance.MyAgent.isStopped = false;
+            if(PlayerScript.Instance != null)
+            { PlayerScript.Instance.CanMove = true;
+               PlayerScript.Instance.MyAgent.isStopped = false;
+            }
+            
+            
 
             DialogManager.Instance.SubtitleArea.gameObject.SetActive(false);
 
@@ -73,7 +90,14 @@ public class Dialog : ScriptableObject, IInterpretable
         {
             DialogManager.Instance.StopAllCoroutines();
             subtitlesIndex++;
-            DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
+            if (subtitles[subtitlesIndex].Speaker != null)
+            {
+                DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Speaker.SpeakerName + subtitles[subtitlesIndex].Text;
+            }
+            else
+            {
+                DialogManager.Instance.SubtitleArea.text = subtitles[subtitlesIndex].Text;
+            }           
             DialogManager.Instance.StartCoroutine(Timer());
 
 

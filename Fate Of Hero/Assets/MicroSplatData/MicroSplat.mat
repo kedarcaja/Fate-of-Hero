@@ -8,8 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MicroSplat
-  m_Shader: {fileID: 4800000, guid: c902806c5389c1c419ab180ef90674ee, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 99ca1a6c67123884aa845984e6e382cf, type: 3}
+  m_ShaderKeywords: _MICROSPLAT _MSRENDERLOOP_SURFACESHADER _PERTEXHEIGHTCONTRAST
+    _PERTEXHEIGHTOFFSET
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -36,11 +37,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Diffuse:
-        m_Texture: {fileID: 18700000, guid: 18394bfcea47fd94487069e629aa489e, type: 2}
+        m_Texture: {fileID: 18700000, guid: a4e4460c200144c409640cb2cb715e72, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalSAO:
-        m_Texture: {fileID: 18700000, guid: 475832942d625654a93bd29ccd0cac96, type: 2}
+        m_Texture: {fileID: 18700000, guid: 349f4216efae66248abfe025c9a34a19, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PerTexProps:
@@ -48,6 +49,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 0.4
+    - _Contrast: 1
     m_Colors:
-    - _UVScale: {r: 45, g: 45, b: 0, a: 0}
+    - _UVScale: {r: 15, g: 15, b: 0, a: 0}

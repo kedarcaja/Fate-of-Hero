@@ -9,7 +9,7 @@
 //   RenderLoop : Surface Shader
 //////////////////////////////////////////////////////
 
-Shader "Hidden/MicroSplat/Terrain_Base" {
+Shader "Hidden/MicroSplat/Terrain_Base541177376" {
    Properties {
       [HideInInspector] _Control0 ("Control0", 2D) = "red" {}
       [HideInInspector] _Control1 ("Control1", 2D) = "black" {}
@@ -53,6 +53,10 @@ Shader "Hidden/MicroSplat/Terrain_Base" {
 
 
 
+      #define _MICROSPLAT 1
+      #define _MSRENDERLOOP_SURFACESHADER 1
+      #define _PERTEXHEIGHTCONTRAST 1
+      #define _PERTEXHEIGHTOFFSET 1
 
       #define _MSRENDERLOOP_SURFACESHADER 1
       struct TriGradMipFormat

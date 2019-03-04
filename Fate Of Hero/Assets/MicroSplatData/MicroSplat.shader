@@ -53,6 +53,10 @@ Shader "MicroSplat/Terrain" {
 
 
 
+      #define _MICROSPLAT 1
+      #define _MSRENDERLOOP_SURFACESHADER 1
+      #define _PERTEXHEIGHTCONTRAST 1
+      #define _PERTEXHEIGHTOFFSET 1
 
       #define _MSRENDERLOOP_SURFACESHADER 1
       struct TriGradMipFormat
@@ -1566,7 +1570,7 @@ ENDCG
 
    }
    Dependency "AddPassShader" = "Hidden/MicroSplat/AddPass"
-   Dependency "BaseMapShader" = "Hidden/MicroSplat/Terrain_Base"
+   Dependency "BaseMapShader" = "Hidden/MicroSplat/Terrain_Base541177376"
    CustomEditor "MicroSplatShaderGUI"
    Fallback "Nature/Terrain/Diffuse"
 }

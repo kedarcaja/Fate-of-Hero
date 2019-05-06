@@ -3,7 +3,7 @@ using UnityEngine.PostProcessing;
 
 namespace UnityEditor.PostProcessing
 {
-    [CustomPropertyDrawer(typeof(UnityEngine.MinAttribute))]
+    [CustomPropertyDrawer(typeof(UnityEngine.Rendering.PostProcessing.MinAttribute))]
     sealed class MinDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

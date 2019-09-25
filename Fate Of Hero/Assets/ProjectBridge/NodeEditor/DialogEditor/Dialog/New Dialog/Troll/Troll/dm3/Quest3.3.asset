@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca53d6b4fd4795d498695a513580495f, type: 3}
+  m_Name: Quest3.3
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 5002343c004a6f34196ca2e117d37e57, type: 3}
+  subtitles:
+  - {fileID: 11400000, guid: b2a62b6eb6e6157418c97d37695a98a7, type: 2}
+  - {fileID: 11400000, guid: 09afba0c2bd60bc458baedbbb81f946a, type: 2}
+  - {fileID: 11400000, guid: 1a73cc1b515a2d142bbea3a1e283a493, type: 2}
+  - {fileID: 11400000, guid: 2ca276b1eb6ec7244b3535cb9d201c96, type: 2}
+  - {fileID: 11400000, guid: bb3f27dce270fb944a0ec9642e627478, type: 2}
+  - {fileID: 11400000, guid: 94a1971bcf4a6b749998a9f65f8422f0, type: 2}
+  - {fileID: 11400000, guid: 9f1f4788c1ef0054a8823a21c276a4c8, type: 2}
+  - {fileID: 11400000, guid: 05aaf1fc4dcb8154aa3f33b5f2b41165, type: 2}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnSubtitlesChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

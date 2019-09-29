@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 #if UNITY_EDITOR
 
-
+[CustomEditor(typeof(Character), true)]
 public class CharacterEditor : Editor
 {
     private Character character;

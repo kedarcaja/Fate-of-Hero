@@ -23,7 +23,7 @@ namespace DialogEditor
             b.dialogPartspeaker = EditorGUILayout.ObjectField(b.dialogPartspeaker, typeof(Character), false) as Character;
 
             DialogEditor.GetEGLLable("Duration: ", GUIStyle.none);
-            b.dialogPartStartDuration = EditorGUILayout.Slider(b.dialogPartStartDuration, 0.2f, 5);
+            b.dialogPartStartDuration = EditorGUILayout.Slider(b.dialogPartStartDuration, 0.2f, 100);
 
             DialogEditor.GetEGLLable("Subtitles: ", GUIStyle.none);
             b.dialogPartSubtitles = GUILayout.TextArea(b.dialogPartSubtitles, charLimit);

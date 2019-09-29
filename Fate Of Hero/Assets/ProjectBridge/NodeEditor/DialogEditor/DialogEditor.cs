@@ -23,7 +23,7 @@ namespace DialogEditor
 
         protected override void OnGUI()
         {
-            EditorGUI.DrawRect(all, settings.backgroundColor);
+            //EditorGUI.DrawRect(all, settings.backgroundColor);
             DrawGrid(_zoom * 10 + settings.gridSpacing, settings.gridOpacity, settings.gridColor);
             base.OnGUI();
         }

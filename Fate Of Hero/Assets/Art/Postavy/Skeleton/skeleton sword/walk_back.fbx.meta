@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: 14dbc847f938b1346bd0ddeef0fee7a0
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: -7365242582593784013
+    second: _walk_back
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip '_walk_back' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Sceleton_NEW_version3:Middle_back' has translation
+      animation that will be discarded.\n\t'Sceleton_NEW_version3:middle_shoulder'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Sceleton_NEW_version3:clavical_L'
+      has translation animation that will be discarded.\n\t'Sceleton_NEW_version3:clavical_R'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: _walk_back
+      takeName: _walk_back
+      internalID: -7365242582593784013
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Sceleton_NEW_version3:ROOT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:heel_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:heel_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:Middle_back
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:clavical_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:clavical_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:thum2_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:thum3_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer1_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer2_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer3_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring1_L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring2_L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring3_L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky1_L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky2_L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky3_L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer1_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer2_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pointer3_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:tum1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:thum2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:thum3_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring1_R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring2_R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:ring3_R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky1_R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky2_R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sceleton_NEW_version3:pinky3_R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Skeleton(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:Skeleton
+      parentName: Skeleton(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:mesh_skeletonSword
+      parentName: Sceleton_NEW_version3:Skeleton
+      position: {x: 0.05516393, y: -0.004650583, z: 0.028953169}
+      rotation: {x: 0.55066514, y: -0.44905415, z: -0.5092575, w: 0.4855667}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:mesh_skeletonArmor
+      parentName: Sceleton_NEW_version3:Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:ROOT
+      parentName: Skeleton(Clone)
+      position: {x: 0.00062040647, y: 0.071006745, z: -0.003388707}
+      rotation: {x: 0.43607187, y: -0.56892455, z: -0.42696196, w: 0.55124384}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000005}
+    - name: Sceleton_NEW_version3:Middle_back
+      parentName: Sceleton_NEW_version3:ROOT
+      position: {x: -0.012399355, y: -0.00072330993, z: 0.00000094257257}
+      rotation: {x: -0.7499169, y: 0.10749385, z: -0.12585889, w: 0.6404915}
+      scale: {x: 0.99999976, y: 1.0000002, z: 0.9999998}
+    - name: Sceleton_NEW_version3:middle_shoulder
+      parentName: Sceleton_NEW_version3:Middle_back
+      position: {x: -0.011351716, y: -0.00065682706, z: -0.002221539}
+      rotation: {x: -0, y: -0, z: 0.0000000074505797, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Sceleton_NEW_version3:neck
+      parentName: Sceleton_NEW_version3:middle_shoulder
+      position: {x: -0.007137125, y: -0.000050303162, z: -0.000006096108}
+      rotation: {x: 0.000000059604638, y: 0.00000002235174, z: -0.00000002235174,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Sceleton_NEW_version3:head
+      parentName: Sceleton_NEW_version3:neck
+      position: {x: -0.012925678, y: -6.9706807e-10, z: 0.0025255491}
+      rotation: {x: -0.000000059604638, y: -0.000000014901159, z: 0.0000000074505793,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: Sceleton_NEW_version3:joint6
+      parentName: Sceleton_NEW_version3:head
+      position: {x: -0.011676771, y: -4.371503e-18, z: -8.464214e-20}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:clavical_L
+      parentName: Sceleton_NEW_version3:middle_shoulder
+      position: {x: -0.005313914, y: -0.00774764, z: -0.00039276874}
+      rotation: {x: -0.038561013, y: 0.036462143, z: -0.16606228, w: 0.98468626}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000002}
+    - name: Sceleton_NEW_version3:shoulder_L
+      parentName: Sceleton_NEW_version3:clavical_L
+      position: {x: 0.003000477, y: -0.0033999449, z: -0.0014432621}
+      rotation: {x: -0.0046345196, y: 0.21682197, z: -0.40637115, w: 0.88759756}
+      scale: {x: 1.0000012, y: 1.0000006, z: 1.0000002}
+    - name: Sceleton_NEW_version3:elbow_L
+      parentName: Sceleton_NEW_version3:shoulder_L
+      position: {x: 0.017491411, y: -0.004431324, z: 0.001074666}
+      rotation: {x: 0.01129288, y: 0.039683517, z: 0.0039431257, w: 0.99914074}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000005}
+    - name: Sceleton_NEW_version3:wrist_L
+      parentName: Sceleton_NEW_version3:elbow_L
+      position: {x: 0.021014845, y: -0.0064220885, z: 0.004445283}
+      rotation: {x: -0.0051487065, y: -0.054812387, z: 0.9919761, w: 0.11380981}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pinky1_L
+      parentName: Sceleton_NEW_version3:wrist_L
+      position: {x: -0.0029620344, y: 0.00022960339, z: -0.0019102651}
+      rotation: {x: -0.0019189473, y: 0.048487853, z: -0.0321918, w: 0.99830306}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pinky2_L
+      parentName: Sceleton_NEW_version3:pinky1_L
+      position: {x: -0.0046799914, y: -0.0005045223, z: -0.0004809332}
+      rotation: {x: 0.0024476424, y: -0.0074154832, z: -0.016039625, w: 0.9998409}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pinky3_L
+      parentName: Sceleton_NEW_version3:pinky2_L
+      position: {x: -0.0036411756, y: -0.0007887314, z: -0.00019102864}
+      rotation: {x: 0.000000029802322, y: 0.0000000041909503, z: -0.0000000072759536,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pinky4_L
+      parentName: Sceleton_NEW_version3:pinky3_L
+      position: {x: -0.00236459, y: -0.0006308597, z: 0.00000919073}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:ring1_L
+      parentName: Sceleton_NEW_version3:wrist_L
+      position: {x: -0.0037578272, y: 0.00073155813, z: -0.000086069536}
+      rotation: {x: -0.00067161646, y: 0.003988203, z: -0.0066048307, w: 0.9999701}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+    - name: Sceleton_NEW_version3:ring2_L
+      parentName: Sceleton_NEW_version3:ring1_L
+      position: {x: -0.0035250639, y: -0.00038552802, z: 0.00012563968}
+      rotation: {x: -0.0000000050058575, y: -0.000000077765414, z: -0.000000111787784,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+    - name: Sceleton_NEW_version3:ring3_L
+      parentName: Sceleton_NEW_version3:ring2_L
+      position: {x: -0.0035974358, y: -0.000369754, z: 0.00025104097}
+      rotation: {x: -0.004167089, y: 0.0021929455, z: -0.056483813, w: 0.99839246}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000001}
+    - name: Sceleton_NEW_version3:ring4_L
+      parentName: Sceleton_NEW_version3:ring3_L
+      position: {x: -0.0038682627, y: -0.0011698422, z: 0.00023995376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:pointer1_L
+      parentName: Sceleton_NEW_version3:wrist_L
+      position: {x: -0.0039210133, y: 0.0005698018, z: 0.0021414002}
+      rotation: {x: 0.000000005122273, y: 0.000000015366819, z: 0.00000005980836,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pointer2_L
+      parentName: Sceleton_NEW_version3:pointer1_L
+      position: {x: -0.003842981, y: -0.00008922105, z: 0.0005347878}
+      rotation: {x: -0.005289756, y: 0.018653704, z: -0.03490006, w: 0.9992028}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: Sceleton_NEW_version3:pointer3_L
+      parentName: Sceleton_NEW_version3:pointer2_L
+      position: {x: -0.0033444103, y: -0.00055290613, z: 0.00021139519}
+      rotation: {x: -0.00418424, y: 0.012010766, z: -0.034783673, w: 0.99931395}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Sceleton_NEW_version3:pointer4_L
+      parentName: Sceleton_NEW_version3:pointer3_L
+      position: {x: -0.0037128036, y: -0.001182729, z: 0.000038226182}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:tum1_L
+      parentName: Sceleton_NEW_version3:wrist_L
+      position: {x: -0.0020169348, y: 0.0000464675, z: 0.0032778468}
+      rotation: {x: -0.000000022177113, y: 0.000000014901158, z: -0.038972363, w: 0.9992403}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Sceleton_NEW_version3:thum2_L
+      parentName: Sceleton_NEW_version3:tum1_L
+      position: {x: -0.0028329568, y: 0.00031777163, z: 0.0022153044}
+      rotation: {x: -0.10471978, y: 0.14255543, z: -0.16952373, w: 0.96952224}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: Sceleton_NEW_version3:thum3_L
+      parentName: Sceleton_NEW_version3:thum2_L
+      position: {x: -0.0028809437, y: -0.000497795, z: 0.001361044}
+      rotation: {x: -0.051517636, y: 0.19118439, z: 0.121583164, w: 0.9726315}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Sceleton_NEW_version3:thum4_L
+      parentName: Sceleton_NEW_version3:thum3_L
+      position: {x: -0.0020562415, y: 2.7755575e-19, z: -9.22823e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:clavical_R
+      parentName: Sceleton_NEW_version3:middle_shoulder
+      position: {x: -0.009283982, y: 0.009834364, z: 0.00046137374}
+      rotation: {x: -0.13990214, y: -0.020896414, z: 0.06900796, w: 0.9875367}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000002}
+    - name: Sceleton_NEW_version3:shoulder_R
+      parentName: Sceleton_NEW_version3:clavical_R
+      position: {x: 0.0010442936, y: 0.002931157, z: 0.0030047195}
+      rotation: {x: 0.118485704, y: -0.20847397, z: 0.49083084, w: 0.8376066}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.9999999}
+    - name: Sceleton_NEW_version3:elbow_R
+      parentName: Sceleton_NEW_version3:shoulder_R
+      position: {x: 0.0191116, y: 0.0060893106, z: 0.0008039131}
+      rotation: {x: -0.029675383, y: 0.084538, z: 0.0030146863, w: 0.99597377}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: Sceleton_NEW_version3:wrist_R
+      parentName: Sceleton_NEW_version3:elbow_R
+      position: {x: 0.019009788, y: 0.006447782, z: 0.0063147885}
+      rotation: {x: -0.0023509613, y: -0.06764388, z: 0.034655027, w: 0.99710476}
+      scale: {x: 1.0000023, y: 1.0000015, z: 1.0000006}
+    - name: Sceleton_NEW_version3:Sword
+      parentName: Sceleton_NEW_version3:wrist_R
+      position: {x: 0.0027946723, y: -0.0012040249, z: -0.0018450109}
+      rotation: {x: -0.000000029802319, y: -0.000000004190951, z: -0.00000001862645,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000002}
+    - name: Sceleton_NEW_version3:pinky1_R
+      parentName: Sceleton_NEW_version3:wrist_R
+      position: {x: 0.0027024369, y: 0.0013945822, z: -0.0024988116}
+      rotation: {x: 0.041311383, y: -0.5164785, z: 0.054881748, w: 0.8535405}
+      scale: {x: 1.0000004, y: 1.0000014, z: 0.9999998}
+    - name: Sceleton_NEW_version3:pinky2_R
+      parentName: Sceleton_NEW_version3:pinky1_R
+      position: {x: 0.004368552, y: 0.00027642702, z: -0.0006869559}
+      rotation: {x: -0.0013499141, y: 0.021855999, z: 0.00021064458, w: 0.9997602}
+      scale: {x: 1.0000012, y: 1.0000002, z: 1.0000001}
+    - name: Sceleton_NEW_version3:pinky3_R
+      parentName: Sceleton_NEW_version3:pinky2_R
+      position: {x: 0.0032225999, y: 0.00019999329, z: -0.000099598605}
+      rotation: {x: -6.984919e-10, y: 0.000000029802319, z: -0.000000026004269, w: 1}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000001}
+    - name: Sceleton_NEW_version3:pinky4_R
+      parentName: Sceleton_NEW_version3:pinky3_R
+      position: {x: 0.003201235, y: -0.000022687567, z: -0.000012483086}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:ring1_R
+      parentName: Sceleton_NEW_version3:wrist_R
+      position: {x: 0.0034646874, y: 0.0011356544, z: -0.0005581957}
+      rotation: {x: 0.13753386, y: -0.43423426, z: -0.011608835, w: 0.8901631}
+      scale: {x: 1.0000001, y: 1.0000013, z: 0.9999998}
+    - name: Sceleton_NEW_version3:ring2_R
+      parentName: Sceleton_NEW_version3:ring1_R
+      position: {x: 0.00438598, y: 0.0013919786, z: -0.000105370505}
+      rotation: {x: -0.00267875, y: 0.01634698, z: 0.10444626, w: 0.99439263}
+      scale: {x: 1.0000007, y: 0.99999976, z: 1.0000001}
+    - name: Sceleton_NEW_version3:ring3_R
+      parentName: Sceleton_NEW_version3:ring2_R
+      position: {x: 0.003621834, y: 0.00009400941, z: 0.00007816492}
+      rotation: {x: 0.00037279227, y: -0.028266488, z: 0.016728407, w: 0.9994604}
+      scale: {x: 0.9999996, y: 1.0000005, z: 1}
+    - name: Sceleton_NEW_version3:ring4_R
+      parentName: Sceleton_NEW_version3:ring3_R
+      position: {x: 0.003749453, y: -0.00018187989, z: -0.00039087195}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:pointer1_R
+      parentName: Sceleton_NEW_version3:wrist_R
+      position: {x: 0.003301501, y: 0.0009738979, z: 0.0016692741}
+      rotation: {x: 0.09246225, y: -0.39300117, z: 0.0074771885, w: 0.91484696}
+      scale: {x: 1.0000005, y: 1.0000017, z: 0.9999998}
+    - name: Sceleton_NEW_version3:pointer2_R
+      parentName: Sceleton_NEW_version3:pointer1_R
+      position: {x: 0.0039321776, y: 0.0009317817, z: 0.0003492199}
+      rotation: {x: 0.0006822716, y: -0.013644866, z: 0.02872557, w: 0.99949396}
+      scale: {x: 1.0000013, y: 1.0000005, z: 1.0000001}
+    - name: Sceleton_NEW_version3:pointer3_R
+      parentName: Sceleton_NEW_version3:pointer2_R
+      position: {x: 0.004090244, y: 0.00042049523, z: 0.00010258205}
+      rotation: {x: 0.007907899, y: -0.104932845, z: 0.11481107, w: 0.9877981}
+      scale: {x: 1, y: 1.0000005, z: 1}
+    - name: Sceleton_NEW_version3:pointer4_R
+      parentName: Sceleton_NEW_version3:pointer3_R
+      position: {x: 0.0030253509, y: -0.000559455, z: -0.0007196966}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:tum1_R
+      parentName: Sceleton_NEW_version3:wrist_R
+      position: {x: 0.0018234325, y: 0.000490754, z: 0.0032458585}
+      rotation: {x: -0.025754133, y: -0.21250346, z: 0.046597786, w: 0.9757088}
+      scale: {x: 1.0000002, y: 0.9999992, z: 1.0000013}
+    - name: Sceleton_NEW_version3:thum2_R
+      parentName: Sceleton_NEW_version3:tum1_R
+      position: {x: 0.002434338, y: -0.000012314844, z: 0.0012892671}
+      rotation: {x: 0.011930892, y: -0.032992493, z: -0.02284229, w: 0.99912333}
+      scale: {x: 0.99999905, y: 1.0000021, z: 1.0000005}
+    - name: Sceleton_NEW_version3:thum3_R
+      parentName: Sceleton_NEW_version3:thum2_R
+      position: {x: 0.0028343163, y: 0.00029005975, z: 0.0010614593}
+      rotation: {x: -0, y: -0, z: 2.0816678e-17, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000004}
+    - name: Sceleton_NEW_version3:thum4_R
+      parentName: Sceleton_NEW_version3:thum3_R
+      position: {x: 0.0021660551, y: 0.000051793897, z: 0.00070484675}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:hip_L
+      parentName: Sceleton_NEW_version3:ROOT
+      position: {x: 0.008513235, y: 0.0007884155, z: 0.009931455}
+      rotation: {x: -0.82149506, y: 0.26058853, z: 0.019568382, w: -0.5068101}
+      scale: {x: 1, y: 0.9999999, z: 1.0000005}
+    - name: Sceleton_NEW_version3:knee_L
+      parentName: Sceleton_NEW_version3:hip_L
+      position: {x: 0.026197478, y: -0.009128412, z: -0.0018714077}
+      rotation: {x: 0.000000029802322, y: -0.000000044703484, z: 0.000000014901161,
+        w: 1}
+      scale: {x: 1.0000008, y: 1, z: 1.0000002}
+    - name: Sceleton_NEW_version3:heel_L
+      parentName: Sceleton_NEW_version3:knee_L
+      position: {x: 0.031576183, y: -0.009198119, z: 0.00049520854}
+      rotation: {x: 3.5527137e-15, y: -0, z: 0.000000059604645, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000007}
+    - name: Sceleton_NEW_version3:toes_L
+      parentName: Sceleton_NEW_version3:heel_L
+      position: {x: -0.0011251488, y: -0.004048969, z: -0.006098662}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.000001}
+    - name: Sceleton_NEW_version3:toes_end_L
+      parentName: Sceleton_NEW_version3:toes_L
+      position: {x: 0.00022352963, y: -0.0030343097, z: -0.004980065}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:hip_R
+      parentName: Sceleton_NEW_version3:ROOT
+      position: {x: 0.008548741, y: 0.0012078435, z: -0.008944861}
+      rotation: {x: -0.93449867, y: 0.30298623, z: -0.023630694, w: 0.18534619}
+      scale: {x: 0.9999994, y: 0.99999976, z: 0.9999993}
+    - name: Sceleton_NEW_version3:knee_R
+      parentName: Sceleton_NEW_version3:hip_R
+      position: {x: 0.026325323, y: -0.01039261, z: 0.0014045294}
+      rotation: {x: -0.000000029802322, y: -0.000000014901161, z: -0.000000029802322,
+        w: 1}
+      scale: {x: 1.0000006, y: 1, z: 1.000001}
+    - name: Sceleton_NEW_version3:heel_R
+      parentName: Sceleton_NEW_version3:knee_R
+      position: {x: 0.031222243, y: -0.008265649, z: 0.0000506737}
+      rotation: {x: -0.000000044703476, y: -0.000000014901158, z: 4.4408917e-15, w: 1}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000011}
+    - name: Sceleton_NEW_version3:toes_R
+      parentName: Sceleton_NEW_version3:heel_R
+      position: {x: -0.0015157397, y: -0.005755283, z: 0.002868555}
+      rotation: {x: -0, y: -0, z: 1.5881866e-22, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Sceleton_NEW_version3:toes_end_R
+      parentName: Sceleton_NEW_version3:toes_R
+      position: {x: -0.0013080211, y: -0.005264331, z: 0.0030500423}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:cloth_front1
+      parentName: Sceleton_NEW_version3:ROOT
+      position: {x: 0.016421694, y: 0.003758322, z: -0.00033052536}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Sceleton_NEW_version3:cloth_front2
+      parentName: Sceleton_NEW_version3:cloth_front1
+      position: {x: 0.0058558844, y: -0.001749538, z: -0.00086439383}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:cloth_front3
+      parentName: Sceleton_NEW_version3:cloth_front2
+      position: {x: 0.005993667, y: -0.0020614287, z: -0.0012165323}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:cloth_back1
+      parentName: Sceleton_NEW_version3:ROOT
+      position: {x: 0.013924036, y: -0.008868554, z: -0.0037569392}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: Sceleton_NEW_version3:cloth_back2
+      parentName: Sceleton_NEW_version3:cloth_back1
+      position: {x: 0.0055019767, y: -0.00062840123, z: 0.000040288563}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Sceleton_NEW_version3:cloth_back3
+      parentName: Sceleton_NEW_version3:cloth_back2
+      position: {x: 0.005745921, y: -0.0008942212, z: 0.00007239066}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 46d8ceaec8528c4458171f19fa69cea6,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

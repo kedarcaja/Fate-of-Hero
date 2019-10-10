@@ -47,9 +47,6 @@ public class PlayerScript : CharacterScript
 
 		Move();
 		base.Update();
-
-	
-
 	}
 
 
@@ -57,8 +54,6 @@ public class PlayerScript : CharacterScript
 	{
 		inputX = Input.GetAxis("Horizontal");
 		inputZ = Input.GetAxis("Vertical");
-
-
 
 		Vector3 forward = Camera.main.transform.forward;
 		Vector3 right = Camera.main.transform.right;
@@ -76,7 +71,6 @@ public class PlayerScript : CharacterScript
 		if (v != Vector3.zero)
 		{
 			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(desiredDirection), rotateSpeed*Time.deltaTime);
-
 		}
 
 	}

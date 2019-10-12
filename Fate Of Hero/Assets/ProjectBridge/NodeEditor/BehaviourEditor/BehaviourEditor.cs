@@ -15,8 +15,8 @@ namespace BehaviourEditor
         private void OnEnable()
         {
             titleContent.text = "Behaviour Editor";
-            settings = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/BehaviourEditor/Resources/Editor/Settings.asset", typeof(NodeEditor.EditorSettings)) as NodeEditor.EditorSettings;
-            DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
+            settings = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/BehaviourEditor/Resources/Editor/Settings.asset", typeof(NodeEditor.EditorSettings)) as NodeEditor.EditorSettings;
+            DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
 
 
         }

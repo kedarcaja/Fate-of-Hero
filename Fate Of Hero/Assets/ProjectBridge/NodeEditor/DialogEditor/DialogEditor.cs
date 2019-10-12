@@ -17,8 +17,8 @@ namespace DialogEditor
         private void OnEnable()
         {
             titleContent.text = "Dialog Editor";
-            settings = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/DialogEditor/Resources/Editor/Settings.asset", typeof(NodeEditor.EditorSettings)) as NodeEditor.EditorSettings;
-            DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
+            settings = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/DialogEditor/Resources/Editor/Settings.asset", typeof(NodeEditor.EditorSettings)) as NodeEditor.EditorSettings;
+            DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
         }
 
         protected override void OnGUI()

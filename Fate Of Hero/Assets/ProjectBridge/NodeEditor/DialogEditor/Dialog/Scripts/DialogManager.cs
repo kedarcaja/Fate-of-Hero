@@ -28,7 +28,7 @@ public class DialogManager : MonoBehaviour, IPlayable
         {
             graph.InitDialog();
         }
-        decisionOptions.OnButtonSelect.AddListener(()=>decisionOptions.DeactiveButtons());
+       // decisionOptions.OnButtonSelect.AddListener(()=>decisionOptions.DeactiveButtons());
     }
     private void Update()
     {

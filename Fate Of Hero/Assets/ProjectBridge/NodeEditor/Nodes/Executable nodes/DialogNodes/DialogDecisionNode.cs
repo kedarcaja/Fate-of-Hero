@@ -20,8 +20,9 @@ namespace DialogEditor
             s.alignment = TextAnchor.UpperCenter;
             s.padding.top = 10;
             s.normal.textColor = GUIStylizer.Colors.LIGHTSKYBLUE;
-
+#if UNITY_EDITOR
             DialogEditor.GetEGLLable("Decision", s);
+#endif
         }
 
         public override void Execute(BaseNode b)

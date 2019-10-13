@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace BehaviourEditor
 {
+#if UNITY_EDITOR
     public class BehaviourEditor : NodeEditor.NodeEditor
     {
         public static NodeEditor.EditorSettings settings;
@@ -147,4 +148,5 @@ namespace BehaviourEditor
             }
         }
     }
+#endif
 }

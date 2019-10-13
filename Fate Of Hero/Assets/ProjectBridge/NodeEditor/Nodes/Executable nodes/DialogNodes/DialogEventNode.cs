@@ -17,7 +17,9 @@ namespace DialogEditor
         public override void DrawWindow(BaseNode b)
         {
             var list = b.dialogEvents;
+#if UNITY_EDITOR
             b.eventListSize = EditorGUILayout.IntField("size", list.Count);
+#endif
 
             if (!b.collapse)
             {
@@ -37,24 +39,28 @@ namespace DialogEditor
                 }
                 for (int i = 0; i < list.Count; i++)
                 {
-
+#if UNITY_EDITOR
                     list[i] = (EDialogEvents)EditorGUILayout.EnumPopup(list[i]);
-
+#endif
                     switch (list[i])
                     {
                         case EDialogEvents.AddItemToPlayersInventory:
+#if UNITY_EDITOR
                             EditorGUILayout.LabelField("Item: ");
+#endif
                             ItemReward it = b.addItems[i];
-                        //    it.Item = EditorGUILayout.ObjectField(it.Item, typeof(Item), false) as Item;
-
+                            //    it.Item = EditorGUILayout.ObjectField(it.Item, typeof(Item), false) as Item;
+#if UNITY_EDITOR
                             EditorGUILayout.LabelField("count: ");
                             it.Count = EditorGUILayout.IntField(it.Count);
+#endif
                             b.addItems[i] = it;
                             break;
 
                     }
+#if UNITY_EDITOR
                     EditorGUILayout.LabelField("");
-
+#endif
                 }
                 b.WindowRect.height = b.drawNode.Height + (list.Count * 90);
 

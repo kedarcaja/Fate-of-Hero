@@ -4,15 +4,17 @@ using UnityEngine;
 
 public static class ScriptableObjectUtility
 {
-	/// <summary>
-	//	This makes it easy to create, name and place unique new ScriptableObject asset files.
-	/// </summary>
-	public static T CreateAsset<T>(string name) where T : ScriptableObject
+#if UNITY_EDITOR
+    /// <summary>
+    //	This makes it easy to create, name and place unique new ScriptableObject asset files.
+    /// </summary>
+    public static T CreateAsset<T>(string name) where T : ScriptableObject
 	{
 		T asset = ScriptableObject.CreateInstance<T>();
 
-		string path = AssetDatabase.GetAssetPath(Selection.activeObject);
-		if (path == "")
+        string path = AssetDatabase.GetAssetPath(Selection.activeObject);
+
+        if (path == "")
 		{
 			path = "Assets";
 		}
@@ -21,14 +23,15 @@ public static class ScriptableObjectUtility
 			path = path.Replace(Path.GetFileName(AssetDatabase.GetAssetPath(Selection.activeObject)), "");
 		}
 
-		string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(path + "/New " + name + ".asset");
+        string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(path + "/" + name + ".asset");
 
-		AssetDatabase.CreateAsset(asset, assetPathAndName);
+        AssetDatabase.CreateAsset(asset, assetPathAndName);
 
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
 		EditorUtility.FocusProjectWindow();
 		Selection.activeObject = asset;
         return asset;
-	}
+    }
+#endif
 }

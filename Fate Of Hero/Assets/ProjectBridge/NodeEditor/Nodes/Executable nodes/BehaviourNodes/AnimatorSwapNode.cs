@@ -14,8 +14,9 @@ namespace NodeEditor
 
         public override void DrawWindow(BaseNode b)
         {
+#if UNITY_EDITOR
             b.animatorController = EditorGUILayout.ObjectField(b.animatorController, typeof(RuntimeAnimatorController), false) as RuntimeAnimatorController;
-
+#endif
         }
 
         public override void Execute(BaseNode b)

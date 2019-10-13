@@ -20,6 +20,7 @@ namespace DialogEditor
         {
             if (!b.collapse)
                 b.WindowRect.height = b.drawNode.Height + (b.dialogPartSubtitles.Length / 30 * 5f);
+#if UNITY_EDITOR
             DialogEditor.GetEGLLable("Character: " + (b.dialogPartspeaker != null ? b.dialogPartspeaker.ToString() : ""), GUIStyle.none);
             b.dialogPartspeaker = EditorGUILayout.ObjectField(b.dialogPartspeaker, typeof(Character), false) as Character;
 
@@ -30,6 +31,7 @@ namespace DialogEditor
             b.dialogPartSubtitles = GUILayout.TextArea(b.dialogPartSubtitles, charLimit);
 
             EditorUtility.SetDirty(b.DialogGraph);
+#endif
 
         }
 

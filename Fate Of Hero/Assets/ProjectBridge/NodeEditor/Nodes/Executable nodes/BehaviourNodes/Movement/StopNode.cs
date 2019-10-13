@@ -21,7 +21,9 @@ namespace BehaviourEditor
             s.fontSize = 30;
             s.richText = true;
             s.margin.left = 75;
+#if UNITY_EDITOR
             BehaviourEditor.GetEGLLable("Stop", s);
+#endif
         }
 
         public override void Execute(BaseNode b)

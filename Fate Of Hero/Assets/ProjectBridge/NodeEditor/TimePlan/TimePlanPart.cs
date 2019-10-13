@@ -32,6 +32,8 @@ public class TimePlanPart : ScriptableObject
         this.day = day;
         this.everyDay = everyDay;
         this.graph = graph;
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
+#endif
     }
 }

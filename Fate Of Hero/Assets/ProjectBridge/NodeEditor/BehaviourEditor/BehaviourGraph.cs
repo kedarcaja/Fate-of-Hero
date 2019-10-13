@@ -27,8 +27,10 @@ namespace BehaviourEditor
 			base.Awake();
 			if (!nodes.Exists(f => f.drawNode is EnterNode))
 			{
-				enterNode = new BaseNode(BehaviourEditor.DrawNodes.EnterNode, 10, 200, "", GenerateId());
-				nodes.Add(enterNode);
+#if UNITY_EDITOR
+                enterNode = new BaseNode(BehaviourEditor.DrawNodes.EnterNode, 10, 200, "", GenerateId());
+#endif
+                nodes.Add(enterNode);
 				enterNode.BehaviourGraph = this;
 
 			}

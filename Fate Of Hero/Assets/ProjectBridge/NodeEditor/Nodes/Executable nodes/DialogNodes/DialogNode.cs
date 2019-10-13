@@ -15,9 +15,10 @@ namespace DialogEditor
 
         public override void DrawWindow(BaseNode b)
         {
+#if UNITY_EDITOR
             DialogEditor.GetEGLLable("Audio clip:", GUIStyle.none);
             b.dialogAudioClip = EditorGUILayout.ObjectField(b.dialogAudioClip, typeof(AudioClip), false) as AudioClip;
-
+#endif
 #pragma warning disable CS0618 // Typ nebo člen je zastaralý.
             b.DialogGraph.SetDirty();
 #pragma warning restore CS0618 // Typ nebo člen je zastaralý.

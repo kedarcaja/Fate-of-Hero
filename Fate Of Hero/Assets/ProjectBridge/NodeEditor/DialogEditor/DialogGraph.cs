@@ -51,7 +51,9 @@ namespace DialogEditor
             base.Awake();
             if (!nodes.Exists(f => f.drawNode is EnterNode))
             {
+#if UNITY_EDITOR
                 enterNode = new BaseNode(DialogEditor.DrawNodes.EnterNode, 10, 200, "", GenerateId());
+#endif
                 nodes.Add(enterNode);
                 enterNode.DialogGraph = this;
 
@@ -64,7 +66,9 @@ namespace DialogEditor
 
             if (!nodes.Exists(f => f.drawNode is DialogNode))
             {
+#if UNITY_EDITOR
                 firstSubtitles = new BaseNode(DialogEditor.DrawNodes.DialogNode, 200, 200, "Dialog Audio", GenerateId());
+#endif
                 nodes.Add(firstSubtitles);
                 firstSubtitles.DialogGraph = this;
 
@@ -95,7 +99,7 @@ namespace DialogEditor
 
             string id0 = GenerateId() + 0 + "u", id1 = GenerateId() + 1 + "u", id2 = GenerateId() + 2 + "u"; // modify id because bug generates same id everytime
 
-
+#if UNITY_EDITOR
             BaseNode audio = AddNode(DialogEditor.DrawNodes.DialogNode, x, y, "Dialog Audio");
             BaseNode even = AddNode(DialogEditor.DrawNodes.DialogEventNode, x + 5, y + 300, "Event");
             BaseNode subtitles = AddNode(DialogEditor.DrawNodes.DialogPartNode, x + 10, y + 500, "Dialog Subtitles");
@@ -113,6 +117,7 @@ namespace DialogEditor
 
             even.collapse = true;
             subtitles.collapse = true;
+#endif
         }
 
         public void Skip()

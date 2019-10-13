@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace DialogEditor
 {
-
+#if UNITY_EDITOR
     public class DialogEditor : NodeEditor.NodeEditor
     {
 
@@ -238,4 +238,5 @@ namespace DialogEditor
             }
         }
     }
+#endif
 }

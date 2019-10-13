@@ -16,7 +16,9 @@ namespace NodeEditor
 
         public override void DrawWindow(BaseNode b)
         {
+#if UNITY_EDITOR
             b.swapGraph = EditorGUILayout.ObjectField(b.swapGraph, typeof(BehaviourGraph), false) as BehaviourGraph;
+#endif
         }
 
         public override void Execute(BaseNode b)

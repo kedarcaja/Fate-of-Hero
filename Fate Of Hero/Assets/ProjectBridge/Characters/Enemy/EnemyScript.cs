@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : EntityScript
+namespace FourGames
 {
+    public class EnemyScript : EntityScript
+    {
 
+    }
 }

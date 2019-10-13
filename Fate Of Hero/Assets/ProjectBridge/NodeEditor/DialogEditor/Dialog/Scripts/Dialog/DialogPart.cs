@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Data; 
 /// <summary>
 /// this is one part of subtitles in dialog
 /// </summary>

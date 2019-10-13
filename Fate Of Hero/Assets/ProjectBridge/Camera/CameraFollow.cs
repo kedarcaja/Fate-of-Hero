@@ -18,28 +18,29 @@ public class CameraFollow : MonoBehaviour
 		Vector3 rot = transform.localRotation.eulerAngles;
 		rotX = rot.x;
 		rotY = rot.y;
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+        MouseManager.Instance.DisableCursor();
 
-	}
+    }
 	private void Update()
 	{
-		//float inputX = Input.GetAxis("RightStickHorizontal");
-		//float inputZ = Input.GetAxis("RightStickVertical");
-		mouseX = Input.GetAxis("Mouse Y");
-		mouseY = Input.GetAxis("Mouse X");
+        if (!Book.Instance.IsActive())
+        {
+            //float inputX = Input.GetAxis("RightStickHorizontal");
+            //float inputZ = Input.GetAxis("RightStickVertical");
+            mouseX = Input.GetAxis("Mouse Y");
+            mouseY = Input.GetAxis("Mouse X");
 
-		finalInputX = /*inputX*/  mouseX;
-		finalInputZ = /*inputZ*/mouseY;
-		rotY += finalInputZ * InputSensitivityX * Time.deltaTime;
-		rotX += finalInputX * InputSensitivityY * Time.deltaTime;
+            finalInputX = /*inputX*/  mouseX;
+            finalInputZ = /*inputZ*/mouseY;
+            rotY += finalInputZ * InputSensitivityX * Time.deltaTime;
+            rotX += finalInputX * InputSensitivityY * Time.deltaTime;
 
-		rotX = Mathf.Clamp(rotX, -clampAngel, clampAngel);
-		Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
-		transform.rotation = localRotation;
+            rotX = Mathf.Clamp(rotX, -clampAngel, clampAngel);
+            Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
+            transform.rotation = localRotation;
 
 
-
+        }
 	}
 	private void LateUpdate()
 	{

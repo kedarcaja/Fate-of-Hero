@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using FourGames;
 
 
 namespace NodeEditor
@@ -33,16 +34,16 @@ namespace NodeEditor
                 case ECondition.IsSunnyDay:
                     return MainOpossum.GetWeather(character) == EWeather.SunnyDay;
 
-                case ECondition.IsAlive:
+                //case ECondition.IsAlive:
 
-                    return character.CharacterData.IsAlive;
+                //    return character.CharacterData.IsAlive;
 
                 case ECondition.IsTimeToGoToWork:
 
                     break;
 
-                case ECondition.IsDead:
-                    return character.CharacterData.IsAlive == false;
+                //case ECondition.IsDead:
+                //    //return character.CharacterData.IsAlive == false;
 
                 case ECondition.IsNight:
                     break;
@@ -50,8 +51,8 @@ namespace NodeEditor
                 case ECondition.IsMorning:
 
 
-                case ECondition.IsPlayerClose:
-                    return (character as EntityScript).PlayerIsClose();
+                //case ECondition.IsPlayerClose:
+                //   // return (character as EntityScript).PlayerIsClose();
 
                 case ECondition.ReachedDestination:
                     return character.AgentReachedTarget();

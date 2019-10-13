@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15335a72baf9d54468ec184caa222998, type: 3}
+  m_Name: "Sb\u011Br zub\u016F"
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 55c320f8609ba614b8c023f1367d2045, type: 2}
+  description: "Seber 10 zub\u016F\n"
+  compulsory: 1
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  totalValue: 10
+  collectItem: {fileID: 11400000, guid: b1958fa0104a5974ba53cde0c9b5a341, type: 2}

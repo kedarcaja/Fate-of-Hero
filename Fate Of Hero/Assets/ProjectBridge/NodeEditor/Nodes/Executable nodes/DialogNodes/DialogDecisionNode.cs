@@ -37,13 +37,13 @@ namespace DialogEditor
 
                 data[i] = subs.dialogPartSubtitles;
             }
-            DialogManager.Instance.DecisionOptions.SetGroup(data);
-            if (DialogManager.Instance.DecisionOptions.lastSelectedButtonIndex < 5)
-            {
-                b.decided = true;
-                b.decisionSelectedOption = DialogManager.Instance.DecisionOptions.lastSelectedButtonIndex;
-                b.nodeCompleted = true;
-            }
+            //DialogManager.Instance.DecisionOptions.SetGroup(data);
+            //if (DialogManager.Instance.DecisionOptions.lastSelectedButtonIndex < 5)
+            //{
+            //    b.decided = true;
+            //    b.decisionSelectedOption = DialogManager.Instance.DecisionOptions.lastSelectedButtonIndex;
+            //    b.nodeCompleted = true;
+            //}
             //else if (Input.GetKeyDown(KeyCode.Alpha1) && (b.transitions.Count >= 1))
             //{
             //    b.decisionSelectedOption = 0;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NodeEditor;
 using UnityEngine;
+using FourGames;
 
 namespace BehaviourEditor
 {

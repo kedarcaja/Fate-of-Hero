@@ -8,15 +8,14 @@ using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour, IPlayable
 {
-    [SerializeField]
-    private TextButtonGroup decisionOptions;
+    
     [SerializeField]
     private TextMeshProUGUI subtitleArea;
     public TextMeshProUGUI SubtitleArea { get => subtitleArea; }
     public AudioSource AudioPlayer { get { return GetComponent<AudioSource>(); } }
     public static DialogManager Instance { get { return FindObjectOfType<DialogManager>(); } }
 
-    public TextButtonGroup DecisionOptions { get => decisionOptions; }
+ 
 
     public DialogGraph graph;
     private bool isStopped = true, isPaused = false;
@@ -28,7 +27,7 @@ public class DialogManager : MonoBehaviour, IPlayable
         {
             graph.InitDialog();
         }
-       // decisionOptions.OnButtonSelect.AddListener(()=>decisionOptions.DeactiveButtons());
+      
     }
     private void Update()
     {

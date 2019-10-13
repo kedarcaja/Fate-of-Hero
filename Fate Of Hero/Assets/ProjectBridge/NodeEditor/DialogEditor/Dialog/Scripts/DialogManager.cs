@@ -41,28 +41,7 @@ public class DialogManager : MonoBehaviour, IPlayable
                 AudioPlayer.Play();
             }
 
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-                Play();
-            
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Stop();
-
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Pause();
-
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Skip();
-
-        }
+        }     
     }
     public void  Skip()
     {
@@ -104,9 +83,13 @@ public class DialogManager : MonoBehaviour, IPlayable
 
     public void ChangeGraph(DialogGraph g)
     {
-        Stop();
-        g.InitDialog();
-        graph = g;
+        if (!IsPlaying())
+        {
+            Stop();
+            g.InitDialog();
+            graph = g;
+        }
+        
     }
     private bool AudioIsReady()
     {

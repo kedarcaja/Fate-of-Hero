@@ -15,6 +15,7 @@ namespace DialogEditor
         public BaseNode firstSubtitles;
 
         #region Dialog variables
+        [SerializeField]
         internal bool wasPlayed = false;
         internal bool repeatable = false;
         internal bool skipable = false;
@@ -53,16 +54,15 @@ namespace DialogEditor
             {
 #if UNITY_EDITOR
                 enterNode = new BaseNode(DialogEditor.DrawNodes.EnterNode, 10, 200, "", GenerateId());
-#endif
+
                 nodes.Add(enterNode);
                 enterNode.DialogGraph = this;
-
+#endif
             }
             else
             {
                 enterNode = nodes.Find(f => f.drawNode is EnterNode);
             }
-
 
             if (!nodes.Exists(f => f.drawNode is DialogNode))
             {
@@ -71,65 +71,20 @@ namespace DialogEditor
 #endif
                 nodes.Add(firstSubtitles);
                 firstSubtitles.DialogGraph = this;
-
             }
             else
             {
                 firstSubtitles = nodes.Find(f => f.drawNode is DialogNode);
             }
 
-
             SetAsEnterState(enterNode, firstSubtitles, Colors.GREEN);
         }
-        public void RemoveDecisionBranch(BaseNode b)
-        {
-
-            for (int i = 0; i < b.transitions.Count; i++)
-            {
-                if (b.transitions.Count == 0) return;
-                BaseNode c = b.transitions[i].endNode;
-
-                removeNodesIDs.Add(c.ID);
-
-                RemoveDecisionBranch(c);
-            }
-        }
-        public void AddDecisionBranch(BaseNode decisionNode, float x, float y)
-        {
-
-            string id0 = GenerateId() + 0 + "u", id1 = GenerateId() + 1 + "u", id2 = GenerateId() + 2 + "u"; // modify id because bug generates same id everytime
-
-#if UNITY_EDITOR
-            BaseNode audio = AddNode(DialogEditor.DrawNodes.DialogNode, x, y, "Dialog Audio");
-            BaseNode even = AddNode(DialogEditor.DrawNodes.DialogEventNode, x + 5, y + 300, "Event");
-            BaseNode subtitles = AddNode(DialogEditor.DrawNodes.DialogPartNode, x + 10, y + 500, "Dialog Subtitles");
-
-            Transition
-             t0 = new Transition(decisionNode, audio, EWindowCurvePlacement.CenterBottom, EWindowCurvePlacement.CenterTop, Colors.REDPING, false, "", false, id0),
-             t1 = new Transition(audio, even, EWindowCurvePlacement.CenterBottom, EWindowCurvePlacement.CenterTop, Colors.REDPING, false, "", false, id1),
-             t2 = new Transition(even, subtitles, EWindowCurvePlacement.CenterBottom, EWindowCurvePlacement.CenterTop, Colors.REDPING, false, "", false, id2);
 
 
-            t0.removable = false;
-            t1.removable = false;
-            t2.removable = false;
-
-
-            even.collapse = true;
-            subtitles.collapse = true;
-#endif
-        }
-
-        public void Skip()
-        {
-            if (skipable)
-            {
-                lifeCycle.Skip();
-            }
-        }
+     
         public void Play()
         {
-            if (!IsPlaying())
+            if (!IsPlaying() && CanPlay())
             {
                 if (isStopped)
                 {
@@ -137,7 +92,6 @@ namespace DialogEditor
 
                     ResetDialog();
                 }
-                lifeCycle.Play();
                 isStopped = false;
                 isPaused = false;
             }
@@ -147,23 +101,17 @@ namespace DialogEditor
         {
             if (IsPlaying())
             {
-                lifeCycle.Pause();
                 isPaused = true;
-
             }
         }
         public bool IsPlaying()
         {
-            return !isPaused && !isStopped && lifeCycle.IsPlaying();
+            return !isPaused && !isStopped;
         }
         public void Stop()
         {
-            if (IsPlaying())
-            {
-                lifeCycle.Stop();
-                isStopped = true;
-
-            }
+            wasPlayed = true;
+            isStopped = true;
         }
 
         private bool CanPlay()

@@ -23,7 +23,7 @@ public class Book : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(isOpen);
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             if (group.IsActive(true))

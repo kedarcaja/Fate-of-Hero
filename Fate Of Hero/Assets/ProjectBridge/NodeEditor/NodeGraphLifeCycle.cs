@@ -34,8 +34,8 @@ namespace NodeEditor
             {
                 foreach (Transition t in currentNode.transitions)
                 {
-                    currentNode.nodeCompleted = false;
                     currentNode = t.endNode;
+                    currentNode.nodeCompleted = false;
                     
                     break;
                 }

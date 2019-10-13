@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using InventorySystem;
 
 namespace DialogEditor
 {
-    public enum EDialogEvents { AddItemToPlayersInventory,AddQuest }
+    public enum EDialogEvents { AddItemToPlayersInventory, AddQuest }
     [CreateAssetMenu(menuName = "DialogEditor/Nodes/Event")]
     public class DialogEventNode : ExecutableNode
     {
@@ -49,7 +50,7 @@ namespace DialogEditor
                             EditorGUILayout.LabelField("Item: ");
 #endif
                             ItemReward it = b.addItems[i];
-                            //    it.Item = EditorGUILayout.ObjectField(it.Item, typeof(Item), false) as Item;
+                            it.Item = EditorGUILayout.ObjectField(it.Item, typeof(Item), false) as Item;
 #if UNITY_EDITOR
                             EditorGUILayout.LabelField("count: ");
                             it.Count = EditorGUILayout.IntField(it.Count);
@@ -77,8 +78,7 @@ namespace DialogEditor
 
                         foreach (ItemReward r in b.addItems)
                         {
-
-                           // Inventory.Instance.AddItem(r.Item, r.Count);
+                           InventoryManager.Instance.Inventory.Add(r.Item, r.Count);
                         }
                         b.nodeCompleted = true;
                         break;

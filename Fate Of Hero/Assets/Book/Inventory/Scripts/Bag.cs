@@ -51,8 +51,9 @@ namespace InventorySystem
                 {
                     DrawRow();
                 }
-                for (int i = 0; i < saver.Slots.Count; i++)
+                for (int i = 0; i < slots.Count; i++)
                 {
+                   
                     slots[i].Saver = saver.Slots[i];
                 }
             }

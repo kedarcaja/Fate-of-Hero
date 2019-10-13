@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using InventorySystem;
 
 public enum EQuestCategory { Main, Secondary, Treasure, Profs, Complete }
 [CreateAssetMenu(menuName = "Quest/Quest", fileName = "NewQuest")]
@@ -176,5 +177,5 @@ public struct Rewards
 public struct ItemReward
 {
 	public int Count;
-	//public Item Item;
+	public Item Item;
 }

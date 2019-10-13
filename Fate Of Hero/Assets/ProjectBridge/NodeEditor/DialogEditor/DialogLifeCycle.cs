@@ -18,22 +18,29 @@ namespace DialogEditor
         {
         }
 
-
         public DialogLifeCycle(DialogGraph graph)
         {
             Init(graph);
         }
         public override void Tick()
         {
-            if (IsPlaying())
+            if (IsPlaying() && !Ended())
             {
                 if (currentNode != null)
                 {
                     ExecuteNodes();
                 }
-
             }
+            else
+            {
+                Stop();
+                DialogManager.Instance.Stop();
+            }
+
+
+            Debug.Log(IsPlaying());
         }
+
         public void Skip()
         {
             Pause();
@@ -46,17 +53,11 @@ namespace DialogEditor
                     return;
                 }
             }
-
             Stop();
-        }
-        public bool IsPlaying()
-        {
-            return !isStopped && !isPaused;
         }
 
         private void ExecuteSubtitles()
         {
-
             currentNode.Execute();
 
             timer = new _Timer(0.1f, 0.1f, DialogManager.Instance);
@@ -64,90 +65,38 @@ namespace DialogEditor
             {
                 if (timer.ElapsedTimeF >= currentNode.dialogPartStartDuration)
                 {
+
                     currentNode.nodeCompleted = true;
-                    DialogManager.Instance.SubtitleArea.text = "";
                     if (currentNode.transitions.Count > 0)
                         DecideForNextNode();
 
                     timer.Stop();
-
                 }
             };
             timer.Execute();
         }
         private void ExecuteNodes()
         {
-
             if (currentNode.drawNode is DialogPartNode && (timer == null || !timer.IsRunning()))
             {
                 ExecuteSubtitles();
             }
 
-            else if (currentNode.drawNode is DialogDecisionNode && currentNode.decided && currentNode.nodeCompleted)
-            {
-                currentNode.Execute();
-                currentNode.nodeCompleted = false;
-                currentNode.decided = false;
-                DecideForNextNode();
-                currentNode.executed = false;
-            }
             else if (!(currentNode.drawNode is DialogPartNode))
             {
                 currentNode.Execute();
                 currentNode.nodeCompleted = true;
                 DecideForNextNode();
                 currentNode.executed = false;
-
             }
 
-
         }
-
-        public override void DecideForNextNode()
-        {
-            if (currentNode.drawNode is DialogDecisionNode && currentNode.nodeCompleted&& currentNode.decided)
-            {
-                switch (currentNode.decisionSelectedOption)
-                {
-                    case 0:
-                        currentNode = currentNode.transitions[0].endNode;
-                        Debug.Log("Selected option 0");
-                        return;
-
-                    case 1:
-                        currentNode = currentNode.transitions[1].endNode;
-                        Debug.Log("Selected option 1");
-
-                        return;
-                    case 2:
-                        currentNode = currentNode.transitions[2].endNode;
-                        Debug.Log("Selected option 2");
-
-                        return;
-                    case 3:
-                        currentNode = currentNode.transitions[3].endNode;
-                        Debug.Log("Selected option 3");
-
-                        return;
-                    case 4:
-                        currentNode = currentNode.transitions[4].endNode;
-                        Debug.Log("Selected option 4");
-
-                        return;
-
-                }
-            }
-
-            base.DecideForNextNode();
-
-        }
-
-
 
         public void Play()
         {
             if (!IsPlaying())
             {
+                (graph as DialogGraph).Play();
                 isStopped = false;
                 isPaused = false;
                 if (timer != null && !timer.IsPaused)
@@ -155,7 +104,6 @@ namespace DialogEditor
                     timer.Execute();
                 }
             }
-
         }
 
         public void Pause()
@@ -167,20 +115,25 @@ namespace DialogEditor
                 {
                     timer.Pause();
                 }
+                (graph as DialogGraph).Pause();
             }
         }
-
+        public bool IsPlaying()
+        {
+            return !isStopped && !isPaused && (graph as DialogGraph).IsPlaying();
+        }
+        private bool Ended()
+        {
+            return currentNode == null || (currentNode.nodeCompleted && currentNode == graph.nodes.Last());
+        }
         public void Stop()
         {
-            if (IsPlaying())
+            isStopped = true;
+            if (timer != null && timer.IsRunning())
             {
-
-                isStopped = true;
-                if (timer != null && timer.IsRunning())
-                {
-                    timer.Stop();
-                }
+                timer.Stop();
             }
+            (graph as DialogGraph).Stop();
         }
     }
 }

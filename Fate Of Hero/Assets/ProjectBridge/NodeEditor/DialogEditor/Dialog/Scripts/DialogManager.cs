@@ -1,21 +1,22 @@
 ﻿using DialogEditor;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.Extensions;
 using Unity.UIExtension;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour, IPlayable
 {
-    
+
     [SerializeField]
     private TextMeshProUGUI subtitleArea;
     public TextMeshProUGUI SubtitleArea { get => subtitleArea; }
     public AudioSource AudioPlayer { get { return GetComponent<AudioSource>(); } }
     public static DialogManager Instance { get { return FindObjectOfType<DialogManager>(); } }
-
- 
+    private DialogScript sender;
 
     public DialogGraph graph;
     private bool isStopped = true, isPaused = false;
@@ -27,34 +28,29 @@ public class DialogManager : MonoBehaviour, IPlayable
         {
             graph.InitDialog();
         }
-      
+
     }
     private void Update()
     {
-        if (graph != null && IsPlaying())
+        if (graph != null)
         {
-
-            graph.lifeCycle.Tick();
-
-            if (!AudioPlayer.isPlaying && AudioIsReady())
+            if (IsPlaying())
             {
-                AudioPlayer.Play();
+                graph.lifeCycle.Tick();
+                if (!AudioPlayer.isPlaying && AudioIsReady())
+                {
+                    AudioPlayer.Play();
+                }
             }
-
-        }     
-    }
-    public void  Skip()
-    {
-        if (IsPlaying())
-        {
-            graph.Skip();
         }
     }
+   
     public void Play()
     {
-        if (!IsPlaying())
+        if (!IsPlaying() && !graph.wasPlayed)
         {
-            graph.Play();
+            subtitleArea.GetComponent<CanvasGroup>().Active(true);
+            graph.lifeCycle.Play();
             isStopped = false;
             isPaused = false;
         }
@@ -72,24 +68,33 @@ public class DialogManager : MonoBehaviour, IPlayable
 
     public void Stop()
     {
-        if (IsPlaying())
+        AudioPlayer.Stop();
+        if (graph)
         {
-            graph.Stop();
-            AudioPlayer.Stop();
-            isStopped = true;
+            graph.lifeCycle.Stop();
         }
+        graph = null;
+        AudioPlayer.clip = null;
+        isStopped = true;
+        subtitleArea.text = "";
+        subtitleArea.GetComponent<CanvasGroup>().Deactive(true);
 
+        if ( sender != null && sender.Graph.destroyOnEnd)
+        {
+            Destroy(sender.gameObject);
+        }
     }
 
-    public void ChangeGraph(DialogGraph g)
+    public void ChangeGraph(DialogScript g)
     {
         if (!IsPlaying())
         {
             Stop();
-            g.InitDialog();
-            graph = g;
+            g.Graph.InitDialog();
+            graph = g.Graph;
+            sender = g;
         }
-        
+
     }
     private bool AudioIsReady()
     {

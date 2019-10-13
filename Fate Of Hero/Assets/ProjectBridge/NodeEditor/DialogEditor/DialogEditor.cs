@@ -92,7 +92,7 @@ namespace DialogEditor
                     }
                     if (selectedNode.drawNode is DialogDecisionNode)
                     {
-                        (currentGraph as DialogGraph).RemoveDecisionBranch(selectedNode);
+                    //    (currentGraph as DialogGraph).RemoveDecisionBranch(selectedNode);
                     }
                     currentGraph.removeNodesIDs.Add(selectedNode.ID);
                   
@@ -117,7 +117,7 @@ namespace DialogEditor
                     break;
 
                 case UserActions.dialogDecisionBranch:
-                    (currentGraph as DialogGraph).AddDecisionBranch(selectedNode, mousePosition.x, mousePosition.y);
+                //    (currentGraph as DialogGraph).AddDecisionBranch(selectedNode, mousePosition.x, mousePosition.y);
                     break;
                 case UserActions.duplicateSelection:
                     if (currentGraph.selectedNodes.Count > 0)

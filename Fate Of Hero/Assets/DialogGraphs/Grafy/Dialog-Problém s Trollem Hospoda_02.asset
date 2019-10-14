@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 19C545
+    - ID: 4A564
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -117,6 +117,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 4A564
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -140,7 +149,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 95bd3ac15bcf9a848901fe430079d6eb, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: a1e3b9d78930f2248b75deae59201bdb, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -211,7 +220,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "No ne \u017Ee bych se b\xE1l, ale m\u011Bl jsem na mysli
       sp\xED\u0161 n\u011Bco kdy nebudu muset bojovat."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
     dialogPartStartDuration: 6.06
     eventListSize: 1
@@ -281,7 +290,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Jo ch\xE1pu ka\u017Edej si jednou za \u010Das pot\u0159ebuje
       pro\u010Distit hlavu n\u011Bjakou norm\xE1ln\xED prac\xED."
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
+    dialogPartspeaker: {fileID: 11400000, guid: 86649ebb40309444a95142010667fd6f,
       type: 2}
     dialogPartStartDuration: 5.4
     eventListSize: 1
@@ -344,7 +353,7 @@ MonoBehaviour:
       \u0161\u0165astnejch kdy\u017E m\u016F\u017Eou jenom t\u0159eba pomoct d\u0159evorubc\u016Fm.
       Ka\u017Edop\xE1dn\u011B kdyby sis to rozmyslel, dej v\u011Bd\u011Bt, v\u0161echno
       ti vysv\u011Btlim."
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
+    dialogPartspeaker: {fileID: 11400000, guid: 86649ebb40309444a95142010667fd6f,
       type: 2}
     dialogPartStartDuration: 9
     eventListSize: 1
@@ -400,6 +409,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 4A564
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -423,7 +441,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 95bd3ac15bcf9a848901fe430079d6eb, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: a1e3b9d78930f2248b75deae59201bdb, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -432,4 +450,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
+  wasPlayed: 0
   destroyOnEnd: 0

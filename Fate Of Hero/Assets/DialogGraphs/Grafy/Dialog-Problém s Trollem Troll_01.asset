@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 58C349
+    - ID: 34A343
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -126,6 +126,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 34A343
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -149,7 +158,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: ea9a04426dcacdb4b92771088a9877b4, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: d1be6e8ae8e18c340bd473b95b0f5f92, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -210,7 +219,7 @@ MonoBehaviour:
     swapGraph: {fileID: 0}
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Dost, po\u010Dkej... Chci si promluvit."
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
     dialogPartStartDuration: 4
     eventListSize: 1
@@ -275,6 +284,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 34A343
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -298,7 +316,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: ea9a04426dcacdb4b92771088a9877b4, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: d1be6e8ae8e18c340bd473b95b0f5f92, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -307,4 +325,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
-  destroyOnEnd: 0
+  wasPlayed: 0
+  destroyOnEnd: 1

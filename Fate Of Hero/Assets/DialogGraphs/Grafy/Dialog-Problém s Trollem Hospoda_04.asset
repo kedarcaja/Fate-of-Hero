@@ -18,8 +18,8 @@ MonoBehaviour:
     ID: 0H096
     WindowRect:
       serializedVersion: 2
-      x: 62.19998
-      y: 367.40002
+      x: 269.19998
+      y: 358.39996
       width: 120
       height: 60
     WindowTitle: 
@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 1H595
+    - ID: 10T525
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -41,7 +41,7 @@ MonoBehaviour:
       removable: 1
     depencies: []
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -77,8 +77,8 @@ MonoBehaviour:
     ID: 0H196
     WindowRect:
       serializedVersion: 2
-      x: 252.20001
-      y: 367.40002
+      x: 459.2
+      y: 358.39996
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -117,8 +117,17 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 10T525
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -140,7 +149,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 61d6f10eaee7d03418c84c34948f8c6d, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: ea2b7c7d61ad3964bba9d5485913e448, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -154,8 +163,8 @@ MonoBehaviour:
     ID: 52T217
     WindowRect:
       serializedVersion: 2
-      x: 528.66943
-      y: 301.08575
+      x: 735.6694
+      y: 292.0857
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -186,7 +195,7 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -211,7 +220,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Tak j\xE1 bych teda o tu pr\xE1ci p\u0159ece jenom m\u011Bl
       z\xE1jem."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
+    dialogPartspeaker: {fileID: 11400000, guid: 86649ebb40309444a95142010667fd6f,
       type: 2}
     dialogPartStartDuration: 3.3
     eventListSize: 1
@@ -224,8 +233,8 @@ MonoBehaviour:
     ID: 46E394
     WindowRect:
       serializedVersion: 2
-      x: 757.5877
-      y: 478.57556
+      x: 964.58765
+      y: 469.5755
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -256,7 +265,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -282,7 +291,7 @@ MonoBehaviour:
     dialogPartSubtitles: "P\u0159\xEDslib zla\u0165\xE1k\u016F t\u011B nakonec p\u0159esv\u011Bd\u010Dil?
       Ale co je mi vlastn\u011B po tom co t\u011B p\u0159esv\u011Bd\u010Dilo, d\u016Fle\u017Eit\xFD
       je \u017Ee ses rozhodl to vz\xEDt. "
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
     dialogPartStartDuration: 7.3
     eventListSize: 1
@@ -295,8 +304,8 @@ MonoBehaviour:
     ID: 21H427
     WindowRect:
       serializedVersion: 2
-      x: 1008.53467
-      y: 485.05713
+      x: 1215.5348
+      y: 476.05707
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -342,7 +351,7 @@ MonoBehaviour:
     swapGraph: {fileID: 0}
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "A jak jsem sl\xEDbil v\u0161echno ti hned vysv\u011Btlim."
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
     dialogPartStartDuration: 2.3
     eventListSize: 1
@@ -358,8 +367,8 @@ MonoBehaviour:
     ID: 0H196
     WindowRect:
       serializedVersion: 2
-      x: 252.20001
-      y: 367.40002
+      x: 459.2
+      y: 358.39996
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -398,6 +407,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 10T525
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -421,7 +439,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 61d6f10eaee7d03418c84c34948f8c6d, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: ea2b7c7d61ad3964bba9d5485913e448, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -430,4 +448,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
+  wasPlayed: 1
   destroyOnEnd: 0

@@ -18,8 +18,8 @@ MonoBehaviour:
     ID: 18G062
     WindowRect:
       serializedVersion: 2
-      x: -2832.201
-      y: 270.1997
+      x: -1685.0001
+      y: 600.79926
       width: 120
       height: 60
     WindowTitle: 
@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 5G1582
+    - ID: 59J1597
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -41,7 +41,7 @@ MonoBehaviour:
       removable: 1
     depencies: []
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -77,8 +77,8 @@ MonoBehaviour:
     ID: 18G162
     WindowRect:
       serializedVersion: 2
-      x: -2642.2012
-      y: 270.1997
+      x: -1495.0009
+      y: 600.79926
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -126,8 +126,26 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 53J1511
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 59J1597
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -149,7 +167,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: bab06a2775d51db4ab9ade579ee23785, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: b4eb8c2f972a018498b76d11e70eac8e, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -163,8 +181,8 @@ MonoBehaviour:
     ID: 28H215
     WindowRect:
       serializedVersion: 2
-      x: -2337.202
-      y: 187.1999
+      x: -1190.0013
+      y: 517.8002
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -198,7 +216,7 @@ MonoBehaviour:
     nodeCompleted: 0
     deletable: 1
     focused: 0
-    executed: 0
+    executed: 1
     comment: 
     condition: 0
     parameter: 
@@ -221,9 +239,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Nechci t\u011B zab\xEDt... nechci nikoho zab\xEDjet... Myslel
       jsem... no \u017Ee kdy\u017E ti d\xE1m men\u0161\xED nakl\xE1da\u010Dku, \u017Ee
       zdrhne\u0161 jako v\u011Bt\u0161ina. "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 10.1
+    dialogPartStartDuration: 9
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -234,8 +252,8 @@ MonoBehaviour:
     ID: 58A316
     WindowRect:
       serializedVersion: 2
-      x: -2055.2002
-      y: 193.19987
+      x: -907.9994
+      y: 523.8
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -266,7 +284,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -291,9 +309,9 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Chci jenom m\xEDt klid. Co bys d\u011Blal ty, kdyby ti n\u011Bkdo
       lez po\u0159\xE1d do domu a sna\u017Eil se t\u011B zab\xEDt?"
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 6
+    dialogPartStartDuration: 5
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -304,8 +322,8 @@ MonoBehaviour:
     ID: 42H460
     WindowRect:
       serializedVersion: 2
-      x: -1806.8004
-      y: 378.99954
+      x: -659.59973
+      y: 709.59894
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -336,7 +354,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -361,7 +379,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "A to \u017Ee jsi to tu zabral t\u011Bm vesni\u010Dan\u016Fm
       s t\xEDm nem\xE1 co d\u011Blat?"
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
     dialogPartStartDuration: 3.3
     eventListSize: 1
@@ -374,8 +392,8 @@ MonoBehaviour:
     ID: 16H52
     WindowRect:
       serializedVersion: 2
-      x: -1563.4004
-      y: 205.79976
+      x: -416.1997
+      y: 536.3998
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -406,7 +424,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -432,9 +450,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Tohle ti \u0159ekli? J\xE1 tady \u017Eil je\u0161t\u011B
       p\u0159edt\xEDm ne\u017E tu byla n\u011Bj\xE1k\xE1 vesnice.\nDokonce jsem se
       s nima sna\u017Eil obchodovat, "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 7.2
+    dialogPartStartDuration: 6
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -445,8 +463,8 @@ MonoBehaviour:
     ID: 19T68
     WindowRect:
       serializedVersion: 2
-      x: -1282.4003
-      y: 206.79976
+      x: -135.1996
+      y: 537.3998
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -477,7 +495,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -502,9 +520,9 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "cht\u011Bli to \u017Eelezo, co se tu nach\xE1z\xED, tak
       jsem se s nima zkusil dohodnout, ale jim se to nel\xEDbilo."
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 5.5
+    dialogPartStartDuration: 5
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -515,8 +533,8 @@ MonoBehaviour:
     ID: 1J75
     WindowRect:
       serializedVersion: 2
-      x: -1014
-      y: 205.99977
+      x: 133.20004
+      y: 536.5998
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -547,7 +565,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -573,9 +591,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Prej \u017Ee se nebudou zabejvat t\xEDm co chci, \u017Ee
       je to tu te\u010F jejich a m\xE1m vypadnout. Kdy\u017E jsem odm\xEDtnul vr\xE1tili
       se v noci s vidlema a pochodn\u011Bma."
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 10
+    dialogPartStartDuration: 9
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -586,8 +604,8 @@ MonoBehaviour:
     ID: 41J835
     WindowRect:
       serializedVersion: 2
-      x: -739.19995
-      y: 209.79982
+      x: 407.99887
+      y: 540.39984
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -618,7 +636,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -643,9 +661,9 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Skoro m\u011B zabili ale poda\u0159ilo se mi zdrhonut. Trvalo
       to skoro t\u0159i roky ne\u017E jsem se dal dohromady. "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 6.5
+    dialogPartStartDuration: 6
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -656,8 +674,8 @@ MonoBehaviour:
     ID: 56H920
     WindowRect:
       serializedVersion: 2
-      x: -475.26416
-      y: 400.70618
+      x: 671.9346
+      y: 731.30554
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -688,7 +706,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -712,7 +730,7 @@ MonoBehaviour:
     swapGraph: {fileID: 0}
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Prej si n\u011Bkoho roztrhnul na dva kusy..."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
     dialogPartStartDuration: 2.1
     eventListSize: 1
@@ -725,8 +743,8 @@ MonoBehaviour:
     ID: 39E1011
     WindowRect:
       serializedVersion: 2
-      x: -253.20013
-      y: 217
+      x: 893.9985
+      y: 547.6
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -757,7 +775,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -782,7 +800,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Kdy\u017E m\u011B to nech\xE1\u0161 do\u0159\xEDct dostanu
       se k tomu..."
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
     dialogPartStartDuration: 3.2
     eventListSize: 1
@@ -795,8 +813,8 @@ MonoBehaviour:
     ID: 52C1134
     WindowRect:
       serializedVersion: 2
-      x: 5.399683
-      y: 219.80005
+      x: 1152.5985
+      y: 550.4001
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -827,7 +845,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -853,9 +871,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Potom co jsem se uzdravil m\u011B napadlo zkusit se s nima
       j\xEDt znova dohodnout. Ale nebylo to nic platn\xFD, sotva jsem p\u0159i\u0161el
       za\xFAto\u010Dili na m\u011B... "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 8.6
+    dialogPartStartDuration: 8.4
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -866,8 +884,8 @@ MonoBehaviour:
     ID: 57G1235
     WindowRect:
       serializedVersion: 2
-      x: 260.60007
-      y: 224.60004
+      x: 1407.7994
+      y: 555.2001
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -898,7 +916,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -923,9 +941,9 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Jeden z t\u011Bch parchant\u016F mi zaseknul krump\xE1\u010D
       do nohy... To jednoho prost\u011B nasere... "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 4.8
+    dialogPartStartDuration: 4
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -936,8 +954,8 @@ MonoBehaviour:
     ID: 54A1321
     WindowRect:
       serializedVersion: 2
-      x: 508.9993
-      y: 227.79997
+      x: 1656.1985
+      y: 558.4
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -968,7 +986,7 @@ MonoBehaviour:
       enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -993,7 +1011,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Ztratil jsem nervy a p\u0159etrhnul ho jak hada, ostatn\xED
       se dali na \xFAt\u011Bk kdy\u017E to vid\u011Bli. "
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
     dialogPartStartDuration: 6.2
     eventListSize: 1
@@ -1006,14 +1024,14 @@ MonoBehaviour:
     ID: 31G1493
     WindowRect:
       serializedVersion: 2
-      x: 745.7996
-      y: 232.40005
+      x: 1892.9995
+      y: 563.00006
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
     nodeColor:
       serializedVersion: 2
-      rgba: 4286545791
+      rgba: 4278255360
     collapse: 1
     drawNode: {fileID: 11400000, guid: 8d63587cf737e6341a5a4d609e843089, type: 2}
     previousCollapse: 0
@@ -1055,9 +1073,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Od t\xFD doby sem ob\u010Das p\u0159ijde akor\xE1t n\u011Bkdo
       koho zaplat\u011Bj aby se m\u011B zbavil m\xEDsto nich, ale a\u017E na tebe
       v\u0161ichni zdrhli po prvn\xEDch p\xE1r r\xE1nach co dostali."
-    dialogPartspeaker: {fileID: 11400000, guid: d3a64b63affba824a839c1dc410520bc,
+    dialogPartspeaker: {fileID: 11400000, guid: 211383aacaa403d4ab4493105ea45966,
       type: 2}
-    dialogPartStartDuration: 9
+    dialogPartStartDuration: 8
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -1071,8 +1089,8 @@ MonoBehaviour:
     ID: 18G162
     WindowRect:
       serializedVersion: 2
-      x: -2642.2012
-      y: 270.1997
+      x: -1495.0009
+      y: 600.79926
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -1120,8 +1138,26 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 53J1511
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 59J1597
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -1143,7 +1179,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: bab06a2775d51db4ab9ade579ee23785, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: b4eb8c2f972a018498b76d11e70eac8e, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -1152,4 +1188,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
-  destroyOnEnd: 0
+  wasPlayed: 0
+  destroyOnEnd: 1

@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 59J659
+    - ID: 34E681
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -41,7 +41,7 @@ MonoBehaviour:
       removable: 1
     depencies: []
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -109,6 +109,15 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 59J659
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 34E681
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -210,8 +219,7 @@ MonoBehaviour:
     swapGraph: {fileID: 0}
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "S trollem u\u017E nebudou pot\xED\u017Ee."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
-      type: 2}
+    dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 2.2
     eventListSize: 1
     dialogEvents: 
@@ -279,8 +287,7 @@ MonoBehaviour:
     swapGraph: {fileID: 0}
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "To r\xE1d sly\u0161\xEDm, co jsi s n\xEDm ud\u011Blal?"
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
-      type: 2}
+    dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 2.5
     eventListSize: 1
     dialogEvents: 
@@ -349,8 +356,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "P\u0159esv\u011Bd\u010Dil jsem ho \u017Ee bude lep\u0161\xED
       aby ode\u0161el."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
-      type: 2}
+    dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 3.2
     eventListSize: 1
     dialogEvents: 
@@ -410,8 +416,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "Opravdu? Nevim jak se ti to povedlo, ale odm\u011Bnu sis
       zaslou\u017Eil tak jako tak."
-    dialogPartspeaker: {fileID: 11400000, guid: 29d673304b109d748ac7c4065ef74d06,
-      type: 2}
+    dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 5.3
     eventListSize: 1
     dialogEvents: 
@@ -466,6 +471,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 34E681
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -498,4 +512,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
-  destroyOnEnd: 0
+  wasPlayed: 0
+  destroyOnEnd: 1

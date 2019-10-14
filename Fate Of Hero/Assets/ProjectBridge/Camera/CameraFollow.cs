@@ -25,6 +25,7 @@ public class CameraFollow : MonoBehaviour
 	{
         if (!Book.Instance.IsActive())
         {
+
             //float inputX = Input.GetAxis("RightStickHorizontal");
             //float inputZ = Input.GetAxis("RightStickVertical");
             mouseX = Input.GetAxis("Mouse Y");
@@ -41,7 +42,7 @@ public class CameraFollow : MonoBehaviour
 
 
         }
-	}
+    }
 	private void LateUpdate()
 	{
 		CameraUpdater();

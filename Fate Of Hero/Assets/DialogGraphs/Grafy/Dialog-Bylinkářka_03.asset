@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 14G311
+    - ID: 39G444
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -41,7 +41,7 @@ MonoBehaviour:
       removable: 1
     depencies: []
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -135,9 +135,18 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 39G444
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove:
     - 9T365
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -159,7 +168,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: a5bcc1f1dd65874448bd41aaf69808cf, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: 27561a08d55d70947a582fbeb24bdc0a, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -207,7 +216,7 @@ MonoBehaviour:
     transitionsIdsToRemove:
     - 56J478
     - 2H464
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -232,9 +241,9 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "U\u010D\xED\u0161 se rychle, hned na prvn\xED pokus se ti
       to povedlo, skv\u011Bl\xE1 pr\xE1ce. "
-    dialogPartspeaker: {fileID: 11400000, guid: b6129e9d59388984d8b8114849832abf,
+    dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 5.3
+    dialogPartStartDuration: 4.5
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -252,7 +261,7 @@ MonoBehaviour:
     WindowTitle: Dialog Subtitles
     nodeColor:
       serializedVersion: 2
-      rgba: 4286545791
+      rgba: 4278255360
     collapse: 1
     drawNode: {fileID: 11400000, guid: 8d63587cf737e6341a5a4d609e843089, type: 2}
     previousCollapse: 0
@@ -295,9 +304,9 @@ MonoBehaviour:
       za\u010D\xEDt znovu rozj\xED\u017Ed\u011Bt obchod, pokud bude\u0161 n\u011Bkdy
       pot\u0159ebovat n\u011Bj\xE1k\xE9 z\xE1soby a bude\u0161 pobl\xED\u017E zastav
       se, r\xE1da t\u011B uvid\xEDm."
-    dialogPartspeaker: {fileID: 11400000, guid: b6129e9d59388984d8b8114849832abf,
+    dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 10.5
+    dialogPartStartDuration: 10
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -311,8 +320,8 @@ MonoBehaviour:
     ID: 2A130
     WindowRect:
       serializedVersion: 2
-      x: 200
-      y: 200
+      x: 317.59995
+      y: 345.40005
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -323,14 +332,14 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: a11d35517dd91f44aac9bbcd1d8fc05e, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 41J463
-      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
+    - ID: 54C417
+      Color: {r: 1, g: 0, b: 1, a: 1}
       disabled: 0
       startPlacement: 6
       endPlacement: 7
       clicked: 0
       Value: 
-      enableClickPoint: 0
+      enableClickPoint: 1
       removable: 1
     depencies:
     - ID: 2A230
@@ -360,7 +369,26 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
-    transitionsIdsToRemove: []
+    - ID: 41J463
+      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 39G444
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    transitionsIdsToRemove:
+    - 9T365
     nodeCompleted: 0
     deletable: 1
     focused: 0
@@ -383,7 +411,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: a5bcc1f1dd65874448bd41aaf69808cf, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: 27561a08d55d70947a582fbeb24bdc0a, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -392,4 +420,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
-  destroyOnEnd: 0
+  wasPlayed: 0
+  destroyOnEnd: 1

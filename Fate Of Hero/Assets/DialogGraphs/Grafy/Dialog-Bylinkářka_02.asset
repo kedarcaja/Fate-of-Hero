@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 0C493
+    - ID: 1J446
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -41,7 +41,7 @@ MonoBehaviour:
       removable: 1
     depencies: []
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -144,8 +144,17 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 1J446
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -167,7 +176,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 6476cfda67ca30f4fbc79e980ac44a28, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: aa144397fdeddf24296196a308a98df2, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -213,7 +222,7 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     transitionsIdsToRemove: []
-    nodeCompleted: 0
+    nodeCompleted: 1
     deletable: 1
     focused: 0
     executed: 0
@@ -239,9 +248,9 @@ MonoBehaviour:
     dialogPartSubtitles: "Nesu hned dv\u011B dobr\xE9 zpr\xE1vy. Ti kostlivci u\u017E
       nep\u0159edstavuj\xED nebezpe\u010D\xED a m\xE1m v\u0161echny byliny kter\xE9
       jste cht\u011Bla."
-    dialogPartspeaker: {fileID: 11400000, guid: a322af98e53444c4d920d5a58c90f206,
+    dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
-    dialogPartStartDuration: 8
+    dialogPartStartDuration: 7
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -259,7 +268,7 @@ MonoBehaviour:
     WindowTitle: Dialog Subtitles
     nodeColor:
       serializedVersion: 2
-      rgba: 4286545791
+      rgba: 4278255360
     collapse: 1
     drawNode: {fileID: 11400000, guid: 8d63587cf737e6341a5a4d609e843089, type: 2}
     previousCollapse: 0
@@ -300,7 +309,7 @@ MonoBehaviour:
     dialogAudioClip: {fileID: 0}
     dialogPartSubtitles: "D\u011Bkuju. Tady m\xE1\u0161 n\u011Bco m\xE1lo od cesty
       a jdeme t\u011B nau\u010Dit ten elix\xEDr."
-    dialogPartspeaker: {fileID: 11400000, guid: b6129e9d59388984d8b8114849832abf,
+    dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
     dialogPartStartDuration: 4.7
     eventListSize: 1
@@ -383,6 +392,15 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 1J446
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 0
     deletable: 1
@@ -406,7 +424,7 @@ MonoBehaviour:
     alwaysCheckConditions: 
     alwaysCheckCoun: 1
     swapGraph: {fileID: 0}
-    dialogAudioClip: {fileID: 8300000, guid: 6476cfda67ca30f4fbc79e980ac44a28, type: 3}
+    dialogAudioClip: {fileID: 8300000, guid: aa144397fdeddf24296196a308a98df2, type: 3}
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
@@ -415,4 +433,5 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
-  destroyOnEnd: 0
+  wasPlayed: 0
+  destroyOnEnd: 1

@@ -1,41 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FourGames;
 
 public class Test : MonoBehaviour
 {
-  
-    [SerializeField]
-    private int zivor;
+    //public Transform game;
+    //CharacterScript characterScript;
 
+    //    private void Awake()
+    //{
+    //    characterScript.GetComponent<CharacterScript>();
+    //}
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.O))
+    //    {
 
-    [SerializeField]
-    private Stats health;
-  
-   
+    //        characterScript.TakeDamage(25,game);
 
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.P))
+    //    {
+            
 
+    //    }
 
-    private void Awake()
-    {
-        health.Initialize();
-       
-
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            health.CurrentVal -= 10;
-          
-
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            health.CurrentVal += 10;
-         
-        }
-
-    }
+    //}
 }

@@ -37,7 +37,7 @@ namespace BehaviourEditor
 			}
 			if (t != null && t.GetComponent<RandomMoveArea>() != null && !b.randomSet)
 			{
-				b.BehaviourGraph.character.RandomMove(t.GetComponent<RandomMoveArea>());
+			//	b.BehaviourGraph.character.RandomMove(t.GetComponent<RandomMoveArea>());
 				b.randomSet = true;
 			}
 			if (b.randomSet && b.BehaviourGraph.character.AgentReachedTarget())

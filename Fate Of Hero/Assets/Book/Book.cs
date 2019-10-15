@@ -14,6 +14,9 @@ public class Book : MonoBehaviour
 
     private CanvasGroup group;
 
+    [SerializeField]
+    private CanvasGroup map;
+
     public static Book Instance { get; private set; }
 
     private void Awake()
@@ -35,7 +38,24 @@ public class Book : MonoBehaviour
                 Open();
             }
             
-        } 
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (map.alpha == 0)
+            {
+                map.alpha = 1;
+                map.blocksRaycasts = true;
+                MouseManager.Instance.EnableCursor();
+            }
+            else
+            {
+                map.alpha = 0;
+                map.blocksRaycasts = false;
+                MouseManager.Instance.EnableCursor();
+            }
+
+        }
     }
     public bool IsActive()
     {

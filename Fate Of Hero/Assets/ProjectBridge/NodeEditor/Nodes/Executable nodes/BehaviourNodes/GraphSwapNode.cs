@@ -23,7 +23,7 @@ namespace NodeEditor
 
         public override void Execute(BaseNode b)
         {
-            b.BehaviourGraph.character.currentGraph = b.swapGraph;
+           // b.BehaviourGraph.character.currentGraph = b.swapGraph;
             b.BehaviourGraph.character.InitGraph();
             b.nodeCompleted = true;
         }

@@ -52,8 +52,8 @@ namespace NodeEditor
         protected virtual void Awake()
         {
 #if UNITY_EDITOR
-            DialogEditor.DialogEditor.DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder; ;
-            BehaviourEditor.BehaviourEditor.DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
+            DialogEditor.DialogEditor.DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder; ;
+            BehaviourEditor.BehaviourEditor.DrawNodes = AssetDatabase.LoadAssetAtPath("Assets/ProjectBridge/NodeEditor/Resources/DrawNodesHolder.asset", typeof(DrawNodeHolder)) as DrawNodeHolder;
 #endif
         }
 

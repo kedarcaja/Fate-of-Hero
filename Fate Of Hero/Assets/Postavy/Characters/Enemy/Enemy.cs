@@ -12,6 +12,7 @@ public class Enemy : Entity, IEnemyNPC
 {
    // [SerializeField]
  //   private EntityTimePlan timePlan;
+ [Header("Enemy")]
     [Tooltip("HearRadius")]
     [SerializeField]
     private float hearRadius;
@@ -29,5 +30,4 @@ public class Enemy : Entity, IEnemyNPC
     public bool CanDive { get => canDive; }
     //  public EntityTimePlan TimePlan { get => timePlan; set => timePlan = value; }
   
-    public bool IsOneHitEnemy => isOneHitEnemy;
 }

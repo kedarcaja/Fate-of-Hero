@@ -33,7 +33,6 @@ namespace FourGames
         protected override void Awake()
         {
             base.Awake();
-            Health.Initialize();
             Instance = FindObjectOfType<PlayerScript>();
 
         }

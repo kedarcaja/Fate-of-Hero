@@ -1,11 +1,13 @@
 ﻿namespace Data
 {
+    using InventorySystem;
     using UnityEngine;
     public enum ECharacterClass { Warior, Archer }
     public enum EWork { Lamberjack, Miner, Baker, InnKeeper }
     public enum EMood { Angry, Scared, Sad, Happy }
     public class Character : ScriptableObject
     {
+        [Header("Character")]
 
         [HideInInspector]
         public ECharacterClass CharacterClass;
@@ -19,10 +21,13 @@
         public Color Color;
         [HideInInspector]
         public int Level;
+
+        [SerializeField]
+        private BagSaver characterBag;
         public override string ToString()
         {
 
-            return string.Format("<color=#" + ColorUtility.ToHtmlStringRGBA(Color) + ">" + name + "</color>");
+            return string.Format($"<color=#{ColorUtility.ToHtmlStringRGBA(Color)}>{ name}</color>");
         }
 
         #region Stats
@@ -228,6 +233,7 @@
 
         public float CombatRadius { get => combatRadius > 0 ? combatRadius : 0; set => combatRadius = value; }
         public float InteractionRadius { get => interactionRadius > 0 ? interactionRadius : 0; set => interactionRadius = value; }
+        public BagSaver CharacterBag  => characterBag; 
 
         #endregion
 

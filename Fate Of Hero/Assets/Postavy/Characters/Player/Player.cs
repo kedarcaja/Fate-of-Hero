@@ -5,13 +5,20 @@ namespace Data
     [CreateAssetMenu(menuName = "CharacterData/Player", fileName = "NewPlayer")]
     public class Player : Entity
     {
+        [Space]
+        [Header("Player")]
+
         [SerializeField]
-        private int currentFury, maxFury, currentConspicuity, maxConspicuity,
-                    currentNoiseLevel, maxNoiseLevel, currentSmellLevel, maxSmellLevel;
+        private int currentFury;
+        private int maxFury,
+                    currentConspicuity,
+                    maxConspicuity,
+                    currentNoiseLevel,
+                    maxNoiseLevel,
+                    currentSmellLevel,
+                    maxSmellLevel;
 
-       // [SerializeField]
-    //    private BarStats XPBar, healthBar, staminaBar, furyBar, conspicuityBar, noisyBar, smellBar, tiredBar, foodBar, drinkBar;
-
+   
         [SerializeField]
         private float poisonRate, currentTiredLevel, maxTiredLevel,
                      currentDrink, maxDrink, currentFood, maxFood, overEat, currentXP, maxXP;
@@ -27,7 +34,6 @@ namespace Data
         {
             get
             {
-         //       XPBar.CurrentVal = currentXP;
                 return currentXP;
             }
 
@@ -41,7 +47,6 @@ namespace Data
         {
             get
             {
-          //      XPBar.MaxVal = maxXP;
                 return maxXP;
             }
 
@@ -71,7 +76,6 @@ namespace Data
             {
 
 
-            //    furyBar.CurrentVal = currentFury;
                 return currentFury;
             }
 
@@ -85,7 +89,6 @@ namespace Data
         {
             get
             {
-          //      furyBar.MaxVal = maxFury;
                 return maxFury;
             }
 
@@ -99,7 +102,6 @@ namespace Data
         {
             get
             {
-            //    conspicuityBar.CurrentVal = currentConspicuity;
                 return currentConspicuity;
             }
 
@@ -113,7 +115,6 @@ namespace Data
         {
             get
             {
-           //     conspicuityBar.MaxVal = maxConspicuity;
                 return maxConspicuity;
             }
 
@@ -127,7 +128,6 @@ namespace Data
         {
             get
             {
-             //   noisyBar.CurrentVal = currentNoiseLevel;
                 return currentNoiseLevel;
             }
 
@@ -141,7 +141,6 @@ namespace Data
         {
             get
             {
-             //   noisyBar.MaxVal = maxNoiseLevel;
                 return maxNoiseLevel;
             }
 
@@ -155,7 +154,6 @@ namespace Data
         {
             get
             {
-               // smellBar.CurrentVal = currentSmellLevel;
                 return currentSmellLevel;
             }
 
@@ -169,7 +167,6 @@ namespace Data
         {
             get
             {
-              //  smellBar.MaxVal = maxSmellLevel;
                 return maxSmellLevel;
             }
 
@@ -183,7 +180,6 @@ namespace Data
         {
             get
             {
-              // tiredBar.CurrentVal = currentTiredLevel;
                 return currentTiredLevel;
             }
 
@@ -198,7 +194,6 @@ namespace Data
         {
             get
             {
-              //  tiredBar.MaxVal = maxTiredLevel;
                 return maxTiredLevel;
             }
 
@@ -213,7 +208,6 @@ namespace Data
             get
             {
 
-            //    drinkBar.CurrentVal = currentDrink;
                 return currentDrink;
             }
 
@@ -227,7 +221,6 @@ namespace Data
         {
             get
             {
-              //  drinkBar.MaxVal = maxDrink;
                 return maxDrink;
             }
 
@@ -241,7 +234,6 @@ namespace Data
         {
             get
             {
-               // foodBar.CurrentVal = currentFood;
                 return currentFood;
             }
 
@@ -255,7 +247,6 @@ namespace Data
         {
             get
             {
-            //    foodBar.MaxVal = maxFood;
                 return maxFood;
             }
 

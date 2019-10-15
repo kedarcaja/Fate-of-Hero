@@ -25,12 +25,12 @@ namespace FourGames
         [SerializeField]
         protected float minSpeed = 3;
         [SerializeField]
-        private Stats health;
+        protected Stats healthBar;
 
         public NavMeshAgent Agent { get => agent; }
         public Character CharacterData { get => characterData; }
         public Animator Animator { get => anim; }
-        public Stats Health { get => health; set => health = value; }
+
 
         protected virtual void Awake()
         {
@@ -41,9 +41,9 @@ namespace FourGames
 
         private void UpdateHealth()
         {
-            if (health != null) 
+            if (healthBar != null) 
             {
-                health.CurrentVal = characterData.Health;
+                healthBar.CurrentVal = characterData.Health;
             }
         }
 
@@ -56,7 +56,6 @@ namespace FourGames
             float dist = agent.remainingDistance;
             return (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance) && agent.velocity == Vector3.zero ;
         }
-
 
         public float GetDistanceFrom(Transform target)
         {
@@ -84,15 +83,23 @@ namespace FourGames
         }
         public virtual void TakeDamage(float Damage, Transform attacker)
         {
+            characterData.Health -= Damage;
             if (IsAlive())
             {
                 UpdateHealth();
-                characterData.Health -= Damage;
                 anim.CrossFade("Dodge", Time.deltaTime);
             }
             else
             {
-                anim.CrossFade("Die", Time.deltaTime);
+                Destroy(anim);
+                Destroy(agent);
+                Destroy(GetComponent<Collider>());
+
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    //destroys ragdoll colliders
+                    Destroy(transform.GetChild(i).GetComponent<Collider>());
+                }
             }
         }
         public virtual bool IsAlive()

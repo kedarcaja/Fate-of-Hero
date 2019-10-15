@@ -4,6 +4,9 @@ namespace Data
 {
     public abstract class Entity : Character
     {
+        [Space]
+        [Header("Entity")]
+
         [SerializeField]
         private int armor;
         [SerializeField]

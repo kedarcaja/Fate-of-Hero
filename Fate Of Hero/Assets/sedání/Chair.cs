@@ -11,7 +11,6 @@ public class Chair : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
         if (!sittingOn)
         {
             isWalkingTowards = true;
@@ -23,15 +22,11 @@ public class Chair : MonoBehaviour
         {
             anim = character.GetComponent<Animator>();
         }
-  
-
     
     void Update()
     {
-        Debug.Log(isWalkingTowards);
         if (isWalkingTowards == true)
         {
-            Debug.Log("isWalkingTowards");
             Vector3 targetDir;
             targetDir = new Vector3(transform.position.x - character.transform.position.x, 0f,
                transform.position.z - character.transform.position.z);

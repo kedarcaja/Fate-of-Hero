@@ -6,39 +6,42 @@ namespace InventorySystem
 {
     public class ChestScript : MonoBehaviour
     {
-        [SerializeField]
-        private Chest chest;
+     
         private Animator animator;
         private bool isOpen = false;
+
+        public Bag Bag { get; private set; }
+
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            Bag = GetComponent<Bag>();
+
         }
         void Open()
         {
-
-
-            animator.SetBool("open", true);
-            chest.Open();
-            isOpen = true;
+            if (animator)
+                animator.SetBool("open", true);
+            InventoryManager.Instance.Chest.Open(this);
             Book.Instance.Open();
+            isOpen = true;
 
         }
 
         void Close()
         {
-
-            animator.SetBool("open", false);
-            chest.Close();
-            isOpen = false;
+            if (animator)
+                animator.SetBool("open", false);
+            InventoryManager.Instance.Chest.Close(this);
             Book.Instance.Close();
+            isOpen = false;
 
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (isOpen)
+            if (isOpen && other.transform.root.name == "lootTrigger")
             {
                 Close();
             }
@@ -46,8 +49,7 @@ namespace InventorySystem
 
         private void OnTriggerStay(Collider other)
         {
-           
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && other.name == "lootTrigger")
             {
                 if (!isOpen)
                 {
@@ -57,7 +59,6 @@ namespace InventorySystem
                 {
                     Close();
                 }
-
             }
         }
     }

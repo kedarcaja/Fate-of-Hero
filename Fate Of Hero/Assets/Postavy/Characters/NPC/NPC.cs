@@ -3,8 +3,10 @@ using UnityEngine;
 namespace Data
 {
     [CreateAssetMenu(menuName = "CharacterData/NPC", fileName = "NewNPCDATA")]
-    public class NPC : Character//, IEnemyNPC
+    public class NPC : Character, IEnemyNPC
     {
+        [Space]
+        [Header("NPC")]
         //[SerializeField]
       //  private EntityTimePlan timePlan;
         [Tooltip("HearRadius")]

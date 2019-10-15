@@ -25,6 +25,9 @@ namespace InventorySystem
 
         public BagSaver Saver { get => saver; set => saver = value; }
 
+        public int SlotsInRow { get => slotsInRow; set => slotsInRow = value; }
+        public int MaxBagLevel { get => maxBagLevel; set => maxBagLevel = value; }
+
         #endregion
 
         #region Unity Methods
@@ -41,19 +44,19 @@ namespace InventorySystem
         #endregion
 
         #region Drawing Methods
-        private void DrawLayout()
+        public void DrawLayout()
         {
-            if (!saver.StaticLayout)
+            if (saver&&!saver.StaticLayout)
             {
                 RemoveSlotsFromTransform();
-               
+
                 for (int i = 0; i < saver.Level; i++)
                 {
                     DrawRow();
                 }
                 for (int i = 0; i < slots.Count; i++)
                 {
-                   
+
                     slots[i].Saver = saver.Slots[i];
                 }
             }
@@ -73,7 +76,7 @@ namespace InventorySystem
         }
         private void DrawRow()
         {
-            for (int i = 0; i <  slotsInRow; i++)
+            for (int i = 0; i < slotsInRow; i++)
             {
                 GameObject g = Instantiate(InventoryManager.Instance.SlotTemplate);
                 g.transform.SetParent(this.transform);
@@ -94,7 +97,7 @@ namespace InventorySystem
             }
             else
             {
-                //TODO drop or return to start slot
+              //  InventoryManager.Instance.DropItem(item);
                 Debug.Log("<color=red>Item was dropped</color>");
             }
         }
@@ -104,6 +107,8 @@ namespace InventorySystem
             {
                 Add(item);
             }
+
+
         }
         public Slot SlotForItem(Item item)
         {

@@ -25,9 +25,12 @@ namespace FourGames
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.transform.root.CompareTag("Character") && isGivingDamage &&other.transform.root != owner.transform)
+            if (other.transform.root.CompareTag("Character") && isGivingDamage)
             {
-                other.transform.root.GetComponent<CharacterScript>().TakeDamage(damage,transform);
+                if(owner != null && other.transform.root != owner.transform)
+                {
+                    other.transform.root.GetComponent<CharacterScript>().TakeDamage(damage,transform);
+                }
             }
         }
     }

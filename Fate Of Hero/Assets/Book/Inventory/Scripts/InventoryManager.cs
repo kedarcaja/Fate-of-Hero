@@ -1,6 +1,8 @@
-﻿using System;
+﻿using FourGames;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UI.Components;
 using UnityEditor;
 using UnityEngine;
@@ -58,19 +60,30 @@ namespace InventorySystem
         private CharacterPanel characterPanel;
         [SerializeField]
         private Inventory inventory;
-       
-        [SerializeField]
-        private DropInventory dropInventory;
+
+
 
         public Inventory Inventory => inventory;
-        public DropInventory DropInventory => dropInventory;
         public CharacterPanel CharacterPanel => characterPanel;
 
-        
-        
-       
+
+        [Space]
+        [Header("Drop")]
+        [SerializeField]
+        private List<BagSaver> dropSavers = new List<BagSaver>();
+
+        [SerializeField]
+        private GameObject dropSackFyzical;
+
+        [SerializeField]
+        private Chest chest;
+        [SerializeField]
+        private List<ChestScript> drops = new List<ChestScript>();
+
+
 
         public static InventoryManager Instance { get; private set; }
+        public Chest Chest => chest;
 
         #endregion
 
@@ -118,10 +131,6 @@ namespace InventorySystem
         public Bag GetCurrentlyOpenedBag()
         {
             return inventoryCategoriesSwitches.Current.Target.GetComponent<Bag>();
-        }
-        public void DropItem(Slot from)
-        {
-          
         }
 
         #endregion
@@ -307,8 +316,72 @@ namespace InventorySystem
         }
         #endregion
 
+        #region Drop Methods
+        public void DropItemFromSlot(Slot from)
+        {
+            for (int i = 0; i < from.ItemCount; i++)
+            {
+                DropItem(from.Peek());
 
+            }
+            from.Clear();
+        }
+        public void DropItem(Item item)
+        {
+            Instantiate(dropSackFyzical, FindObjectOfType<PlayerScript>().transform.forward, Quaternion.identity).GetComponent<Bag>();
+        }
+        public void DropDraged()
+        {
+            if (ExistingSaverDrop() || NewSaverForDrop())
+            {
+            
+                ChestScript c = ExistingSaverDrop();
+                if (c == null)
+                {
+                    // spawn object
+                    float angle = UnityEngine.Random.Range(0.0f, Mathf.PI * 1.1f);
+                    Vector3 V = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
 
+                     c = Instantiate(dropSackFyzical, FindObjectOfType<PlayerScript>().transform.position + V, Quaternion.identity).GetComponent<ChestScript>();
+                     c.Bag.Saver = NewSaverForDrop();
+                    drops.Add(c);
+                    c.Bag.MaxBagLevel = 1;
+                    c.Bag.Saver.Level = 1;
+                    c.Bag.SlotsInRow = 6;
+
+                }
+                else
+                {
+                    c.Bag.Saver = ExistingSaverDrop().Bag.Saver;
+                }
+
+              
+                c.Bag.DrawLayout();
+                c.Bag.Add(dragedFrom.Peek(), dragedFrom.ItemCount);
+                dragedFrom.Clear();
+            }
+            StopDrag();
+        }
+        public BagSaver NewSaverForDrop()
+        {
+            return dropSavers.Find(d => !d.Slots.Exists(s => s.Items.Count > 1));
+        }
+        public ChestScript ExistingSaverDrop()
+        {
+            foreach (ChestScript c in drops)
+            {
+                Vector3 dp = c.transform.position;
+                Vector3 pp = FindObjectOfType<PlayerScript>().transform.position;
+
+                if (Vector3.Distance(pp, dp) <= 10 && c.Bag.Saver.Slots.Exists(e=>e.Items.Count == 0))
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
+       
+        #endregion
 
         #region  Unity Editor
 #if UNITY_EDITOR
@@ -372,5 +445,7 @@ namespace InventorySystem
         }
 #endif
         #endregion
+
+
     }
 }

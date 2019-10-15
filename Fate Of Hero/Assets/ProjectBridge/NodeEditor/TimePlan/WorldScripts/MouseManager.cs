@@ -11,7 +11,7 @@ public class MouseManager : MonoBehaviour
 	
     [SerializeField]
 	private Texture2D pointerUI;   
-	public static MouseManager Instance;
+	public static MouseManager Instance { get; private set; }
   
 	private void Awake()
 	{

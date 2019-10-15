@@ -44,14 +44,12 @@ public class Book : MonoBehaviour
         {
             if (map.alpha == 0)
             {
-                map.alpha = 1;
-                map.blocksRaycasts = true;
+                map.Active(true);
                 MouseManager.Instance.EnableCursor();
             }
             else
             {
-                map.alpha = 0;
-                map.blocksRaycasts = false;
+                map.Deactive(true);
                 MouseManager.Instance.EnableCursor();
             }
 
@@ -63,7 +61,7 @@ public class Book : MonoBehaviour
     }
     public void Open()
     {
-      if (!group.IsActive(true))
+      if (!IsActive())
         {
             group.Active(true);
             MouseManager.Instance.EnableCursor();
@@ -74,7 +72,7 @@ public class Book : MonoBehaviour
 
     public void Close()
     {
-        if (group.IsActive(true))
+        if (IsActive())
         {
             group.Deactive(true);
             MouseManager.Instance.DisableCursor();

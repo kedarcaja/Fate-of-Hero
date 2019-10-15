@@ -50,7 +50,9 @@ namespace DialogEditor
                             EditorGUILayout.LabelField("Item: ");
 #endif
                             ItemReward it = b.addItems[i];
+#if UNITY_EDITOR
                             it.Item = EditorGUILayout.ObjectField(it.Item, typeof(Item), false) as Item;
+#endif
 #if UNITY_EDITOR
                             EditorGUILayout.LabelField("count: ");
                             it.Count = EditorGUILayout.IntField(it.Count);

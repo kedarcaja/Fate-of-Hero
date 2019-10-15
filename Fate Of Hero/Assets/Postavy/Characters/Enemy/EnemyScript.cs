@@ -9,7 +9,7 @@ namespace FourGames
        
         protected override void Update()
         {
-            if (IsAlive())
+            if (IsAlive() && GetDistanceFrom(FindObjectOfType<PlayerScript>().transform.position) <= 20 && FindObjectOfType<PlayerScript>().IsAlive())
             {
                 if (AgentReachedTarget() )
                 {

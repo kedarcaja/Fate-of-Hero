@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bf9858a336780d469289d12505aec86, type: 3}
-  m_Name: Kostra0Data
+  m_Name: KostraData
   m_EditorClassIdentifier: 
   CharacterClass: 0
   Work: 0
   Mood: 0
   Portait: {fileID: 0}
-  Color: {r: 1, g: 0, b: 0, a: 1}
-  Level: 1
-  combatRadius: 1
+  Color: {r: 0, g: 0, b: 0, a: 1}
+  Level: 0
+  characterBag: {fileID: 0}
+  combatRadius: 0
   interactionRadius: 0
-  health: 100
+  health: 0
   maxHealth: 100
-  stamina: 100
-  maxStamina: 100
+  stamina: 0
+  maxStamina: 0
   minDamage: 0
   maxDamage: 0
   fireResistance: 0
@@ -41,7 +42,7 @@ MonoBehaviour:
   charisma: 0
   runSpeed: 0
   walkSpeed: 0
-  armor: 10
+  armor: 0
   regeneration: 0
   chanceToCritical: 0
   chanceToStunt: 0

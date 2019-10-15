@@ -22,12 +22,11 @@ namespace FourGames
 
         [SerializeField]
         private float animationCrossSpeed = 1;
-        protected bool canAttack = true, canMove = true;
+       
 
         public static PlayerScript Instance { get; private set; }
 
-        [SerializeField]
-        private Sword sword;
+      
 
 
         protected override void Awake()
@@ -38,6 +37,8 @@ namespace FourGames
         }
         protected override void Update()
         {
+            if (!IsAlive()) return;
+
 
             HandleMove();
             HandleJump();
@@ -127,41 +128,6 @@ namespace FourGames
                 anim.CrossFade("Jump", Time.deltaTime);
             }
         }
-        public void EnableAttack()
-        {
-            canAttack = true;
-            
-        }
-        public void DisableAttack()
-        {
-            canAttack = false;
-            DisableMove();
 
-        }
-        public void SetGrounded()
-        {
-            EnableMove();
-        }
-     
-        public void EnableDamage()
-        {
-            sword.EnableDamage();
-        }
-        public void DisableDamage()
-        {
-            sword.DisableDamage();
-        }
-        
-        public void DisableMove()
-        {
-            agent.updatePosition = false;
-            agent.isStopped = true;
-           
-        }
-        public void EnableMove()
-        {
-            agent.isStopped = false;
-            agent.updatePosition = true;
-        }
     }
 }

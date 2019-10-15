@@ -27,10 +27,11 @@ namespace FourGames
         {
             if (other.transform.root.CompareTag("Character") && isGivingDamage)
             {
-                if(owner != null && other.transform.root != owner.transform)
+               if((owner != null && other.transform.root != owner.transform) || owner == null)
                 {
                     other.transform.root.GetComponent<CharacterScript>().TakeDamage(damage,transform);
                 }
+                isGivingDamage = false;
             }
         }
     }

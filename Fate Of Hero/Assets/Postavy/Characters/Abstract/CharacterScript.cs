@@ -14,7 +14,7 @@ namespace FourGames
     {
         [Header("Character")]
         protected NavMeshAgent agent;
-       
+
         protected Rigidbody rigid;
         protected Animator anim;
         protected bool IsRunning = false;
@@ -27,21 +27,37 @@ namespace FourGames
         [SerializeField]
         protected Stats healthBar;
 
+
+        [SerializeField]
+        protected Sword sword;
+
         public NavMeshAgent Agent { get => agent; }
         public Character CharacterData { get => characterData; }
         public Animator Animator { get => anim; }
 
+        protected bool canAttack = true, canMove = true;
 
         protected virtual void Awake()
         {
             anim = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
+
             rigid = GetComponent<Rigidbody>();
+
+        }
+        private void Start()
+        {
+            if (healthBar != null)
+            {
+                healthBar.MaxVal = characterData.MaxHealth;
+                healthBar.CurrentVal = characterData.MaxHealth;
+                healthBar.Initialize();
+            }
         }
 
         private void UpdateHealth()
         {
-            if (healthBar != null) 
+            if (healthBar != null)
             {
                 healthBar.CurrentVal = characterData.Health;
             }
@@ -49,12 +65,13 @@ namespace FourGames
 
         protected virtual void Update()
         {
+            if (!IsAlive()) return;
             anim.SetFloat("magnitudeSpeed", agent.velocity.magnitude);
         }
         public bool AgentReachedTarget()
         {
             float dist = agent.remainingDistance;
-            return (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance) && agent.velocity == Vector3.zero ;
+            return (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance) && agent.velocity == Vector3.zero;
         }
 
         public float GetDistanceFrom(Transform target)
@@ -84,27 +101,71 @@ namespace FourGames
         public virtual void TakeDamage(float Damage, Transform attacker)
         {
             characterData.Health -= Damage;
+            UpdateHealth();
+
             if (IsAlive())
             {
-                UpdateHealth();
                 anim.CrossFade("Dodge", Time.deltaTime);
             }
             else
             {
-                Destroy(anim);
-                Destroy(agent);
-                Destroy(GetComponent<Collider>());
-
-                for (int i = 0; i < transform.childCount; i++)
+                if (this is PlayerScript)
                 {
-                    //destroys ragdoll colliders
-                    Destroy(transform.GetChild(i).GetComponent<Collider>());
+                    anim.CrossFade("Die", Time.deltaTime);
+                }
+                else
+                {
+                    Destroy(anim);
+                    Destroy(agent);
+                    Destroy(GetComponent<Collider>());
+
+                    for (int i = 0; i < transform.childCount; i++)
+                    {
+                        //destroys ragdoll colliders
+                        Destroy(transform.GetChild(i).GetComponent<Collider>());
+                    }
                 }
             }
         }
         public virtual bool IsAlive()
         {
             return characterData.IsAlive;
+        }
+        public void EnableAttack()
+        {
+            canAttack = true;
+
+        }
+        public void DisableAttack()
+        {
+            canAttack = false;
+            DisableMove();
+
+        }
+        public void SetGrounded()
+        {
+            EnableMove();
+        }
+
+        public void EnableDamage()
+        {
+            sword.EnableDamage();
+        }
+        public void DisableDamage()
+        {
+            sword.DisableDamage();
+        }
+
+        public void DisableMove()
+        {
+            agent.updatePosition = false;
+            agent.isStopped = true;
+
+        }
+        public void EnableMove()
+        {
+            agent.isStopped = false;
+            agent.updatePosition = true;
         }
     }
 }

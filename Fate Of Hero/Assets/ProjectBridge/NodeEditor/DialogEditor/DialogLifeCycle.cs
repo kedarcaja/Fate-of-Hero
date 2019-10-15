@@ -38,7 +38,7 @@ namespace DialogEditor
             }
 
 
-            Debug.Log(IsPlaying());
+
         }
 
         public void Skip()

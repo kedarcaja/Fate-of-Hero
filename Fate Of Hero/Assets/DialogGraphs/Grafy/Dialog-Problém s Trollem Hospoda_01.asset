@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 28A779
+    - ID: 52C671
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -89,7 +89,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: a11d35517dd91f44aac9bbcd1d8fc05e, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 34H37
+    - ID: 5E722
       Color: {r: 1, g: 0.54901963, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -136,6 +136,15 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 28A779
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 52C671
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -211,6 +220,15 @@ MonoBehaviour:
       clicked: 0
       Value: 
       enableClickPoint: 0
+      removable: 1
+    - ID: 8C750
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
       removable: 1
     transitionsIdsToRemove: []
     nodeCompleted: 1
@@ -403,7 +421,16 @@ MonoBehaviour:
     collapse: 1
     drawNode: {fileID: 11400000, guid: 8d63587cf737e6341a5a4d609e843089, type: 2}
     previousCollapse: 0
-    transitions: []
+    transitions:
+    - ID: 22G891
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
+      removable: 1
     depencies:
     - ID: 29C677
       Color: {r: 1, g: 0, b: 1, a: 1}
@@ -448,6 +475,137 @@ MonoBehaviour:
     addItems: []
     decisionSelectedOption: 10
     decided: 0
+  - BehaviourGraph: {fileID: 0}
+    DialogGraph: {fileID: 11400000}
+    ID: 56J669
+    WindowRect:
+      serializedVersion: 2
+      x: 541
+      y: 627
+      width: 200
+      height: 340
+    WindowTitle: Event
+    nodeColor:
+      serializedVersion: 2
+      rgba: 4286545791
+    collapse: 0
+    drawNode: {fileID: 11400000, guid: 181ea9981e1050b449a07f8b1dbd8362, type: 2}
+    previousCollapse: 0
+    transitions:
+    - ID: 8C750
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
+      removable: 1
+    depencies:
+    - ID: 5E722
+      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    transitionsIdsToRemove: []
+    nodeCompleted: 0
+    deletable: 1
+    focused: 0
+    executed: 0
+    comment: 
+    condition: 0
+    parameter: 
+    AnimatorActivatorType: 0
+    AnimatorActivatorBoolValue: 0
+    AnimatorActivatorIntValue: 0
+    AnimatorActivatorFloatValue: 0
+    animationLayer: 0
+    animatorController: {fileID: 0}
+    delay: 0
+    randomMoveArea: 
+    randomSet: 0
+    portalTargetNodeID: 
+    destinationTarget: {fileID: 0}
+    destinationTargetName: 
+    alwaysCheckConditions: 
+    alwaysCheckCoun: 1
+    swapGraph: {fileID: 0}
+    dialogAudioClip: {fileID: 0}
+    dialogPartSubtitles: 
+    dialogPartspeaker: {fileID: 0}
+    dialogPartStartDuration: 0
+    eventListSize: 1
+    dialogEvents: 03000000
+    addItems:
+    - Count: 0
+      Item: {fileID: 0}
+    decisionSelectedOption: 10
+    decided: 0
+  - BehaviourGraph: {fileID: 0}
+    DialogGraph: {fileID: 11400000}
+    ID: 12T750
+    WindowRect:
+      serializedVersion: 2
+      x: 1771.9768
+      y: 692.8838
+      width: 200
+      height: 340
+    WindowTitle: Event
+    nodeColor:
+      serializedVersion: 2
+      rgba: 4286545791
+    collapse: 0
+    drawNode: {fileID: 11400000, guid: 181ea9981e1050b449a07f8b1dbd8362, type: 2}
+    previousCollapse: 0
+    transitions: []
+    depencies:
+    - ID: 22G891
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
+      removable: 1
+    transitionsIdsToRemove: []
+    nodeCompleted: 0
+    deletable: 1
+    focused: 0
+    executed: 0
+    comment: 
+    condition: 0
+    parameter: 
+    AnimatorActivatorType: 0
+    AnimatorActivatorBoolValue: 0
+    AnimatorActivatorIntValue: 0
+    AnimatorActivatorFloatValue: 0
+    animationLayer: 0
+    animatorController: {fileID: 0}
+    delay: 0
+    randomMoveArea: 
+    randomSet: 0
+    portalTargetNodeID: 
+    destinationTarget: {fileID: 0}
+    destinationTargetName: 
+    alwaysCheckConditions: 
+    alwaysCheckCoun: 1
+    swapGraph: {fileID: 0}
+    dialogAudioClip: {fileID: 0}
+    dialogPartSubtitles: 
+    dialogPartspeaker: {fileID: 0}
+    dialogPartStartDuration: 0
+    eventListSize: 1
+    dialogEvents: 04000000
+    addItems:
+    - Count: 0
+      Item: {fileID: 0}
+    decisionSelectedOption: 10
+    decided: 0
   removeNodesIDs: []
   selectedNodes: []
   firstSubtitles:
@@ -456,8 +614,8 @@ MonoBehaviour:
     ID: 7G147
     WindowRect:
       serializedVersion: 2
-      x: 210.19995
-      y: 432.20013
+      x: 371.00006
+      y: 462.20016
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -468,7 +626,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: a11d35517dd91f44aac9bbcd1d8fc05e, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 34H37
+    - ID: 5E722
       Color: {r: 1, g: 0.54901963, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -515,6 +673,15 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 28A779
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 52C671
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6

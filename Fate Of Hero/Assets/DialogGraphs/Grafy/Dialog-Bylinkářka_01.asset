@@ -18,8 +18,8 @@ MonoBehaviour:
     ID: 23H043
     WindowRect:
       serializedVersion: 2
-      x: -1292.2191
-      y: 375.80484
+      x: -1459.619
+      y: 2.004984
       width: 120
       height: 60
     WindowTitle: 
@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 35J1489
+    - ID: 12C1451
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -77,8 +77,8 @@ MonoBehaviour:
     ID: 23H143
     WindowRect:
       serializedVersion: 2
-      x: -1112.9216
-      y: 378.48965
+      x: -1280.3217
+      y: 4.6898003
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -89,14 +89,14 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: a11d35517dd91f44aac9bbcd1d8fc05e, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 36C435
-      Color: {r: 1, g: 0, b: 1, a: 1}
+    - ID: 39T1525
+      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
       endPlacement: 7
       clicked: 0
       Value: 
-      enableClickPoint: 1
+      enableClickPoint: 0
       removable: 1
     depencies:
     - ID: 23H243
@@ -144,6 +144,33 @@ MonoBehaviour:
       Value: 
       enableClickPoint: 0
       removable: 1
+    - ID: 4T1437
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 46H1410
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 12C1451
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
     transitionsIdsToRemove:
     - 6E355
     nodeCompleted: 1
@@ -182,8 +209,8 @@ MonoBehaviour:
     ID: 31C335
     WindowRect:
       serializedVersion: 2
-      x: -818.8225
-      y: 338.01193
+      x: -986.22235
+      y: -35.787937
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -205,6 +232,15 @@ MonoBehaviour:
       removable: 1
     depencies:
     - ID: 36C435
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
+      removable: 1
+    - ID: 46J1528
       Color: {r: 1, g: 0, b: 1, a: 1}
       disabled: 0
       startPlacement: 6
@@ -242,7 +278,7 @@ MonoBehaviour:
     dialogPartSubtitles: "Nerada t\u011B zklamu, ale nic moc si ode m\u011B nekoup\xED\u0161."
     dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 2.4
+    dialogPartStartDuration: 3
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -253,8 +289,8 @@ MonoBehaviour:
     ID: 1H34
     WindowRect:
       serializedVersion: 2
-      x: -554.4937
-      y: 559.2012
+      x: -721.89325
+      y: 185.40099
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -311,7 +347,7 @@ MonoBehaviour:
     dialogPartSubtitles: "Pro\u010D?"
     dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
-    dialogPartStartDuration: 1.1
+    dialogPartStartDuration: 2
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -322,8 +358,8 @@ MonoBehaviour:
     ID: 30E440
     WindowRect:
       serializedVersion: 2
-      x: -300.20105
-      y: 353.80063
+      x: -467.6003
+      y: -19.999306
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -392,8 +428,8 @@ MonoBehaviour:
     ID: 56C556
     WindowRect:
       serializedVersion: 2
-      x: -22.200176
-      y: 558.8009
+      x: -189.59969
+      y: 185.00072
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -462,8 +498,8 @@ MonoBehaviour:
     ID: 6J642
     WindowRect:
       serializedVersion: 2
-      x: 235.79962
-      y: 329.80066
+      x: 68.3995
+      y: -43.99922
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -558,7 +594,7 @@ MonoBehaviour:
       Pot\u0159ebovala bych aby ses jich zbavil."
     dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 10.5
+    dialogPartStartDuration: 10.8
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -569,8 +605,8 @@ MonoBehaviour:
     ID: 47T711
     WindowRect:
       serializedVersion: 2
-      x: 525.7982
-      y: 550.80115
+      x: 358.39764
+      y: 177.00084
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -638,8 +674,8 @@ MonoBehaviour:
     ID: 57C833
     WindowRect:
       serializedVersion: 2
-      x: 795.7952
-      y: 312.80038
+      x: 432.6813
+      y: -30.999512
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -717,7 +753,7 @@ MonoBehaviour:
       v\u016Fbec nezaj\xEDmalo, \u017Ee maj\xED b\xFDt po smrti."
     dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 8
+    dialogPartStartDuration: 8.3
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -728,8 +764,8 @@ MonoBehaviour:
     ID: 11C981
     WindowRect:
       serializedVersion: 2
-      x: 1376.7996
-      y: 538.964
+      x: 1209.401
+      y: 165.16373
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -797,7 +833,7 @@ MonoBehaviour:
       ty bylinky? "
     dialogPartspeaker: {fileID: 11400000, guid: 1afd2f2c4fb51ee478f200d2df205c59,
       type: 2}
-    dialogPartStartDuration: 7
+    dialogPartStartDuration: 7.5
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -808,8 +844,8 @@ MonoBehaviour:
     ID: 35A1091
     WindowRect:
       serializedVersion: 2
-      x: 1110.7985
-      y: 311.80038
+      x: 634.8277
+      y: -47.7138
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -869,7 +905,7 @@ MonoBehaviour:
       a nau\u010Dit t\u011B ho vyrobit a\u017E se vr\xE1t\xED\u0161."
     dialogPartspeaker: {fileID: 11400000, guid: bb0b05512520992419eacef9103b006e,
       type: 2}
-    dialogPartStartDuration: 12.5
+    dialogPartStartDuration: 13
     eventListSize: 1
     dialogEvents: 
     addItems: []
@@ -880,8 +916,8 @@ MonoBehaviour:
     ID: 12G1174
     WindowRect:
       serializedVersion: 2
-      x: -1406.2606
-      y: 517.1015
+      x: -1573.6609
+      y: 143.30145
       width: 120
       height: 60
     WindowTitle: 
@@ -939,8 +975,8 @@ MonoBehaviour:
     ID: 13H1228
     WindowRect:
       serializedVersion: 2
-      x: 1625.4008
-      y: 334.58575
+      x: 1458.0026
+      y: -39.214115
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -1011,14 +1047,14 @@ MonoBehaviour:
     ID: 17G136
     WindowRect:
       serializedVersion: 2
-      x: 426.06543
-      y: 749.2149
+      x: 923.6652
+      y: 410.4142
       width: 200
-      height: 340
+      height: 430
     WindowTitle: Event
     nodeColor:
       serializedVersion: 2
-      rgba: 4278255360
+      rgba: 4286545791
     collapse: 0
     drawNode: {fileID: 11400000, guid: 181ea9981e1050b449a07f8b1dbd8362, type: 2}
     previousCollapse: 0
@@ -1060,11 +1096,83 @@ MonoBehaviour:
     dialogPartSubtitles: 
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
-    eventListSize: 1
-    dialogEvents: 00000000
+    eventListSize: 2
+    dialogEvents: 0000000004000000
     addItems:
     - Count: 10
       Item: {fileID: 11400000, guid: 6170028d4d67be74293a1cf9a428580b, type: 2}
+    - Count: 0
+      Item: {fileID: 0}
+    decisionSelectedOption: 10
+    decided: 0
+  - BehaviourGraph: {fileID: 0}
+    DialogGraph: {fileID: 11400000}
+    ID: 23E1423
+    WindowRect:
+      serializedVersion: 2
+      x: -1076.0415
+      y: 289.55862
+      width: 200
+      height: 340
+    WindowTitle: Event
+    nodeColor:
+      serializedVersion: 2
+      rgba: 4286545791
+    collapse: 0
+    drawNode: {fileID: 11400000, guid: 181ea9981e1050b449a07f8b1dbd8362, type: 2}
+    previousCollapse: 0
+    transitions:
+    - ID: 46J1528
+      Color: {r: 1, g: 0, b: 1, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 1
+      removable: 1
+    depencies:
+    - ID: 39T1525
+      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    transitionsIdsToRemove: []
+    nodeCompleted: 0
+    deletable: 1
+    focused: 0
+    executed: 0
+    comment: 
+    condition: 0
+    parameter: 
+    AnimatorActivatorType: 0
+    AnimatorActivatorBoolValue: 0
+    AnimatorActivatorIntValue: 0
+    AnimatorActivatorFloatValue: 0
+    animationLayer: 0
+    animatorController: {fileID: 0}
+    delay: 0
+    randomMoveArea: 
+    randomSet: 0
+    portalTargetNodeID: 
+    destinationTarget: {fileID: 0}
+    destinationTargetName: 
+    alwaysCheckConditions: 
+    alwaysCheckCoun: 1
+    swapGraph: {fileID: 0}
+    dialogAudioClip: {fileID: 0}
+    dialogPartSubtitles: 
+    dialogPartspeaker: {fileID: 0}
+    dialogPartStartDuration: 0
+    eventListSize: 1
+    dialogEvents: 03000000
+    addItems:
+    - Count: 0
+      Item: {fileID: 0}
     decisionSelectedOption: 10
     decided: 0
   removeNodesIDs: []
@@ -1075,8 +1183,8 @@ MonoBehaviour:
     ID: 23H143
     WindowRect:
       serializedVersion: 2
-      x: 131.4784
-      y: 360.4897
+      x: -1280.3217
+      y: 4.6898003
       width: 200
       height: 110
     WindowTitle: Dialog Audio
@@ -1087,14 +1195,14 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: a11d35517dd91f44aac9bbcd1d8fc05e, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 36C435
-      Color: {r: 1, g: 0, b: 1, a: 1}
+    - ID: 39T1525
+      Color: {r: 1, g: 0.54901963, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
       endPlacement: 7
       clicked: 0
       Value: 
-      enableClickPoint: 1
+      enableClickPoint: 0
       removable: 1
     depencies:
     - ID: 23H243
@@ -1134,6 +1242,33 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 35J1489
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 4T1437
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 46H1410
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 12C1451
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6

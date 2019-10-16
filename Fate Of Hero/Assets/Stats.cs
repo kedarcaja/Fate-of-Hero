@@ -6,8 +6,7 @@ using System;
 [Serializable]
 public class Stats
 {
-    [SerializeField]
-    private BarScript bar;
+    public BarScript bar;
 
     [SerializeField]
     private float maxVal;

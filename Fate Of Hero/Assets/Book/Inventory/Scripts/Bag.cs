@@ -27,7 +27,11 @@ namespace InventorySystem
 
         public int SlotsInRow { get => slotsInRow; set => slotsInRow = value; }
         public int MaxBagLevel { get => maxBagLevel; set => maxBagLevel = value; }
+        [SerializeField]
+        private bool generateLoot = false;
 
+        [SerializeField]
+        private List<Item> generateLootItems = new List<Item>();
         #endregion
 
         #region Unity Methods
@@ -39,10 +43,23 @@ namespace InventorySystem
             if (grid != null)
                 grid.constraintCount = slotsInRow;
             DrawLayout();
+
+
+            if(GetComponent<ChestScript>() != null)
+            {
+                GenerateLoot();
+            }
         }
 
         #endregion
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F11))
+            {
+                Clear();
+            }
+        }
         #region Drawing Methods
         public void DrawLayout()
         {
@@ -230,7 +247,24 @@ namespace InventorySystem
                     DrawLayout();
             }
         }
-    }
+        public void GenerateLoot()
+        {
+            for (int i = 0; i < 5; i++)
+            {
 
+                if (generateLootItems[i].MaxInSlot > 10)
+                {
+                    Add(generateLootItems[i], 2);
+                }
+                else
+                {
+                    Add(generateLootItems[i]);
+                }
+
+            }
+        }
+    }
 }
+
+
 

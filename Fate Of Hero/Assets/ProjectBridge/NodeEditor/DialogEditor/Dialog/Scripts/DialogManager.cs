@@ -26,6 +26,7 @@ public class DialogManager : MonoBehaviour, IPlayable
     {
         if (graph)
         {
+            graph.wasPlayed = false;
             graph.InitDialog();
         }
 
@@ -44,10 +45,10 @@ public class DialogManager : MonoBehaviour, IPlayable
             }
         }
     }
-   
+
     public void Play()
     {
-        if (!IsPlaying() && !graph.wasPlayed)
+        if (!IsPlaying())
         {
             subtitleArea.GetComponent<CanvasGroup>().Active(true);
             graph.lifeCycle.Play();
@@ -79,7 +80,7 @@ public class DialogManager : MonoBehaviour, IPlayable
         subtitleArea.text = "";
         subtitleArea.GetComponent<CanvasGroup>().Deactive(true);
 
-        if ( sender != null && sender.Graph.destroyOnEnd)
+        if (sender != null && sender.Graph.destroyOnEnd)
         {
             Destroy(sender.gameObject);
         }
@@ -90,6 +91,8 @@ public class DialogManager : MonoBehaviour, IPlayable
         if (!IsPlaying())
         {
             Stop();
+            if (graph)
+                graph.wasPlayed = false;
             g.Graph.InitDialog();
             graph = g.Graph;
             sender = g;

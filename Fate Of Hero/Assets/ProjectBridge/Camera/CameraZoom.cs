@@ -8,7 +8,7 @@ public class CameraZoom : MonoBehaviour
 
 	void Update()
 	{
-        if (!Book.Instance.IsActive())
+        if (Book.Instance&&!Book.Instance.IsActive())
         {
             float fov = Camera.main.fieldOfView;
             fov -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;

@@ -110,13 +110,13 @@ namespace DialogEditor
         }
         public void Stop()
         {
-            wasPlayed = true;
+          //  wasPlayed = true;
             isStopped = true;
         }
 
         private bool CanPlay()
         {
-            return IsEnable ? (unlimitedRepeating ? true : (repeatable ? repeatLimit > playCount : !wasPlayed)) : false;
+            return IsEnable;
         }
         public void ResetDialog()
         {

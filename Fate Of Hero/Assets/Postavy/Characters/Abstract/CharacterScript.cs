@@ -24,8 +24,7 @@ namespace FourGames
         protected float maxSpeed = 6;
         [SerializeField]
         protected float minSpeed = 3;
-        [SerializeField]
-        protected Stats healthBar;
+        public  Stats healthBar;
 
 
         [SerializeField]
@@ -43,6 +42,20 @@ namespace FourGames
             agent = GetComponent<NavMeshAgent>();
 
             rigid = GetComponent<Rigidbody>();
+
+
+            if(name == "Leo")
+            {
+                if(FindObjectOfType<Canvas>() !=null)
+                healthBar.bar = GameObject.Find("HealthBar").GetComponent<BarScript>();
+
+                characterData.Health = 1000;
+            }
+            else
+            {
+                characterData.Health = 50;
+
+            }
 
         }
         private void Start()

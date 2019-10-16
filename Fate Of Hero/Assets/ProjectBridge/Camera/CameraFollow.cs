@@ -18,12 +18,13 @@ public class CameraFollow : MonoBehaviour
 		Vector3 rot = transform.localRotation.eulerAngles;
 		rotX = rot.x;
 		rotY = rot.y;
+        if(MouseManager.Instance)
         MouseManager.Instance.DisableCursor();
 
     }
 	private void Update()
 	{
-        if (!Book.Instance.IsActive())
+        if (Book.Instance && !Book.Instance.IsActive())
         {
 
             //float inputX = Input.GetAxis("RightStickHorizontal");

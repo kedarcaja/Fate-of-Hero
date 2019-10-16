@@ -11,26 +11,13 @@ namespace InventorySystem
         [SerializeField]
         private List<Bag> bags = new List<Bag>();
 
-
-
-        [SerializeField]
-        private List<Item> testItems; // delete
-
         public List<Bag> Bags => bags;
+
+
         #endregion
         #region Unity Methods 
 
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                testItems.ForEach(i => Add(i));
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                Clear();
-            }
-        }
+
         #endregion
         #region  Collection Methods
 
@@ -81,5 +68,8 @@ namespace InventorySystem
             SortBag(InventoryManager.Instance.GetCurrentlyOpenedBag());
         }
         #endregion
+
+
+
     }
 }

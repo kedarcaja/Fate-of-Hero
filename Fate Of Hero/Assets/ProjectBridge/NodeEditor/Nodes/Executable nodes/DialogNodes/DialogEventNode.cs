@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using InventorySystem;
+using UnityEngine.SceneManagement;
+using FourGames;
 
 namespace DialogEditor
 {
-    public enum EDialogEvents { AddItemToPlayersInventory, AddQuest }
+    public enum EDialogEvents { AddItemToPlayersInventory, AddQuest, LoadToVillage,FreezePlayer, UnFreezePlayer }
     [CreateAssetMenu(menuName = "DialogEditor/Nodes/Event")]
     public class DialogEventNode : ExecutableNode
     {
@@ -87,6 +89,15 @@ namespace DialogEditor
                     case EDialogEvents.AddQuest:
 
 
+                        break;
+                    case EDialogEvents.LoadToVillage:
+                        SceneManager.LoadScene("Vesnička");
+                        break;
+                    case EDialogEvents.FreezePlayer:
+                        FindObjectOfType<PlayerScript>().DisableMove();
+                        break;
+                    case EDialogEvents.UnFreezePlayer:
+                        FindObjectOfType<PlayerScript>().EnableMove();
                         break;
                 }
             }

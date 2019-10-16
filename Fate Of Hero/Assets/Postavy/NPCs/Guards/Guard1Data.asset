@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bf9858a336780d469289d12505aec86, type: 3}
-  m_Name: KostraData
+  m_Script: {fileID: 11500000, guid: 219b6a5347e356c4b880aa3c9394ddee, type: 3}
+  m_Name: Guard1Data
   m_EditorClassIdentifier: 
   CharacterClass: 0
   Work: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
   characterBag: {fileID: 0}
   combatRadius: 0
   interactionRadius: 0
-  health: 0
+  health: 100
   maxHealth: 100
   stamina: 0
   maxStamina: 0
@@ -42,11 +42,6 @@ MonoBehaviour:
   charisma: 0
   runSpeed: 0
   walkSpeed: 0
-  armor: 0
-  regeneration: 0
-  chanceToCritical: 0
-  chanceToStunt: 0
   hearRadius: 0
   canSwim: 0
   canDive: 0
-  isOneHitEnemy: 0

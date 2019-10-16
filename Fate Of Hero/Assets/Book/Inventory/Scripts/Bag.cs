@@ -53,13 +53,8 @@ namespace InventorySystem
 
         #endregion
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.F11))
-            {
-                Clear();
-            }
-        }
+        
+       
         #region Drawing Methods
         public void DrawLayout()
         {
@@ -263,6 +258,20 @@ namespace InventorySystem
 
             }
         }
+
+        public void TakeAllToInventory()
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (!slots[i].IsEmpty())
+                {
+                    InventoryManager.Instance.Inventory.Add(slots[i].Peek(), slots[i].ItemCount);
+                    slots[i].Clear();
+                }
+            }
+        }
+
+
     }
 }
 

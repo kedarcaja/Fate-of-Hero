@@ -20,7 +20,15 @@ namespace InventorySystem
 
         #endregion
         #region  Collection Methods
-
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F11))
+            {
+                
+                Clear();
+            }
+        }
         public void Add(Item item)
         {
             if (BagForItem(item) != null)

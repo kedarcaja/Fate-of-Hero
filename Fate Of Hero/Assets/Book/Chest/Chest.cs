@@ -16,7 +16,7 @@ namespace InventorySystem
         public Bag Bag => bag;
 
         [SerializeField]
-        private Button button;
+        private Button takeAllButton;
 
         private void Awake()
         {
@@ -27,6 +27,8 @@ namespace InventorySystem
 
         public void Open(ChestScript chest)
         {
+            //takeAllButton.onClick.AddListener(() => chest.Bag.TakeAllToInventory());
+            takeAllButton.onClick.RemoveAllListeners();
 
             Bag.Saver = chest.Bag.Saver;
             bag.MaxBagLevel = chest.Bag.MaxBagLevel;
@@ -35,6 +37,7 @@ namespace InventorySystem
             GetComponent<GridLayoutGroup>().constraintCount = chest.Bag.SlotsInRow;
             bag.DrawLayout();
             group.Active(true);
+            
             CharacterPanel.Instance.GetComponent<CanvasGroup>().Deactive(true);
 
         }

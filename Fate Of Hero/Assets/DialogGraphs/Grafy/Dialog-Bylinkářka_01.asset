@@ -30,7 +30,7 @@ MonoBehaviour:
     drawNode: {fileID: 11400000, guid: 8e74665c768090641a062e5b08444997, type: 2}
     previousCollapse: 0
     transitions:
-    - ID: 12C1451
+    - ID: 2G1515
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -163,6 +163,15 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 12C1451
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 2G1515
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6
@@ -498,8 +507,8 @@ MonoBehaviour:
     ID: 6J642
     WindowRect:
       serializedVersion: 2
-      x: 68.3995
-      y: -43.99922
+      x: 68.39949
+      y: -45.135582
       width: 200
       height: 155
     WindowTitle: Dialog Subtitles
@@ -1047,8 +1056,8 @@ MonoBehaviour:
     ID: 17G136
     WindowRect:
       serializedVersion: 2
-      x: 923.6652
-      y: 410.4142
+      x: 1723.665
+      y: 259.2778
       width: 200
       height: 430
     WindowTitle: Event
@@ -1097,12 +1106,12 @@ MonoBehaviour:
     dialogPartspeaker: {fileID: 0}
     dialogPartStartDuration: 0
     eventListSize: 2
-    dialogEvents: 0000000004000000
+    dialogEvents: 0400000000000000
     addItems:
-    - Count: 10
-      Item: {fileID: 11400000, guid: 6170028d4d67be74293a1cf9a428580b, type: 2}
     - Count: 0
       Item: {fileID: 0}
+    - Count: 0
+      Item: {fileID: 11400000, guid: 9d5d94e9cd6b36b499bfad81531aa1bc, type: 2}
     decisionSelectedOption: 10
     decided: 0
   - BehaviourGraph: {fileID: 0}
@@ -1269,6 +1278,15 @@ MonoBehaviour:
       enableClickPoint: 0
       removable: 1
     - ID: 12C1451
+      Color: {r: 0, g: 1, b: 0, a: 1}
+      disabled: 0
+      startPlacement: 6
+      endPlacement: 7
+      clicked: 0
+      Value: 
+      enableClickPoint: 0
+      removable: 1
+    - ID: 2G1515
       Color: {r: 0, g: 1, b: 0, a: 1}
       disabled: 0
       startPlacement: 6

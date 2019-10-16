@@ -8,7 +8,7 @@ public class MiniMapa : MonoBehaviour
     
     void Update()
     {
-        transform.position = hrac.position + new Vector3(0, y, 0);
+        transform.position = hrac.transform.position + new Vector3(0, 50, 0);
     }
 }
 

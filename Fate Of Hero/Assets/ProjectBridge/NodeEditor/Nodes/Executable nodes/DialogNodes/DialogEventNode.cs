@@ -91,7 +91,7 @@ namespace DialogEditor
 
                         break;
                     case EDialogEvents.LoadToVillage:
-                        SceneManager.LoadScene("Vesnička");
+                        SceneManager.LoadScene("Village");
                         break;
                     case EDialogEvents.FreezePlayer:
                         FindObjectOfType<PlayerScript>().DisableMove();

@@ -15,6 +15,9 @@ namespace InventorySystem
 
         public Bag Bag => bag;
 
+        [SerializeField]
+        private Button button;
+
         private void Awake()
         {
             group = GetComponentInParent<CanvasGroup>();

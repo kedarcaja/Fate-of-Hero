@@ -357,7 +357,7 @@ namespace InventorySystem
 
               
                 c.Bag.DrawLayout();
-                c.Bag.Add(dragedFrom.Peek(), dragedFrom.ItemCount);
+                c.Bag.Add(dragedFrom?.Peek(), dragedFrom.ItemCount);
                 dragedFrom.Clear();
             }
             StopDrag();

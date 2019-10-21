@@ -33,8 +33,9 @@ namespace FourGames
         public NavMeshAgent Agent { get => agent; }
         public Character CharacterData { get => characterData; }
         public Animator Animator { get => anim; }
+        public bool CanAttack { get => canAttack; set => canAttack = value; }
 
-        protected bool canAttack = true, canMove = true;
+        private bool canAttack = true, canMove = true;
 
         protected virtual void Awake()
         {
@@ -49,14 +50,14 @@ namespace FourGames
                 if(FindObjectOfType<Canvas>() !=null)
                 healthBar.bar = GameObject.Find("HealthBar").GetComponent<BarScript>();
 
-                characterData.Health = 1000;
+                characterData.Health = 500;
             }
             else
             {
-                characterData.Health = 50;
+                characterData.Health = 1;
 
             }
-
+            UpdateHealth();
         }
         private void Start()
         {
@@ -68,7 +69,7 @@ namespace FourGames
             }
         }
 
-        private void UpdateHealth()
+        protected void UpdateHealth()
         {
             if (healthBar != null)
             {
@@ -116,6 +117,7 @@ namespace FourGames
             characterData.Health -= Damage;
             UpdateHealth();
 
+           
             if (IsAlive())
             {
                 anim.CrossFade("Dodge", Time.deltaTime);

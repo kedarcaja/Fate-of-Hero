@@ -110,7 +110,7 @@ namespace InventorySystem
             else
             {
               //  InventoryManager.Instance.DropItem(item);
-                Debug.Log("<color=red>Item was dropped</color>");
+              //  Debug.Log("<color=red>Item was dropped</color>");
             }
         }
         public void Add(Item item, int count)
@@ -244,17 +244,12 @@ namespace InventorySystem
         }
         public void GenerateLoot()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < generateLootItems.Count; i++)
             {
 
-                if (generateLootItems[i].MaxInSlot > 10)
-                {
-                    Add(generateLootItems[i], 2);
-                }
-                else
-                {
+               
                     Add(generateLootItems[i]);
-                }
+                
 
             }
         }
@@ -266,11 +261,11 @@ namespace InventorySystem
                 if (!slots[i].IsEmpty())
                 {
                     InventoryManager.Instance.Inventory.Add(slots[i].Peek(), slots[i].ItemCount);
-                    slots[i].Clear();
                 }
             }
         }
 
+        
 
     }
 }

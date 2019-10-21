@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace NodeEditor
@@ -53,6 +54,7 @@ namespace NodeEditor
 
             currentNode.executed = false;
 
+           
             if (!(currentNode.drawNode is DialogDecisionNode)&&((currentNode.drawNode is ExecutableNode && currentNode.nodeCompleted)|| currentNode.drawNode is CheckAlwaysNode || currentNode.drawNode is EnterNode))
             {
                 CheckTransitions();

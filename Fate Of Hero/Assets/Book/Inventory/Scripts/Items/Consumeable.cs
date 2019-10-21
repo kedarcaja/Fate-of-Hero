@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Extensions;
 using System;
 using System.Collections.Generic;
+using FourGames;
 
 namespace InventorySystem
 {
@@ -43,15 +44,12 @@ namespace InventorySystem
 
         public void Use(float effect)
         {
-            foreach (EItemStats s in targetStats)
+           // foreach (EItemStats s in targetStats)
             {
-                Debug.Log($"item: {s} value befor effect {item.GetPropertyValueByName(s.ToString()).ToString()}");
-
-                item.SetPropertyValueByName(s.ToString(),int.Parse(item.GetPropertyValueByName(s.ToString()).ToString()) + effect);
-
-                Debug.Log($"item: {s} value after effect {item.GetPropertyValueByName(s.ToString()).ToString()}");
+              ///  item.SetPropertyValueByName(s.ToString(),int.Parse(item.GetPropertyValueByName(s.ToString()).ToString()) + effect);      
 
             }
+            PlayerScript.Instance.Heal(effect);
         }
     }
     [Serializable]

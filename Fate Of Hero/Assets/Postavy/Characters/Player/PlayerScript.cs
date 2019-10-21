@@ -15,19 +15,13 @@ namespace FourGames
         Vector3 desiredDirection;
         private float inputX = 0;
         private float inputZ = 0;
-
         [SerializeField]
-        private int zivot;
-
-
+        private SkinnedMeshRenderer swordRender;
         [SerializeField]
         private float animationCrossSpeed = 1;
        
-
         public static PlayerScript Instance { get; private set; }
-
-      
-
+        public SkinnedMeshRenderer SwordRender => swordRender; 
 
         protected override void Awake()
         {
@@ -41,7 +35,6 @@ namespace FourGames
 
 
             HandleMove();
-            HandleJump();
             HandleAttack();
 
             base.Update();
@@ -92,42 +85,36 @@ namespace FourGames
         }
         public void HandleAttack()
         {
-            if (!canAttack) return;
+            if (!CanAttack) return;
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonDown(0))
             {
 
                 DisableMove();
+                transform.rotation = Camera.main.transform.rotation;
                 agent.velocity = Vector3.zero;
                 anim.CrossFade("Attack1", 0.1f);
-                canAttack = false;
+                CanAttack = false;
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonDown(1) )
             {
                 DisableMove();
+                transform.rotation = Camera.main.transform.rotation;
                 agent.velocity = Vector3.zero;
                 anim.CrossFade("Attack2", 0.1f);
-                canAttack = false;
+                CanAttack = false;
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                DisableMove();
-                anim.CrossFade("Attack3", 0.1f);
-                canAttack = false;
-            }
+           
             if (anim.GetCurrentAnimatorStateInfo(1).IsName("Default"))
             {
                 EnableAttack();
             }
         }
-        public void HandleJump()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                DisableMove();
-                anim.CrossFade("Jump", Time.deltaTime);
-            }
-        }
 
+        public void Heal(float Hp)
+        {
+            characterData.Health += Hp;
+            UpdateHealth();
+        }
     }
 }

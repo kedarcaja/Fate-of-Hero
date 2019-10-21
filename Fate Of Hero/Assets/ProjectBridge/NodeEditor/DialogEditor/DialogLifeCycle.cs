@@ -12,8 +12,9 @@ namespace DialogEditor
     {
         private _Timer timer;
 
+        private DialogGraph dialogGraph;
+        private bool isPlaying = false;
 
-        private bool isStopped = true, isPaused = false;
         public override void CheckAlwaysConditions()
         {
         }
@@ -21,119 +22,72 @@ namespace DialogEditor
         public DialogLifeCycle(DialogGraph graph)
         {
             Init(graph);
+            dialogGraph = graph;
         }
         public override void Tick()
         {
-            if (IsPlaying() && !Ended())
-            {
-                if (currentNode != null)
-                {
-                    ExecuteNodes();
-                }
-            }
-            else
-            {
-                Stop();
-                DialogManager.Instance.Stop();
-            }
-
-
-
-        }
-
-        public void Skip()
-        {
-            Pause();
-            while (currentNode.transitions.Count > 0)
-            {
-                currentNode = currentNode.transitions[0].endNode;
-                if (currentNode.drawNode is DialogDecisionNode)
-                {
-                    Play();
-                    return;
-                }
-            }
-            Stop();
-        }
-
-        private void ExecuteSubtitles()
-        {
-            currentNode.Execute();
-
-            timer = new _Timer(0.1f, 0.1f, DialogManager.Instance);
-            timer.OnUpdate += delegate
-            {
-                if (timer.ElapsedTimeF >= currentNode.dialogPartStartDuration)
-                {
-
-                    currentNode.nodeCompleted = true;
-                    if (currentNode.transitions.Count > 0)
-                        DecideForNextNode();
-
-                    timer.Stop();
-                }
-            };
-            timer.Execute();
-        }
-        private void ExecuteNodes()
-        {
-            if (currentNode.drawNode is DialogPartNode && (timer == null || !timer.IsRunning()))
+            if (isPlaying)
             {
                 ExecuteSubtitles();
             }
-
-            else if (!(currentNode.drawNode is DialogPartNode))
+        }
+        void ExecuteSubtitles()
+        {
+            if (!currentNode.executed)
             {
+                timer = new _Timer(0.1f, currentNode.dialogPartStartDuration, DialogManager.Instance);
+                timer.OnUpdate += () => { currentNode.nodeCompleted = true; };
+                timer.Execute();
                 currentNode.Execute();
-                currentNode.nodeCompleted = true;
+                currentNode.executed = true;
+                currentNode.nodeCompleted = false;
+            }
+
+            else if (currentNode.nodeCompleted && currentNode.executed)
+            {
+                DialogManager.Instance.StopAllCoroutines();
+                currentNode.executed = false;
                 DecideForNextNode();
                 currentNode.executed = false;
             }
-
         }
+
+
 
         public void Play()
         {
-            if (!IsPlaying())
-            {
-                (graph as DialogGraph).Play();
-                isStopped = false;
-                isPaused = false;
-                if (timer != null && !timer.IsPaused)
-                {
-                    timer.Execute();
-                }
-            }
+            if (isPlaying) return;
+            isPlaying = true;
+
+        }
+
+
+        public void Stop()
+        {
+            if (!isPlaying) return;
+            isPlaying = false;
+            DialogManager.Instance.Stop();
         }
 
         public void Pause()
         {
-            if (IsPlaying())
-            {
-                isPaused = true;
-                if (timer != null && timer.IsRunning())
-                {
-                    timer.Pause();
-                }
-                (graph as DialogGraph).Pause();
-            }
+
         }
+
         public bool IsPlaying()
         {
-            return !isStopped && !isPaused && (graph as DialogGraph).IsPlaying();
+            return isPlaying;
         }
-        private bool Ended()
+        public override void DecideForNextNode()
         {
-            return currentNode == null || (currentNode.nodeCompleted && currentNode == graph.nodes.Last());
-        }
-        public void Stop()
-        {
-            isStopped = true;
-            if (timer != null && timer.IsRunning())
+            if (currentNode.transitions.Count != 0)
             {
-                timer.Stop();
+                base.DecideForNextNode();
             }
-            (graph as DialogGraph).Stop();
+            else
+            {
+                Stop();
+            }
         }
     }
 }

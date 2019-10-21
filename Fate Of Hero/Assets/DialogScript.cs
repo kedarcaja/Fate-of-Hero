@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DialogEditor;
+using FourGames;
 
 public class DialogScript : MonoBehaviour
 {
@@ -17,8 +18,9 @@ public class DialogScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (playOnTrigger)
+        if (playOnTrigger && other.transform.root.name == "Leo")
         {
+            PlayerScript.Instance.DisableMove();
             DialogManager.Instance.ChangeGraph(this);
             DialogManager.Instance.Play();
         }

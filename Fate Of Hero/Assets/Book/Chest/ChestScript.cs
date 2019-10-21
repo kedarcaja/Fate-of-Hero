@@ -21,6 +21,8 @@ namespace InventorySystem
         }
         void Open()
         {
+            if (isOpen) return;
+
             if (animator)
                 animator.SetBool("open", true);
             InventoryManager.Instance.Chest.Open(this);
@@ -31,6 +33,8 @@ namespace InventorySystem
 
         void Close()
         {
+            if (!isOpen) return;
+
             if (animator)
                 animator.SetBool("open", false);
             InventoryManager.Instance.Chest.Close(this);
@@ -41,15 +45,15 @@ namespace InventorySystem
 
         private void OnTriggerExit(Collider other)
         {
-            if (isOpen && other.transform.root.name == "lootTrigger")
+            if (isOpen && other.transform.name == "lootTrigger")
             {
                 Close();
             }
         }
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            if (Input.GetKeyDown(KeyCode.E) && other.name == "lootTrigger")
+            if ( other.name == "lootTrigger")
             {
                 if (!isOpen)
                 {
@@ -57,7 +61,7 @@ namespace InventorySystem
                 }
                 else
                 {
-                    Close();
+                //    Close();
                 }
             }
         }

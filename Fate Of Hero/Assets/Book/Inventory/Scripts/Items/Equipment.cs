@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FourGames;
+using UnityEngine;
 
 namespace InventorySystem
 {
@@ -38,10 +39,17 @@ namespace InventorySystem
             {
                 InventoryManager.Instance.Inventory.Add(slot.Peek(), slot.ItemCount);
                 slot.Clear();
+                PlayerScript.Instance.SwordRender.enabled = false;
+
+
             }
             else
             {
                 InventoryManager.Instance.CharacterPanel.Equip(slot);
+                PlayerScript.Instance.SwordRender.enabled = true;
+
+
+
             }
         }
     }

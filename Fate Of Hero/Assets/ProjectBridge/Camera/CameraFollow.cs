@@ -7,11 +7,11 @@ public class CameraFollow : MonoBehaviour
 	public float cameraMoveSpeed = 120.0f;
 	public GameObject target;
 	public float clampAngel = 80f;
-	public float InputSensitivityX = 150f, InputSensitivityY = 150f;
+	public float InputSensitivityX = 450, InputSensitivityY = 450;
 	private float mouseX, mouseY;
 	private float finalInputX, finalInputZ;
 	private float rotX, rotY;
-
+   
 
 	private void Start()
 	{
@@ -24,12 +24,24 @@ public class CameraFollow : MonoBehaviour
     }
 	private void Update()
 	{
+        if (Input.GetKeyDown(KeyCode.PageUp))
+        {
+            InputSensitivityX += 50;
+            InputSensitivityY += 50;
+
+        }
+        if (Input.GetKeyDown(KeyCode.PageDown))
+        {
+            InputSensitivityX -= 50;
+            InputSensitivityY -= 50;
+        }
+
         if (Book.Instance && !Book.Instance.IsActive())
         {
 
             //float inputX = Input.GetAxis("RightStickHorizontal");
             //float inputZ = Input.GetAxis("RightStickVertical");
-            mouseX = Input.GetAxis("Mouse Y");
+            mouseX = -Input.GetAxis("Mouse Y");
             mouseY = Input.GetAxis("Mouse X");
 
             finalInputX = /*inputX*/  mouseX;

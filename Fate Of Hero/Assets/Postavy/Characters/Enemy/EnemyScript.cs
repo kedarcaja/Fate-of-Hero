@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using System.Linq;
 namespace FourGames
 {
     public class EnemyScript : EntityScript
     {
        
+
         protected override void Update()
         {
             if (IsAlive() && GetDistanceFrom(FindObjectOfType<PlayerScript>().transform.position) <= 20 && FindObjectOfType<PlayerScript>().IsAlive())

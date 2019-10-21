@@ -4,6 +4,8 @@ using UI.Components;
 using UnityEngine;
 using Unity.Extensions;
 using UI.Components;
+using FourGames;
+using UnityEngine.SceneManagement;
 
 public class Book : MonoBehaviour
 {
@@ -23,6 +25,7 @@ public class Book : MonoBehaviour
     {
         Instance = FindObjectOfType<Book>();
         group = GetComponent<CanvasGroup>();
+        
     }
     private void Update()
     {
@@ -31,26 +34,37 @@ public class Book : MonoBehaviour
         {
             if (group.IsActive(true))
             {
-                Close();  
+                Close();
             }
             else
             {
                 Open();
             }
-            
+
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
         }
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (map.alpha == 0)
+            if (map.IsActive(true))
             {
-                map.Active(true);
-                MouseManager.Instance.EnableCursor();
+                map.Deactive(true);
+                MouseManager.Instance.DisableCursor();
+                PlayerScript.Instance.EnableMove();
+                PlayerScript.Instance.DisableAttack();
+
             }
             else
             {
-                map.Deactive(true);
+                map.Active(true);
                 MouseManager.Instance.EnableCursor();
+                PlayerScript.Instance.DisableMove();
+                PlayerScript.Instance.DisableAttack();
+
+
             }
 
         }
@@ -61,22 +75,25 @@ public class Book : MonoBehaviour
     }
     public void Open()
     {
-      if (!IsActive())
+        if (!IsActive())
         {
+            PlayerScript.Instance.CanAttack = false;
             group.Active(true);
             MouseManager.Instance.EnableCursor();
             isOpen = true;
         }
-      
+
     }
 
     public void Close()
     {
         if (IsActive())
         {
+            PlayerScript.Instance.CanAttack = true;
             group.Deactive(true);
             MouseManager.Instance.DisableCursor();
             isOpen = false;
         }
     }
+    
 }

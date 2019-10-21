@@ -9,7 +9,7 @@ using static GUIStylizer;
 namespace DialogEditor
 {
     [CreateAssetMenu(menuName = "DialogEditor/Graph")]
-    public class DialogGraph : NodeGraph, IPlayable
+    public class DialogGraph : NodeGraph
     {
 
         public BaseNode firstSubtitles;
@@ -25,7 +25,7 @@ namespace DialogEditor
         public bool destroyOnEnd = false;
         internal DialogLifeCycle lifeCycle;
         internal int playCount = 0;
-        private bool isStopped = true, isPaused = false;
+       
         #endregion
 
         public override NodeGraphLifeCycle LifeCycle()
@@ -80,52 +80,16 @@ namespace DialogEditor
             SetAsEnterState(enterNode, firstSubtitles, Colors.GREEN);
         }
 
-
-     
-        public void Play()
+        public bool CanPlay()
         {
-            if (!IsPlaying() && CanPlay())
-            {
-                if (isStopped)
-                {
-                    if (!CanPlay()) return;
-
-                    ResetDialog();
-                }
-                isStopped = false;
-                isPaused = false;
-            }
-        }
-
-        public void Pause()
-        {
-            if (IsPlaying())
-            {
-                isPaused = true;
-            }
-        }
-        public bool IsPlaying()
-        {
-            return !isPaused && !isStopped;
-        }
-        public void Stop()
-        {
-          //  wasPlayed = true;
-            isStopped = true;
-        }
-
-        private bool CanPlay()
-        {
-            return IsEnable;
-        }
-        public void ResetDialog()
-        {
-            playCount++;
+            return IsEnable && !wasPlayed;
         }
         public void InitDialog()
         {
             lifeCycle = new DialogLifeCycle(this);
         }
+
+
     }
 
 

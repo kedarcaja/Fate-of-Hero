@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
+using FourGames;
 
 public class MiniMapa : MonoBehaviour
 {
-    public Transform hrac;
-   
-    public int y;
-    
+    [SerializeField]
+    private float y;
+    private Transform character;
+
     void Update()
     {
-        transform.position = hrac.transform.position + new Vector3(0, 50, 0);
+        if (!character)
+        {
+            character = FindObjectOfType<PlayerScript>().GetComponent<Transform>();
+        }
+
+        transform.position = new Vector3(character.transform.position.x, character.transform.position.y + y, character.transform.position.z);
     }
 }
 

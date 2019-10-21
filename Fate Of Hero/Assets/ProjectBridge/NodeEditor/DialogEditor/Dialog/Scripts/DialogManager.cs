@@ -1,4 +1,5 @@
 ﻿using DialogEditor;
+using FourGames;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,7 @@ public class DialogManager : MonoBehaviour, IPlayable
                     AudioPlayer.Play();
                 }
             }
+
         }
     }
 
@@ -50,40 +52,31 @@ public class DialogManager : MonoBehaviour, IPlayable
     {
         if (!IsPlaying())
         {
+            graph.InitDialog();
             subtitleArea.GetComponent<CanvasGroup>().Active(true);
+            AudioPlayer.Play();
             graph.lifeCycle.Play();
             isStopped = false;
             isPaused = false;
         }
     }
 
-    public void Pause()
-    {
-        if (IsPlaying())
-        {
-            graph.Pause();
-            AudioPlayer.Pause();
-            isPaused = true;
-        }
-    }
+
 
     public void Stop()
     {
         AudioPlayer.Stop();
-        if (graph)
-        {
-            graph.lifeCycle.Stop();
-        }
         graph = null;
         AudioPlayer.clip = null;
         isStopped = true;
         subtitleArea.text = "";
         subtitleArea.GetComponent<CanvasGroup>().Deactive(true);
-
         if (sender != null && sender.Graph.destroyOnEnd)
         {
             Destroy(sender.gameObject);
         }
+        PlayerScript.Instance.EnableMove();
+
     }
 
     public void ChangeGraph(DialogScript g)
@@ -104,9 +97,16 @@ public class DialogManager : MonoBehaviour, IPlayable
         return AudioPlayer.clip != null && AudioPlayer.clip.loadState == AudioDataLoadState.Loaded && AudioPlayer.clip;
     }
 
+
     public bool IsPlaying()
     {
-        return !isStopped && !isPaused && graph.IsPlaying();
+
+        return graph ? graph.lifeCycle.IsPlaying() : false;
+    }
+
+    public void Pause()
+    {
+
     }
 }
 public interface IPlayable
